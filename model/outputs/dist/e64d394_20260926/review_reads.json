@@ -1,0 +1,235 @@
+{
+  "dist": "e64d394_20260926",
+  "constants": {
+    "l3_median_matched": 0.0030304820245452353,
+    "l5_median_matched": 1.165726204849395,
+    "l3_mean_matched": 0.001639990138201631,
+    "l5_mean_matched": 0.34955954980520665,
+    "queue_tail_record_scale": 0.0442730230516831
+  },
+  "R55_within_margin": {
+    "4e-05": {
+      "S1a": 0.77935,
+      "S2": 0.9206
+    },
+    "2e-05": {
+      "S1a": 0.60215,
+      "S2": 0.77585
+    },
+    "1e-05": {
+      "S1a": 0.39835,
+      "S2": 0.55875
+    }
+  },
+  "R56_inside_both_bands": {
+    "share": 0.09875,
+    "n": 1975,
+    "p": {
+      "S1a": 0.5129113924050633,
+      "S1b": 0.6865822784810126,
+      "S2": 0.8729113924050633
+    },
+    "wilson_s1a": [
+      0.49086335153696864,
+      0.5349093025248827
+    ]
+  },
+  "R56_mean_matched": {
+    "S1a": 0.5363,
+    "S1b": 0.5853,
+    "S2": 0.62945
+  },
+  "R61_multiplier": {
+    "queue_tail_at_record_ceiling": {
+      "median": 1.0005830865909728,
+      "p5": 0.6811096770630778,
+      "p95": 2.2744792065055726
+    },
+    "queue_tail_at_panel_level": {
+      "median": 0.9936746863332497,
+      "p5": 0.9606946193696695,
+      "p95": 1.0670296896788345
+    },
+    "queue_tail_excluded": {
+      "median": 1.4120424948984382,
+      "p5": 0.05192611057647391,
+      "p95": 34.005416292673075
+    },
+    "queue_tail_share_of_S0_at_ceiling": 0.9553393315466105
+  },
+  "R66_police_ratio_medians_matched": {
+    "8.5": {
+      "S1a": 0.53315,
+      "S1b": 0.5831,
+      "S2": 0.74845
+    },
+    "10.0": {
+      "S1a": 0.56335,
+      "S1b": 0.6135,
+      "S2": 0.77435
+    },
+    "12.0": {
+      "S1a": 0.59725,
+      "S1b": 0.6459,
+      "S2": 0.8009
+    },
+    "12.5": {
+      "S1a": 0.60465,
+      "S1b": 0.6531,
+      "S2": 0.807
+    }
+  },
+  "R72_police_ratio_means_matched": {
+    "8.5": {
+      "S1a": 0.63565,
+      "S1b": 0.6821,
+      "S2": 0.7332
+    },
+    "10.0": {
+      "S1a": 0.6643,
+      "S1b": 0.70915,
+      "S2": 0.75955
+    },
+    "12.0": {
+      "S1a": 0.69475,
+      "S1b": 0.7384,
+      "S2": 0.78565
+    },
+    "12.5": {
+      "S1a": 0.7008,
+      "S1b": 0.74465,
+      "S2": 0.79145
+    },
+    "record_central": {
+      "S1a": 0.5363,
+      "S1b": 0.5853,
+      "S2": 0.62945
+    }
+  },
+  "R67_breakeven_at_record": {
+    "median": 0.030024141908551284,
+    "p20": 0.00543934755762875,
+    "share_above_observed_band_top_0.079": 0.3192,
+    "share_above_sampled_rate": 0.4311,
+    "share_no_positive_breakeven": 0.00485,
+    "linearity_check_vs_saved_breakeven_at_elicited_level_median_abs_rel_diff": 0.012886237538285343
+  },
+  "R67_breakeven_on_plan_surface": {
+    "median": 5.289583574556173,
+    "p20": 0.8722835465092372,
+    "share_above_observed_band_top_0.079": 0.8179,
+    "share_above_sampled_rate": 0.8281,
+    "share_no_positive_breakeven": 0.15935
+  },
+  "R67_red_running_removal_panel_values": {
+    "p_with": 0.9954,
+    "p_without": 1.0,
+    "monte_carlo_interval_width": 0.0018756370514574608
+  },
+  "R78_red_running_removal_at_record": {
+    "p_with": 0.4311,
+    "p_without": 0.99195
+  },
+  "R69_release_error": {
+    "p_collision_given_conflict_median": 0.005394907417649388,
+    "p_serious_harm_given_collision_median": 0.013927637005422535,
+    "serious_harm_per_error_at_medians": 7.513831219088215e-05,
+    "S0_cycles_per_day_median": 259.63564843105087,
+    "equalising_error_rate_per_cycle_at_medians": 0.0006151138262634297,
+    "one_in_cycles": 1625.7153673078685,
+    "operating_days_between_errors": 6.261526015906846,
+    "per_draw_equalising_rate": {
+      "median": 0.000656885912804574,
+      "p10": 0.00013492456180029321,
+      "p90": 0.021833729102573106
+    }
+  },
+  "R71_R75_tied_operator": {
+    "reference_0m": {
+      "p": 0.51465,
+      "p_corners_min_max": [
+        0.30195,
+        0.74725
+      ],
+      "p_s2_below_s1a": 0.5801
+    },
+    "reference_1m": {
+      "p": 0.45105,
+      "p_corners_min_max": [
+        0.24755,
+        0.6832
+      ],
+      "p_s2_below_s1a": 0.565
+    }
+  },
+  "R73_delay_sign": {
+    "spearman_delay_diff_vs_clearance_diff": 0.9978932008622329,
+    "spearman_delay_diff_vs_clearance_speed": -0.8770061728540152,
+    "spearman_delay_diff_vs_fixed_plan_green_ratio": 0.054283690655209216,
+    "share_signs_agree": 0.9827,
+    "share_S1a_adds_delay": 0.57465,
+    "share_S1a_clearance_longer": 0.56035
+  },
+  "R74_plan_surface": {
+    "l5_collision_axis": 0.04548215482445499,
+    "queue_tail_at_panel_level": {
+      "p_S1a": 0.8281,
+      "p_S2": 0.80025,
+      "p_S2_below_S1a": 0.2366
+    },
+    "queue_tail_difference_excluded": {
+      "p_S1a": 0.9016,
+      "p_S2": 0.80025,
+      "p_S2_below_S1a": 0.2802
+    },
+    "implied_head_on_serious_harm_s1a": 4.6819386544027476e-07
+  },
+  "R79_speed_sweep_axes": {
+    "factor_serious_harm_axis": 1.2509564604603938,
+    "factor_collision_axis": 0.04788792484207868,
+    "rows": [
+      {
+        "speed_kmh": 30.0,
+        "head_on_model_level": 7.74167e-06,
+        "head_on_serious_harm_axis": 9.684492101252418e-06,
+        "head_on_collision_axis": 3.707325111121753e-07,
+        "device_head_on_serious_harm_axis": 9.419164235988768e-07
+      },
+      {
+        "speed_kmh": 40.0,
+        "head_on_model_level": 9.59266e-06,
+        "head_on_serious_harm_axis": 1.2e-05,
+        "head_on_collision_axis": 4.5937258111561445e-07,
+        "device_head_on_serious_harm_axis": 1.7516142550658526e-06
+      },
+      {
+        "speed_kmh": 50.0,
+        "head_on_model_level": 1.65344e-05,
+        "head_on_serious_harm_axis": 2.0683814499836333e-05,
+        "head_on_collision_axis": 7.917981045088657e-07,
+        "device_head_on_serious_harm_axis": 3.1518098212591713e-06
+      },
+      {
+        "speed_kmh": 60.0,
+        "head_on_model_level": 2.83315e-05,
+        "head_on_serious_harm_axis": 3.544147295953365e-05,
+        "head_on_collision_axis": 1.3567367426633523e-06,
+        "device_head_on_serious_harm_axis": 5.499379734088356e-06
+      },
+      {
+        "speed_kmh": 70.0,
+        "head_on_model_level": 4.64978e-05,
+        "head_on_serious_harm_axis": 5.81667233071953e-05,
+        "head_on_collision_axis": 2.2266831517220064e-06,
+        "device_head_on_serious_harm_axis": 9.347371844722945e-06
+      },
+      {
+        "speed_kmh": 80.0,
+        "head_on_model_level": 7.43968e-05,
+        "head_on_serious_harm_axis": 9.306715759757982e-05,
+        "head_on_collision_axis": 3.5627083668911594e-06,
+        "device_head_on_serious_harm_axis": 1.5414160410146925e-05
+      }
+    ]
+  }
+}

@@ -114,8 +114,8 @@
       "operator_term_median": 1.2758778080516753e-06,
       "k_op": 1.0,
       "p_corners_min_max": [
-        0.4946,
-        0.7583
+        0.4408,
+        0.8194
       ]
     },
     "pre_specified_one_operator": {
@@ -126,8 +126,8 @@
       "operator_term_median": 6.379389040258376e-07,
       "k_op": 1.0,
       "p_corners_min_max": [
-        0.5324,
-        0.8194
+        0.4946,
+        0.8675
       ]
     }
   }

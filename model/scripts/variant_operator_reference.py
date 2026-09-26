@@ -38,7 +38,11 @@ def main() -> None:
 
     def reads(k_op: float, operators: float, headon: float = HEADON_C, controller: float = STRIKE_C):
         l3, l5 = controller / w3_anchor, headon / w5_anchor
-        op = operators * (controller / STRIKE_C) * k_op * parts["S2"]["W3"]
+        # the pre-specified treatment (k_op == 1) is the encroachment method's own level and is NOT scaled
+        # with the controller axis, as in decision_outputs_s2.py; a calibrated operator term (k_op != 1) is
+        # tied to the controller record and moves with it (round-5 risk analyst, Fable, S245)
+        scale = (controller / STRIKE_C) if k_op != 1.0 else 1.0
+        op = operators * scale * k_op * parts["S2"]["W3"]
         d = parts["S2"]["W4d"] + op - l3 * parts["S0"]["W3"] + l5 * (parts["S2"]["W5"] - parts["S0"]["W5"])
         d1a = (parts["S1a"]["W4d"] + parts["S1a"]["W3"] - l3 * parts["S0"]["W3"]
                + l5 * (parts["S1a"]["W5"] - parts["S0"]["W5"]))
