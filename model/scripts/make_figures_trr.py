@@ -86,16 +86,17 @@ def med(x):
 # ----------------------------------------------------------------- FIGURE 1 (model structure)
 def fig0_model_flow():
     """Model structure: inputs through the computation to the outputs, with the
-    record checks shown where they act. Plain labels only."""
-    fig, ax = plt.subplots(figsize=(6.54, 3.5))
+    record checks shown where they act. Plain labels only; every line is kept short
+    enough for a 9 pt face inside its box at the printed width."""
+    fig, ax = plt.subplots(figsize=(6.54, 4.3))
     ax.set_xlim(0, 10)
-    ax.set_ylim(0, 10)
+    ax.set_ylim(0, 12.2)
     ax.axis("off")
 
     def box(x, y, w, h, lines, fc="#f5f7fa", ec=MUTED, lw=0.8, fs=9.0):
         ax.add_patch(Rectangle((x, y), w, h, fc=fc, ec=ec, lw=lw, zorder=3))
         ax.text(x + w / 2, y + h / 2, lines, ha="center", va="center", fontsize=fs,
-                color=INK, zorder=4, linespacing=1.35)
+                color=INK, zorder=4, linespacing=1.3)
 
     def arrow(x0, y0, x1, y1, color=INK, lw=1.1):
         ax.annotate("", xy=(x1, y1), xytext=(x0, y0),
@@ -103,25 +104,24 @@ def fig0_model_flow():
                                     shrinkA=1, shrinkB=1), zorder=2)
 
     # main computation row
-    ry, rh = 5.2, 3.4
-    box(0.05, ry, 2.00, rh, "inputs\n\nmeasured rates,\nstandards tables,\nelicited quantities,\nTable 1 priors")
-    box(2.60, ry, 1.85, rh, "sampling\n\n1 value of every\nuncertain quantity,\n20,000 draws")
-    box(4.97, ry, 2.0, rh, "cycle and queue\ncalculation\n\nsignal timings,\nqueues, vehicles\nfacing red")
-    box(7.45, ry, 2.50, rh, "harm mechanisms\n\nevent tree for red\nrunning; rates for the\nother risks; injury curves")
-    arrow(2.05, ry + rh / 2, 2.60, ry + rh / 2)
-    arrow(4.45, ry + rh / 2, 5.00, ry + rh / 2)
-    arrow(6.90, ry + rh / 2, 7.45, ry + rh / 2)
+    ry, rh = 6.6, 5.2
+    xs, w = (0.05, 2.55, 5.05, 7.55), 2.25
+    box(xs[0], ry, w, rh, "inputs\n\nmeasured rates,\nstandards tables,\nelicited\nquantities,\nTable 1 priors")
+    box(xs[1], ry, w, rh, "sampling\n\n1 value of every\nuncertain\nquantity,\n20,000 draws")
+    box(xs[2], ry, w, rh, "cycle and queue\ncalculation\n\nsignal timings,\nqueues, vehicles\nfacing red")
+    box(xs[3], ry, 2.40, rh, "harm\nmechanisms\n\nevent tree for\nred running;\nrates for the\nother risks;\ninjury curves")
+    for a, b in zip(xs[:-1], xs[1:]):
+        arrow(a + w, ry + rh / 2, b, ry + rh / 2)
 
     # outputs row
-    oy, oh = 0.55, 3.1
+    oy, oh = 0.5, 4.6
     box(0.05, oy, 4.85, oh,
-        "checks against independent records\n\nhead-on rate vs the crash registers;\n"
-        "strike rate vs the injury record", fc="#fdf6e3", ec=GOLD)
-    box(5.30, oy, 2.15, oh, "per-draw totals\n\nH(S0), H(S1), H(S2)\nand ΔH against S0")
-    box(7.85, oy, 2.10, oh, "outputs\n\nP(ΔH < 0),\nbreak-even line,\nPRCC sensitivity")
-    arrow(8.70, ry, 6.60, oy + oh, color=INK)
-    arrow(4.90, oy + oh / 2, 5.30, oy + oh / 2, color=GOLD)
-    arrow(7.45, oy + oh / 2, 7.85, oy + oh / 2)
+        "checks against\nindependent records\n\nhead-on rate against\nthe crash registers;\nstrike rate against\nthe injury record", fc="#fdf6e3", ec=GOLD)
+    box(5.15, oy, 2.30, oh, "per-draw totals\n\nH(S0), H(S1),\nH(S2) and\nΔH against S0")
+    box(7.70, oy, 2.25, oh, "outputs\n\nP(ΔH < 0),\nbreak-even\nline, PRCC\nsensitivity")
+    arrow(8.75, ry, 6.30, oy + oh, color=INK)
+    arrow(4.90, oy + oh / 2, 5.15, oy + oh / 2, color=GOLD)
+    arrow(7.45, oy + oh / 2, 7.70, oy + oh / 2)
 
     _save(fig, "fig0_model_flow.png")
     plt.close(fig)
@@ -363,52 +363,53 @@ def fig_injury():
 
 # ----------------------------------------------------------------- FIGURE 7 (input origins)
 def fig_inputs():
-    """Where every model input comes from and where it enters the model."""
-    fig, ax = plt.subplots(figsize=(6.5, 4.0))
+    """Where every model input comes from and where it enters the model. Thirteen
+    assumed quantities, as in Table 1; every line short enough for 9 pt in its box."""
+    fig, ax = plt.subplots(figsize=(6.5, 4.6))
     ax.set_xlim(0, 10)
-    ax.set_ylim(0, 11.6)
+    ax.set_ylim(0, 12.6)
     ax.axis("off")
 
     def box(x, y, w, h, title, lines, fc, ec, fs=9.0):
         ax.add_patch(Rectangle((x, y), w, h, fc=fc, ec=ec, lw=0.9, zorder=3))
-        ax.text(x + 0.16, y + h - 0.28, title, ha="left", va="top", fontsize=9,
+        ax.text(x + 0.16, y + h - 0.26, title, ha="left", va="top", fontsize=9,
                 color=INK, zorder=4, fontweight="bold")
-        ax.text(x + 0.16, y + 0.22, lines, ha="left", va="bottom", fontsize=fs,
-                color=INK, zorder=4, linespacing=1.4)
+        ax.text(x + 0.16, y + 0.20, lines, ha="left", va="bottom", fontsize=fs,
+                color=INK, zorder=4, linespacing=1.35)
 
     # origins, left column
-    box(0.05, 8.55, 4.95, 3.00, "Field measurements",
-        "violation rates at signals, flaggers\nand attended devices; entry timing\nwithin the red; operating speed",
+    box(0.05, 9.35, 4.80, 3.20, "Field measurements",
+        "violation rates at signals,\nflaggers and attended devices;\nentry timing within the red;\noperating speed",
         "#eef4fc", BLUE)
-    box(0.05, 6.00, 4.95, 2.40, "Expert panel (companion study)",
-        "controller-strike rate and its severity;\nqueue-tail crash rate and its severity",
+    box(0.05, 6.45, 4.80, 2.70, "Expert panel (companion study)",
+        "controller-strike rate and\nits severity; queue-tail crash\nrate and its severity",
         "#eef9f4", AQUA)
-    box(0.05, 3.45, 4.95, 2.40, "Standards",
-        "all-red tables and their assumed speeds;\ntemporary speed limit; sight-distance rules",
+    box(0.05, 3.55, 4.80, 2.70, "Standards",
+        "all-red tables and their\nassumed speeds; temporary\nspeed limit; sight-distance rules",
         "#fdf6e3", GOLD)
-    box(0.05, 0.05, 4.95, 3.25, "Assumed ranges (Table 1)",
-        "12 quantities never measured at a\nportable signal or attended device,\neach given a wide prior",
+    box(0.05, 0.05, 4.80, 3.30, "Assumed ranges (Table 1)",
+        "13 quantities never measured\nat a portable signal or\nattended device, each given\na wide prior",
         "#f4f4f2", MUTED)
 
     # model stages, right column
-    box(6.90, 8.60, 3.05, 2.55, "Signal cycle and queues",
-        "red and green times, all-red,\nqueues, vehicles facing red", "#f5f7fa", MUTED)
-    box(6.90, 4.95, 3.05, 2.55, "Red-running event tree",
+    box(6.30, 9.30, 3.65, 3.00, "Signal cycle and queues",
+        "red and green times,\nall-red, queues,\nvehicles facing red", "#f5f7fa", MUTED)
+    box(6.30, 5.20, 3.65, 2.90, "Red-running event tree",
         "enter, meet, collide\n(Figure 3)", "#f5f7fa", MUTED)
-    box(6.90, 0.90, 3.05, 2.85, "Strike and queue-tail\nterms; injury step",
-        "rate × severity for each;\ninjury curves (Figure 5)", "#f5f7fa", MUTED)
+    box(6.30, 0.60, 3.65, 3.40, "Strike and queue-tail\nterms; injury step",
+        "rate x severity for each;\ninjury curves (Figure 5)", "#f5f7fa", MUTED)
 
     def arrow(y0, y1, color):
-        ax.annotate("", xy=(6.90, y1), xytext=(5.00, y0),
+        ax.annotate("", xy=(6.30, y1), xytext=(4.85, y0),
                     arrowprops=dict(arrowstyle="-|>", color=color, lw=1.0,
                                     shrinkA=2, shrinkB=2), zorder=2)
 
-    arrow(10.50, 6.60, BLUE)   # field -> tree (violation rates, timing)
-    arrow(9.60, 10.20, BLUE)   # field (operating speed) -> cycle
-    arrow(7.40, 2.30, AQUA)    # panel -> strike/queue-tail terms
-    arrow(4.90, 9.30, GOLD)    # standards -> cycle
-    arrow(4.10, 1.70, GOLD)    # standards (speed limit) -> injury
-    arrow(1.60, 5.70, MUTED)   # assumed -> tree
+    arrow(11.30, 7.30, BLUE)   # field -> tree (violation rates, timing)
+    arrow(10.40, 11.00, BLUE)  # field (operating speed) -> cycle
+    arrow(7.90, 2.60, AQUA)    # panel -> strike/queue-tail terms
+    arrow(5.20, 10.20, GOLD)   # standards -> cycle
+    arrow(4.40, 1.90, GOLD)    # standards (speed limit) -> injury
+    arrow(1.70, 6.30, MUTED)   # assumed -> tree
 
     _save(fig, "fig_inputs.png")
     plt.close(fig)

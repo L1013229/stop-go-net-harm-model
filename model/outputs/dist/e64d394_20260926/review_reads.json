@@ -57,6 +57,50 @@
     },
     "queue_tail_share_of_S0_at_ceiling": 0.9553393315466105
   },
+  "R82_queue_tail_share_and_retained_exposure": {
+    "rear_end_record_only": {
+      "queue_tail_level_per_op_day": 1.9285714285714285e-05,
+      "scale_on_panel_level": 0.0035157988893983632,
+      "queue_tail_share_of_S0_harm_median": 0.6294515393815154,
+      "p_S1a_with_difference_at_this_level": 0.4411
+    },
+    "all_cause_record_uncorrected": {
+      "queue_tail_level_per_op_day": 0.00024285714285714286,
+      "scale_on_panel_level": 0.0442730230516831,
+      "queue_tail_share_of_S0_harm_median": 0.9553393315466105,
+      "p_S1a_with_difference_at_this_level": 0.49655
+    },
+    "all_cause_record_corrected_3x": {
+      "queue_tail_level_per_op_day": 0.0007285714285714286,
+      "scale_on_panel_level": 0.1328190691550493,
+      "queue_tail_share_of_S0_harm_median": 0.9846562696792374,
+      "p_S1a_with_difference_at_this_level": 0.5478
+    },
+    "all_cause_record_corrected_5x": {
+      "queue_tail_level_per_op_day": 0.0012142857142857142,
+      "scale_on_panel_level": 0.22136511525841546,
+      "queue_tail_share_of_S0_harm_median": 0.9907369096633666,
+      "p_S1a_with_difference_at_this_level": 0.574
+    },
+    "panel_level": {
+      "queue_tail_level_per_op_day": 0.005485442965429268,
+      "scale_on_panel_level": 1.0,
+      "queue_tail_share_of_S0_harm_median": 0.9979345779485722,
+      "p_S1a_with_difference_at_this_level": 0.6467
+    },
+    "tied_retained_fraction_ref_0m": {
+      "mean": 0.7398560252721587,
+      "median": 0.7557814938985026,
+      "p10": 0.5514302616963307,
+      "p90": 0.8994335608858457
+    },
+    "tied_retained_fraction_ref_1m": {
+      "mean": 0.801861842033801,
+      "median": 0.8237800338482963,
+      "p10": 0.6229073369124144,
+      "p90": 0.9412010151051619
+    }
+  },
   "R66_police_ratio_medians_matched": {
     "8.5": {
       "S1a": 0.53315,
@@ -107,16 +151,20 @@
     }
   },
   "R67_breakeven_at_record": {
-    "median": 0.030024141908551284,
-    "p20": 0.00543934755762875,
+    "median_all_draws": 0.029698795394514553,
+    "p20_all_draws": 0.005300975239467571,
+    "median_positive_draws_only": 0.030024141908551284,
+    "p20_positive_draws_only": 0.00543934755762875,
     "share_above_observed_band_top_0.079": 0.3192,
     "share_above_sampled_rate": 0.4311,
     "share_no_positive_breakeven": 0.00485,
     "linearity_check_vs_saved_breakeven_at_elicited_level_median_abs_rel_diff": 0.012886237538285343
   },
   "R67_breakeven_on_plan_surface": {
-    "median": 5.289583574556173,
-    "p20": 0.8722835465092372,
+    "median_all_draws": 3.124831880611474,
+    "p20_all_draws": 0.14077812498327744,
+    "median_positive_draws_only": 5.289583574556173,
+    "p20_positive_draws_only": 0.8722835465092372,
     "share_above_observed_band_top_0.079": 0.8179,
     "share_above_sampled_rate": 0.8281,
     "share_no_positive_breakeven": 0.15935
@@ -160,6 +208,97 @@
         0.6832
       ],
       "p_s2_below_s1a": 0.565
+    }
+  },
+  "R89_coherence_and_plan_surface_clause": {
+    "panel_values": {
+      "full_mechanism_ratio_median": 0.6066831841683797,
+      "full_p5": 0.060375416611637714,
+      "full_p95": 0.9707928635611894,
+      "frame_matched_ratio_median": 0.9983250243179791,
+      "frame_p5": 0.9720087580003015,
+      "frame_p95": 1.078048389917342
+    },
+    "record_serious_harm_axis_queue_ceiling": {
+      "full_mechanism_ratio_median": 1.0005830865909728,
+      "full_p5": 0.6811096770630778,
+      "full_p95": 2.2744792065055726,
+      "frame_matched_ratio_median": 1.052685405290445,
+      "frame_p5": 0.983812410854695,
+      "frame_p95": 3.1791398422811317
+    },
+    "record_serious_harm_axis_queue_excluded": {
+      "full_mechanism_ratio_median": 1.4120424948984382,
+      "full_p5": 0.05192611057647391,
+      "full_p95": 34.005416292673075,
+      "frame_matched_ratio_median": 109.7389092957032,
+      "frame_p5": 25.339163239190942,
+      "frame_p95": 1058.2556175618595
+    },
+    "plan_surface_collision_axis": {
+      "full_mechanism_ratio_median": 0.9865679663115756,
+      "full_p5": 0.94215865648783,
+      "full_p95": 1.0072232210074248,
+      "frame_matched_ratio_median": 0.9925909308068976,
+      "frame_p5": 0.9692588955386862,
+      "frame_p95": 1.0103935625008957
+    },
+    "w5_removal_on_plan_surface": {
+      "p_with": 0.8281,
+      "p_without": 0.8404,
+      "monte_carlo_interval_width": 0.01045804243846811
+    }
+  },
+  "R83_tied_device_priced": {
+    "reference_0m": {
+      "dh_median": -7.580767377545294e-08,
+      "dh_mean": -4.736200842877281e-07,
+      "safety_cost_nzd_mean_vosl": -5.920251053596601,
+      "safety_cost_nzd_mean_serious_injury": -0.31263661763832934,
+      "p_net_benefit": 0.51465
+    },
+    "reference_1m": {
+      "dh_median": 2.3566311687559988e-07,
+      "dh_mean": 6.740532597550491e-07,
+      "safety_cost_nzd_mean_vosl": 8.425665746938114,
+      "safety_cost_nzd_mean_serious_injury": 0.4449425567643079,
+      "p_net_benefit": 0.45105
+    }
+  },
+  "R85_within_margin_at_nz_levels": {
+    "record_central_1.2e-5": {
+      "p_dh_neg": 0.4311,
+      "p_within_margin": 0.77935,
+      "dh_median": 2.2962246908693206e-06,
+      "abs_dh_p90": 8.54729052284408e-05
+    },
+    "nz_uncorrected_2.1e-5": {
+      "p_dh_neg": 0.3322,
+      "p_within_margin": 0.68335,
+      "dh_median": 9.182261525698807e-06,
+      "abs_dh_p90": 0.00014316848565422392
+    },
+    "nz_corrected_3x_6.4e-5": {
+      "p_dh_neg": 0.16905,
+      "p_within_margin": 0.43645,
+      "dh_median": 4.86281372809833e-05,
+      "abs_dh_p90": 0.00044336129184604773
+    },
+    "nz_corrected_6x_1.3e-4": {
+      "p_dh_neg": 0.0993,
+      "p_within_margin": 0.2893,
+      "dh_median": 0.00011273987958262496,
+      "abs_dh_p90": 0.000907452913257927
+    }
+  },
+  "R86_tied_value_of_information_spans": {
+    "reference_0m": {
+      "strike_span": 0.25995,
+      "headon_span": 0.1982
+    },
+    "reference_1m": {
+      "strike_span": 0.25734999999999997,
+      "headon_span": 0.1976
     }
   },
   "R73_delay_sign": {
