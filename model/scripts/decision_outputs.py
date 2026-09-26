@@ -106,11 +106,11 @@ def main() -> None:
     p_supp = float((supp[np.isfinite(supp)] < 0).mean())
 
     # elicited-level disclosure, W1: the queue-tail level implied by the elicitation,
-    # against the whole-of-TTM serious-harm rate the NZ record supports (~146 DSI/yr over
-    # ~0.4M op-days/yr ~= 3.7e-4 per op-day across ALL pathways and site types). W1 alone
+    # against the whole-of-TTM serious-harm rate the NZ record supports (about 97 DSI crashes a year
+    # over ~0.4M op-days/yr ~= 2.4e-4 per op-day across ALL pathways and site types). W1 alone
     # exceeding that all-cause rate means the elicited LEVEL is high; it cancels in dH.
     w1_med = float(np.nanmedian(P["S0"]["W1"]))
-    ALL_TTM_DSI_PER_OP_DAY = 146.0 / 4.0e5
+    ALL_TTM_DSI_PER_OP_DAY = (680.0 / 7.0) / 4.0e5   # supplement S1.3 (CAS 2018 to 2024, crash basis); was 146/4e5 until 27 Sep 2026
 
     summary = {
         "w1_median_s0": w1_med,

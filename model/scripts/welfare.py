@@ -22,6 +22,8 @@ import numpy as np
 MODEL = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(MODEL / "src"))
 from mtcpts.model import OPERATION_HOURS  # noqa: E402
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from decision_outputs_s2 import ALL_TTM_DSI_PER_OP_DAY as ALL_TTM_RECORD  # noqa: E402
 
 BASELINE_Q = 300.0
 HEADON_C, STRIKE_C = 1.2e-5, 1.0e-5
@@ -76,7 +78,7 @@ def main() -> None:
            "value_per_event_nzd": v_event,
            "delay_veh_hours_per_op_day_median": {s: float(np.nanmedian(v)) for s, v in delay_h.items()},
            "mean_wait_s_per_vehicle_median": {s: float(np.nanmedian(v * 3600.0 / veh_day)) for s, v in delay_h.items()}}
-    ALL_TTM_DSI_PER_OP_DAY = 146.0 / 4.0e5          # research/crash-record-bounds.md, all pathways
+    ALL_TTM_DSI_PER_OP_DAY = ALL_TTM_RECORD           # supplement S1.3; defined once in decision_outputs_s2.py
     w1_scale = ALL_TTM_DSI_PER_OP_DAY / float(np.nanmedian(parts["S0"]["W1"]))
     out["queue_tail_record_scale"] = w1_scale
     out["median_matched_calibrated_means_over_record"] = {

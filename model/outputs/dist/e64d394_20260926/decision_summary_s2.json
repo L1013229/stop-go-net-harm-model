@@ -97,11 +97,11 @@
     0.6592685631428991
   ],
   "s1b_p_at_record_central": 0.4825,
-  "s2_vs_s1a_p_s2_lower_with_queue_tail_record_ceiling": 0.65065,
-  "s2_vs_s1a_dh_median_with_queue_tail_record_ceiling": -4.6350874219825395e-06,
+  "s2_vs_s1a_p_s2_lower_with_queue_tail_record_ceiling": 0.67935,
+  "s2_vs_s1a_dh_median_with_queue_tail_record_ceiling": -5.126910353233681e-06,
   "s2_vs_s1a_p_s2_lower_with_queue_tail_elicited_level": 0.4176,
   "s2_vs_s1a_dh_median_with_queue_tail_elicited_level": 8.347687866185981e-06,
-  "queue_tail_record_scale": 0.06653974935120606,
+  "queue_tail_record_scale": 0.0442730230516831,
   "s2_own_anchor_p_at_record_central": 0.38285,
   "s2_own_anchor_p_worst_best": [
     0.184,

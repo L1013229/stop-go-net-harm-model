@@ -29,6 +29,13 @@ BASELINE = (300, 250)
 HEADON_REC = (6e-6, 2e-5)          # head-on serious harm per op-day, from the crash record
 STRIKE_REC = (5e-6, 2e-5)          # controller serious harm per op-day, from the injury record
 HEADON_C, STRIKE_C = 1.2e-5, 1.0e-5
+# All-cause serious-harm record at temporary traffic management sites of every kind (supplement S1.3):
+# 680 death-or-serious-injury crashes at New Zealand sites carrying any of the seven work-zone signals over
+# 2018 to 2024 (Crash Analysis System, as loaded 2026-09-14), 97.1 a year, over about 0.4 million operation
+# days a year of roadworks under traffic control. Crash basis, the unit the model counts. Replaces the
+# 146-a-year figure (a persons count from an earlier note) on 27 Sep 2026 after review round 5.
+ALL_TTM_DSI_PER_OP_DAY = (680.0 / 7.0) / 4.0e5
+
 MARGIN = 1.0 / (100.0 * 250.0)     # one serious-harm event per 100 site-years
 UNGATED_R_V2 = Triangular(1.1e-2, 2.2e-2, 4.4e-2)   # Addendum A3: single source, half/double
 
@@ -169,8 +176,7 @@ def main() -> None:
     summary["s1b_p_at_record_central"] = float((rec["S1b"][np.isfinite(rec["S1b"])] < 0).mean())
     # (b) the attended device against the signal WITH the queue-tail difference, at the record
     #     ceiling for the queue-tail level (all-cause record / elicited) and at the elicited level
-    ALL_TTM = 146.0 / 4.0e5
-    w1_scale = ALL_TTM / float(np.nanmedian(parts["S0"]["W1"]))
+    w1_scale = ALL_TTM_DSI_PER_OP_DAY / float(np.nanmedian(parts["S0"]["W1"]))
     qt21 = parts["S2"]["W1"] - parts["S1a"]["W1"]
     for label, k in (("record_ceiling", w1_scale), ("elicited_level", 1.0)):
         d = (rec["S2"] - rec["S1a"] + k * qt21)[fin]
