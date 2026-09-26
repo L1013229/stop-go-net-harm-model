@@ -31,6 +31,15 @@
     "delta_delay_cost_nzd_per_op_day_mean": 228.79525399739606,
     "delta_delay_cost_nzd_per_op_day_median_plan": 49.50083428548611,
     "delta_delay_cost_nzd_per_op_day_mean_plan": 92.64713478269015,
+    "pathway_priced_safety_cost_nzd_mean": 10.182023266644418,
+    "pathway_priced_safety_cost_nzd_median": -3.281832256947862,
+    "pathway_priced_net_social_cost_nzd_mean": 238.97727726404042,
+    "pathway_priced_net_social_cost_nzd_median": 139.16195373376866,
+    "pathway_priced_p_net_benefit": 0.4127,
+    "pathway_prices_nzd_per_event": {
+      "strike": 3028080.0,
+      "headon": 1654651.6
+    },
     "primary_dh_median": 2.2962246908693206e-06,
     "primary_dh_mean": 2.1371734764949936e-05,
     "primary_p_dh_neg": 0.4311,
@@ -164,6 +173,15 @@
     "delta_delay_cost_nzd_per_op_day_mean": 204.957085891644,
     "delta_delay_cost_nzd_per_op_day_median_plan": 39.20322870393855,
     "delta_delay_cost_nzd_per_op_day_mean_plan": 82.99423361940302,
+    "pathway_priced_safety_cost_nzd_mean": -8.947291162407268,
+    "pathway_priced_safety_cost_nzd_median": -6.408042374739008,
+    "pathway_priced_net_social_cost_nzd_mean": 196.0097947292367,
+    "pathway_priced_net_social_cost_nzd_median": 94.22431177687426,
+    "pathway_priced_p_net_benefit": 0.4387,
+    "pathway_prices_nzd_per_event": {
+      "strike": 3028080.0,
+      "headon": 1654651.6
+    },
     "primary_dh_median": 4.6506330102787953e-07,
     "primary_dh_mean": 9.81080288717477e-06,
     "primary_p_dh_neg": 0.4825,
@@ -297,6 +315,15 @@
     "delta_delay_cost_nzd_per_op_day_mean": 0.0,
     "delta_delay_cost_nzd_per_op_day_median_plan": 0.0,
     "delta_delay_cost_nzd_per_op_day_mean_plan": 0.0,
+    "pathway_priced_safety_cost_nzd_mean": -39.80947007483091,
+    "pathway_priced_safety_cost_nzd_median": -15.528557502730774,
+    "pathway_priced_net_social_cost_nzd_mean": -39.80947007483091,
+    "pathway_priced_net_social_cost_nzd_median": -15.528557502730774,
+    "pathway_priced_p_net_benefit": 0.7074,
+    "pathway_prices_nzd_per_event": {
+      "strike": 3028080.0,
+      "headon": 1654651.6
+    },
     "primary_dh_median": -3.6968144387611438e-06,
     "primary_dh_mean": -1.1245302517539576e-05,
     "primary_p_dh_neg": 0.6527,

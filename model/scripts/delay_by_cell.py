@@ -16,7 +16,7 @@ import decision_outputs_s2 as D  # noqa: E402
 
 def main() -> None:
     vals = tomllib.load(open(MODEL / "config" / "welfare-values.toml", "rb"))
-    vot = float(vals["value_of_travel_time_nzd_per_hour"]["value"])
+    vot = float(vals["value_of_travel_time_nzd_per_vehicle_hour"]["value"])  # MBCM Table 18 composite per vehicle-hour (round 4)
     sej = load_sej(MODEL / "config"); dist = D.newest_dist()
     rows = []
     for q in (300.0, 600.0, 800.0):

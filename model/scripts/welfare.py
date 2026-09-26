@@ -99,6 +99,20 @@ def main() -> None:
             "delta_delay_cost_nzd_per_op_day_median_plan": float(np.median(ddelay) * vot_plan),
             "delta_delay_cost_nzd_per_op_day_mean_plan": float(np.mean(ddelay) * vot_plan),
         }
+        # pathway pricing (registry R53, repriced): the strike-side change (placement exposure plus the
+        # removed controller strike) at the strike record's fatal share, the head-on change at the head-on
+        # record's fatal share; queue-tail difference excluded, medians matched
+        strike_price = 0.20 * vosl + 0.80 * v_event.get("serious_injury", vosl)
+        headon_price = 0.084 * vosl + 0.916 * v_event.get("serious_injury", vosl)
+        strike_part = (parts[s]["W4d"] + parts[s]["W3"] - l3 * parts["S0"]["W3"])[fin]
+        headon_part = (l5 * (parts[s]["W5"] - parts["S0"]["W5"]))[fin]
+        pw = strike_part * strike_price + headon_part * headon_price
+        row["pathway_priced_safety_cost_nzd_mean"] = float(np.mean(pw))
+        row["pathway_priced_safety_cost_nzd_median"] = float(np.median(pw))
+        row["pathway_priced_net_social_cost_nzd_mean"] = float(np.mean(pw + ddelay * vot))
+        row["pathway_priced_net_social_cost_nzd_median"] = float(np.median(pw + ddelay * vot))
+        row["pathway_priced_p_net_benefit"] = float(((pw + ddelay * vot) < 0).mean())
+        row["pathway_prices_nzd_per_event"] = {"strike": strike_price, "headon": headon_price}
         for label, dh in (("primary", base), ("queue_tail_at_record_ceiling", base + w1_scale * qt),
                           ("queue_tail_at_elicited_level", base + qt),
                           ("mean_matched", base_mean_matched),
