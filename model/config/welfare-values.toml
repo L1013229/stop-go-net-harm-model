@@ -1,0 +1,38 @@
+# Monetary values for the welfare reading (docs/prespec.md Addendum A7).
+# Source: Monetised Benefits and Costs Manual (MBCM), NZ Transport Agency, Volume 1
+# procedures, version 1.7.5 (applies from 29 May 2026); every value is stated there at July
+# 2021 prices. Verified against the published PDF on 2026-09-26 (research agent; Wayback
+# snapshot of the live PDF dated 2026-09-12 carries the same title page). The conference
+# manuscript cited v1.7.2 (2024) with the same two figures; the figures are unchanged, the
+# edition and price-year basis are corrected here. Values are NZD. Nothing here enters the
+# safety model.
+
+[value_of_travel_time_nzd_per_hour]
+value = 19.53
+category = "commuting to and from work, equalised across users, uncongested (MBCM Table 16)"
+range_note = "same table row: work travel 37.92, other non-work 18.91; rural traffic mixes purposes, so 19.53 is the middle value and 18.91 to 37.92 the span"
+price_year = "July 2021"
+basis = "MBCM v1.7.5 Volume 1, section 3.6, Table 16"
+checked = "2026-09-26"
+
+[value_of_statistical_life_nzd]
+value = 12.5e6
+price_year = "July 2021"
+basis = "MBCM v1.7.5 Volume 1, section 3.1, p.72: $12.5 million per fatality"
+checked = "2026-09-26"
+
+[value_per_serious_injury_nzd]
+value = 660100
+price_year = "July 2021"
+basis = "MBCM v1.7.5 Volume 1, section 3.1, p.72: $660,100 per serious injury"
+checked = "2026-09-26"
+
+[value_per_minor_injury_nzd]
+value = 68000
+price_year = "July 2021"
+basis = "MBCM v1.7.5 Volume 1, section 3.1, p.72: $68,000 per minor injury (not used)"
+checked = "2026-09-26"
+
+[operating_days_per_year]
+value = 250
+basis = "site-year convention fixed in docs/prespec.md (equivalence margin)"
