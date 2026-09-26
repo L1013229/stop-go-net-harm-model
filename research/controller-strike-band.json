@@ -1,0 +1,13 @@
+{
+  "dsi_per_op_day_band": [
+    5e-06,
+    2e-05
+  ],
+  "dsi_per_op_day_central": 1e-05,
+  "fatal_per_op_day_central": 2e-06,
+  "headon_dsi_per_op_day_band": [
+    6e-06,
+    2e-05
+  ],
+  "source": "research/controller-strike-bounds.md and research/crash-record-bounds.md"
+}

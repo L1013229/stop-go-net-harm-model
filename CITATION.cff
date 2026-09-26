@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this model, cite the paper below."
+title: "mtcpts: net-harm comparison of manual traffic control, portable traffic signals and attended automated flagger devices at rural stop/go work zones"
+authors:
+  - family-names: Tilton
+    given-names: David
+    affiliation: University of Canterbury
+  - family-names: van der Walt
+    given-names: Jacobus Daniel
+    affiliation: University of Canterbury
+repository-code: "https://github.com/L1013229/stop-go-net-harm-model"
+license: MIT
+preferred-citation:
+  type: article
+  title: "A Probabilistic Net-Harm Comparison of Manual Traffic Control, Portable Traffic Signals and Attended Automated Flagger Devices at Rural Stop/Go Work Zones"
+  authors:
+    - family-names: Tilton
+      given-names: David
+    - family-names: van der Walt
+      given-names: Jacobus Daniel
+  journal: Transportation Research Record
+  year: 2026
+  notes: "Submitted 2026. The conference version (TRB Annual Meeting 2027, TRBAM-S-26-04990) was presentation only."

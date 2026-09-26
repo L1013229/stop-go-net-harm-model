@@ -1,0 +1,236 @@
+# mtcpts priors — FROZEN before any production run.
+#
+# Construction rules: docs/prespec.md. Structure: docs/model-design.md.
+# Both were committed before this file; run_suite.py enforces that order.
+# Evidence workings: research/violation-priors-harmonisation.md,
+# research/clearance-interval-basis.md, research/avoidance-and-severity-basis.md.
+#
+# CONVERSION EQUATIONS (frozen):
+#   per-facing-vehicle = per-stop-cycle / mean(facing vehicles per stop cycle)
+#   facing per cycle   = q_vps * red_duration (site-reconstructed where unreported)
+#   Kansas PTS-only 3.1% observed -> 3.7% facing-adjusted at f_red = 0.85
+#   Yousif 11.3% of cycles with >=1 red-run -> ~2.0% per facing at ~6 facing/cycle
+
+# Contested (rule 3): w_occ, q_lead, d_sight_m, w_onset, ttc50, s_ttc,
+#                     impact_speed_frac, p_detect_s0, p_detect_s1b, p_evade_harm.
+
+# ============================================================ violation rates
+[r_v0]  # human flagger/MTC, driver-INITIATED entry past a STOP instruction, per facing vehicle
+family = "triangular"
+lo = 0.0
+mode = 1.8e-4
+hi = 2.0e-3
+evidence = "Pooled Jeffreys over two independent zero-event settings: TTI 0-6407-1 flagger 0/294 stop cycles (~0/588 facing, avg 2 veh/cycle Table 21); Kansas K-TRAN 0/814 observed (~690 facing) driver-initiated (all 9 recorded events flagger-consented). Zero-event -> mode at pooled Jeffreys posterior median; hi at the upper 95% bound doubled (rule 1 widening)."
+
+[r_v1a]  # unattended PTS (same head under S1b; actuation != compliance), per facing vehicle
+family = "triangular"
+lo = 1.0e-2
+mode = 3.7e-2
+hi = 8.9e-2
+evidence = "Four settings: Kansas PTS-only 92/2,944 = 3.1% -> 3.7% facing-adjusted; Yousif UK urban shuttle-lane ~2.0%; Carlson 2015 TX ~3.5%; Finley 2015 OH ~7.9% (47.1/100 cycles). Range = [min,max] of central estimates, mode = Kansas (largest n, most comparable rural two-lane setting). NOTE: these are rates of observed ENTRIES, already conditioned on the section appearing clear to the entering driver; the event tree preserves the rate and makes its timing endogenous rather than multiplying it by an independent opposing-presence probability."
+
+# ============================================================ event-tree conditionals (contested, rule 3)
+[w_occ]  # violator enters against a VISIBLY present opposing vehicle (per visible distance)
+family = "loguniform"
+lo = 1.0e-4
+hi = 1.0e-2
+evidence = "No measurement exists. Entry against a vehicle the driver can SEE in a single lane: lower bound — an oncoming vehicle in one's own lane is maximally salient, deliberate entry near-absent (order 1 in 10,000); upper bound — glare, dust, low-mounted portable heads and obscuration ('prone to being obscured by vehicles ... high sided vehicles', UK Pink Book p.22) admit misjudgement at 1 in 100. Vehicles beyond the sight line carry NO deterrence and full entry weight; that is the d_sight mechanism, not this parameter. Log-uniform across two orders (rule 3); PRCC-reported."
+
+[q_lead]  # opposing entrant who CAN see the violator enters against him anyway
+family = "loguniform"
+lo = 1.0e-3
+hi = 1.0e-1
+evidence = "No measurement exists. The entrant with sight of an oncoming violator (released queue lead, or a free arrival during green) holds in the ordinary case; residual failure is glare, inattention or distance misjudgement. Bounds: 1 in 1,000 (compliant daylight entry with the violator in plain view) to 1 in 10 (night, sun-strike, or judgement at long visible range). An entrant whose sight line the violator has not yet crossed enters with probability ONE — that route is governed by d_sight, not this parameter. Log-uniform across two orders (rule 3); PRCC-reported."
+
+[ttc50]  # TTC at which ONE driver has a 50% chance of failing to avoid, seconds
+family = "uniform"
+lo = 1.0
+hi = 2.5
+evidence = "No P(avoidance | TTC) curve has ever been fitted for a head-on conflict on a straight rural road, nor in any work-zone context (gap confirmed). Bounded below by the fastest measured surprise-hazard perception-response medians (Olson & Sivak 1986, 50th pct ~1.1 s) and above by the NCHRP 400 design envelope for simple-to-moderate hazards (2.5 s). Green (2000) places surprise responses at ~1.5 s. Lechner & Malaterre (1991) found only 1 in 5 unalerted drivers avoided a junction intrusion, consistent with failure being likely at short TTC. Rule-3 uniform; PRCC-reported."
+
+[s_ttc]  # logistic scale of the avoidance-failure function, seconds
+family = "uniform"
+lo = 0.3
+hi = 1.0
+evidence = "Spread of perception-response distributions (Olson & Sivak 50th->95th spans ~0.5 s) plus manoeuvre-execution variance (Brannstrom 2014: braking rarely needs >1 s once initiated; steering often <0.5 s with a longer tail). Markkula 2016 shows response onset is triggered by a kinematic looming threshold rather than a fixed delay, which motivates a sigmoid in TTC and simultaneously cautions against over-trusting any two-parameter reduction. Rule-3 uniform; no monotone device-favourability direction, so excluded from the variant sets."
+
+[w_onset]  # share of violations committed AT SPEED at red onset (rather than from a standstill)
+family = "uniform"
+lo = 0.50
+hi = 0.95
+evidence = "Only the vehicle at the stop line can enter the section; those queued behind it are physically blocked. A violation is therefore either an ONSET entry, by a vehicle still moving that follows its own departing platoon through, or a STANDING departure by the queue's lead vehicle against a red it has been waiting at. The two are different acts, and the second is much the rarer. Yousif 2014 reports red-running at portable signals concentrated in the first seconds after red onset, which is the signature of the moving-entry class; the exact split is unreported. Rule-3 uniform, bounded below by a simple majority and above short of exclusivity; PRCC-reported."
+
+[onset_window_s]  # how long after red onset an arriving vehicle is still moving
+family = "uniform"
+lo = 2.0
+hi = 8.0
+evidence = "The interval between red onset and the formation of a standing queue at the stop line, during which an arriving vehicle faces a run-or-stop decision at speed. Bounded below by the amber period and above by the first arrival headway at the lowest modelled demand."
+
+[p_detect_s0]  # MTC radio-hold effectiveness for pre-release violations (contested)
+family = "uniform"
+lo = 0.3
+hi = 0.9
+evidence = "TTI 0-6407-1 p.127: in ALL documented AFAD violations the supervising flagger stopped the motorist before oncoming traffic — human interception is real and strong but the sample is small and AFAD-attended; wide uniform below certainty."
+
+[p_detect_s1b]  # actuated/monitored PTS violation-aware all-red extension (contested)
+family = "uniform"
+lo = 0.1
+hi = 0.7
+evidence = "No field measurement of violation-triggered all-red extension found; bounded below p_detect_s0 central mass (the device lacks pursuit and command authority); rule-3 wide prior."
+
+[impact_speed_frac]  # collision-conditional impact closing-speed retention (contested)
+family = "uniform"
+lo = 0.3
+hi = 1.0
+evidence = "A collision implies evasion failed or was late, so braking sheds some but not all closing speed. No work-zone head-on data. Bounds span heavy partial braking to none."
+
+[p_evade_harm]  # P(harm-bearing secondary outcome | successful evasion) — W5b band only
+family = "loguniform"
+lo = 1.0e-5
+hi = 1.0e-3
+evidence = "No study links an originating conflict to a downstream run-off-road or crew-strike outcome (Spainhour & Mishra 2008 treat overcorrection ROR as a standalone category). Mechanism bounds: an evading vehicle on a rural straight with a sealed shoulder usually recovers; the work crew occupies the adjacent closed lane, so a lateral evasion toward the works is possible but not the natural escape direction (the shoulder is). Rule-3 log-uniform across two orders; reported as a bounded band, never in the primary ledger."
+
+[d_sight_m]  # mutual sight distance along the section (site intervisibility), capped at L
+family = "loguniform"
+lo = 150.0
+hi = 3000.0
+evidence = "No study measures intervisibility at shuttle sites; bounds from design geometry and code practice. Lower: stopping sight distance on a compliant rural alignment is 130-185 m at 80-100 km/h design speeds (AASHTO/NCHRP 400; Austroads GRD Part 3 parameters give the same range), and AGTTM requires >=150 m approach sight to a signal face, so a section whose internal sight falls below ~150 m is at the credible floor of alignments that host shuttle running. Upper: 3,000 m is end-to-end intervisibility for every modelled section. QGTTM Part 3 Table 5.4 caps tabulated shuttle length at 800 m (<=300 veh/h), so longer sections exist only with bespoke engineering, exactly the tail where restricted sight is plausible. Log-uniform (rule 3); PRCC-reported; swept as a design axis."
+
+# ============================================================ clearance-interval design
+[v_clear_kmh]  # assumed clearance speed embodied in the programmed all-red
+family = "uniform"
+lo = 20.0
+hi = 40.0
+evidence = "The stated or implied assumed clearance speeds of the jurisdictions that specify the all-red: NSW TCAWS Appendix B tabulates all-red at STATED minimum clearance speeds of 20 km/h (Table B-5) and 40 km/h (Table B-6); NZ M23:2022 Appendix F Table 2 (ex CoPTTM B5.3.5) steps 5 s per 50 m, implying ~36 km/h at band edges without stating a speed; UK Pink Book implies 36 km/h; TTI computes at 20 mph (32.2 km/h). Range = [min, max] of the jurisdictional values (rule 2, code-specified). Band tables round upward, which adds margin this parameter does not carry."
+
+[clear_buffer_s]  # fixed safety buffer added to the computed clearance
+family = "uniform"
+lo = 0.0
+hi = 5.0
+evidence = "TTI/TxDOT 3926-2 adds a 'safety time cushion' of typically 3 to 5 s by engineering judgement, for the very slow or momentarily stopped motorist. The UK Pink Book's stepped band table carries no separate buffer term (its margin is entirely in the 36 km/h assumed speed), so the lower bound is zero."
+
+[t_confirm_s]  # MTC observation + radio confirmation before releasing the opposing queue
+family = "uniform"
+lo = 2.0
+hi = 8.0
+evidence = "No published time-and-motion data for the radio exchange between two controllers. Operational estimate: visually confirm the section is clear, call, receive acknowledgement, turn the paddle. Bounded by a single crisp exchange and a slow one with a repeat."
+
+# ============================================================ traffic / operations
+[platoon_speed_kmh]
+family = "triangular"
+lo = 30.0
+mode = 40.0
+hi = 50.0
+evidence = "Operating speed THROUGH the works under the mandatory 30 km/h TSL at NZ portable-signal and stop/go sites (CoPTTM C10.3.5). Field measurement at the nearest analogue: mean 43.5 km/h at a posted 40 km/h activity-area point (Debnath, Blackman & Haworth 2015, three QLD sites, tube counters); their Tobit model finds lower posted TSLs produce LARGER absolute excess (2014), so a 30 km/h TSL operating near 40 is the literature's expectation, matching practitioner observation. Mode 40; lo = full compliance; hi = the companion scenario's stipulated ~50 km/h (the elicited severities remain anchored there and are transported to the sampled speed)."
+
+[a_veh_ms2]  # acceleration from rest at the stop line
+family = "uniform"
+lo = 1.0
+hi = 2.0
+evidence = "Comfortable to brisk light-vehicle acceleration from a standing start; determines how long a released opposing vehicle remains slow near its stop line, which sets both the closing speed and the time available to avoid in an early-red conflict."
+
+[sat_headway_s]
+family = "uniform"
+lo = 1.9
+hi = 2.6
+evidence = "Saturation discharge headway range for single-lane discharge, HCM-consistent."
+
+[startup_lost_s]
+family = "uniform"
+lo = 1.0
+hi = 3.0
+evidence = "Standard startup lost time band."
+
+[s0_green_margin]
+family = "uniform"
+lo = 1.05
+hi = 1.5
+evidence = "MTC adaptive release: clears the standing queue plus an operating margin."
+
+[f_cycle_a]  # S1a fixed-time green scaling vs the adaptive plan at the same clearance
+family = "triangular"
+lo = 0.9
+mode = 1.0
+hi = 1.3
+evidence = "Kansas 2016 measured green-interval and wait-time equivalence between flagger and PTS conditions (single lineage, rule 2): equivalence-centred with a fixed-plan-inefficiency tail."
+
+[f_cycle_b]
+family = "triangular"
+lo = 0.85
+mode = 1.0
+hi = 1.15
+evidence = "Actuated gap-out tracks demand; tighter band around equivalence."
+
+# ============================================================ vehicle mix
+[mass_kg]
+family = "uniform"
+lo = 1200.0
+hi = 2200.0
+evidence = "Light-vehicle fleet mass band (companion-model convention); HV share handled in robustness."
+
+[occupancy]
+family = "triangular"
+lo = 1.0
+mode = 1.3
+hi = 2.5
+evidence = "Rural light-vehicle occupancy. Sampled continuously then rounded to whole occupants, giving an effective mean of 1.56 per vehicle (44% single, 56% double), consistent with rural light-vehicle occupancy of about 1.5. The event probability 1 - prod(1 - p_i) is driven by the mean, and the mean is the quantity reported here."
+
+# ============================================================ W4d incremental placement
+[t_deploy_s]  # TOTAL incremental on-foot time for PTS heads (both ends, install + remove)
+family = "triangular"
+lo = 240.0
+mode = 480.0
+hi = 960.0
+evidence = "Two heads x (position, level, aim, cable/checks) x install+remove; no published time-and-motion data — operational estimate, rule 2."
+
+[enc_rate_vkm]
+family = "loguniform"
+lo = 1.0e-7
+hi = 1.0e-5
+evidence = "Companion-model encroachment prior (Glennon/Cooper/Ray syntheses), same rural-shoulder mechanism for the placement task."
+
+[reach_alpha]
+family = "uniform"
+lo = 0.02
+hi = 0.15
+evidence = "Companion-model lateral-reach decay band."
+
+[offset_m]
+family = "uniform"
+lo = 0.5
+hi = 2.0
+evidence = "Head placement near the edgeline for visibility (companion-model deployment offsets)."
+
+[l_exposed_km]
+family = "fixed"
+value = 0.001
+evidence = "Point-target effective length, 1 m, companion-model convention."
+
+[deploy_speed_kmh]
+family = "uniform"
+lo = 60.0
+hi = 100.0
+evidence = "Deployment occurs before the TSL is effective or respected; open-road approach speeds at a rural site."
+
+# ============================================================ Addendum A (2026-09-26): attended AFAD arm S2
+# Post-primary extension; rules in docs/prespec.md Addendum A. Draws taken after every
+# existing draw so S0/S1a/S1b reproduce the frozen run bit for bit.
+
+[r_v2]  # attended gated AFAD, driver-initiated entry past the stop indication, per facing vehicle
+family = "triangular"
+lo = 3.5e-3
+mode = 6.8e-3
+hi = 2.1e-2
+evidence = "Two independent attended-device settings (rule 1). Texas TTI 0-6407-1 Table 22, gated treatments, converted with Table 21 mean queue as the facing denominator: red/yellow lens + gate 8/367 cycles x 2 = 0.0109; stop/slow WOS + gate 8/198 x 6 = 0.0067; WOS/GOS + gate 6/190 x 7 = 0.0045; alternative signs + gate 10/264 x 6 = 0.0063. Minnesota 1999 AutoFlagger 5/313 stops x 2 (queue unreported, q = 2) = 0.0080. Range of centrals [0.0045, 0.0109]; widened one step of each endpoint's order (JC-1: 1e-3 below, 1e-2 above) -> [3.5e-3, 2.1e-2]; span under one order -> triangular; mode = pooled central 37/5,462 = 6.8e-3. The upper bound meets the ungated Texas observation (24/360 x 3 = 0.022), so the prior admits a gate arm that is not respected. First-vehicle scoring may understate per-facing rates up to 2x (JC-8); gate arm and cones suppress mid-queue departures at gated treatments."
+
+[p_detect_s2]  # AFAD operator hold: operator sees a pre-release violation and holds the opposing unit on red (contested)
+family = "uniform"
+lo = 0.3
+hi = 0.9
+evidence = "Same bounds as p_detect_s0. TTI 0-6407-1 p.127: in every documented AFAD violation the supervising flagger stopped the motorist before oncoming traffic; that evidence was collected under attended AFADs, so it belongs to this configuration at least as much as to manual control. Small sample, wide uniform below certainty (rule 3); PRCC-reported; in the variant sets at 0.9 (optimistic-device) and 0.3 (pessimistic-device)."
+
+[offset_op_m]  # AFAD operator's standing offset from the edgeline, metres (contested)
+family = "uniform"
+lo = 1.5
+hi = 6.0
+evidence = "No measurement of where AFAD operators stand. MUTCD Part 6 requires the device to be attended and its operator positioned out of the travelled way; TTI 0-6407-1 placed the operating flagger at the work-area midpoint, visible from both ends; NZ and QLD boom units are operated from a safe zone. Lower bound: on the shoulder just clear of the edgeline where the shoulder is narrow. Upper bound: behind the work area's delineation on a wide verge. Uniform (rule 3); PRCC-reported; in the variant sets at 6.0 (optimistic-device) and 1.5 (pessimistic-device). The W4d point-target length (1 m) and reach decay apply."
