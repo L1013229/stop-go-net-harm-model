@@ -87,7 +87,7 @@ under-recorded. But the gap here is 130 to 600 times **on fatalities**, which ar
 recorded, and a generous three-to-fivefold under-recording correction for serious injuries
 still leaves the serious-harm rate eighty to one hundred and thirty times too high. The
 over-estimation is real, not a recording artefact, and it survived a two-round protocol with
-calibration seeds, which is itself consistent with the finding that even good elicitations
+seed questions that yielded no usable calibration score (so equal weights were kept), which is itself consistent with the finding that even good elicitations
 struggle with rare dreaded events.
 
 ## 6. The gate
