@@ -80,7 +80,11 @@ def main() -> None:
            "mean_wait_s_per_vehicle_median": {s: float(np.nanmedian(v * 3600.0 / veh_day)) for s, v in delay_h.items()}}
     ALL_TTM_DSI_PER_OP_DAY = ALL_TTM_RECORD           # supplement S1.3; defined once in decision_outputs_s2.py
     w1_scale = ALL_TTM_DSI_PER_OP_DAY / float(np.nanmedian(parts["S0"]["W1"]))
+    # round-6 review (risk analyst, Codex): the mean-matched reading must match the restored queue tail's MEAN
+    # to the record too, or it mixes conventions (median scaling leaves the queue-tail mean at 1.86x the record)
+    w1_scale_mean = ALL_TTM_DSI_PER_OP_DAY / float(np.nanmean(parts["S0"]["W1"]))
     out["queue_tail_record_scale"] = w1_scale
+    out["queue_tail_record_scale_mean_matched"] = w1_scale_mean
     out["median_matched_calibrated_means_over_record"] = {
         "strike": float(np.nanmean(l3 * parts["S0"]["W3"]) / STRIKE_C),
         "headon": float(np.nanmean(l5 * parts["S1a"]["W5"]) / HEADON_C)}
@@ -118,7 +122,8 @@ def main() -> None:
         for label, dh in (("primary", base), ("queue_tail_at_record_ceiling", base + w1_scale * qt),
                           ("queue_tail_at_elicited_level", base + qt),
                           ("mean_matched", base_mean_matched),
-                          ("mean_matched_queue_tail_at_record_ceiling", base_mean_matched + w1_scale * qt)):
+                          ("mean_matched_queue_tail_at_record_ceiling", base_mean_matched + w1_scale_mean * qt),
+                          ("mean_matched_queue_tail_median_scaled_hybrid", base_mean_matched + w1_scale * qt)):
             row[f"{label}_dh_median"] = float(np.median(dh))
             row[f"{label}_dh_mean"] = float(np.mean(dh))          # the expectation A7 prices
             row[f"{label}_p_dh_neg"] = float((dh < 0).mean())

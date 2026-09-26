@@ -96,6 +96,24 @@ def main() -> None:
     h0 = H("S0", l3, l5, qt_scale)
     out["R61_multiplier"]["queue_tail_share_of_S0_at_ceiling"] = float(np.nanmedian(qt_scale * parts["S0"]["W1"] / h0))
 
+    # R82: the queue tail's share of manual control's harm at three levels of the term (round-6 practitioner,
+    # Codex: the record-scaled level is a calibration level, not a demonstrated bound), and the retained
+    # fraction of the controller's exposure under the tied operator construction (round-6 finding 3)
+    rear_end_record = (54.0 / 7.0) / 4.0e5
+    out["R82_queue_tail_share_and_retained_exposure"] = {}
+    for label, level in (("rear_end_record_only", rear_end_record), ("all_cause_record_uncorrected", ALL_TTM_DSI_PER_OP_DAY),
+                         ("all_cause_record_corrected_3x", 3 * ALL_TTM_DSI_PER_OP_DAY), ("all_cause_record_corrected_5x", 5 * ALL_TTM_DSI_PER_OP_DAY),
+                         ("panel_level", float(np.nanmedian(parts["S0"]["W1"])))):
+        k = level / float(np.nanmedian(parts["S0"]["W1"]))
+        h0 = H("S0", l3, l5, k)
+        out["R82_queue_tail_share_and_retained_exposure"][label] = {
+            "queue_tail_level_per_op_day": level, "scale_on_panel_level": k,
+            "queue_tail_share_of_S0_harm_median": float(np.nanmedian(k * parts["S0"]["W1"] / h0)),
+            "p_S1a_with_difference_at_this_level": P(dh("S1a", l3, l5, k))}
+    for d_ref in (0.0, 1.0):
+        frac = np.exp(-t["draw_reach_alpha"] * (t["draw_offset_op_m"] - d_ref))
+        out["R82_queue_tail_share_and_retained_exposure"][f"tied_retained_fraction_ref_{d_ref:.0f}m"] = {
+            "mean": float(np.nanmean(frac)), "median": float(np.nanmedian(frac)), "p10": q(frac, 10), "p90": q(frac, 90)}
     # R66 and R72: strike central at the police fatal-to-serious ratio
     out["R66_police_ratio_medians_matched"] = {
         str(r): {s: P(dh(s, c / w3_med, l5)) for s in ("S1a", "S1b", "S2")} for r, c in POLICE_RATIO_CENTRALS.items()}
@@ -111,8 +129,10 @@ def main() -> None:
     fin = np.isfinite(r_star)
     pos = r_star[fin & (r_star > 0)]
     check = t["draw_r_v1a"] * (parts["S0"]["W3"] + parts["S0"]["W5"] - parts["S1a"]["W3"] - parts["S1a"]["W4d"]) / parts["S1a"]["W5"]
+    allf = r_star[fin]
     out["R67_breakeven_at_record"] = {
-        "median": float(np.median(pos)), "p20": float(np.percentile(pos, 20)),
+        "median_all_draws": float(np.median(allf)), "p20_all_draws": float(np.percentile(allf, 20)),
+        "median_positive_draws_only": float(np.median(pos)), "p20_positive_draws_only": float(np.percentile(pos, 20)),
         "share_above_observed_band_top_0.079": float((r_star[fin] > 0.079).mean()),
         "share_above_sampled_rate": float((r_star[fin] > r[fin]).mean()),
         "share_no_positive_breakeven": float((r_star[fin] <= 0).mean()),
@@ -124,8 +144,10 @@ def main() -> None:
                  - (parts["S1a"]["W1"] - parts["S0"]["W1"]))
     r_star_c = r * removed_c / (l5c_ * parts["S1a"]["W5"])
     finc = np.isfinite(r_star_c); posc = r_star_c[finc & (r_star_c > 0)]
+    allc = r_star_c[finc]
     out["R67_breakeven_on_plan_surface"] = {
-        "median": float(np.median(posc)), "p20": float(np.percentile(posc, 20)),
+        "median_all_draws": float(np.median(allc)), "p20_all_draws": float(np.percentile(allc, 20)),
+        "median_positive_draws_only": float(np.median(posc)), "p20_positive_draws_only": float(np.percentile(posc, 20)),
         "share_above_observed_band_top_0.079": float((r_star_c[finc] > 0.079).mean()),
         "share_above_sampled_rate": float((r_star_c[finc] > r[finc]).mean()),
         "share_no_positive_breakeven": float((r_star_c[finc] <= 0).mean())}
@@ -167,6 +189,53 @@ def main() -> None:
         out["R71_R75_tied_operator"][f"reference_{d_ref:.0f}m"] = {
             "p": P(d2), "p_corners_min_max": [min(corners), max(corners)], "p_s2_below_s1a": P(d21)}
 
+    # R89: the plan's coherence outcomes and the W5-driven clause on the plan's surface (round-6 hostile referee and
+    # forensic writing reader, Opus: the frame-matched ratio was pre-specified and never reported; the W5 clause was
+    # not read on the plan's own surface)
+    def H_full(s, l3_, l5_, queue, strike=True):
+        w3 = (l3_ * parts["S0"]["W3"] if strike else 0.0) if s == "S0" else parts[s]["W3"]
+        return queue * parts[s]["W1"] + parts[s]["W4d"] + w3 + l5_ * parts[s]["W5"]
+    out["R89_coherence_and_plan_surface_clause"] = {}
+    l5c = COLLISION_REC / float(np.nanmedian(t["diag_S1a_collisions_per_day"]))
+    for label, (l3_, l5_, queue) in (("panel_values", (1.0, 1.0, 1.0)), ("record_serious_harm_axis_queue_ceiling", (l3, l5, qt_scale)),
+                                       ("record_serious_harm_axis_queue_excluded", (l3, l5, 0.0)), ("plan_surface_collision_axis", (l3, l5c, 1.0))):
+        full = H_full("S1a", l3_, l5_, queue) / H_full("S0", l3_, l5_, queue)
+        frame = H_full("S1a", l3_, l5_, queue) / H_full("S0", l3_, l5_, queue, strike=False)
+        out["R89_coherence_and_plan_surface_clause"][label] = {
+            "full_mechanism_ratio_median": q(full, 50), "full_p5": q(full, 5), "full_p95": q(full, 95),
+            "frame_matched_ratio_median": q(frame, 50), "frame_p5": q(frame, 5), "frame_p95": q(frame, 95)}
+    d_plan = dh("S1a", l3, l5c, 1.0); d_plan_no_w5 = 1.0 * (parts["S1a"]["W1"] - parts["S0"]["W1"]) + parts["S1a"]["W4d"] + parts["S1a"]["W3"] - l3 * parts["S0"]["W3"]
+    n_p = int(np.isfinite(d_plan).sum()); p_p = P(d_plan)
+    out["R89_coherence_and_plan_surface_clause"]["w5_removal_on_plan_surface"] = {
+        "p_with": p_p, "p_without": P(d_plan_no_w5), "monte_carlo_interval_width": float(2 * 1.96 * np.sqrt(p_p * (1 - p_p) / n_p))}
+    # R83: the adopted tied device reading priced as the welfare reading prices the others (round-6 desk reader, Codex:
+    # Table 4 carried the pre-specified and independent-draw device rows but not the adopted comparison)
+    import tomllib
+    vals = tomllib.load(open(Path(__file__).resolve().parents[1] / "config" / "welfare-values.toml", "rb"))
+    vosl = float(vals["value_of_statistical_life_nzd"]["value"]); v_si = float(vals["value_per_serious_injury_nzd"]["value"])
+    out["R83_tied_device_priced"] = {}
+    for d_ref in (0.0, 1.0):
+        op = l3 * parts["S0"]["W3"] * np.exp(-t["draw_reach_alpha"] * (t["draw_offset_op_m"] - d_ref))
+        d2 = dh("S2", l3, l5, op=op); f2 = d2[np.isfinite(d2)]
+        out["R83_tied_device_priced"][f"reference_{d_ref:.0f}m"] = {
+            "dh_median": float(np.median(f2)), "dh_mean": float(np.mean(f2)),
+            "safety_cost_nzd_mean_vosl": float(np.mean(f2) * vosl), "safety_cost_nzd_mean_serious_injury": float(np.mean(f2) * v_si),
+            "p_net_benefit": float((f2 < 0).mean())}
+    # R85: within-margin probability and median change at New Zealand's own serious-harm levels (round-6 risk analyst)
+    out["R85_within_margin_at_nz_levels"] = {}
+    for label, h_ in (("record_central_1.2e-5", HEADON_C), ("nz_uncorrected_2.1e-5", 2.1e-5), ("nz_corrected_3x_6.4e-5", 6.4e-5), ("nz_corrected_6x_1.3e-4", 1.3e-4)):
+        d1 = dh("S1a", l3, h_ / w5_med); f1 = d1[np.isfinite(d1)]
+        out["R85_within_margin_at_nz_levels"][label] = {"p_dh_neg": P(d1), "p_within_margin": float((np.abs(f1) <= MARGIN).mean()),
+                                                          "dh_median": float(np.median(f1)), "abs_dh_p90": q(np.abs(f1), 90)}
+    # R86: value-of-information spans under the adopted tied construction (round-6 risk analyst)
+    def tied_p(l3_, l5_, d_ref):
+        op = l3_ * parts["S0"]["W3"] * np.exp(-t["draw_reach_alpha"] * (t["draw_offset_op_m"] - d_ref))
+        return P(dh("S2", l3_, l5_, op=op))
+    out["R86_tied_value_of_information_spans"] = {}
+    for d_ref in (0.0, 1.0):
+        span_strike = abs(tied_p(STRIKE_REC[1] / w3_med, l5, d_ref) - tied_p(STRIKE_REC[0] / w3_med, l5, d_ref))
+        span_headon = abs(tied_p(l3, HEADON_REC[1] / w5_med, d_ref) - tied_p(l3, HEADON_REC[0] / w5_med, d_ref))
+        out["R86_tied_value_of_information_spans"][f"reference_{d_ref:.0f}m"] = {"strike_span": span_strike, "headon_span": span_headon}
     # R73: what decides the sign of the signals' extra delay
     q_vps, sat_vps = BASELINE_Q / 3600.0, 1.0 / t["draw_sat_headway_s"]
     veh_day = 2.0 * BASELINE_Q * OPERATION_HOURS
