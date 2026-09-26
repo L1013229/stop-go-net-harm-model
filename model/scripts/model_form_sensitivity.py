@@ -57,7 +57,7 @@ def main() -> None:
     rows = []
     for label, form in FORMS.items():
         res = run_cell(Cell(*BASELINE), sej, Priors(), n_iter=20_000, n_grid=128, form=form)
-        for s in ("S1a", "S2"):
+        for s in ("S1a", "S1b", "S2"):
             d = reads(res, s, HEADON_C, STRIKE_C)
             worst = min(float((reads(res, s, h_, c_) < 0).mean())
                         for h_ in HEADON_REC for c_ in STRIKE_REC)
@@ -83,7 +83,7 @@ def main() -> None:
         w.writeheader(); w.writerows(rows)
     # most adverse form per strategy, by the pre-stated rule
     adverse = {}
-    for s in ("S1a", "S2"):
+    for s in ("S1a", "S1b", "S2"):
         rs = [r for r in rows if r["strategy"] == s]
         worst = min(rs, key=lambda r: float(r["p_dh_neg_record_central"]))
         adverse[s] = {"form": worst["form"], **{k: worst[k] for k in worst if k not in ("form", "strategy")}}

@@ -306,3 +306,19 @@ Mechanism says S2 removes most of the controller exposure S0 carries and adds a 
 the head-on exposure S1a carries, so at the record calibration it is expected to sit closer
 to a favourable verdict than S1a does. That expectation is recorded here before the first S2
 run so a favourable S2 result is read as a predicted one, with the reservations that attach.
+
+## A7.1 Amendment to the welfare reading (recorded 2026-09-26, after review round 1, with results known)
+
+A7 said the queue-tail term is restored in the welfare reading. As sampled, that term carries
+the panel's queue-tail level, which the record check found to be 15 times the all-cause record
+(REGISTRY R30, R38). Restoring it at the panel's level prices a safety gain the record does not
+support, so the welfare reading is reported three ways and all three are shown: the queue-tail
+difference excluded (the same change in harm the decision outputs use); restored scaled to the
+all-cause record ceiling (factor 0.0665, the reading consistent with the calibration the rest of
+the paper applies); and restored at the panel's level, which is the A7 reading as first
+written. A7 also said the reading gives an EXPECTED net social cost. The first implementation
+reported medians and a sum of medians; the expected values (means over draws) are now computed
+and reported beside them (welfare.py, fields *_mean). Both changes were made after the first
+welfare run and after the first review round, are labelled as such in the manuscript, and move
+no prior. Pricing by pathway (a strike priced at its recorded fatal share, a head-on at its) is
+reported as a further sensitivity for the same reason.
