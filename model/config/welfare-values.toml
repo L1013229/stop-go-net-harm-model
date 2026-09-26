@@ -15,6 +15,14 @@ price_year = "July 2021"
 basis = "MBCM v1.7.5 Volume 1, section 3.6, Table 16"
 checked = "2026-09-26"
 
+[value_of_travel_time_nzd_per_vehicle_hour]
+value = 48.23
+category = "composite value of travel time, rural other road category, weekday, routes with HPMV (MBCM Table 18)"
+range_note = "Table 18 combines vehicle occupant time (the per-person values of Table 16), vehicle time and freight time for the standard rural traffic composition (tables A44 to A46); the same row without HPMV is 47.69 and rural strategic weekday is 49.05. The per-person commuting value above was the plan's stated price; applied per vehicle-hour it omits occupancy and vehicle time and understates the delay cost by a factor of about 2.5 (review round 3, practitioner finding 20; round 2, risk analyst finding 20)."
+price_year = "July 2021"
+basis = "MBCM v1.7.5 Volume 1, section 3.6, Table 18: composite values of travel time ($/h/vehicle July 2021)"
+checked = "2026-09-26 (local text copy of the v1.7.5 procedures volume, page 86)"
+
 [value_of_statistical_life_nzd]
 value = 12.5e6
 price_year = "July 2021"

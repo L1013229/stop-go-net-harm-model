@@ -11,6 +11,18 @@
     "w5_median_elicited": "1.7959e-05",
     "p_s2_lower_than_s1a_record_central": "0.8081"
   },
+  "S1b": {
+    "form": "MF2b logistic in ln TTC",
+    "p_dh_neg_elicited": "0.9785",
+    "p_dh_neg_record_central": "0.4786",
+    "p_dh_neg_record_worst_corner": "0.2733",
+    "p_equivalent_record_central": "0.7941",
+    "dh_median_record": "5.2062e-07",
+    "abs_dh_median_record": "1.3122e-05",
+    "implied_collisions_per_op_day": "8.4684e-04",
+    "w5_median_elicited": "1.3497e-05",
+    "p_s2_lower_than_s1a_record_central": "0.8081"
+  },
   "S2": {
     "form": "MF2b logistic in ln TTC",
     "p_dh_neg_elicited": "0.9974",

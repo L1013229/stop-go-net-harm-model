@@ -234,3 +234,5 @@ family = "uniform"
 lo = 1.5
 hi = 6.0
 evidence = "No measurement of where AFAD operators stand. MUTCD Part 6 requires the device to be attended and its operator positioned out of the travelled way; TTI 0-6407-1 placed the operating flagger at the work-area midpoint, visible from both ends; NZ and QLD boom units are operated from a safe zone. Lower bound: on the shoulder just clear of the edgeline where the shoulder is narrow. Upper bound: behind the work area's delineation on a wide verge. Uniform (rule 3); PRCC-reported; in the variant sets at 6.0 (optimistic-device) and 1.5 (pessimistic-device). The W4d point-target length (1 m) and reach decay apply."
+
+# A7.1 recorded 2026-09-26 (post-run amendment to the welfare reading; no prior changed)

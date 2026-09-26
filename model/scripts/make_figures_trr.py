@@ -179,10 +179,11 @@ def fig_tree(tr):
     hm = med(tr["part_S1a_W5"])
 
     def sci(x):
+        # enough digits that two neighbouring nodes never print the same value (review round 2)
         if x >= 10:
-            return f"{x:,.0f}"
+            return f"{x:,.1f}"
         if x >= 0.01:
-            return f"{x:.2f}"
+            return f"{x:.3g}"
         e = int(np.floor(np.log10(x)))
         return rf"${x/10**e:.1f}\times10^{{{e}}}$"
 
@@ -395,7 +396,7 @@ def fig_inputs():
     box(6.90, 4.95, 3.05, 2.55, "Red-running event tree",
         "enter, meet, collide\n(Figure 3)", "#f5f7fa", MUTED)
     box(6.90, 0.90, 3.05, 2.85, "Strike and queue-tail\nterms; injury step",
-        "rate × severity for each;\ninjury curves (Figure 6)", "#f5f7fa", MUTED)
+        "rate × severity for each;\ninjury curves (Figure 5)", "#f5f7fa", MUTED)
 
     def arrow(y0, y1, color):
         ax.annotate("", xy=(6.90, y1), xytext=(5.00, y0),
@@ -408,7 +409,6 @@ def fig_inputs():
     arrow(4.90, 9.30, GOLD)    # standards -> cycle
     arrow(4.10, 1.70, GOLD)    # standards (speed limit) -> injury
     arrow(1.60, 5.70, MUTED)   # assumed -> tree
-    ax.text(5.95, 11.25, "feeds", ha="center", fontsize=9, color=MUTED)
 
     _save(fig, "fig_inputs.png")
     plt.close(fig)
@@ -425,6 +425,7 @@ def fig3_decision_surface(gates, bands):
     cb = fig.colorbar(cf, ax=axes, pad=0.02, fraction=0.03)
     cb.set_label("P($\\Delta H$ < 0)", fontsize=9)
     cb.ax.tick_params(labelsize=9)
+    fig.subplots_adjust(left=0.13, right=0.86, bottom=0.24, top=0.90, wspace=0.08)
     _save(fig, "fig3_decision_surface.png")
     plt.close(fig)
 
@@ -438,8 +439,9 @@ def _surface_panel(ax, fname, ptitle, plabel, bands, anchor):
     cf = ax.contourf(x, y, P, levels=np.linspace(0, 1, 11),
                      colors=["#ffffff", *SEQ[:6], *([SEQ[6]] * 3)])
     ax.contour(x, y, P, levels=[0.5], colors=[INK], linewidths=[1.4], zorder=5)
-    lbl = ax.text(1.6e-6, 4.0e-6, "break-even (P = 0.5)", fontsize=9, color="white",
-                  rotation=36, ha="center", va="center", zorder=7)
+    lx, ly, rot = (0.26, 0.21, 36) if ptitle.startswith("(a)") else (0.17, 0.13, 14)
+    lbl = ax.text(lx, ly, "break-even (P = 0.5)", fontsize=9, color="white",
+                  rotation=rot, ha="center", va="center", zorder=7, transform=ax.transAxes)
     lbl.set_path_effects([pe.withStroke(linewidth=1.6, foreground="#184f95")])
     ax.set_xscale("log"); ax.set_yscale("log")
     ax.set_xlim(x.min(), x.max()); ax.set_ylim(y.min(), y.max())
@@ -463,9 +465,9 @@ def _surface_panel(ax, fname, ptitle, plabel, bands, anchor):
     ax.text(anchor * 1.18, 2.6e-4, f"{factor:.0f}×", fontsize=9,
             color="white", ha="left", va="center")
 
-    ax.set_xlabel("head-on serious-harm events per operation\nday as recorded at signals (introduced)")
+    ax.set_xlabel("head-on serious-harm events per\noperation day (anchored at signals)")
     if ptitle.startswith("(a)"):
-        ax.set_ylabel("controller serious-harm events\nper operation day (removed)")
+        ax.set_ylabel("controller serious-harm events\nper operation day")
     ax.set_title(ptitle, loc="left")
     for sp in ("top", "right"):
         ax.spines[sp].set_visible(False)
@@ -478,17 +480,18 @@ def fig4_decomposition_prcc(tr):
 
     ax = axes[0]
     paths = ["W1", "W3", "W5", "W4d"]
-    labels = ["rear-end", "strike or\noperator", "head-on", "placement"]
+    labels = ["rear-end", "strike or operator", "head-on", "placement of units"]
     xs = np.arange(len(paths))
     for i, st in enumerate(("S0", "S1a", "S1b", "S2")):
         c, _, hatch = STRAT[st]
         vals = [med(tr[f"part_{st}_{p}"]) for p in paths]
-        xs_nz = [x + (i - 1.5) * 0.2 for x, v in zip(xs, vals) if v > 1e-11]
+        xs_nz = [x + (i - 1.5) * 0.17 for x, v in zip(xs, vals) if v > 1e-11]
         vs_nz = [v for v in vals if v > 1e-11]
-        ax.bar(xs_nz, vs_nz, width=0.18, color=c, edgecolor="white",
+        ax.bar(xs_nz, vs_nz, width=0.15, color=c, edgecolor="white",
                lw=0.5, hatch=hatch, label=st)
     ax.set_yscale("log")
-    ax.set_xticks(xs); ax.set_xticklabels(labels, fontsize=9)
+    ax.set_xticks(xs); ax.set_xticklabels(labels, fontsize=9, rotation=32, ha="right", rotation_mode="anchor")
+    ax.set_xlim(-0.6, len(paths) - 0.4)
     ax.set_ylabel("serious-harm events\nper operation day")
     ax.set_title("(a)   harm by kind and strategy", loc="left")
     ax.legend(frameon=False, ncol=1, loc="upper right", handlelength=1.3, labelspacing=0.3)
@@ -510,11 +513,16 @@ def fig4_decomposition_prcc(tr):
         "d_sight_m": "mutual sight distance",
         "w_occ": "entry against visible vehicle",
         "offset_op_m": "operator standing distance",
+        "r_v1a": "signal violation rate",
+        "enc_rate_vkm": "encroachment rate",
+        "r_v2": "device violation rate",
     }
-    S2_ONLY = {"r_v2", "p_detect_s2", "offset_op_m"}     # cannot enter the signal's ledger
-    rows = [r for r in load_csv("prcc_baseline_s1a.csv") if r["input"] not in S2_ONLY][:9][::-1]
-    vals = [float(r["prcc"]) for r in rows]
-    labels = [NAMES.get(r["input"], r["input"]) for r in rows]
+    # the ranking at the RECORDED rates (decision_summary_s2.json, review round 1), not at the
+    # panel's values: the paper reads its answer at the record, so the figure ranks there too
+    ds2 = json.loads((DIST / "decision_summary_s2.json").read_text())
+    top = ds2["s1a_prcc_at_record_top8"][:8][::-1]
+    vals = [float(v) for _, v in top]
+    labels = [NAMES.get(k, k) for k, _ in top]
     ax.barh(labels, vals, height=0.62,
             edgecolor="white", lw=0.4, color=[BLUE if v > 0 else INK for v in vals])
     for i, v in enumerate(vals):
@@ -527,10 +535,11 @@ def fig4_decomposition_prcc(tr):
         else:
             ax.text(v + 0.02, i, f"+{v:.2f}", ha="left", va="center", fontsize=9,
                     color=INK)
-    ax.set_xlim(-1.06, 0.14)
+    lim = max(abs(v) for v in vals) + 0.22
+    ax.set_xlim(-lim, lim)
     ax.axvline(0, color=MUTED, lw=0.7)
-    ax.set_xlabel("partial rank correlation with $\\Delta H$")
-    ax.set_title("(b)   partial rank correlations", loc="left")
+    ax.set_xlabel("partial rank correlation with $\\Delta H$ at the recorded rates\n(negative favours the signals)")
+    ax.set_title("(b)   partial rank correlations, signals", loc="left")
     ax.tick_params(axis="y", labelsize=9)
     _clean(ax, "x")
 
@@ -654,15 +663,17 @@ def fig_speed():
     w5 = np.array([float(r["w5_s1a_median"]) for r in rows])
     w3 = np.array([float(r["w3_median"]) for r in rows])
     ax.plot(v, w3, color=INK, ls="--", lw=1.8, marker="s", ms=3.5,
-            label="controller struck (manual control)")
+            label="controller struck, at the panel's level")
     ax.plot(v, w5, color=BLUE, ls="-", lw=1.8, marker="o", ms=3.5,
             label="head-on from red running (signals)")
-    ax.annotate("about 10× over this range", xy=(46, 5.2e-5), fontsize=9, color=BLUE)
+    ax.annotate("about 10× over this range", xy=(30.5, 4.2e-5), fontsize=9, color=BLUE)
     ax.annotate("about 2.3×", xy=(72, 3.3e-3), fontsize=9, color=INK)
+    ax.axhspan(5e-6, 2e-5, color=INK, alpha=0.10, lw=0)
+    ax.text(v.max() - 0.5, 6.0e-6, "controller-strike record", fontsize=9, color=INK, va="bottom", ha="right")
     ax.set_yscale("log")
     ax.set_xlabel("operating speed through the works (km/h)")
     ax.set_ylabel("serious-harm events\nper operation day")
-    ax.legend(loc="center right", fontsize=9, frameon=True, facecolor="white", edgecolor="none", framealpha=1.0)
+    ax.legend(loc="center left", fontsize=9, frameon=True, facecolor="white", edgecolor="none", framealpha=1.0)
     _clean(ax)
     fig.tight_layout()
     _save(fig, "fig_speed.png")
