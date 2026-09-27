@@ -221,6 +221,29 @@ def main() -> None:
             "dh_median": float(np.median(f2)), "dh_mean": float(np.mean(f2)),
             "safety_cost_nzd_mean_vosl": float(np.mean(f2) * vosl), "safety_cost_nzd_mean_serious_injury": float(np.mean(f2) * v_si),
             "p_net_benefit": float((f2 < 0).mean())}
+    # R91: cycles whose sampled green is shorter than the queue needs (round-8 risk analyst, Codex): share of draws,
+    # decision probability without them, and the delay if their residual queue is priced as a deterministic
+    # queue growing over the operation day (both directions), at the composite value of travel time
+    VOT = 48.23; D = OPERATION_HOURS * 3600.0
+    q_vps, sat_vps = BASELINE_Q / 3600.0, 1.0 / t["draw_sat_headway_s"]
+    veh_day = 2.0 * BASELINE_Q * OPERATION_HOURS
+    over = {k: (q_vps * t[f"diag_{k}_cycle_s"] > sat_vps * t[f"diag_{k}_green_s"]) for k in ("S0", "S1a", "S1b", "S2")}
+    base_delay = {k: veh_day * uniform_delay_per_vehicle_s(t[f"diag_{k}_cycle_s"], t[f"diag_{k}_green_s"], q_vps, sat_vps) / 3600.0
+                  for k in ("S0", "S1a", "S1b")}
+    out["R91_non_clearing_cycles"] = {"share_oversaturated": {k: float(v.mean()) for k, v in over.items()}}
+    for k in ("S1a", "S1b"):
+        T, G = t[f"diag_{k}_cycle_s"], t[f"diag_{k}_green_s"]
+        excess = np.clip(q_vps * T - sat_vps * G, 0.0, None)
+        residual_vh = 2.0 * excess * D * D / (2.0 * T) / 3600.0
+        dd = base_delay[k] - base_delay["S0"]; adj = dd + residual_vh
+        m = np.isfinite(dd); keep = m & ~over[k] & ~over["S0"]
+        d = dh(k, l3, l5); fd = np.isfinite(d)
+        out["R91_non_clearing_cycles"][k] = {
+            "p_dh_neg_all": P(d), "p_dh_neg_clearing_only": P(d[fd & ~over[k] & ~over["S0"]]),
+            "extra_delay_mean_vh": float(np.mean(dd[m])), "extra_delay_mean_clearing_only_vh": float(np.mean(dd[keep])),
+            "extra_delay_mean_with_residual_vh": float(np.mean(adj[m])), "extra_delay_median_with_residual_vh": float(np.median(adj[m])),
+            "cost_mean_nzd": float(np.mean(dd[m]) * VOT), "cost_mean_with_residual_nzd": float(np.mean(adj[m]) * VOT),
+            "cost_median_with_residual_nzd": float(np.median(adj[m]) * VOT)}
     # R85: within-margin probability and median change at New Zealand's own serious-harm levels (round-6 risk analyst)
     out["R85_within_margin_at_nz_levels"] = {}
     for label, h_ in (("record_central_1.2e-5", HEADON_C), ("nz_uncorrected_2.1e-5", 2.1e-5), ("nz_corrected_3x_6.4e-5", 6.4e-5), ("nz_corrected_6x_1.3e-4", 1.3e-4)):
