@@ -265,6 +265,36 @@
       "p_net_benefit": 0.45105
     }
   },
+  "R91_non_clearing_cycles": {
+    "share_oversaturated": {
+      "S0": 0.0,
+      "S1a": 0.003,
+      "S1b": 0.02085,
+      "S2": 0.0
+    },
+    "S1a": {
+      "p_dh_neg_all": 0.4311,
+      "p_dh_neg_clearing_only": 0.4312938816449348,
+      "extra_delay_mean_vh": 4.743836906435747,
+      "extra_delay_mean_clearing_only_vh": 4.744621562280262,
+      "extra_delay_mean_with_residual_vh": 5.2386387775484575,
+      "extra_delay_median_with_residual_vh": 2.5777903450360142,
+      "cost_mean_nzd": 228.79525399739606,
+      "cost_mean_with_residual_nzd": 252.6595482411621,
+      "cost_median_with_residual_nzd": 124.32682834108695
+    },
+    "S1b": {
+      "p_dh_neg_all": 0.4825,
+      "p_dh_neg_clearing_only": 0.48245927590256854,
+      "extra_delay_mean_vh": 4.249576734224425,
+      "extra_delay_mean_clearing_only_vh": 4.271267243328807,
+      "extra_delay_mean_with_residual_vh": 11.591207177101218,
+      "extra_delay_median_with_residual_vh": 2.382514603257949,
+      "cost_mean_nzd": 204.957085891644,
+      "cost_mean_with_residual_nzd": 559.0439221515917,
+      "cost_median_with_residual_nzd": 114.90867931513087
+    }
+  },
   "R85_within_margin_at_nz_levels": {
     "record_central_1.2e-5": {
       "p_dh_neg": 0.4311,
