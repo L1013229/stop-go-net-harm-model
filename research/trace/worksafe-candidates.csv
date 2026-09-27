@@ -1,0 +1,48 @@
+snapshot_row,date,in_review_period_2010_2025,selection,formatted_date_of_incident,age,industry,district_of_incident,summary_of_incident
+10,2026-05-13,0,industry_and_vehicle_word,13/05/2026,70,Construction,Otago,Worker died following vehicle rollover on rural access track
+11,2026-05-12,0,direct_word,12/05/2026,59,Construction,Waikato,Road worker fatally struck by truck on expressway worksite
+27,2026-01-13,0,industry_and_vehicle_word,13/01/2026,17,Construction,Hawke's Bay,Fatally injured after being struck by a truck
+33,2025-12-14,1,industry_and_vehicle_word,14/12/2025,52,Administrative and Support Services,Wellington,Struck by a falling tree branch
+43,2025-10-22,1,direct_word,22/10/2025,61,"Transport, Postal and Warehousing",Auckland,Traffic collision between bus and car
+48,2025-07-14,1,industry_and_vehicle_word,14/07/2025,38,Construction,Auckland,Truck rolled over worker / driver
+49,2025-07-10,1,industry_and_vehicle_word,10/07/2025,29,Construction,Bay of Plenty,Single vehicle crash involving a truck
+64,2025-04-16,1,industry_and_vehicle_word,16/04/2025,64,Construction,Hawke's Bay,"Vehicle crash (truck, not further defined)"
+66,2025-04-10,1,industry_and_vehicle_word,10/04/2025,85,Construction,Auckland,Caught between a moving vehicle and trailer.
+67,2025-04-09,1,industry_and_vehicle_word,09/04/2025,36,Construction,Manawatu-Whanganui,Vehicle crash (truck v van)
+74,2025-01-21,1,industry_and_vehicle_word,21/01/2025,50,Construction,Taranaki,Vehicle crash (truck v truck)
+90,2024-08-26,1,industry_and_vehicle_word,26/08/2024,,Construction,Auckland,Multi-vehicle crash (truck v car + van)
+91,2024-08-26,1,industry_and_vehicle_word,26/08/2024,,Construction,Auckland,Multi-vehicle crash (truck v car + van)
+92,2024-08-26,1,industry_and_vehicle_word,26/08/2024,,Construction,Auckland,Multi-vehicle crash (truck v car + van)
+112,2024-05-08,1,industry_and_vehicle_word,08/05/2024,49,Construction,Auckland,Vehicle rolled on top of person
+117,2024-04-09,1,industry_and_vehicle_word,09/04/2024,41,Construction,Canterbury,Vehicle crash (van)
+121,2024-03-19,1,industry_and_vehicle_word,19/03/2024,44,Administrative and Support Services,Northland,Vehicle incident (truck rolled over worker)
+136,2024-01-15,1,industry_and_vehicle_word,15/01/2024,41,Construction,Northland,Trapped between vehicles (truck and roller)
+148,2023-11-03,1,industry_and_vehicle_word,03/11/2023,64,Construction,Waikato,Vehicle incident (Truck and Ute)
+158,2023-07-21,1,industry_and_vehicle_word,21/07/2023,24,Construction,Waikato,Vehicle incident (Car and car)
+171,2023-04-18,1,industry_and_vehicle_word,18/04/2023,31,Administrative and Support Services,Auckland,Vehicle incident (Van and pedestrian)
+175,2023-03-28,1,industry_and_vehicle_word,28/03/2023,58,Construction,Otago,Vehicle rollover (truck)
+180,2023-03-13,1,industry_and_vehicle_word,13/03/2023,76,Construction,Auckland,Multiple vehicle incident (Car and truck)
+181,2023-03-13,1,industry_and_vehicle_word,13/03/2023,83,Construction,Auckland,Multiple vehicle incident (Car and truck)
+190,2023-02-12,1,industry_and_vehicle_word,12/02/2023,59,Construction,Waikato,Collision with truck
+207,2022-10-05,1,direct_word,05/10/2022,68,"Transport, Postal and Warehousing",Waikato,Collision on road involving truck and light bus
+208,2022-09-27,1,direct_word,27/09/2022,81,"Transport, Postal and Warehousing",Manawatu-Whanganui,Collision on road involving truck and pedestrian
+209,2022-09-14,1,direct_word,14/09/2022,66,Health Care and Social Assistance,Waikato,Collision on road involving car and ambulance
+211,2022-08-30,1,direct_word,30/08/2022,30,"Transport, Postal and Warehousing",Hawke's Bay,Collision on road involving truck and light goods vehicle
+220,2022-06-27,1,direct_word,27/06/2022,28,"Transport, Postal and Warehousing",Waikato,Collision on road involving truck and cyclist
+239,2022-01-03,1,direct_word,03/01/2022,27,Arts and Recreation Services,Auckland,Crashed motorcycle into a culvert
+241,2021-12-30,1,direct_word,30/12/2021,31,"Transport, Postal and Warehousing",Wellington,Vehicle ran off road
+246,2021-10-05,1,industry_and_vehicle_word,05/10/2021,21,Construction,Auckland,Struck by falling steel beam.
+255,2021-06-17,1,industry_and_vehicle_word,17/06/2021,57,Construction,Canterbury,Run over by car.
+260,2021-05-13,1,direct_word,13/05/2021,56,Construction,Waikato,Road worker struck by car
+270,2021-02-23,1,industry_and_vehicle_word,23/02/2021,53,Administrative and Support Services,Canterbury,Crushed by vehicle.
+287,2020-10-23,1,industry_and_vehicle_word,23/10/2020,52,Construction,Canterbury,Trailer detached from towing vehicle
+289,2020-09-30,1,direct_word,30/09/2020,48,"Transport, Postal and Warehousing",Waikato,Truck and trailer left road down a bank and hit a tree.
+314,2020-03-10,1,direct_word,10/03/2020,51,Mining,Auckland,Truck went off quarry road.
+318,2020-02-05,1,direct_word,05/02/2020,64,"Agriculture, Forestry and Fishing Support Services",Bay of Plenty,Multiple car crash due to fertiliser spill on the road.
+383,2019-05-07,1,direct_word,07/05/2019,52,"Transport, Postal and Warehousing",Northland,Truck struck the back of stationary traffic management vehicle.
+395,2019-03-11,1,industry_and_vehicle_word,11/03/2019,25,Construction,Wellington,Run over by truck.
+399,2019-02-26,1,industry_and_vehicle_word,26/02/2019,55,Construction,Bay of Plenty,Truck rear-ended a work truck causing a pile-up.
+400,2019-02-26,1,industry_and_vehicle_word,26/02/2019,55,Construction,Bay of Plenty,Truck rear-ended a work truck causing a pile-up.
+401,2019-02-26,1,industry_and_vehicle_word,26/02/2019,40,Construction,Bay of Plenty,Truck rear-ended a work truck causing a pile-up.
+411,2019-01-16,1,industry_and_vehicle_word,16/01/2019,23,Administrative and Support Services,Manawatu-Whanganui,Vehicle incident (Car and ute)
+412,2019-01-16,1,industry_and_vehicle_word,16/01/2019,21,Administrative and Support Services,Manawatu-Whanganui,Vehicle incident (Car and ute)

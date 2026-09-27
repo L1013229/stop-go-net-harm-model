@@ -1,0 +1,12 @@
+{
+  "S0_two_front_opposite_straight_ahead": "Exactly 2 vehicles; both front; opposite from and to; each from opposite own to; both manoeuvre going ahead",
+  "S1_two_front_opposite_straight": "Exactly 2 vehicles; both front; opposite from and to; each from opposite own to",
+  "S2_two_front_opposite_from": "Exactly 2 vehicles; both front; from directions opposite",
+  "M1_pair_front_opposite_from": "Any vehicle pair; both front; from directions opposite",
+  "M2_pair_front_near_opposite_from": "Any vehicle pair; both front; from directions 135, 180 or 225 degrees apart",
+  "M3_two_front": "Exactly 2 vehicles; both front; no direction condition",
+  "M4_pair_front": "Any vehicle pair; both front; no direction condition",
+  "L1_pair_one_front_opposite_from": "Any vehicle pair; at least one front; from directions opposite",
+  "L2_pair_opposite_from": "Any vehicle pair; from directions opposite; no impact condition",
+  "L3_multi_any_front": "At least 2 vehicles; at least one front impact; no direction condition (deliberately nonspecific)"
+}

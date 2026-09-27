@@ -1,0 +1,276 @@
+{
+  "access_date_local": "2026-09-28",
+  "timezone": "Pacific/Auckland",
+  "sources": [
+    {
+      "id": "DFT_OPEN",
+      "title": "DfT Road safety open data",
+      "url": "https://www.gov.uk/government/statistical-data-sets/road-safety-open-data",
+      "locator": "2021–2025 annual collision, vehicle and casualty CSV links; all-years files; 2024 specification changes",
+      "expected": [
+        "2025",
+        "collision"
+      ],
+      "browser_verified": true
+    },
+    {
+      "id": "DFT_GUIDE",
+      "title": "DfT road safety open dataset data guide 2025",
+      "url": "https://assets.publishing.service.gov.uk/media/6ab2a71d997a4b2950cced58/dft-road-casualty-statistics-road-safety-open-dataset-data-guide-2025.xlsx",
+      "locator": "2024_code_list and 2011_to_2024_conversion sheets",
+      "local_download": "dft-data-guide-2025.xlsx",
+      "expected": []
+    },
+    {
+      "id": "DFT_PERMIT_PAGE",
+      "title": "Street works permit schemes: evaluation of effectiveness",
+      "url": "https://www.gov.uk/government/publications/street-works-permit-schemes-evaluation-of-effectiveness",
+      "locator": "Report and annexes published April 2018",
+      "expected": [
+        "permit",
+        "evaluation"
+      ],
+      "browser_verified": true
+    },
+    {
+      "id": "DFT_PERMIT",
+      "title": "Evaluation of street works permit schemes: final report (2018)",
+      "url": "https://assets.publishing.service.gov.uk/media/5ad5f284ed915d32a3a70c07/permit-schemes-evaluation-report.pdf",
+      "locator": "Table 3.8, printed p.41 / PDF page 43; 2016 works and duration",
+      "local_download": "/tmp/round15-pdfs/dft-permits-2018.pdf",
+      "expected": [
+        "1,508,796",
+        "7,370,134"
+      ]
+    },
+    {
+      "id": "DFT_ANNEX",
+      "title": "Evaluation of street works permit schemes: annexes (2018)",
+      "url": "https://assets.publishing.service.gov.uk/media/5ad5f29440f0b617dca7148e/permit-schemes-evaluation-annexes.pdf",
+      "locator": "Annex 8, Table 8.1, printed p.58 / PDF page 59; traffic-control column, grand-total rows",
+      "local_download": "/tmp/round15-pdfs/dft-annexes-2018.pdf",
+      "expected": [
+        "410,395",
+        "2,018,405"
+      ]
+    },
+    {
+      "id": "DFT_SM",
+      "title": "DfT written evidence MIS0064 to Transport Committee (2025)",
+      "url": "https://committees.parliament.uk/writtenevidence/135172/html/",
+      "locator": "Key facts and figures, Tables 2 and 3; England 2023/24; Table 3 footnote includes HS2",
+      "expected": [
+        "2,209,516",
+        "870,296",
+        "2,210,304"
+      ],
+      "browser_verified": true
+    },
+    {
+      "id": "AT_2019",
+      "title": "Auckland Transport 2019 annual report: performance against 2018/19 SOI",
+      "url": "https://at.govt.nz/media/1981078/item-101-attachment-1-open-22-october-2019-annual-report-performance-against-the-2018-19-soi.pdf",
+      "locator": "2019 highlights and achievements, printed pp.3–4 / PDF page 3, right-hand column",
+      "local_download": "/tmp/round15-pdfs/at-2019.pdf",
+      "expected": [
+        "29,000",
+        "corridor access"
+      ]
+    },
+    {
+      "id": "WS_TABLE",
+      "title": "WorkSafe fatalities summary table",
+      "url": "https://data.worksafe.govt.nz/editorial/fatalities_summary_table",
+      "locator": "Vue #app data-props -> tableData.tableData; data as at 5 August 2026, updated 11 August 2026",
+      "expected": [
+        "Fatalities summary table",
+        "summary_of_incident"
+      ],
+      "browser_verified": true
+    },
+    {
+      "id": "WS_FATAL",
+      "title": "WorkSafe detailed work-related fatalities data",
+      "url": "https://data.worksafe.govt.nz/graph/detail/fatalities?accident_type=Vehicle+Incident",
+      "locator": "Dashboard data coverage January 2011–August 2025; updated 3 September 2026; no flagger-duty selector",
+      "expected": [
+        "fatalities"
+      ],
+      "browser_verified": true
+    },
+    {
+      "id": "WS_LIVE",
+      "title": "WorkSafe: Working near live traffic",
+      "url": "https://www.worksafe.govt.nz/topic-and-industry/road-and-roadside/keeping-healthy-safe-working-road-or-roadside/part-c/19-0-working-near-live-traffic/",
+      "locator": "Guidance on traffic-control risks and controls; no controller-death time series",
+      "expected": [
+        "live traffic"
+      ],
+      "browser_verified": true
+    },
+    {
+      "id": "WS_ITCL",
+      "title": "WorkSafe accepted enforceable undertaking: Independent Traffic Control Limited",
+      "url": "https://www.worksafe.govt.nz/laws-and-regulations/enforceable-undertakings/accepted-enforceable-undertakings/independent-traffic-control-limited/",
+      "locator": "Accepted 29 June 2026; incident 12 February 2023",
+      "expected": [
+        "12 February 2023",
+        "Traffic Controller"
+      ],
+      "browser_verified": true
+    },
+    {
+      "id": "WS_ITCL_PDF",
+      "title": "Independent Traffic Control Ltd: accepted undertaking",
+      "url": "https://www.worksafe.govt.nz/dmsdocument/72900-enforceable-undertaking-independent-traffic-control-limited/latest/",
+      "locator": "Sections 1.2–1.3, PDF pp.3–4: location and removal of cones for a works truck",
+      "local_download": "/tmp/round15-pdfs/itcl-undertaking.pdf",
+      "expected": [
+        "Cogswell",
+        "cones"
+      ]
+    },
+    {
+      "id": "FH_BARNES",
+      "title": "Fulton Hogan REDNZ23-006: Traffic Management at Road Closures",
+      "url": "https://www.wellingtonwater.co.nz/assets/WW-Knowledge-Base-/Health-and-Safety/Red-Safety-Alerts/Red-Alerts/2023/REDNZ23-006-Traffic-Management-at-Road-Closures.pdf",
+      "locator": "PDF page 1: Brian Barnes, 12 February 2023, SH23 Raglan",
+      "expected": [
+        "Brian Barnes",
+        "12 February"
+      ],
+      "browser_verified": true
+    },
+    {
+      "id": "POL_TAIAROA",
+      "title": "NZ Police: Homicide team forensically exam vehicle",
+      "url": "https://www.police.govt.nz/news/release/34843",
+      "locator": "19 April 2013 release; second paragraph: stop/go duty, Tram Road, 19 March 2013 shooting",
+      "expected": [
+        "Taiaroa",
+        "19 March"
+      ],
+      "browser_verified": true
+    },
+    {
+      "id": "POL_TAHITAHI",
+      "title": "NZ Police: Name release – Waikato Expressway crash",
+      "url": "https://www.police.govt.nz/news/release/name-release-%E2%80%93-waikato-expressway-crash",
+      "locator": "25 May 2021 release: Christopher Tahitahi, 13 May truck strike",
+      "expected": [
+        "Christopher Tahitahi",
+        "13 May"
+      ],
+      "browser_verified": true
+    },
+    {
+      "id": "NEWS_KOPURU",
+      "title": "1News: Pedestrian dies after being hit by a vehicle in Northland",
+      "url": "https://www.1news.co.nz/2024/03/19/pedestrian-dies-after-being-hit-by-car-in-northland/",
+      "locator": "19 March 2024 report: West Coast Road, Te Kōpuru",
+      "expected": [
+        "West Coast",
+        "March"
+      ]
+    },
+    {
+      "id": "NEWS_FOREMAN",
+      "title": "John Williamson: Northland roadwork site fatalities has traffic management soul searching",
+      "url": "https://www.nzherald.co.nz/northern-advocate/news/john-williamson-northland-road-fatalities-at-road-works-has-traffic-management-soul-searching/HQYSHAWNYNHGFEM5MPRDGDBCM4/",
+      "locator": "3 April 2024 opinion; Te Kōpuru foreman incident dated 18 March, conflicting with WorkSafe/Police 19 March",
+      "expected": [
+        "foreman"
+      ],
+      "browser_verified": true,
+      "note": "Secondary opinion; activity not independently established. Short factual paraphrase only."
+    },
+    {
+      "id": "NEWS_GABRIEL",
+      "title": "Police name roadworker killed in workplace incident in Abbey Caves, Whangārei",
+      "url": "https://www.nzherald.co.nz/nz/police-name-roadworker-killed-in-workplace-incident-in-abbey-caves-whangarei/EPXFHYRFE5DL7NGOMFU5PYS7MM/",
+      "locator": "26 January 2024 NZ local date; Gabriel Fa’amausili, 15 January incident",
+      "expected": [
+        "Gabriel",
+        "January 15"
+      ],
+      "browser_verified": true,
+      "note": "Short factual paraphrase only."
+    },
+    {
+      "id": "NEWS_BILO",
+      "title": "1News / RNZ: Faulty handbrake on truck most likely killed road worker, court told",
+      "url": "https://www.1news.co.nz/2022/09/13/faulty-handbrake-on-truck-most-likely-killed-road-worker-court-told/",
+      "locator": "13 September 2022; Joji Bilo was measuring a resealing job; March 2019 death, day from WorkSafe",
+      "expected": [
+        "Joji Bilo",
+        "measuring wheel"
+      ],
+      "browser_verified": true
+    },
+    {
+      "id": "NEWS_WALTERS",
+      "title": "ODT / RNZ: Police wanted driver off the road before dodgy truck killed roadworker",
+      "url": "https://www.odt.co.nz/news/national/police-wanted-driver-off-the-road-before-dodgy-truck-killed-roadworker-ufjn7nc5",
+      "locator": "23 November 2025; Johnathon Walters, Remuera, May 2024; date linked cautiously to WorkSafe row",
+      "expected": [
+        "Johnathon Walters",
+        "May 2024"
+      ]
+    },
+    {
+      "id": "NEWS_MATATA",
+      "title": "ODT: Three killed in horror crash worked for same firm",
+      "url": "https://www.odt.co.nz/news/national/three-killed-horror-crash-worked-same-firm",
+      "locator": "26 February 2019; Matatā / SH2, culvert maintenance; three deaths",
+      "expected": [
+        "culvert",
+        "Higgins"
+      ],
+      "browser_verified": true
+    },
+    {
+      "id": "POL_MATATA",
+      "title": "NZ Police: Name release – fatal crash near Whakatane",
+      "url": "https://www.police.govt.nz/news/release/name-release-fatal-crash-near-whakatane",
+      "locator": "27 February 2019 release naming three victims of previous-day SH2 crash",
+      "expected": [
+        "Raroa",
+        "Hiha",
+        "Eparaima"
+      ],
+      "browser_verified": true
+    },
+    {
+      "id": "POL_WOODLANDS",
+      "title": "NZ Police release republished by Infonews: Roadworker killed in incident outside Hamilton",
+      "url": "https://www.infonews.co.nz/news.cfm?id=65251",
+      "locator": "25 March 2011 publication; roadworks death previous day, Woodlands Road; no flagger duty stated",
+      "expected": [
+        "Woodlands",
+        "truck"
+      ]
+    },
+    {
+      "id": "WS_MOTORCYCLIST",
+      "title": "WorkSafe court summary: Broadspectrum (formerly Transfield)",
+      "url": "https://www.worksafe.govt.nz/laws-and-regulations/prosecutions/court-summaries/broadspectrum-new-zealand-limited/",
+      "locator": "Offence 4 March 2015, Island Block Road Meremere; deceased was a motorcyclist",
+      "expected": [
+        "motorcyclist",
+        "4 March 2015"
+      ],
+      "browser_verified": true
+    },
+    {
+      "id": "PEGULA",
+      "title": "Stephen M. Pegula (2013): An analysis of fatal occupational injuries at road construction sites, 2003–2010",
+      "url": "https://www.bls.gov/opub/mlr/2013/article/an-analysis-of-fatal-occupational-injuries-at-road-construction-sites-2003-2010.htm",
+      "locator": "Working onsite, paragraph after Table 4 and backup-alarm paragraph; footnote 4; November 2013, DOI 10.21916/mlr.2013.36",
+      "expected": [
+        "92 cases",
+        "Only 32"
+      ],
+      "browser_verified": true
+    }
+  ]
+}

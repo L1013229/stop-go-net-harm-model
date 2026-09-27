@@ -1,0 +1,416 @@
+{
+  "new_payload_bytes_this_verification": 5581521,
+  "access_date_local": "2026-09-28",
+  "note": "Browser evidence means the linked source text was read with the web tool on the access date, even where raw HTTP is blocked. It is not an assertion of HTTP 200.",
+  "results": [
+    {
+      "id": "DFT_OPEN",
+      "url": "https://www.gov.uk/government/statistical-data-sets/road-safety-open-data",
+      "checked_utc": "2026-09-27T18:07:31.505121+00:00",
+      "browser_content_verified_during_research": true,
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.gov.uk/government/statistical-data-sets/road-safety-open-data",
+      "bytes": 87577,
+      "sha256": "bd10ff3ee0376cf6a1064032cae20e9685215e6342e1c04c9e90fbcc0258eb56",
+      "format": "HTML",
+      "expected_content_found": {
+        "2025": true,
+        "collision": true
+      },
+      "http_or_local_content_verified": true,
+      "verified": true
+    },
+    {
+      "id": "DFT_GUIDE",
+      "url": "https://assets.publishing.service.gov.uk/media/6ab2a71d997a4b2950cced58/dft-road-casualty-statistics-road-safety-open-dataset-data-guide-2025.xlsx",
+      "checked_utc": "2026-09-27T18:07:33.482017+00:00",
+      "browser_content_verified_during_research": false,
+      "method": "Earlier successful source download; local content and SHA checked",
+      "bytes": 85112,
+      "sha256": "51b08606ef3dad1ae5d4c8726241b022fc8e4bbdc910ef0e5cc2fb92b054fc12",
+      "format": "XLSX",
+      "expected_content_found": {},
+      "http_or_local_content_verified": true,
+      "verified": true
+    },
+    {
+      "id": "DFT_PERMIT_PAGE",
+      "url": "https://www.gov.uk/government/publications/street-works-permit-schemes-evaluation-of-effectiveness",
+      "checked_utc": "2026-09-27T18:07:33.506128+00:00",
+      "browser_content_verified_during_research": true,
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.gov.uk/government/publications/street-works-permit-schemes-evaluation-of-effectiveness",
+      "bytes": 71943,
+      "sha256": "4a76d7f77f11428bb7a49e65ae40f1368b997bb02564a3804fcecb35043cef07",
+      "format": "HTML",
+      "expected_content_found": {
+        "permit": true,
+        "evaluation": true
+      },
+      "http_or_local_content_verified": true,
+      "verified": true
+    },
+    {
+      "id": "DFT_PERMIT",
+      "url": "https://assets.publishing.service.gov.uk/media/5ad5f284ed915d32a3a70c07/permit-schemes-evaluation-report.pdf",
+      "checked_utc": "2026-09-27T18:07:34.140572+00:00",
+      "browser_content_verified_during_research": false,
+      "method": "Earlier successful source download; local content and SHA checked",
+      "bytes": 1002811,
+      "sha256": "0f7f4e759627440869048f2f27331ba6d9c51d709c8fbdf14eda1d8199a469ba",
+      "format": "PDF",
+      "expected_content_found": {
+        "1,508,796": true,
+        "7,370,134": true
+      },
+      "http_or_local_content_verified": true,
+      "verified": true
+    },
+    {
+      "id": "DFT_ANNEX",
+      "url": "https://assets.publishing.service.gov.uk/media/5ad5f29440f0b617dca7148e/permit-schemes-evaluation-annexes.pdf",
+      "checked_utc": "2026-09-27T18:07:34.398504+00:00",
+      "browser_content_verified_during_research": false,
+      "method": "Earlier successful source download; local content and SHA checked",
+      "bytes": 1458943,
+      "sha256": "789d01da874099511b5a30296266c3767fa819ee8f026a7866cc61da5635caa7",
+      "format": "PDF",
+      "expected_content_found": {
+        "410,395": true,
+        "2,018,405": true
+      },
+      "http_or_local_content_verified": true,
+      "verified": true
+    },
+    {
+      "id": "DFT_SM",
+      "url": "https://committees.parliament.uk/writtenevidence/135172/html/",
+      "checked_utc": "2026-09-27T18:07:34.530842+00:00",
+      "browser_content_verified_during_research": true,
+      "method": "GET",
+      "status": 403,
+      "final_url": "https://committees.parliament.uk/writtenevidence/135172/html/",
+      "bytes": 5563,
+      "http_or_local_content_verified": false,
+      "error": "403 Client Error: Forbidden for url: https://committees.parliament.uk/writtenevidence/135172/html/",
+      "verified": true
+    },
+    {
+      "id": "AT_2019",
+      "url": "https://at.govt.nz/media/1981078/item-101-attachment-1-open-22-october-2019-annual-report-performance-against-the-2018-19-soi.pdf",
+      "checked_utc": "2026-09-27T18:07:34.577252+00:00",
+      "browser_content_verified_during_research": false,
+      "method": "Earlier successful source download; local content and SHA checked",
+      "bytes": 14155857,
+      "sha256": "f3d073e3edebca87fb853ab22f7684175d2ae356ca0cb7d0e6b066daaa523b44",
+      "format": "PDF",
+      "expected_content_found": {
+        "29,000": true,
+        "corridor access": true
+      },
+      "http_or_local_content_verified": true,
+      "verified": true
+    },
+    {
+      "id": "WS_TABLE",
+      "url": "https://data.worksafe.govt.nz/editorial/fatalities_summary_table",
+      "checked_utc": "2026-09-27T18:07:36.029392+00:00",
+      "browser_content_verified_during_research": true,
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://data.worksafe.govt.nz/editorial/fatalities_summary_table",
+      "bytes": 118048,
+      "sha256": "db6f259d291965e26c29ec8658090b13812aae5deb8829c8481071fffda18690",
+      "format": "HTML",
+      "expected_content_found": {
+        "Fatalities summary table": true,
+        "summary_of_incident": true
+      },
+      "http_or_local_content_verified": true,
+      "verified": true
+    },
+    {
+      "id": "WS_FATAL",
+      "url": "https://data.worksafe.govt.nz/graph/detail/fatalities?accident_type=Vehicle+Incident",
+      "checked_utc": "2026-09-27T18:07:36.286393+00:00",
+      "browser_content_verified_during_research": true,
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://data.worksafe.govt.nz/graph/detail/fatalities?accident_type=Vehicle+Incident",
+      "bytes": 8447,
+      "sha256": "47bf19e9ea94443c9b1884eb9812986039e36e3884cf94811a888daa1a7948ff",
+      "format": "HTML",
+      "expected_content_found": {
+        "fatalities": true
+      },
+      "http_or_local_content_verified": true,
+      "verified": true
+    },
+    {
+      "id": "WS_LIVE",
+      "url": "https://www.worksafe.govt.nz/topic-and-industry/road-and-roadside/keeping-healthy-safe-working-road-or-roadside/part-c/19-0-working-near-live-traffic/",
+      "checked_utc": "2026-09-27T18:07:36.446253+00:00",
+      "browser_content_verified_during_research": true,
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.worksafe.govt.nz/topic-and-industry/road-and-roadside/keeping-healthy-safe-working-road-or-roadside/part-c/19-0-working-near-live-traffic/",
+      "bytes": 404819,
+      "sha256": "0a16cfe67e52f9328a08ed02e9b2e66be49b4086f262c99e522d1ff27faaea73",
+      "format": "HTML",
+      "expected_content_found": {
+        "live traffic": true
+      },
+      "http_or_local_content_verified": true,
+      "verified": true
+    },
+    {
+      "id": "WS_ITCL",
+      "url": "https://www.worksafe.govt.nz/laws-and-regulations/enforceable-undertakings/accepted-enforceable-undertakings/independent-traffic-control-limited/",
+      "checked_utc": "2026-09-27T18:07:37.288489+00:00",
+      "browser_content_verified_during_research": true,
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.worksafe.govt.nz/laws-and-regulations/enforceable-undertakings/accepted-enforceable-undertakings/independent-traffic-control-limited/",
+      "bytes": 466054,
+      "sha256": "6129acb6b161191c82301adba916507b115c930cf9cf5a7e5586b29aad2fbcc7",
+      "format": "HTML",
+      "expected_content_found": {
+        "12 February 2023": true,
+        "Traffic Controller": true
+      },
+      "http_or_local_content_verified": true,
+      "verified": true
+    },
+    {
+      "id": "WS_ITCL_PDF",
+      "url": "https://www.worksafe.govt.nz/dmsdocument/72900-enforceable-undertaking-independent-traffic-control-limited/latest/",
+      "checked_utc": "2026-09-27T18:07:41.896010+00:00",
+      "browser_content_verified_during_research": false,
+      "method": "Earlier successful source download; local content and SHA checked",
+      "bytes": 385654,
+      "sha256": "a2cd1b66ab9e79e8e26da269a57300914f540f97c2668f346c3bf0ea375fff27",
+      "format": "PDF",
+      "expected_content_found": {
+        "Cogswell": true,
+        "cones": true
+      },
+      "http_or_local_content_verified": true,
+      "verified": true
+    },
+    {
+      "id": "FH_BARNES",
+      "url": "https://www.wellingtonwater.co.nz/assets/WW-Knowledge-Base-/Health-and-Safety/Red-Safety-Alerts/Red-Alerts/2023/REDNZ23-006-Traffic-Management-at-Road-Closures.pdf",
+      "checked_utc": "2026-09-27T18:07:42.005767+00:00",
+      "browser_content_verified_during_research": true,
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.wellingtonwater.co.nz/assets/WW-Knowledge-Base-/Health-and-Safety/Red-Safety-Alerts/Red-Alerts/2023/REDNZ23-006-Traffic-Management-at-Road-Closures.pdf",
+      "bytes": 311146,
+      "sha256": "b8449f6ab8194eecd8e2665db5d2727ad230d91321f246ae5e8c680e88b8d123",
+      "format": "PDF",
+      "expected_content_found": {
+        "Brian Barnes": true,
+        "12 February": true
+      },
+      "http_or_local_content_verified": true,
+      "verified": true
+    },
+    {
+      "id": "POL_TAIAROA",
+      "url": "https://www.police.govt.nz/news/release/34843",
+      "checked_utc": "2026-09-27T18:07:42.099345+00:00",
+      "browser_content_verified_during_research": true,
+      "method": "GET",
+      "status": 403,
+      "final_url": "https://www.police.govt.nz/news/release/34843",
+      "bytes": 21591,
+      "http_or_local_content_verified": false,
+      "error": "403 Client Error: Forbidden for url: https://www.police.govt.nz/news/release/34843",
+      "verified": true
+    },
+    {
+      "id": "POL_TAHITAHI",
+      "url": "https://www.police.govt.nz/news/release/name-release-%E2%80%93-waikato-expressway-crash",
+      "checked_utc": "2026-09-27T18:07:42.234111+00:00",
+      "browser_content_verified_during_research": true,
+      "method": "GET",
+      "status": 403,
+      "final_url": "https://www.police.govt.nz/news/release/name-release-%E2%80%93-waikato-expressway-crash",
+      "bytes": 21591,
+      "http_or_local_content_verified": false,
+      "error": "403 Client Error: Forbidden for url: https://www.police.govt.nz/news/release/name-release-%E2%80%93-waikato-expressway-crash",
+      "verified": true
+    },
+    {
+      "id": "NEWS_KOPURU",
+      "url": "https://www.1news.co.nz/2024/03/19/pedestrian-dies-after-being-hit-by-car-in-northland/",
+      "checked_utc": "2026-09-27T18:07:42.333554+00:00",
+      "browser_content_verified_during_research": false,
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.1news.co.nz/2024/03/19/pedestrian-dies-after-being-hit-by-car-in-northland/",
+      "bytes": 763347,
+      "sha256": "4ce3017eea0eefe64a52b4a73f26e0646a79329f3a078d2b633c3faf11aa9deb",
+      "format": "HTML",
+      "expected_content_found": {
+        "West Coast": true,
+        "March": true
+      },
+      "http_or_local_content_verified": true,
+      "verified": true
+    },
+    {
+      "id": "NEWS_FOREMAN",
+      "url": "https://www.nzherald.co.nz/northern-advocate/news/john-williamson-northland-road-fatalities-at-road-works-has-traffic-management-soul-searching/HQYSHAWNYNHGFEM5MPRDGDBCM4/",
+      "checked_utc": "2026-09-27T18:07:43.095144+00:00",
+      "browser_content_verified_during_research": true,
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.nzherald.co.nz/northern-advocate/news/john-williamson-northland-road-fatalities-at-road-works-has-traffic-management-soul-searching/HQYSHAWNYNHGFEM5MPRDGDBCM4/",
+      "bytes": 501966,
+      "sha256": "e7b261cdd221f9cec4be7d9f2d0813e3ab39199dfab8c03fead2518ad512cfb6",
+      "format": "HTML",
+      "expected_content_found": {
+        "foreman": true
+      },
+      "http_or_local_content_verified": true,
+      "verified": true
+    },
+    {
+      "id": "NEWS_GABRIEL",
+      "url": "https://www.nzherald.co.nz/nz/police-name-roadworker-killed-in-workplace-incident-in-abbey-caves-whangarei/EPXFHYRFE5DL7NGOMFU5PYS7MM/",
+      "checked_utc": "2026-09-27T18:07:44.580583+00:00",
+      "browser_content_verified_during_research": true,
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.nzherald.co.nz/nz/police-name-roadworker-killed-in-workplace-incident-in-abbey-caves-whangarei/EPXFHYRFE5DL7NGOMFU5PYS7MM/",
+      "bytes": 678553,
+      "sha256": "a834e494c8d60351677e2e87d7a0b6b9c9dfa83d61f4e952bd5fc1ab8df5b294",
+      "format": "HTML",
+      "expected_content_found": {
+        "Gabriel": true,
+        "January 15": true
+      },
+      "http_or_local_content_verified": true,
+      "verified": true
+    },
+    {
+      "id": "NEWS_BILO",
+      "url": "https://www.1news.co.nz/2022/09/13/faulty-handbrake-on-truck-most-likely-killed-road-worker-court-told/",
+      "checked_utc": "2026-09-27T18:07:45.892931+00:00",
+      "browser_content_verified_during_research": true,
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.1news.co.nz/2022/09/13/faulty-handbrake-on-truck-most-likely-killed-road-worker-court-told/",
+      "bytes": 785261,
+      "sha256": "08df87483f994f108144ffa22d70d61e9819dd8069792a0256732a5447f8dbb5",
+      "format": "HTML",
+      "expected_content_found": {
+        "Joji Bilo": true,
+        "measuring wheel": true
+      },
+      "http_or_local_content_verified": true,
+      "verified": true
+    },
+    {
+      "id": "NEWS_WALTERS",
+      "url": "https://www.odt.co.nz/news/national/police-wanted-driver-off-the-road-before-dodgy-truck-killed-roadworker-ufjn7nc5",
+      "checked_utc": "2026-09-27T18:07:49.689426+00:00",
+      "browser_content_verified_during_research": false,
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.odt.co.nz/news/national/police-wanted-driver-off-the-road-before-dodgy-truck-killed-roadworker-ufjn7nc5",
+      "bytes": 423286,
+      "sha256": "bdade5867ebea1b59848594982d029b8d79d129aac906a1ab003453a8b773324",
+      "format": "HTML",
+      "expected_content_found": {
+        "Johnathon Walters": true,
+        "May 2024": true
+      },
+      "http_or_local_content_verified": true,
+      "verified": true
+    },
+    {
+      "id": "NEWS_MATATA",
+      "url": "https://www.odt.co.nz/news/national/three-killed-horror-crash-worked-same-firm",
+      "checked_utc": "2026-09-27T18:07:50.023802+00:00",
+      "browser_content_verified_during_research": true,
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.odt.co.nz/news/national/three-killed-in-horror-crash-worked-for-same-firm-n0v9mlvb",
+      "bytes": 366508,
+      "sha256": "fbd174019ed6e0235bef0db2499c55d6f85fcc5f318dd60cec86447450da54e8",
+      "format": "HTML",
+      "expected_content_found": {
+        "culvert": true,
+        "Higgins": true
+      },
+      "http_or_local_content_verified": true,
+      "verified": true
+    },
+    {
+      "id": "POL_MATATA",
+      "url": "https://www.police.govt.nz/news/release/name-release-fatal-crash-near-whakatane",
+      "checked_utc": "2026-09-27T18:07:50.379784+00:00",
+      "browser_content_verified_during_research": true,
+      "method": "GET",
+      "status": 403,
+      "final_url": "https://www.police.govt.nz/news/release/name-release-fatal-crash-near-whakatane",
+      "bytes": 21591,
+      "http_or_local_content_verified": false,
+      "error": "403 Client Error: Forbidden for url: https://www.police.govt.nz/news/release/name-release-fatal-crash-near-whakatane",
+      "verified": true
+    },
+    {
+      "id": "POL_WOODLANDS",
+      "url": "https://www.infonews.co.nz/news.cfm?id=65251",
+      "checked_utc": "2026-09-27T18:07:50.478854+00:00",
+      "browser_content_verified_during_research": false,
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.infonews.co.nz/news.cfm?id=65251",
+      "bytes": 53112,
+      "sha256": "624ff8fc47564f0cad89f00ad6a371f033607516d6bd7d2b34253cea90e13fd8",
+      "format": "HTML",
+      "expected_content_found": {
+        "Woodlands": true,
+        "truck": true
+      },
+      "http_or_local_content_verified": true,
+      "verified": true
+    },
+    {
+      "id": "WS_MOTORCYCLIST",
+      "url": "https://www.worksafe.govt.nz/laws-and-regulations/prosecutions/court-summaries/broadspectrum-new-zealand-limited/",
+      "checked_utc": "2026-09-27T18:07:51.073110+00:00",
+      "browser_content_verified_during_research": true,
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.worksafe.govt.nz/laws-and-regulations/prosecutions/court-summaries/broadspectrum-new-zealand-limited/",
+      "bytes": 469793,
+      "sha256": "7f0f9b8b98c5d05b2eb73a59e70417c5a9330aaf441882fdf9e66013a28f6e1c",
+      "format": "HTML",
+      "expected_content_found": {
+        "motorcyclist": true,
+        "4 March 2015": true
+      },
+      "http_or_local_content_verified": true,
+      "verified": true
+    },
+    {
+      "id": "PEGULA",
+      "url": "https://www.bls.gov/opub/mlr/2013/article/an-analysis-of-fatal-occupational-injuries-at-road-construction-sites-2003-2010.htm",
+      "checked_utc": "2026-09-27T18:07:53.028933+00:00",
+      "browser_content_verified_during_research": true,
+      "method": "GET",
+      "status": 403,
+      "final_url": "https://www.bls.gov/opub/mlr/2013/article/an-analysis-of-fatal-occupational-injuries-at-road-construction-sites-2003-2010.htm",
+      "bytes": 1325,
+      "http_or_local_content_verified": false,
+      "error": "403 Client Error: Forbidden for url: https://www.bls.gov/opub/mlr/2013/article/an-analysis-of-fatal-occupational-injuries-at-road-construction-sites-2003-2010.htm",
+      "verified": true
+    }
+  ]
+}

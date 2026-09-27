@@ -1,0 +1,10 @@
+xlsx_row,column_1,column_2,column_3,column_4,column_5,column_6,column_7
+31,collision,special_conditions_at_site,0,None,carriageway_hazards,0,None
+32,collision,special_conditions_at_site,1,Auto traffic signal - out,carriageway_hazards,11,Defective traffic signals
+33,collision,special_conditions_at_site,2,Auto signal part defective,carriageway_hazards,11,Defective traffic signals
+34,collision,special_conditions_at_site,3,Road sign or marking defective or obscured,carriageway_hazards,12,Permanent road signing or markings defective or obscured or inadequate
+35,collision,special_conditions_at_site,4,Roadworks,carriageway_hazards,13,Roadworks
+36,collision,special_conditions_at_site,5,Road surface defective,carriageway_hazards,21,Poor or defective road surface
+37,collision,special_conditions_at_site,6,Oil or diesel,carriageway_hazards,14,Oil or diesel
+38,collision,special_conditions_at_site,7,Mud,carriageway_hazards,15,Mud
+39,collision,special_conditions_at_site,9,Unknown (self rep only),carriageway_hazards,99,Unknown (self rep only)
