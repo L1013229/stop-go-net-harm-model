@@ -539,8 +539,8 @@ def fig4_decomposition_prcc(tr):
     lim = max(abs(v) for v in vals) + 0.22
     ax.set_xlim(-lim, lim)
     ax.axvline(0, color=MUTED, lw=0.7)
-    ax.set_xlabel("partial rank correlation with $\\Delta H$ at the recorded rates\n(negative favours the signals)")
-    ax.set_title("(b)   partial rank correlations, signals", loc="left")
+    ax.set_xlabel("Rank correlation with $\\Delta H$\nat constructed reference levels\n(negative favours signals)")
+    ax.set_title("(b)   signal sensitivities", loc="left")
     ax.tick_params(axis="y", labelsize=9)
     _clean(ax, "x")
 
@@ -670,7 +670,7 @@ def fig_speed():
     ax.annotate("about 10× over this range", xy=(30.5, 4.2e-5), fontsize=9, color=BLUE)
     ax.annotate("about 2.3×", xy=(72, 3.3e-3), fontsize=9, color=INK)
     ax.axhspan(5e-6, 2e-5, color=INK, alpha=0.10, lw=0)
-    ax.text(v.max() - 0.5, 6.0e-6, "controller-strike record", fontsize=9, color=INK, va="bottom", ha="right")
+    ax.text(v.max() - 0.5, 6.0e-6, "constructed occupational benchmark", fontsize=9, color=INK, va="bottom", ha="right")
     ax.set_yscale("log")
     ax.set_xlabel("operating speed through the works (km/h)")
     ax.set_ylabel("serious-harm events\nper operation day")

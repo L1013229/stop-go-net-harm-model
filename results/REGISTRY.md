@@ -125,3 +125,85 @@ values from `model/config/welfare-values.toml` (MBCM v1.7.5, July 2021 prices).
 | R89 | **The plan's frame-matched coherence ratio, and the red-running clause on the plan's surface** (round-6 hostile referee and forensic writing reader, Opus: the frame-matched ratio was pre-specified as a coherence outcome and never reported; `review_reads.py`, saved draws) | Full-mechanism ratio H(S1a)/H(S0), median (5th to 95th): panel's values 0.607 (0.060 to 0.971); records with the queue tail at the record-scaled level 1.001 (0.681 to 2.274); records with the queue tail excluded 1.412 (0.052 to 34.0); plan's surface 0.987 (0.942 to 1.007). Frame-matched ratio, the controller strike removed from S0 as the panel's question removed it: 0.998 (0.972 to 1.078); 1.053 (0.984 to 3.179); 109.7 (25.3 to 1058, the queue tail excluded leaves S0 with almost no harm, so the ratio is uninformative there); 0.993 (0.969 to 1.010). Red-running removal on the plan's surface (collision axis, queue tail at the panel's level): P 0.8281 with the pathway, 0.8404 without, Monte Carlo interval width 0.0105; the PRCC ranking exists at the panel's values (R9) and at the record (R41) only. |
 | R90 | **Unattended-only violation bound** (round-7 practitioner, Codex, finding 5: the 355 pooled violations in R1 include 93 Kansas observations with a flagger present; research/crash-record-bounds.md section 1 and research/violation-priors-harmonisation.md line 189) | Unattended signals only: Kansas PTS-only 92 violations plus the United Kingdom urban shuttle site's about 170 (11.3 per cent of about 1,500 cycles) = 262 with no collision; rule-of-three 95 per cent bound 3/262 = 1.15e-2 per violation, about 1 in 90 (R1's 8.5e-3 from 355 pools in the 93 flagger-present observations). The model's implied 4.64e-6 per violation (R1) sits far below either bound, so the check's verdict is unchanged. The 0.8-threshold frontier at the panel's values (219 per cent) is R63's 20th percentile. |
 | R91 | **Cycles whose sampled green is shorter than the queue needs** (round-8 risk analyst, Codex, finding 1; `review_reads.py`, saved draws; the check deducts no start-up lost time) | Share of draws where arrivals per cycle exceed the green's discharge capacity: S0 0, S1a 0.0030 (60 draws), S1b 0.02085 (417), S2 0. Decision probability without those draws: S1a 0.4313 (all 0.4311), S1b 0.4825 (0.4825). Extra delay over manual control, mean: S1a 4.744 veh-h (NZ$229), 4.745 without those draws, 5.239 (NZ$253) with each residual queue priced as a deterministic queue growing over the 8-hour day in both directions; median 2.578 (NZ$124). S1b: 4.250 (NZ$205), 4.271 without, 11.591 (NZ$559) with residual queues; median 2.383 (NZ$115). The uniform-delay formula the welfare reading uses assumes the queue clears; the paper's delay figures are therefore those of cycles that clear, and the residual-queue pricing is reported beside them. No run changed. |
+
+
+## v1.2 provenance index (no model values changed)
+
+The following rows index existing inputs and source qualifications used by the rebuild.
+They add no analysis and supersede no result. Results R1 to R91 retain their existing
+values and correction history.
+
+| ID | Result or input of record | Value and existing source |
+|---|---|---|
+| R92 | Existing site and prior values retained in v1.2 | Baseline 100 km/h permanent limit, 150 m closure, 250 m controlled section, 30 km/h temporary limit, 300 vehicles/hour/direction, 8-hour day, elicitation severity anchor 50 km/h (Scenario C; `docs/model-design.md`). `model/config/priors.toml`: signal entry triangular (0.010, 0.037, 0.089); manual entry triangular (0, 0.00018, 0.0020); gated-device entry triangular (0.0035, 0.0068, 0.021), all per facing vehicle. Mutual sight log-uniform 150 to 3,000 m, capped at section length; avoidance midpoint uniform 1.0 to 2.5 s and width uniform 0.3 to 1.0 s; human hold uniform 0.3 to 0.9; operator offset uniform 1.5 to 6.0 m and lateral reach decay uniform 0.02 to 0.15 per metre; operating speed triangular (30, 40, 50) km/h. Assumed clearance speed uniform 20 to 40 km/h; added clearance margin uniform 0 to 5 s; radio confirmation uniform 2 to 8 s. All unchanged. |
+| R93 | Existing record-comparison quantities and definitions retained in v1.2 | British recorded head-on serious/fatal share about 38 per cent (`research/crash-record-bounds.md`, current supplement Table S1; New Zealand 19 per cent in R50). Model share 1.4 per cent is R69's 0.0139 rounded. Model collisions 7 to 70 times the recorded range compare R1 with R64's band. Occupational fatal-to-serious-harm multiplier 5 is unchanged (R66). MAIS3+ means Maximum Abbreviated Injury Scale 3 or worse (R2 outcome definition; severity sources). The central half and nine-tenths of draws in the Figure 7 caption denote the display plan's existing interquartile and 5th-to-95th intervals, not newly computed quantiles. |
+| R94 | Provenance for non-result material removed from the v1.1 main text | Exact source units and original claim-ledger rows are preserved in `trr/reviews/round9-essentialism/moved-from-v1.1.md`, taken by read-only `git show master:trr/manuscript/sections/<file>`. This row indexes literature/context counts, prior-construction detail, mathematical definitions, scope qualifications and development history that had no result row. Their authorities remain the citations, configuration and source files named in each archived unit and claim row. It supplies a trace for these non-result items without inventing a model estimate. Result-bearing units retain their specific R1 to R91 references in that ledger. |
+
+| R95 | Existing observational and timing annotations in v1.2 main displays | Figure 2 retains the display plan's converted observed ranges of 2.0 to 7.9 per cent for unattended signals and 0.45 to 1.1 per cent for gated attended devices; manual control has 0 driver-initiated entries among about 1,280 facing vehicles (rounded from the pooled approximately 588 and 690 facing counts). Sources: `model/config/priors.toml` evidence for r_v0, r_v1a and r_v2, `research/violation-priors-harmonisation.md`, and Table S9. Figure 3 retains the existing all-red plot's NSW 20 and 40 km/h and Texas 20 mph plus 4 s annotations (`research/clearance-interval-basis.md`). These are existing source values, not new model estimates. |
+
+
+## v1.2 figure build: saved-output summaries
+
+| ID | Result of record | Value and source |
+|---|---|---|
+| R100 | Figure coordinates and paired signed-change summaries read from the frozen production outputs | `model/scripts/make_figures_trr_v12.py`; source `model/outputs/dist/e64d394_20260926/`. No new draws, model execution, priors or forms. `trr/reviews/round9-essentialism/v1.2-figure-audit.json` registers the complete 61 by 61 median- and mean-matched probability maps (including exact record centres and endpoints), six paired signed-change distributions below, seven device-exposure rows, and all saved grid, model-form and sight coordinates with input SHA256 hashes. All 20,000 paired baseline draws are finite. Signal centres remain 0.4311 / 0.5363; tied device 0.51465 / 0.45105; joint own-anchor/independent exposure remains R49's 0.257, corners 0.139 to 0.386, below signals 0.225 at published precision. ECDFs are exact empirical reads of the same arrays after scaling; band shares remain R45. Existing values in R1–R94 are not superseded. |
+
+R100 signed changes are substitute minus manual control, serious-harm events per
+operation day. Queue-tail differences and avoidance harm are excluded. The device
+rows use median matching; both pathway denominators use means in the mean-matched
+signal row. These are uncertainty intervals in expected rates, not day-to-day
+variation. Full precision is retained in the audit JSON.
+
+| Treatment | Mean | Signed median | 5th percentile | 25th percentile | 75th percentile | 95th percentile |
+|---|---:|---:|---:|---:|---:|---:|
+| Fixed-time signals, medians matched | +2.13717348e-05 | +2.29622469e-06 | -4.29960306e-05 | -9.09858893e-06 | +2.18685729e-05 | +1.35266816e-04 |
+| Fixed-time signals, means matched | +2.05082736e-06 | -4.91553131e-07 | -2.62135720e-05 | -6.88306347e-06 | +4.79155087e-06 | +3.79155322e-05 |
+| Attended device, tied 0 m | -4.73620084e-07 | -7.58076738e-08 | -1.36153385e-05 | -3.03309300e-06 | +2.22497069e-06 | +1.38014805e-05 |
+| Attended device, tied 1 m | +6.74053260e-07 | +2.35663117e-07 | -1.00487471e-05 | -1.84273740e-06 | +2.66649574e-06 | +1.44120258e-05 |
+| Attended device, encroachment | -1.12453025e-05 | -3.69681444e-06 | -5.34507568e-05 | -1.61599582e-05 | +2.10181271e-06 | +1.41031007e-05 |
+| Attended device, independent scaling 0 m | +2.41369056e-06 | +2.26922449e-06 | -4.36272829e-05 | -9.35053735e-06 | +1.79082762e-05 | +5.71590310e-05 |
+
+
+## Round 10 definition correction (version 1.2)
+
+| ID | Result or input of record | Definition and existing source |
+|---|---|---|
+| R101 | Meaning of the unchanged 77.2% diagnostic in R8 and R18 (and the analogous S2 diagnostic in R21) | The saved baseline median of `diag_S1a_p_safe_window` is 0.7718400077831457, still 77% at manuscript precision. `conflict.w5_tree` accumulates the indicator that no opposing vehicle is inside and no next opposing entry occurs before exit, weighted by `w_onset / n_grid` for moving onset entries and `(1 - w_onset) / n_grid` for later standing entries. It is an encounter-free candidate-entry share under that mixture, before visible-occupancy entry weighting and its normalisation. It is neither the fraction of elapsed red time nor the fraction clearing before opposing release. The red is `2C + G_opp`; the first opposing crossing is `C + startup_lost_s`. This corrects the descriptions in R8, R18 and R21, not their values, saved outputs or implementation. |
+| R102 | Existing conditioning priors brought into main Table 1 | `model/config/priors.toml`: visible-opponent entry multiplier `w_occ` log-uniform 0.0001 to 0.01; opposing-driver entry probability `q_lead` log-uniform 0.001 to 0.1; onset candidate share `w_onset` uniform 0.50 to 0.95. The first two are multiplied by separation divided by sight distance when the opponent is visible. All are unchanged, previously in Table S8 and indexed by R94. |
+
+Round 10 display placement: the current signed-change display is main Figure 6,
+operator exposure is Figure 7, and sight is Figure 8. The avoidance-model display
+is reserved for supplement S8 by the round-10 request. The current build audit is
+`trr/reviews/round10/v1.2-figure-audit.json`; its numerical maps, interval summaries
+and seven underlying device rows agree with R100's historical audit. Only four
+change rows and three device rows are displayed in the main paper.
+
+## Model-form headline reads (version 1.2)
+
+Source: `model/outputs/dist/e64d394_20260926/model_form_headline_reads.json`;
+script: `model/scripts/model_form_headline_reads.py`, importing the unchanged
+`model/scripts/review_reads.py` calculations. Primary shares reproduce R100 exactly,
+and a primary rerun reproduces all 130 `baseline_traces.npz` arrays bit for bit.
+Each form uses the same 20,000 paired draws, seed 20260709, 128-point integration
+grid, baseline 300 veh/h/direction and 250 m section, and unchanged production
+priors and per-expert SEJ fits. All 20,000 draws are finite for each headline.
+Alternative traces use the baseline schema and are saved as
+`model/outputs/dist/e64d394_20260926/model_form_traces_<form>.npz`, with form IDs
+`common_cause_0p5`, `common_cause_1p0`, `threshold`, and `loglogistic`.
+
+Values below are in this order: primary logistic in TTC, common cause 0.5,
+common cause 1.0, hard threshold, logistic in ln(TTC). Each form's controller
+and signal head-on terms are re-anchored on its own medians or means; tied-device
+reads use median matching. Queue-tail differences and avoidance harm are excluded.
+Most adverse means the lowest favourable share for each headline separately,
+following A6's direction. The minimum across all five forms and, where different,
+the minimum among the four alternatives are distinguished. These reads extend
+R29's structural sensitivity to mean matching and the tied operator construction;
+they do not replace the primary form or the earlier encroachment-device readings.
+
+| ID | Result of record | Value and source |
+|---|---|---|
+| R103 | Signal favourable share, medians matched, by model form | 0.43110, 0.43070, 0.42955, 0.43735, 0.42915. Most adverse: logistic in ln(TTC), **0.42915**. Source `model/outputs/dist/e64d394_20260926/model_form_headline_reads.json`, `rows[].signal_medians_matched` and `most_adverse.signal_medians_matched`; script `model/scripts/model_form_headline_reads.py`. |
+| R104 | Signal favourable share, means matched, by model form | 0.53630, 0.55185, 0.56325, 0.54905, 0.63415. Lowest across all five forms: primary, **0.53630**; lowest among the four alternatives: hard threshold, **0.54905**. Every alternative raises the favourable share. Source `model/outputs/dist/e64d394_20260926/model_form_headline_reads.json`, `rows[].signal_means_matched` and `most_adverse.signal_means_matched`; script `model/scripts/model_form_headline_reads.py`. |
+| R105 | Attended device favourable share, tied operator construction, 0 m reference, by model form | 0.51465, 0.51845, 0.51930, 0.50740, 0.51135. Most adverse: hard threshold, **0.50740**. Source `model/outputs/dist/e64d394_20260926/model_form_headline_reads.json`, `rows[].tied_device_0m` and `most_adverse.tied_device_0m`; script `model/scripts/model_form_headline_reads.py`. |
+| R106 | Attended device favourable share, tied operator construction, 1 m reference, by model form | 0.45105, 0.45510, 0.45545, 0.44540, 0.44815. Most adverse: hard threshold, **0.44540**. Source `model/outputs/dist/e64d394_20260926/model_form_headline_reads.json`, `rows[].tied_device_1m` and `most_adverse.tied_device_1m`; script `model/scripts/model_form_headline_reads.py`. |
