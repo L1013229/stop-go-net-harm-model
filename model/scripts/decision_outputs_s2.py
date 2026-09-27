@@ -40,8 +40,12 @@ MARGIN = 1.0 / (100.0 * 250.0)     # one serious-harm event per 100 site-years
 UNGATED_R_V2 = Triangular(1.1e-2, 2.2e-2, 4.4e-2)   # Addendum A3: single source, half/double
 
 
+DIST = MODEL / "outputs/dist/capfix_20260927"
+
+
 def newest_dist() -> Path:
-    return max((MODEL / "outputs" / "dist").glob("*_2026*"), key=lambda d: d.stat().st_mtime)
+    """Selected production output; explicit to protect the version 1.2 record."""
+    return DIST
 
 
 def record_reads(parts: dict, headon: float, controller: float, w5_anchor: float,

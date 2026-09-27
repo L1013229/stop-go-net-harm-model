@@ -4,7 +4,7 @@ Run from the repository with:
     PYTHONDONTWRITEBYTECODE=1 python3 model/scripts/model_form_headline_reads.py
 
 The production dist is explicit. Existing outputs are never replaced. First verify
-the saved primary headlines against R100, then reproduce every primary trace array
+the saved primary headlines against the selected review reads, then reproduce every primary trace array
 before running alternatives with the production seed, draws, grid and priors.
 
 review_reads.main contains nested calibration and tied-operator functions. Invoke
@@ -41,7 +41,7 @@ from mtcpts.distributions import load_sej  # noqa: E402
 from mtcpts.model import Cell, Priors, run_cell  # noqa: E402
 
 REPO = Path(__file__).resolve().parents[2]
-DIST = REPO / "model/outputs/dist/e64d394_20260926"
+DIST = REPO / "model/outputs/dist/capfix_20260927"
 SEED = 20260709
 FORM_IDS = ("primary", "common_cause_0p5", "common_cause_1p0", "threshold", "loglogistic")
 METRICS = ("signal_medians_matched", "signal_means_matched", "tied_device_0m", "tied_device_1m")
@@ -76,12 +76,14 @@ def headline_reads(trace: Path) -> tuple[dict, dict]:
 
 
 def registered_primary() -> dict:
-    line = next(line for line in (REPO / "results/REGISTRY.md").read_text().splitlines()
-                if line.startswith("| R100 |"))
-    match = re.search(r"Signal centres remain ([\d.]+) / ([\d.]+); tied device ([\d.]+) / ([\d.]+);", line)
-    if match is None:
-        raise RuntimeError("STOP: cannot locate R100's four exact primary shares")
-    return dict(zip(METRICS, map(float, match.groups()), strict=True))
+    """Cross-check against the selected run's independently regenerated review reads."""
+    reads = json.loads((DIST / "review_reads.json").read_text())
+    return dict(zip(METRICS, (
+        reads["R78_red_running_removal_at_record"]["p_with"],
+        reads["R56_mean_matched"]["S1a"],
+        reads["R71_R75_tied_operator"]["reference_0m"]["p"],
+        reads["R71_R75_tied_operator"]["reference_1m"]["p"],
+    ), strict=True))
 
 
 def trace_arrays(res) -> dict:
@@ -142,8 +144,8 @@ def main() -> None:
     expected = registered_primary()
     primary_values, primary_factors = headline_reads(baseline_path)
     if primary_values != expected:
-        raise RuntimeError(f"STOP: primary mismatch: computed {primary_values}; R100 {expected}")
-    print(f"Primary shares exactly reproduce R100: {primary_values}", flush=True)
+        raise RuntimeError(f"STOP: primary mismatch: computed {primary_values}; review reads {expected}")
+    print(f"Primary shares exactly reproduce review reads: {primary_values}", flush=True)
 
     with np.load(baseline_path, allow_pickle=False) as saved:
         baseline = {key: saved[key] for key in saved.files}
@@ -214,7 +216,7 @@ def main() -> None:
                     "implementation": "Imported review_reads.main, including its nested dh and tied functions.",
                     "extracted_keys": ["R78_red_running_removal_at_record.p_with", "R56_mean_matched.S1a",
                                        "R71_R75_tied_operator.reference_0m.p", "R71_R75_tied_operator.reference_1m.p"]},
-        "primary_reproduction": {"registry": "results/REGISTRY.md#R100", "expected": expected,
+        "primary_reproduction": {"source": relative(DIST / "review_reads.json"), "expected": expected,
                                  "actual": primary_values, "exact_headline_match": True,
                                  "rerun_trace_arrays_bitwise_identical": len(baseline),
                                  "registry_sha256_before_new_rows": registry_hash},

@@ -1,0 +1,16 @@
+form,strategy,p_dh_neg_elicited,p_dh_neg_record_central,p_dh_neg_record_worst_corner,p_equivalent_record_central,dh_median_record,abs_dh_median_record,implied_collisions_per_op_day,w5_median_elicited,p_s2_lower_than_s1a_record_central
+"primary (independent failures, logistic in TTC)",S1a,0.9913,0.4330,0.2367,0.7661,2.2414e-06,1.4658e-05,9.8782e-04,1.3804e-05,0.7996
+"primary (independent failures, logistic in TTC)",S1b,0.9877,0.4847,0.2769,0.8086,4.3251e-07,1.2840e-05,7.4799e-04,1.0481e-05,0.7996
+"primary (independent failures, logistic in TTC)",S2,1.0000,0.6815,0.4753,0.9217,-4.4683e-06,8.1071e-06,1.0407e-04,1.4598e-06,0.7996
+MF1 common cause rho=0.5,S1a,0.9849,0.4280,0.2344,0.7631,2.4656e-06,1.4801e-05,1.5879e-03,2.4417e-05,0.8097
+MF1 common cause rho=0.5,S1b,0.9815,0.4853,0.2785,0.8082,3.7519e-07,1.2996e-05,1.1938e-03,1.8109e-05,0.8097
+MF1 common cause rho=0.5,S2,0.9995,0.6781,0.4720,0.9157,-4.3226e-06,8.1846e-06,1.6660e-04,2.5131e-06,0.8097
+MF1 common cause rho=1.0,S1a,0.9787,0.4281,0.2334,0.7627,2.4183e-06,1.4992e-05,2.1438e-03,3.3952e-05,0.8119
+MF1 common cause rho=1.0,S1b,0.9767,0.4876,0.2802,0.8078,3.1851e-07,1.2979e-05,1.5846e-03,2.4953e-05,0.8119
+MF1 common cause rho=1.0,S2,0.9990,0.6772,0.4727,0.9136,-4.2869e-06,8.2146e-06,2.2222e-04,3.4625e-06,0.8119
+MF2a threshold at ttc50,S1a,0.9885,0.4341,0.2426,0.7611,2.1604e-06,1.4996e-05,1.3731e-03,1.8391e-05,0.7856
+MF2a threshold at ttc50,S1b,0.9846,0.4806,0.2782,0.8033,5.1323e-07,1.3148e-05,1.0651e-03,1.4279e-05,0.7856
+MF2a threshold at ttc50,S2,1.0000,0.6764,0.4714,0.9222,-4.2859e-06,8.1696e-06,1.5049e-04,2.0095e-06,0.7856
+MF2b logistic in ln TTC,S1a,0.9769,0.4261,0.2360,0.7467,2.5158e-06,1.5342e-05,1.4896e-03,2.3962e-05,0.8067
+MF2b logistic in ln TTC,S1b,0.9747,0.4825,0.2786,0.7888,4.7726e-07,1.3376e-05,1.1228e-03,1.7859e-05,0.8067
+MF2b logistic in ln TTC,S2,0.9974,0.6651,0.4643,0.9010,-3.8644e-06,8.4938e-06,1.5446e-04,2.4302e-06,0.8067

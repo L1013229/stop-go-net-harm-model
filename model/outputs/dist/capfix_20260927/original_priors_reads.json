@@ -1,0 +1,48 @@
+{
+  "dist": "capfix_20260927",
+  "priors": {
+    "v_clear_kmh": "uniform 30 to 36",
+    "platoon_speed_kmh": "uniform 40 to 60"
+  },
+  "serious_harm_axis": {
+    "S1a": 0.4481,
+    "S1b": 0.50315,
+    "S2": 0.63105,
+    "S2_below_S1a": 0.73985
+  },
+  "serious_harm_axis_corners": {
+    "S1a": [
+      0.2432,
+      0.70585
+    ],
+    "S2": [
+      0.417,
+      0.80685
+    ]
+  },
+  "implied_headon_collisions_s1a_median": 0.0011406290643831553,
+  "collision_axis_qt_panel": {
+    "S1a": 0.8262,
+    "S1b": 0.64745,
+    "S2": 0.7488,
+    "S2_below_S1a": 0.22505,
+    "S1a_corners": [
+      0.7559,
+      0.87365
+    ],
+    "S1a_median_dh": -3.8653192132477934e-05,
+    "S1a_within_margin": 0.43965
+  },
+  "collision_axis_qt_excluded": {
+    "S1a": 0.89795,
+    "S1b": 0.92035,
+    "S2": 0.7488,
+    "S2_below_S1a": 0.2511,
+    "S1a_corners": [
+      0.65045,
+      0.98605
+    ],
+    "S1a_median_dh": -8.256034654330756e-06,
+    "S1a_within_margin": 0.91055
+  }
+}

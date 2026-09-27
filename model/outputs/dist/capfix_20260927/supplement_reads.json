@@ -1,0 +1,215 @@
+{
+  "dist": "capfix_20260927",
+  "source": "baseline_traces.npz; formula in review_reads.py:dh",
+  "intervals": {
+    "Signals, medians matched": {
+      "n": 20000,
+      "mean": 2.136537974805997e-05,
+      "q05": -4.308157508347266e-05,
+      "q25": -9.35754239844742e-06,
+      "median": 2.241418326038411e-06,
+      "q75": 2.3878459117452106e-05,
+      "q95": 0.00014423952868585277,
+      "p_negative": 0.43305
+    },
+    "Signals, means matched": {
+      "n": 20000,
+      "mean": 2.074478545337334e-06,
+      "q05": -2.6026312396248218e-05,
+      "q25": -6.8957590228213025e-06,
+      "median": -4.3726453558938884e-07,
+      "q75": 5.345550030754574e-06,
+      "q95": 4.0914302094332895e-05,
+      "p_negative": 0.53415
+    },
+    "Attended device, tied exposure, reference 0 m": {
+      "n": 20000,
+      "mean": -1.5396185584554342e-06,
+      "q05": -1.402532458703193e-05,
+      "q25": -3.4074418708293298e-06,
+      "median": -3.5450409655985356e-07,
+      "q75": 1.363306531398073e-06,
+      "q95": 9.775250711787403e-06,
+      "p_negative": 0.5634
+    },
+    "Attended device, tied exposure, reference 1 m": {
+      "n": 20000,
+      "mean": -3.919452144126572e-07,
+      "q05": -1.0449030630438843e-05,
+      "q25": -2.1831463321041874e-06,
+      "median": 3.734593461133848e-09,
+      "q75": 1.7522067183009586e-06,
+      "q95": 1.0258305117920415e-05,
+      "p_negative": 0.4991
+    },
+    "Attended device, pre-specified encroachment": {
+      "n": 20000,
+      "mean": -1.2311300991707284e-05,
+      "q05": -5.44390612506855e-05,
+      "q25": -1.6810353425203278e-05,
+      "median": -4.4682969679883e-06,
+      "q75": 1.3432104363748615e-06,
+      "q95": 1.1550682411179564e-05,
+      "p_negative": 0.6815
+    },
+    "Attended device, independent level scaling, reference 0 m": {
+      "n": 20000,
+      "mean": 1.3476920823141759e-06,
+      "q05": -4.4884484910760714e-05,
+      "q25": -1.0001619880525588e-05,
+      "median": 1.6673665430700562e-06,
+      "q75": 1.6332537783157076e-05,
+      "q95": 5.5306853139232256e-05,
+      "p_negative": 0.44055
+    }
+  },
+  "margin_readings_from_saved_draws": [
+    {
+      "record_setting": "Centre",
+      "strategy": "Signals",
+      "calibration": "Medians; serious-harm axis",
+      "operator": "None",
+      "margin": 4e-05,
+      "p_within": 0.76605,
+      "signed_median": 2.241418326038411e-06
+    },
+    {
+      "record_setting": "Centre",
+      "strategy": "Attended device",
+      "calibration": "Medians; serious-harm axis",
+      "operator": "Pre-specified encroachment",
+      "margin": 4e-05,
+      "p_within": 0.92175,
+      "signed_median": -4.4682969679883e-06
+    },
+    {
+      "record_setting": "Both upper record limits",
+      "strategy": "Signals",
+      "calibration": "Medians; serious-harm axis",
+      "operator": "None",
+      "margin": 4e-05,
+      "p_within": 0.61515,
+      "signed_median": 1.804811145052494e-06
+    },
+    {
+      "record_setting": "Both upper record limits",
+      "strategy": "Attended device",
+      "calibration": "Medians; serious-harm axis",
+      "operator": "Pre-specified encroachment",
+      "margin": 4e-05,
+      "p_within": 0.7636,
+      "signed_median": -1.2739555359186255e-05
+    },
+    {
+      "record_setting": "Centre",
+      "strategy": "Signals",
+      "calibration": "Medians; serious-harm axis",
+      "operator": "None",
+      "margin": 2e-05,
+      "p_within": 0.59115,
+      "signed_median": 2.241418326038411e-06
+    },
+    {
+      "record_setting": "Centre",
+      "strategy": "Attended device",
+      "calibration": "Medians; serious-harm axis",
+      "operator": "Pre-specified encroachment",
+      "margin": 2e-05,
+      "p_within": 0.7774,
+      "signed_median": -4.4682969679883e-06
+    },
+    {
+      "record_setting": "Centre",
+      "strategy": "Signals",
+      "calibration": "Medians; serious-harm axis",
+      "operator": "None",
+      "margin": 1e-05,
+      "p_within": 0.39415,
+      "signed_median": 2.241418326038411e-06
+    },
+    {
+      "record_setting": "Centre",
+      "strategy": "Attended device",
+      "calibration": "Medians; serious-harm axis",
+      "operator": "Pre-specified encroachment",
+      "margin": 1e-05,
+      "p_within": 0.5661,
+      "signed_median": -4.4682969679883e-06
+    },
+    {
+      "record_setting": "NZ uncorrected",
+      "strategy": "Signals",
+      "calibration": "Medians; serious-harm axis",
+      "operator": "None",
+      "margin": 4e-05,
+      "p_within": 0.6736,
+      "signed_median": 9.334484534010905e-06
+    },
+    {
+      "record_setting": "NZ corrected 3-fold",
+      "strategy": "Signals",
+      "calibration": "Medians; serious-harm axis",
+      "operator": "None",
+      "margin": 4e-05,
+      "p_within": 0.43625,
+      "signed_median": 4.8970590593160965e-05
+    },
+    {
+      "record_setting": "NZ corrected 6-fold",
+      "strategy": "Signals",
+      "calibration": "Medians; serious-harm axis",
+      "operator": "None",
+      "margin": 4e-05,
+      "p_within": 0.2958,
+      "signed_median": 0.00011299243839598693
+    },
+    {
+      "record_setting": "Centre",
+      "strategy": "Signals",
+      "calibration": "Medians; collision axis; panel queue tail",
+      "operator": "None",
+      "margin": 4e-05,
+      "p_within": 0.44085,
+      "signed_median": -3.8401273696709665e-05
+    },
+    {
+      "record_setting": "Centre",
+      "strategy": "Attended device",
+      "calibration": "Medians; collision axis; panel queue tail",
+      "operator": "Pre-specified encroachment",
+      "margin": 4e-05,
+      "p_within": 0.91885,
+      "signed_median": -7.130188794370631e-06
+    }
+  ],
+  "residual_delay": {
+    "share_oversaturated": {
+      "S0": 0.0,
+      "S1a": 0.003,
+      "S1b": 0.02085,
+      "S2": 0.0
+    },
+    "S1a": {
+      "p_dh_neg_all": 0.43305,
+      "p_dh_neg_clearing_only": 0.43329989969909727,
+      "extra_delay_mean_vh": 4.743836906435747,
+      "extra_delay_mean_clearing_only_vh": 4.744621562280262,
+      "extra_delay_mean_with_residual_vh": 5.2386387775484575,
+      "extra_delay_median_with_residual_vh": 2.5777903450360142,
+      "cost_mean_nzd": 228.79525399739606,
+      "cost_mean_with_residual_nzd": 252.6595482411621,
+      "cost_median_with_residual_nzd": 124.32682834108695
+    },
+    "S1b": {
+      "p_dh_neg_all": 0.48465,
+      "p_dh_neg_clearing_only": 0.4850125108512485,
+      "extra_delay_mean_vh": 4.249576734224425,
+      "extra_delay_mean_clearing_only_vh": 4.271267243328807,
+      "extra_delay_mean_with_residual_vh": 11.591207177101218,
+      "extra_delay_median_with_residual_vh": 2.382514603257949,
+      "cost_mean_nzd": 204.957085891644,
+      "cost_mean_with_residual_nzd": 559.0439221515917,
+      "cost_median_with_residual_nzd": 114.90867931513087
+    }
+  }
+}

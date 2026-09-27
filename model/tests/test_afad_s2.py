@@ -1,7 +1,7 @@
 """Addendum A: the attended AFAD arm (S2) and the model-form hooks.
 
-Pins (1) that the three frozen strategies reproduce the frozen production traces bit for bit
-after the extension, (2) the S2 structural identities, (3) that the primary model form is
+Pins (1) that unbound draws in the three frozen strategies reproduce production bit for bit
+after the extension and entry-cap correction, (2) the S2 structural identities, (3) that the primary model form is
 byte-identical to the pre-addendum tree and the alternatives move in the stated direction.
 """
 import sys
@@ -28,17 +28,22 @@ def sej():
 
 # ------------------------------------------------------------- frozen strategies unchanged
 @pytest.mark.skipif(not FROZEN.exists(), reason="frozen production traces not on this machine")
-def test_frozen_strategies_reproduce_production_traces_bit_for_bit(sej):
-    """The S2 draws are taken after every existing draw, and the primary tree path is the
-    pre-addendum arithmetic, so the frozen strategies must reproduce the production traces
-    exactly. A one-ulp change in multiplication order fails this, and did once."""
+def test_uncapped_draws_reproduce_frozen_production_bit_for_bit(sej):
+    """The entry-cap addendum changes only binding draws and W5-derived quantities.
+    Preserve the original bitwise regression everywhere else, including all inputs."""
     res = run_cell(Cell(300, 250), sej, Priors(), n_iter=20_000, n_grid=128)
     fr = np.load(FROZEN)
+    for key, value in res.draws.items():
+        if f"draw_{key}" in fr:
+            np.testing.assert_array_equal(value, fr[f"draw_{key}"])
     for s in ("S0", "S1a", "S1b"):
-        assert np.array_equal(res.h(s), fr[f"h_{s.lower()}"]), s
+        unchanged = ~res.diag[s]["onset_cap_binds"]
+        assert np.array_equal(res.h(s)[unchanged], fr[f"h_{s.lower()}"][unchanged]), s
         for k in ("W1", "W3", "W5", "W4d", "W5b"):
-            assert np.array_equal(res.parts[s][k], fr[f"part_{s}_{k}"]), (s, k)
-    assert np.array_equal(res.diag["S1a"]["collisions_per_day"], fr["diag_S1a_collisions_per_day"])
+            mask = unchanged if k in ("W5", "W5b") else np.ones(res.n_iter, dtype=bool)
+            assert np.array_equal(res.parts[s][k][mask], fr[f"part_{s}_{k}"][mask]), (s, k)
+        assert np.array_equal(res.diag[s]["collisions_per_day"][unchanged],
+                              fr[f"diag_{s}_collisions_per_day"][unchanged])
 
 
 def test_s2_draws_follow_every_existing_draw(sej):

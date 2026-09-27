@@ -1,0 +1,38 @@
+{
+  "S1a": {
+    "form": "MF2b logistic in ln TTC",
+    "p_dh_neg_elicited": "0.9769",
+    "p_dh_neg_record_central": "0.4261",
+    "p_dh_neg_record_worst_corner": "0.2360",
+    "p_equivalent_record_central": "0.7467",
+    "dh_median_record": "2.5158e-06",
+    "abs_dh_median_record": "1.5342e-05",
+    "implied_collisions_per_op_day": "1.4896e-03",
+    "w5_median_elicited": "2.3962e-05",
+    "p_s2_lower_than_s1a_record_central": "0.8067"
+  },
+  "S1b": {
+    "form": "MF2a threshold at ttc50",
+    "p_dh_neg_elicited": "0.9846",
+    "p_dh_neg_record_central": "0.4806",
+    "p_dh_neg_record_worst_corner": "0.2782",
+    "p_equivalent_record_central": "0.8033",
+    "dh_median_record": "5.1323e-07",
+    "abs_dh_median_record": "1.3148e-05",
+    "implied_collisions_per_op_day": "1.0651e-03",
+    "w5_median_elicited": "1.4279e-05",
+    "p_s2_lower_than_s1a_record_central": "0.7856"
+  },
+  "S2": {
+    "form": "MF2b logistic in ln TTC",
+    "p_dh_neg_elicited": "0.9974",
+    "p_dh_neg_record_central": "0.6651",
+    "p_dh_neg_record_worst_corner": "0.4643",
+    "p_equivalent_record_central": "0.9010",
+    "dh_median_record": "-3.8644e-06",
+    "abs_dh_median_record": "8.4938e-06",
+    "implied_collisions_per_op_day": "1.5446e-04",
+    "w5_median_elicited": "2.4302e-06",
+    "p_s2_lower_than_s1a_record_central": "0.8067"
+  }
+}

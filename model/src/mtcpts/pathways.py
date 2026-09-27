@@ -91,7 +91,8 @@ def w5_terms(day: DayContext, ci: ConflictInputs, tp: TreeParams, r_v_facing: np
         dv1, dv2 = headon_delta_vs_from_closing(closing_kmh, m1, m2)
         return p_event_dsi_headon(dv1, dv2, occ1, occ2)
 
-    tree = w5_tree(ci, tp, severity_fn=severity_fn, n_grid=n_grid, form=form)
+    tree = w5_tree(ci, tp, severity_fn=severity_fn, n_grid=n_grid, form=form,
+                   r_v_facing=r_v_facing)
     violations_per_day = day.facing_stop_per_day * r_v_facing
     return {
         "events": violations_per_day * tree["p_harm"],
@@ -105,6 +106,9 @@ def w5_terms(day: DayContext, ci: ConflictInputs, tp: TreeParams, r_v_facing: np
         "p_blind": tree["p_blind"],
         "f_clear": tree["f_clear"],
         "p_safe_window": tree["p_safe_window"],
+        "onset_cap_binds": tree["onset_cap_binds"],
+        "onset_share": tree["onset_share"],
+        "onset_entry_probability": tree["onset_entry_probability"],
     }
 
 

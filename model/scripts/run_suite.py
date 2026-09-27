@@ -11,6 +11,7 @@ absorbed, and is repaired at the model's structure rather than by moving a prior
 from __future__ import annotations
 
 import csv
+import argparse
 import json
 import subprocess
 import sys
@@ -168,6 +169,12 @@ def run_grid(sej, priors: Priors, out: Path, suffix: str) -> None:
                         f"dh_q95_{s}": _q(dh, 95),
                         f"breakeven_q50_{s}": _q(res.breakeven[key], 50)}
             for s in STRATEGIES:
+                finite = np.isfinite(res.h(s))
+                bound = res.diag[s]["onset_cap_binds"][finite]
+                row |= {f"cap_finite_n_{s}": int(finite.sum()),
+                        f"cap_binds_n_{s}": int(bound.sum()),
+                        f"cap_binds_frac_{s}": float(bound.mean()) if len(bound) else float("nan"),
+                        f"onset_probability_max_{s}": float(np.max(res.diag[s]["onset_entry_probability"][finite])) if len(bound) else float("nan")}
                 row |= {f"w1_{s}": _q(res.parts[s]["W1"], 50),
                         f"w3_{s}": _q(res.parts[s]["W3"], 50),
                         f"w5_{s}": _q(res.parts[s]["W5"], 50),
@@ -280,10 +287,13 @@ def run_baseline_extras(sej, out: Path) -> None:
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--dist", type=Path, help="New production output directory (must not exist)")
+    args = parser.parse_args()
     sha = prespec_guard()
     stamp = datetime.now(timezone.utc).strftime("%Y%m%d")
-    out = MODEL / "outputs" / "dist" / f"{sha}_{stamp}"
-    out.mkdir(parents=True, exist_ok=True)
+    out = args.dist or MODEL / "outputs" / "dist" / f"{sha}_{stamp}"
+    out.mkdir(parents=True, exist_ok=args.dist is None)
     sej = load_sej(MODEL / "config")
 
     validity_gates(sej, out)                      # blocking, before any decision output

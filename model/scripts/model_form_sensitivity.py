@@ -39,8 +39,12 @@ FORMS = {
 }
 
 
+DIST = MODEL / "outputs/dist/capfix_20260927"
+
+
 def newest_dist() -> Path:
-    return max((MODEL / "outputs" / "dist").glob("*_2026*"), key=lambda d: d.stat().st_mtime)
+    """Selected production output; explicit to protect the version 1.2 record."""
+    return DIST
 
 
 def reads(res, s: str, headon: float, controller: float) -> np.ndarray:

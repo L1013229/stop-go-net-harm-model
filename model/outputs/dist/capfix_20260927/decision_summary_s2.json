@@ -1,0 +1,216 @@
+{
+  "dist": "capfix_20260927",
+  "w5_anchor_s1a_median": 1.3804063067746923e-05,
+  "w3_anchor_s0_median": 0.0032998050867833924,
+  "headon_record_band": [
+    6e-06,
+    2e-05
+  ],
+  "strike_record_band": [
+    5e-06,
+    2e-05
+  ],
+  "equiv_margin_per_op_day": 4e-05,
+  "s1a_p_elicited": 0.9913,
+  "s1a_p_elicited_wilson": [
+    0.9899152729373634,
+    0.9924960324339082
+  ],
+  "s1a_dh_median_elicited": -0.003352061377135066,
+  "s1a_p_at_record_central": 0.43305,
+  "s1a_p_at_record_corners": {
+    "h6e-06_c5e-06": 0.4275,
+    "h6e-06_c2e-05": 0.67865,
+    "h2e-05_c5e-06": 0.23675,
+    "h2e-05_c2e-05": 0.46795
+  },
+  "s1a_p_at_record_worst_for_device": 0.23675,
+  "s1a_p_at_record_best_for_device": 0.67865,
+  "s1a_dh_median_at_record": 2.241418326038411e-06,
+  "s1a_abs_dh_median_at_record": 1.465751636545247e-05,
+  "s1a_abs_dh_q90_at_record": 9.035668136214796e-05,
+  "s1a_p_equivalent_at_record_central": 0.76605,
+  "s1a_p_equivalent_worst_record_corner": 0.61515,
+  "s1a_voi_span_strike_axis": 0.24839999999999995,
+  "s1a_voi_span_headon_axis": 0.21344999999999997,
+  "s2_p_elicited": 0.99995,
+  "s2_p_elicited_wilson": [
+    0.9997168094297738,
+    0.9999911737177268
+  ],
+  "s2_dh_median_elicited": -0.0032935110750265785,
+  "s2_p_at_record_central": 0.6815,
+  "s2_p_at_record_corners": {
+    "h6e-06_c5e-06": 0.59465,
+    "h6e-06_c2e-05": 0.8344,
+    "h2e-05_c5e-06": 0.47525,
+    "h2e-05_c2e-05": 0.75525
+  },
+  "s2_p_at_record_worst_for_device": 0.47525,
+  "s2_p_at_record_best_for_device": 0.8344,
+  "s2_dh_median_at_record": -4.4682969679883e-06,
+  "s2_abs_dh_median_at_record": 8.107149277701264e-06,
+  "s2_abs_dh_q90_at_record": 3.240563750348969e-05,
+  "s2_p_equivalent_at_record_central": 0.92175,
+  "s2_p_equivalent_worst_record_corner": 0.74995,
+  "s2_voi_span_strike_axis": 0.26605,
+  "s2_voi_span_headon_axis": 0.10629999999999995,
+  "s2_vs_s1a_p_s2_lower_at_record_central": 0.79965,
+  "s2_vs_s1a_dh_median_at_record": -7.402942809023393e-06,
+  "s2_vs_s1a_p_s2_lower_elicited": 0.44015,
+  "s2_w3r_operator_median": 1.2758778080516753e-06,
+  "s2_w3r_vs_controller_record_central": 0.12758778080516753,
+  "s2_w5_at_record_median": 1.2690247044190216e-06,
+  "s2_w4d_median": 6.299413786677727e-08,
+  "s2_w5_elicited_median": 1.459808087860756e-06,
+  "s0_w5_at_record_median": 7.395175999551154e-08,
+  "check_s1a_record_central_reproduces_R13_0.431": false,
+  "s2_ungated": {
+    "r_v2_prior": "Triangular(1.1e-2, 2.2e-2, 4.4e-2)",
+    "p_elicited": 0.99965,
+    "p_at_record_central": 0.56525,
+    "p_at_record_worst_for_device": 0.344,
+    "p_equivalent_at_record_central": 0.907,
+    "vs_s1a_p_s2_lower_at_record_central": 0.7068,
+    "implied_headon_collisions_per_op_day": 0.00027138688584881887,
+    "violations_per_op_day": 93.83731308567681
+  },
+  "s2_ladder": {
+    "facing_per_day": 3764.5245581250047,
+    "violations_per_day": 37.02102795106021,
+    "conflicts_per_day": 0.018093083483412,
+    "collisions_per_day": 0.00010406988098825852,
+    "p_safe_window": 0.7674154216460567,
+    "clearance_s": 31.499269269775205,
+    "violations_per_serious_harm_event": 25360201.973748393
+  },
+  "s1a_p_at_record_central_wilson": [
+    0.42619638642303087,
+    0.4399293272048815
+  ],
+  "s1b_p_at_record_central_wilson": [
+    0.47772735935248206,
+    0.4915785361544404
+  ],
+  "s2_p_at_record_central_wilson": [
+    0.6750088207198551,
+    0.687921470191779
+  ],
+  "s1b_p_at_record_central": 0.48465,
+  "s2_vs_s1a_p_s2_lower_with_queue_tail_record_ceiling": 0.6811,
+  "s2_vs_s1a_dh_median_with_queue_tail_record_ceiling": -5.481291315753064e-06,
+  "s2_vs_s1a_p_s2_lower_with_queue_tail_elicited_level": 0.42525,
+  "s2_vs_s1a_dh_median_with_queue_tail_elicited_level": 7.77642572409023e-06,
+  "queue_tail_record_scale": 0.0442730230516831,
+  "s2_own_anchor_p_at_record_central": 0.38285,
+  "s2_own_anchor_p_worst_best": [
+    0.184,
+    0.6321
+  ],
+  "s2_own_anchor_vs_s1a_p_s2_lower": 0.3634,
+  "s1a_p_at_record_factor10_box": [
+    0.111,
+    0.81495
+  ],
+  "s2_p_at_record_factor10_box": [
+    0.29685,
+    0.90195
+  ],
+  "s1a_prcc_at_record_top8": [
+    [
+      "re3_rate",
+      -0.532
+    ],
+    [
+      "q_lead",
+      0.506
+    ],
+    [
+      "r_v1a",
+      0.426
+    ],
+    [
+      "w_occ",
+      0.375
+    ],
+    [
+      "impact_speed_frac",
+      0.37
+    ],
+    [
+      "ttc50",
+      0.367
+    ],
+    [
+      "w_onset",
+      -0.258
+    ],
+    [
+      "sev3_p",
+      -0.252
+    ]
+  ],
+  "s2_prcc_at_record_top8": [
+    [
+      "re3_rate",
+      -0.841
+    ],
+    [
+      "sev3_p",
+      -0.617
+    ],
+    [
+      "enc_rate_vkm",
+      0.509
+    ],
+    [
+      "w_occ",
+      0.277
+    ],
+    [
+      "w_onset",
+      -0.247
+    ],
+    [
+      "ttc50",
+      0.223
+    ],
+    [
+      "impact_speed_frac",
+      0.221
+    ],
+    [
+      "q_lead",
+      0.209
+    ]
+  ],
+  "offset_op_spearman_with_w3r": -0.0686580410616451,
+  "offset_op_spearman_with_dh_s2_elicited": -0.004630348403575869,
+  "s1a_p_at_record_central_mean_anchored": 0.53415,
+  "s1a_dh_mean_at_record_central": 2.136537974805997e-05,
+  "s2_p_at_record_central_mean_anchored": 0.6487,
+  "s2_dh_mean_at_record_central": -1.2311300991707284e-05,
+  "s1a_p_at_record_central_with_avoidance_harm": 0.31455,
+  "s2_p_at_record_central_with_avoidance_harm": 0.58785,
+  "share_of_scaled_strike_draws_inside_band": 0.3453,
+  "share_of_scaled_headon_draws_inside_band": 0.27665,
+  "scaled_strike_q05_q95": [
+    5.714868455482735e-07,
+    6.030707207218401e-05
+  ],
+  "scaled_headon_q05_q95": [
+    6.312025533633514e-07,
+    0.00015976408481398937
+  ],
+  "operator_term_edge_line_median": 1.7496444638309819e-06,
+  "operator_term_calibration_factor": 5.7154468846226205,
+  "operator_term_calibrated_median": 7.292211843188085e-06,
+  "s2_p_at_record_central_operator_calibrated": 0.44055,
+  "s2_p_operator_calibrated_worst_best": [
+    0.35735,
+    0.49455
+  ],
+  "s2_operator_calibrated_vs_s1a_p_s2_lower": 0.5425,
+  "s2_operator_calibrated_dh_median": 1.6673665430700562e-06,
+  "s2_operator_calibrated_p_equivalent": 0.84625
+}

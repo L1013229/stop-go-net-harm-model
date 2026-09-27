@@ -22,7 +22,7 @@ from mtcpts.model import (Cell, Priors, calibration_curve, decision_surface,  # 
                           p_dh_negative, run_cell)
 
 MODEL = Path(__file__).resolve().parents[1]
-DIST = max((MODEL / "outputs" / "dist").glob("*_2026*"), key=lambda d: d.stat().st_mtime)
+DIST = MODEL / "outputs/dist/capfix_20260927"
 BASELINE = (300, 250)
 
 
