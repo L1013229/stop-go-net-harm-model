@@ -263,7 +263,8 @@ def p_collision_given_conflict(q: np.ndarray, form: ModelForm = PRIMARY_FORM) ->
 
 
 def w5_tree(ci: ConflictInputs, tp: TreeParams, severity_fn=None,
-            n_grid: int = 128, form: ModelForm = PRIMARY_FORM) -> dict[str, np.ndarray]:
+            n_grid: int = 128, form: ModelForm = PRIMARY_FORM,
+            r_v_facing: np.ndarray | None = None) -> dict[str, np.ndarray]:
     """Integrate the W5 event tree over the arrival time of a vehicle facing red.
 
     `severity_fn(closing_ms) -> P(>=1 DSI | collision)` is evaluated INSIDE the integral,
@@ -295,6 +296,10 @@ def w5_tree(ci: ConflictInputs, tp: TreeParams, severity_fn=None,
 
     acc = {k: np.zeros(n) for k in
            ("w", "conf", "coll", "harm", "collv", "collt", "blind", "clear", "safe")}
+    # Unit-share kernels retain each type's sight weighting. The cap must act on
+    # the final, normalised allocation, not on the sampled candidate share.
+    onset = {k: np.zeros(n) for k in acc}
+    standing_acc = {k: np.zeros(n) for k in acc}
 
     def branch(t_a: np.ndarray, standing: bool, weight: np.ndarray) -> None:
         """Accumulate one violator type entering at t_a, with density `weight`."""
@@ -363,6 +368,16 @@ def w5_tree(ci: ConflictInputs, tp: TreeParams, severity_fn=None,
         acc["blind"] += w * p_conf * blind
         acc["clear"] += (~visible_occ).astype(float) * weight
         acc["safe"] += ((~occupied) & (~meets)).astype(float) * weight
+        type_acc = standing_acc if standing else onset
+        unit_w = np.where(visible_occ, tp.w_occ * np.clip(d_near / s, 0.0, 1.0), 1.0) / n_grid
+        for key, value in {
+            "w": unit_w, "conf": unit_w * p_conf, "coll": unit_w * p_coll,
+            "harm": unit_w * p_coll * p_dsi, "collv": unit_w * p_coll * closing,
+            "collt": unit_w * p_coll * ttc, "blind": unit_w * p_conf * blind,
+            "clear": (~visible_occ).astype(float) / n_grid,
+            "safe": ((~occupied) & (~meets)).astype(float) / n_grid,
+        }.items():
+            type_acc[key] += value
 
     # ONSET type: arrives still moving, within the onset window, and runs the red rather
     # than stopping. Density 1/ow over [0, ow), carrying share w_onset.
@@ -375,6 +390,25 @@ def w5_tree(ci: ConflictInputs, tp: TreeParams, severity_fn=None,
     span = np.maximum(R - ow, 1e-9)
     for g in range(n_grid):
         branch(ow + u[g] * span, standing=True, weight=(1.0 - tp.w_onset) / n_grid)
+
+    old_fraction = tp.w_onset * onset["w"] / acc["w"]
+    fraction = old_fraction.copy()
+    binds = np.zeros(n, dtype=bool)
+    probability = np.zeros(n)
+    if r_v_facing is not None:
+        entries_per_arrival_rate = np.asarray(r_v_facing) * R
+        capacity = np.divide(ow, entries_per_arrival_rate,
+                             out=np.full(n, np.inf), where=entries_per_arrival_rate > 0)
+        binds = old_fraction > capacity
+        fraction = np.minimum(old_fraction, capacity)
+        # Equivalent candidate share for the capped final fraction F:
+        # F = beta*A / (beta*A + (1-beta)*B), with A/B the sight normalisers.
+        # Reallocate only binding draws; every unbound accumulator stays bitwise intact.
+        beta = fraction * standing_acc["w"] / np.maximum(
+            (1.0 - fraction) * onset["w"] + fraction * standing_acc["w"], 1e-300)
+        for key in acc:
+            acc[key] = np.where(binds, beta * onset[key] + (1.0 - beta) * standing_acc[key], acc[key])
+        probability = entries_per_arrival_rate * fraction / ow
 
     denom = np.maximum(acc["coll"], 1e-300)
     conf_denom = np.maximum(acc["conf"], 1e-300)
@@ -389,4 +423,7 @@ def w5_tree(ci: ConflictInputs, tp: TreeParams, severity_fn=None,
         "p_blind": np.where(acc["conf"] > 0, acc["blind"] / conf_denom, 0.0),
         "f_clear": acc["clear"],
         "p_safe_window": acc["safe"],
+        "onset_cap_binds": binds,
+        "onset_share": fraction,
+        "onset_entry_probability": probability,
     }

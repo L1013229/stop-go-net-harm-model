@@ -1,0 +1,27 @@
+{
+  "headon_collisions_per_op_day": 0.0009878165853851343,
+  "gate1_band": [
+    1e-06,
+    0.001
+  ],
+  "gate1_pass": true,
+  "p_collision_given_violation": 6.20079445137603e-06,
+  "rule_of_three_ceiling": 0.0085,
+  "rule_of_three_pass": true,
+  "controller_strikes_per_op_day": 0.006120433362531023,
+  "controller_dsi_per_op_day": 0.0032998050867833924,
+  "gate2_band": [
+    1e-06,
+    0.0001
+  ],
+  "gate2_pass": false,
+  "headon_dsi_per_op_day": 1.3804063067746923e-05,
+  "s2_headon_collisions_per_op_day": 0.00010406988098825852,
+  "s2_gate1_pass": true,
+  "s2_p_collision_given_violation": 2.863389926545272e-06,
+  "s2_rule_of_three_pass": true,
+  "s2_operator_strikes_per_op_day": 6.898325840168238e-06,
+  "s2_operator_dsi_per_op_day": 1.2758778080516753e-06,
+  "s2_operator_below_controller_record_central": true,
+  "s2_headon_dsi_per_op_day": 1.459808087860756e-06
+}

@@ -1,0 +1,37 @@
+{
+  "dist": "capfix_20260927",
+  "r_v0_variant": "Triangular(0.006, 0.0131, 0.024) per facing vehicle (Kansas incl. flagger-consented entries)",
+  "s0_w5_elicited_median": 2.0516908164140893e-06,
+  "s0_w5_at_record_median": 1.7835538475982606e-06,
+  "s0_headon_share_of_s1a_at_record": 0.14862948729985503,
+  "s1a_w5_median": 1.3804063067746923e-05,
+  "s1a_p_at_record_central": 0.48565,
+  "s1a_dh_median_at_record": 4.0989588134034565e-07,
+  "s1a_p_at_record_corners": {
+    "h6e-06_c5e-06": 0.4806,
+    "h6e-06_c2e-05": 0.7139,
+    "h2e-05_c5e-06": 0.291,
+    "h2e-05_c2e-05": 0.51895
+  },
+  "s1a_p_equivalent_at_record_central": 0.78175,
+  "s1b_p_at_record_central": 0.55065,
+  "s1b_dh_median_at_record": -1.2378478702400814e-06,
+  "s1b_p_at_record_corners": {
+    "h6e-06_c5e-06": 0.54495,
+    "h6e-06_c2e-05": 0.76695,
+    "h2e-05_c5e-06": 0.35335,
+    "h2e-05_c2e-05": 0.584
+  },
+  "s1b_p_equivalent_at_record_central": 0.82705,
+  "s2_p_at_record_central": 0.83265,
+  "s2_dh_median_at_record": -8.584070055230928e-06,
+  "s2_p_at_record_corners": {
+    "h6e-06_c5e-06": 0.73625,
+    "h6e-06_c2e-05": 0.8955,
+    "h2e-05_c5e-06": 0.75405,
+    "h2e-05_c2e-05": 0.89855
+  },
+  "s2_p_equivalent_at_record_central": 0.91045,
+  "s2_vs_s1a_p_s2_lower_at_record_central": 0.79965,
+  "s1a_p_elicited": 0.9934
+}

@@ -8,7 +8,7 @@ Code, configuration, tests and production outputs for version 1.2 of *A Probabil
 - `model/config/priors.toml`: every non-elicited prior with its evidence; `welfare-values.toml`: the monetary values; `sej_scenario_c_pooled.npz`: the pooled expert-judgement priors (see below).
 - `model/scripts/`: `run_suite.py` (the guarded production run), `decision_outputs.py` and `decision_outputs_s2.py` (the comparisons at constructed reference rates), `model_form_sensitivity.py`, `welfare.py`, `make_figures.py` (conference figures), `make_figures_trr.py` (retained journal figures), `make_figures_trr_v12.py` (version 1.2 figures from saved outputs), `make_influence_diagram.py` (main and full influence diagrams), `export_pooled_priors.py` (how the pooled priors were made; it needs the restricted table, see below).
 - `model/tests/`: the test suite (`python3 -m pytest model/tests`).
-- `model/outputs/dist/e64d394_20260926/`: the production run of record (grid results, sensitivity, calibration curves, decision surfaces, record checks, model-form and welfare summaries), including the saved per-draw traces used by the figure scripts.
+- `model/outputs/dist/capfix_20260927/`: the production run of record for version 1.3 (the version 1.2 run, e64d394_20260926, is in this repository's history) (grid results, sensitivity, calibration curves, decision surfaces, record checks, model-form and welfare summaries), including the saved per-draw traces used by the figure scripts.
 - `docs/prespec.md` (the pre-registered design, decision rules and the addendum for the attended device), `docs/model-design.md`, `research/` (the evidence notes behind every prior and both record bands), `results/REGISTRY.md` (every number the paper quotes, with its source file).
 - `docs/influence-diagram-edges.md`: the node and edge list for the main influence diagram and its full supplemental version, with links to the model code and the distinction between modelled links and the unmodelled delay-to-violation response.
 
@@ -49,3 +49,5 @@ python3 model/scripts/make_influence_diagram.py
 MIT (see `LICENSE`). Cite the paper when you use the model.
 
 The per-form trace files behind `model_form_headline_reads.json` (about 18 MB each) are not included; `model/scripts/model_form_headline_reads.py` regenerates them from the same seed and draws.
+
+Version 1.3 (27 September 2026) corrects the red-running tree so that entries against red at any moment cannot exceed the vehicles able to enter; the excess is assigned to queue-lead departures and the measured violation total is unchanged. The correction was specified in `docs/prespec-addendum-2026-09-27-entry-cap.md` before the corrected run. The production outputs are in `model/outputs/dist/capfix_20260927/`.

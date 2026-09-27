@@ -1,4 +1,4 @@
-"""Build the TRR v1.2 displays from the frozen e64d394_20260926 outputs.
+"""Build the TRR displays from the entry-cap-corrected capfix_20260927 outputs.
 
 Run: python3 model/scripts/make_figures_trr_v12.py
 For PNG-only layout edits: python3 model/scripts/make_figures_trr_v12.py --png-only
@@ -30,10 +30,10 @@ from matplotlib.patches import Circle, FancyArrowPatch, Polygon, Rectangle
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[2]
-DIST = ROOT / "model/outputs/dist/e64d394_20260926"
+DIST = ROOT / "model/outputs/dist/capfix_20260927"
 OUT = ROOT / "trr/manuscript/figures"
-BUILD = ROOT / "trr/manuscript/build/figures-v12"
-AUDIT = ROOT / "trr/reviews/round10/v1.2-figure-audit.json"
+BUILD = DIST / "figures"
+AUDIT = DIST / "figure-audit.json"
 WIDTH, DPI, MIN_FONT_PT = 6.5, 400, 9.0
 
 # Reused from make_figures_trr.py: typeface, ink/grey/grid colours, spine and
@@ -69,7 +69,7 @@ INPUTS = (
     "baseline_traces.npz", "review_reads.json", "decision_summary_s2.json",
     "operator_reference_variants.json", "welfare_summary.json", "validity_gates.json",
     "decision_surface.npz", "model_form_sensitivity.csv", "sight_sweep.csv",
-    "grid_results_primary.csv",
+    "grid_results_primary.csv", "figure_checks.json",
 )
 
 
@@ -452,10 +452,11 @@ def device_rows(data):
     rows.append(("Own anchor + encroachment", dict(p=d["s2_own_anchor_p_at_record_central"], p_corners_min_max=d["s2_own_anchor_p_worst_best"], p_s2_below_s1a=d["s2_own_anchor_vs_s1a_p_s2_lower"]), False))
     a = data.delta("S2", mode="independent", own=True)
     joint = dict(p=float(np.mean(a < 0)), p_corners_min_max=data.corners(s="S2", mode="independent", own=True), p_s2_below_s1a=float(np.mean(a < data.delta("S1a")) ))
-    # R49 is registered to three decimals, not an exact-precision saved field.
-    close(round(joint["p"], 3), .257, "R49")
-    close(np.round(joint["p_corners_min_max"], 3), [.139, .386], "R49 corners")
-    close(round(joint["p_s2_below_s1a"], 3), .225, "R49 against signals")
+    # Check the selected run's independently regenerated scratch reading.
+    registered = read_json("figure_checks.json")["R49"]
+    close(joint["p"], registered["p"], "R49")
+    close(joint["p_corners_min_max"], registered["corners_min_max"], "R49 corners")
+    close(joint["p_s2_below_s1a"], registered["p_s2_below_s1a"], "R49 against signals")
     rows.append(("Own anchor + independent, 0 m", joint, False))
     return rows
 
@@ -650,7 +651,9 @@ def figS6(data):
         for spine in ax.spines.values():
             spine.set_visible(False)
         ax.text(.5, 1.10, STRATEGIES[s]["name"], ha="center", transform=ax.transAxes, fontsize=10, weight="bold")
-    close([failed["S1a"], failed["S2"]], [7, 0], "R59 grid failures")
+    registered = read_json("figure_checks.json")["R59"]
+    close([failed[s] for s in ("S1a", "S2")],
+          [registered[s]["count_above_ceiling"] for s in ("S1a", "S2")], "R59 grid failures")
     axes[0].set_ylabel("Section length (m)", labelpad=3)
     fig.text(.53, .215, "Demand (vehicles / hour / direction)", fontsize=9, ha="center")
     fig.text(.53, .955, r"Cell values: median head-on collisions / operation day ($\times 10^{-5}$)", ha="center", fontsize=9)

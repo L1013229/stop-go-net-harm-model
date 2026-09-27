@@ -1,0 +1,65 @@
+{
+  "input_arrays_bitwise_unchanged": 42,
+  "baseline": {
+    "S0": {
+      "finite_n": 20000,
+      "binds_n": 0,
+      "binds_share": 0.0,
+      "max_onset_probability": 0.07821285422430536,
+      "w5_kernel_reconstruction_max_absolute_error": 2.981555974335137e-19,
+      "unbound_w5_w5b_bitwise_unchanged": true,
+      "total_entries_bitwise_unchanged": true
+    },
+    "S1a": {
+      "finite_n": 20000,
+      "binds_n": 5532,
+      "binds_share": 0.2766,
+      "max_onset_probability": 1.0000000000000002,
+      "w5_kernel_reconstruction_max_absolute_error": 1.431146867680866e-17,
+      "unbound_w5_w5b_bitwise_unchanged": true,
+      "total_entries_bitwise_unchanged": true
+    },
+    "S1b": {
+      "finite_n": 20000,
+      "binds_n": 5300,
+      "binds_share": 0.265,
+      "max_onset_probability": 1.0000000000000002,
+      "w5_kernel_reconstruction_max_absolute_error": 1.3660947373317356e-17,
+      "unbound_w5_w5b_bitwise_unchanged": true,
+      "total_entries_bitwise_unchanged": true
+    },
+    "S2": {
+      "finite_n": 20000,
+      "binds_n": 0,
+      "binds_share": 0.0,
+      "max_onset_probability": 0.8811351545051072,
+      "w5_kernel_reconstruction_max_absolute_error": 2.9002408113987244e-18,
+      "unbound_w5_w5b_bitwise_unchanged": true,
+      "total_entries_bitwise_unchanged": true
+    }
+  },
+  "grid": {
+    "primary": {
+      "cells": 35,
+      "unchanged_input_and_total_entry_columns": true,
+      "capacity_checked_all_finite_draws": true
+    },
+    "optdev": {
+      "cells": 35,
+      "unchanged_input_and_total_entry_columns": true,
+      "capacity_checked_all_finite_draws": true
+    },
+    "pessdev": {
+      "cells": 35,
+      "unchanged_input_and_total_entry_columns": true,
+      "capacity_checked_all_finite_draws": true
+    }
+  },
+  "model_form_cap_counts_identical_to_primary": [
+    "common_cause_0p5",
+    "common_cause_1p0",
+    "threshold",
+    "loglogistic"
+  ],
+  "protected_files_unchanged": 158
+}

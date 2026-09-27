@@ -30,7 +30,7 @@ from matplotlib.patches import FancyArrowPatch, Rectangle
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
 MODEL = Path(__file__).resolve().parents[1]
-DIST = max((MODEL / "outputs" / "dist").glob("*_2026*"), key=lambda d: d.stat().st_mtime)
+DIST = MODEL / "outputs/dist/capfix_20260927"
 FIG = MODEL / "outputs" / "figures_trr"
 FIG.mkdir(parents=True, exist_ok=True)
 
@@ -667,8 +667,8 @@ def fig_speed():
             label="controller struck, at the panel's level")
     ax.plot(v, w5, color=BLUE, ls="-", lw=1.8, marker="o", ms=3.5,
             label="head-on from red running (signals)")
-    ax.annotate("about 10× over this range", xy=(30.5, 4.2e-5), fontsize=9, color=BLUE)
-    ax.annotate("about 2.3×", xy=(72, 3.3e-3), fontsize=9, color=INK)
+    ax.annotate(f"about {w5[-1] / w5[0]:.1f}× over this range", xy=(30.5, 4.2e-5), fontsize=9, color=BLUE)
+    ax.annotate(f"about {w3[-1] / w3[0]:.1f}×", xy=(72, 3.3e-3), fontsize=9, color=INK)
     ax.axhspan(5e-6, 2e-5, color=INK, alpha=0.10, lw=0)
     ax.text(v.max() - 0.5, 6.0e-6, "constructed occupational benchmark", fontsize=9, color=INK, va="bottom", ha="right")
     ax.set_yscale("log")

@@ -29,8 +29,12 @@ BASELINE_Q = 300.0
 HEADON_C, STRIKE_C = 1.2e-5, 1.0e-5
 
 
+DIST = MODEL / "outputs/dist/capfix_20260927"
+
+
 def newest_dist() -> Path:
-    return max((MODEL / "outputs" / "dist").glob("*_2026*"), key=lambda d: d.stat().st_mtime)
+    """Selected production output; explicit to protect the version 1.2 record."""
+    return DIST
 
 
 def uniform_delay_per_vehicle_s(cycle_s, green_s, q_vps, sat_vps):

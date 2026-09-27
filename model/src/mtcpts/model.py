@@ -301,6 +301,9 @@ def run_cell(cell: Cell, sej: "dict[str, ExpertMixture] | PooledSEJ", priors: Pr
             "closing_kmh": w5["closing_ms"] * 3.6,
             "mean_ttc_s": w5["mean_ttc"], "p_blind": w5["p_blind"],
             "f_clear": w5["f_clear"], "p_safe_window": w5["p_safe_window"],
+            "onset_cap_binds": w5["onset_cap_binds"],
+            "onset_share": w5["onset_share"],
+            "onset_entry_probability": w5["onset_entry_probability"],
         }
 
     # ---- closed-form break-even in the device violation rate (dH linear in it) ---------

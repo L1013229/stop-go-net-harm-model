@@ -1,0 +1,251 @@
+{
+  "dist": "capfix_20260927",
+  "script": "model/scripts/model_form_headline_reads.py",
+  "created_utc": "2026-09-27T07:19:43.754539+00:00",
+  "branch": "trr-v1.2-cut",
+  "git_head": "d1f5c2fa21d987ea5fdc6f7cd5e5516daea8fe5d",
+  "production": {
+    "seed": 20260709,
+    "rng": "PCG64",
+    "rng_seed_sequence": [
+      20260709,
+      300,
+      250
+    ],
+    "n_draws": 20000,
+    "n_grid": 128,
+    "q_vph_dir": 300,
+    "section_m": 250,
+    "priors": "unmodified Priors(); production per-expert SEJ fits"
+  },
+  "reading": {
+    "signal_strategy": "S1a",
+    "device_strategy": "S2",
+    "device_matching": "medians",
+    "queue_tail_difference": "excluded",
+    "avoidance_harm": "excluded",
+    "headon_central": 1.2e-05,
+    "controller_central": 1e-05,
+    "calibration": "Re-anchor each form on its own S0 W3 and S1a W5 means or medians.",
+    "implementation": "Imported review_reads.main, including its nested dh and tied functions.",
+    "extracted_keys": [
+      "R78_red_running_removal_at_record.p_with",
+      "R56_mean_matched.S1a",
+      "R71_R75_tied_operator.reference_0m.p",
+      "R71_R75_tied_operator.reference_1m.p"
+    ]
+  },
+  "primary_reproduction": {
+    "source": "model/outputs/dist/capfix_20260927/review_reads.json",
+    "expected": {
+      "signal_medians_matched": 0.43305,
+      "signal_means_matched": 0.53415,
+      "tied_device_0m": 0.5634,
+      "tied_device_1m": 0.4991
+    },
+    "actual": {
+      "signal_medians_matched": 0.43305,
+      "signal_means_matched": 0.53415,
+      "tied_device_0m": 0.5634,
+      "tied_device_1m": 0.4991
+    },
+    "exact_headline_match": true,
+    "rerun_trace_arrays_bitwise_identical": 142,
+    "registry_sha256_before_new_rows": "d588221d5de11922f0d48000cd816c103787592b916a6d2f8eb2a09fb7cf18a3"
+  },
+  "validation": {
+    "all_sampled_inputs_identical_across_forms": true,
+    "existing_model_form_median_shares_reproduced_at_saved_precision": true,
+    "existing_outputs_overwritten": false,
+    "source_sha256_unchanged_during_run": {
+      "model/config/priors.toml": "e25d8a4b4c941ed940f81d5d0ce41bdc630988e24b5978e2ee93a1cb5e2b55f0",
+      "model/config/sej_scenario_c_fits.csv": "63d104232012b4032b76bb6cc95fcb7ea773e1d62dc9f1dd53005a4f905b0dea",
+      "model/scripts/run_suite.py": "3669f2a99930de7dc205f1999d70b1d10d7b975d9cfd89063dd0730c553bcef1",
+      "model/scripts/review_reads.py": "1da7a0385d8dcda894dd64a247feb1c68fd77f35b064c158384ea970f3edbf0f",
+      "model/scripts/model_form_sensitivity.py": "726b09a8a3e8c9ecde53cfd5f866ef92d877d80976916e636cdc0576246da6a3",
+      "model/scripts/model_form_headline_reads.py": "d087c50b136c3df15093428a1f444ea29ef219f047b1dba042c5d8741af8caf9",
+      "model/scripts/decision_outputs_s2.py": "879c3f866a2d53a12f7f060646bed5db707ffb0101f79b7edbc34fae5f8c70eb",
+      "model/scripts/welfare.py": "b21ca3d4872b51acf0c1cf0b1778e45cfdfe4e66c1359cab5867b53465ffafa3",
+      "model/config/welfare-values.toml": "36787d7027aa378eadfb8a202edab51e91ba68dc9babf0526f5e4fc5c0c5ed57",
+      "docs/prespec.md": "029d7c90f70ef6c0309d2720925b51286da6233fea10b92b4e766e839c0396a7",
+      "docs/model-design.md": "854c3d75b8be62ec703f573ec509d8df43967dd7bd1732f9759ff21bf876575c",
+      "model/outputs/dist/capfix_20260927/baseline_traces.npz": "705eb63b7ee72c83f581c1da4c131688fa5e28e7b7a74ebdbe648c4abd5d2d16",
+      "model/outputs/dist/capfix_20260927/review_reads.json": "181561a93f9d68f40858a4f2a4e037dbd5fb352f150d1f3698e7b0126d19da4b",
+      "model/outputs/dist/capfix_20260927/model_form_sensitivity.csv": "251ca5788eec89593e1239b1e8d675d95237da4637bd3a5bd228db069c1e1df8",
+      "model/outputs/dist/capfix_20260927/speed_sweep.csv": "9a3b627a6e6e0faf442bfbb68c8f942a38d58769ff17b6676fb86e95bb602584",
+      "model/src/mtcpts/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "model/src/mtcpts/conflict.py": "48e859a6e3e4234db325f46693358c30f744e9df439c6efaa60897f641340359",
+      "model/src/mtcpts/cycle.py": "7886eafbf6a756602a07f4f7816209e57bc9dcaa77d512ab44e953aa596d4a8c",
+      "model/src/mtcpts/distributions.py": "1634b3dcbdc34f3437278bc046095eca875e1a4de641de2b5d727043f4c3ac9d",
+      "model/src/mtcpts/model.py": "7858fa64eb499e9ba618d6947439b4175d001b677b94d5479b15fabb07d32bfb",
+      "model/src/mtcpts/pathways.py": "0159311ba4478b1df8ca0f3bf7eae959b781a419ab4f7a5703fff410cf4c5c13",
+      "model/src/mtcpts/sensitivity.py": "e36fcc0630419cc2e3091e225be83aafe5e84e0ead8f464de5cdf1c53b443df5",
+      "model/src/mtcpts/severity.py": "5868f40afe261d2b8ecd0957de1e73d7ceda7288f1bf81f31aa4e038f0473bf6"
+    }
+  },
+  "environment": {
+    "python": "3.13.5",
+    "numpy": "2.4.4",
+    "scipy": "1.15.3"
+  },
+  "rows": [
+    {
+      "form": "primary",
+      "label": "primary (independent failures, logistic in TTC)",
+      "rho": 0.0,
+      "curve": "logistic",
+      "trace_file": "model/outputs/dist/capfix_20260927/baseline_traces.npz",
+      "trace_sha256": "705eb63b7ee72c83f581c1da4c131688fa5e28e7b7a74ebdbe648c4abd5d2d16",
+      "n_draws": 20000,
+      "finite_draws_per_headline": 20000,
+      "sampled_input_arrays_bitwise_equal_to_primary": 42,
+      "signal_medians_matched": 0.43305,
+      "signal_means_matched": 0.53415,
+      "tied_device_0m": 0.5634,
+      "tied_device_1m": 0.4991,
+      "calibration_factors": {
+        "l3_median_matched": 0.0030304820245452353,
+        "l5_median_matched": 0.8693092708362004,
+        "l3_mean_matched": 0.001639990138201631,
+        "l5_mean_matched": 0.26123434678291135
+      },
+      "signal_implied_collisions_per_op_day_median": 0.0009878165853851343,
+      "device_implied_collisions_per_op_day_median": 0.00010406988098825852
+    },
+    {
+      "form": "common_cause_0p5",
+      "label": "MF1 common cause rho=0.5",
+      "rho": 0.5,
+      "curve": "logistic",
+      "trace_file": "model/outputs/dist/capfix_20260927/model_form_traces_common_cause_0p5.npz",
+      "trace_sha256": "d8c0683c21677affc5f240c7c4fab9057c6976f3649331c3661732b91cfcd56d",
+      "n_draws": 20000,
+      "finite_draws_per_headline": 20000,
+      "sampled_input_arrays_bitwise_equal_to_primary": 42,
+      "signal_medians_matched": 0.428,
+      "signal_means_matched": 0.5467,
+      "tied_device_0m": 0.5641,
+      "tied_device_1m": 0.49935,
+      "calibration_factors": {
+        "l3_median_matched": 0.0030304820245452353,
+        "l5_median_matched": 0.4914577023165881,
+        "l3_mean_matched": 0.001639990138201631,
+        "l5_mean_matched": 0.1330635644146389
+      },
+      "signal_implied_collisions_per_op_day_median": 0.001587893939660258,
+      "device_implied_collisions_per_op_day_median": 0.00016660289058732352
+    },
+    {
+      "form": "common_cause_1p0",
+      "label": "MF1 common cause rho=1.0",
+      "rho": 1.0,
+      "curve": "logistic",
+      "trace_file": "model/outputs/dist/capfix_20260927/model_form_traces_common_cause_1p0.npz",
+      "trace_sha256": "6207893f44219f355ee21e85aaa021a00ebe51a5e7e7862a6b186c05fc18cf07",
+      "n_draws": 20000,
+      "finite_draws_per_headline": 20000,
+      "sampled_input_arrays_bitwise_equal_to_primary": 42,
+      "signal_medians_matched": 0.4281,
+      "signal_means_matched": 0.55645,
+      "tied_device_0m": 0.5662,
+      "tied_device_1m": 0.5005,
+      "calibration_factors": {
+        "l3_median_matched": 0.0030304820245452353,
+        "l5_median_matched": 0.3534412859253775,
+        "l3_mean_matched": 0.001639990138201631,
+        "l5_mean_matched": 0.08926634686665467
+      },
+      "signal_implied_collisions_per_op_day_median": 0.0021437718560032176,
+      "device_implied_collisions_per_op_day_median": 0.00022221955116583992
+    },
+    {
+      "form": "threshold",
+      "label": "MF2a threshold at ttc50",
+      "rho": 0.0,
+      "curve": "threshold",
+      "trace_file": "model/outputs/dist/capfix_20260927/model_form_traces_threshold.npz",
+      "trace_sha256": "c870b7690634a114166c4c3f1ce026462d92c7bdcb492d48281c20ea2bc3c032",
+      "n_draws": 20000,
+      "finite_draws_per_headline": 20000,
+      "sampled_input_arrays_bitwise_equal_to_primary": 42,
+      "signal_medians_matched": 0.4341,
+      "signal_means_matched": 0.5446,
+      "tied_device_0m": 0.5557,
+      "tied_device_1m": 0.49255,
+      "calibration_factors": {
+        "l3_median_matched": 0.0030304820245452353,
+        "l5_median_matched": 0.6524843183852719,
+        "l3_mean_matched": 0.001639990138201631,
+        "l5_mean_matched": 0.1840288199519242
+      },
+      "signal_implied_collisions_per_op_day_median": 0.0013731101557362393,
+      "device_implied_collisions_per_op_day_median": 0.00015048644318273988
+    },
+    {
+      "form": "loglogistic",
+      "label": "MF2b logistic in ln TTC",
+      "rho": 0.0,
+      "curve": "loglogistic",
+      "trace_file": "model/outputs/dist/capfix_20260927/model_form_traces_loglogistic.npz",
+      "trace_sha256": "e33a6ee5d079d9c020e0a5575e88d5ac893282765556ae81fde06359d6511ef0",
+      "n_draws": 20000,
+      "finite_draws_per_headline": 20000,
+      "sampled_input_arrays_bitwise_equal_to_primary": 42,
+      "signal_medians_matched": 0.42615,
+      "signal_means_matched": 0.63075,
+      "tied_device_0m": 0.55565,
+      "tied_device_1m": 0.49455,
+      "calibration_factors": {
+        "l3_median_matched": 0.0030304820245452353,
+        "l5_median_matched": 0.5007942697776225,
+        "l3_mean_matched": 0.001639990138201631,
+        "l5_mean_matched": 0.07849250168515624
+      },
+      "signal_implied_collisions_per_op_day_median": 0.0014895710535467322,
+      "device_implied_collisions_per_op_day_median": 0.0001544622848936872
+    }
+  ],
+  "most_adverse_rule": "Minimum favourable share for each headline separately across all five forms (docs/prespec.md A6); lower shares weaken favourability of substitution.",
+  "most_adverse": {
+    "signal_medians_matched": {
+      "form": "loglogistic",
+      "label": "MF2b logistic in ln TTC",
+      "value": 0.42615,
+      "all_tied_forms": [
+        "loglogistic"
+      ],
+      "primary_value": 0.43305,
+      "direction": "minimum"
+    },
+    "signal_means_matched": {
+      "form": "primary",
+      "label": "primary (independent failures, logistic in TTC)",
+      "value": 0.53415,
+      "all_tied_forms": [
+        "primary"
+      ],
+      "primary_value": 0.53415,
+      "direction": "minimum"
+    },
+    "tied_device_0m": {
+      "form": "loglogistic",
+      "label": "MF2b logistic in ln TTC",
+      "value": 0.55565,
+      "all_tied_forms": [
+        "loglogistic"
+      ],
+      "primary_value": 0.5634,
+      "direction": "minimum"
+    },
+    "tied_device_1m": {
+      "form": "threshold",
+      "label": "MF2a threshold at ttc50",
+      "value": 0.49255,
+      "all_tied_forms": [
+        "threshold"
+      ],
+      "primary_value": 0.4991,
+      "direction": "minimum"
+    }
+  }
+}
