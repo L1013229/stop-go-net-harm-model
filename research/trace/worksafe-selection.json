@@ -1,0 +1,19 @@
+{
+  "source": "https://data.worksafe.govt.nz/editorial/fatalities_summary_table",
+  "snapshot_rows": 415,
+  "valid_dated_rows": 414,
+  "invalid_date_rows": [
+    415
+  ],
+  "first_incident": "2019-01-09",
+  "last_incident": "2026-07-24",
+  "direct_regex": "road|traffic|flagger|stop[ /-]?go|culvert|expressway",
+  "vehicle_regex": "truck|vehicle|car\\b|roller|run over|ran over|struck|collision",
+  "industries": [
+    "Administrative and Support Services",
+    "Construction"
+  ],
+  "candidate_rows_all_years": 47,
+  "candidate_rows_2010_2025": 44,
+  "warning": "Candidate screen only: no occupation/control-duty variable; notifications exclude other regulators. No national rate calculated."
+}

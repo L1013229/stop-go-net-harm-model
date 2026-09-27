@@ -1,0 +1,31 @@
+{
+  "dft_2016_table_3_8": {
+    "source_id":"DFT_PERMIT", "geography":"England", "year":2016,
+    "works_noticing":694880, "works_permit":813916, "works_total":1508796,
+    "duration_days_noticing":3623105, "duration_days_permit":3747029, "duration_days_total":7370134
+  },
+  "dft_2016_table_8_1": {
+    "source_id":"DFT_ANNEX", "year":2016,
+    "columns":["none","some_carriageway","traffic_control","lane_closure","road_closure"],
+    "works":[244340,772138,410395,30565,51358],
+    "duration_days":[1127493,3643992,2018405,157163,423081]
+  },
+  "dft_street_manager_table_2": {
+    "source_id":"DFT_SM", "geography":"England",
+    "2021_22_total_actual_works":2104285,
+    "2022_23_total_actual_works":2195151,
+    "2023_24":{"minor":1096645,"standard":194584,"major":133752,"immediate_emergency":119102,"immediate_urgent":665433,"total":2209516}
+  },
+  "dft_street_manager_table_3": {
+    "source_id":"DFT_SM", "geography":"England", "period":"2023/24", "includes_hs2":true,
+    "no_incursion":473292,"some_incursion":866716,"traffic_management_and_carriageway_restrictions":870296,"total":2210304
+  },
+  "auckland_2018_19": {"source_id":"AT_2019","corridor_access_requests_approximately":29000,"tmp_per_request_min":1,"tmp_per_request_max":20},
+  "pegula_2003_2010": {"source_id":"PEGULA","start":2003,"end":2010,"traffic_control_activity_fatalities":92,"employed_as_flaggers":32,"other_occupations":60},
+  "paper_values_not_verified_exposure_data": {
+    "gb_annual_opdays":1500000,"gb_range":[900000,2500000],
+    "nz_annual_opdays":400000,"nz_range":[150000,750000],
+    "nz_stopgo_annual_opdays":175000,"nz_stopgo_range":[65000,630000],
+    "nz_controller_deaths_per_year":[0.25,0.5],"nz_roadworker_dsi_per_year":[3,4]
+  }
+}

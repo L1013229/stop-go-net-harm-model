@@ -1,0 +1,2915 @@
+{
+  "url": "https://data.worksafe.govt.nz/editorial/fatalities_summary_table",
+  "accessed_utc": "2026-09-27T18:03:33.756546+00:00",
+  "http_status": 200,
+  "http_body_sha256": "db6f259d291965e26c29ec8658090b13812aae5deb8829c8481071fffda18690",
+  "scope": "The work-related deaths listed in this table are based on initial notifications to WorkSafe and provides preliminary information. Once the death has been investigated, more detailed information becomes available.",
+  "coverage_note_html": "<p>It excludes notifications made to other regulators. For information about the number of work-related fatalities, see our <a href=\"https://data.worksafe.govt.nz/graph/summary/fatalities\"><strong>fatalities summary information</strong></a> and <a href=\"https://data.worksafe.govt.nz/graph/detail/fatalities\"><strong>detailed fatalities data</strong></a>. <br><br><strong>Data as at 5 August 2026<br>Table updated 11 August 2026</strong></p>",
+  "rows": [
+    {
+      "formatted_date_of_incident": "24/07/2026",
+      "age": null,
+      "industry": "Agriculture",
+      "district_of_incident": "Wellington",
+      "summary_of_incident": "Quad bike fatality"
+    },
+    {
+      "formatted_date_of_incident": "14/07/2026",
+      "age": 58,
+      "industry": "Agriculture",
+      "district_of_incident": "Invercargill",
+      "summary_of_incident": "Quad bike fatality"
+    },
+    {
+      "formatted_date_of_incident": "08/07/2026",
+      "age": null,
+      "industry": "Agriculture",
+      "district_of_incident": "Whangārei",
+      "summary_of_incident": "Fatal injury after calving"
+    },
+    {
+      "formatted_date_of_incident": "23/06/2026",
+      "age": null,
+      "industry": "Forestry",
+      "district_of_incident": "Gisborne",
+      "summary_of_incident": "Motor vehicle accident"
+    },
+    {
+      "formatted_date_of_incident": "10/06/2026",
+      "age": null,
+      "industry": "Agriculture",
+      "district_of_incident": "Gisborne",
+      "summary_of_incident": "Quad bike crash"
+    },
+    {
+      "formatted_date_of_incident": "27/05/2026",
+      "age": 51,
+      "industry": "Agriculture",
+      "district_of_incident": "Canterbury",
+      "summary_of_incident": "Motorbike rollover"
+    },
+    {
+      "formatted_date_of_incident": "25/05/2026",
+      "age": null,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Drowned"
+    },
+    {
+      "formatted_date_of_incident": "23/05/2026",
+      "age": null,
+      "industry": "Agriculture",
+      "district_of_incident": "Hawke's Bay",
+      "summary_of_incident": "Farm worker died in quad bike incident on dairy farm"
+    },
+    {
+      "formatted_date_of_incident": "20/05/2026",
+      "age": null,
+      "industry": "Agriculture, Forestry and Fishing",
+      "district_of_incident": "Waikato",
+      "summary_of_incident": "Farm worker died after ladder fall while operating a chainsaw"
+    },
+    {
+      "formatted_date_of_incident": "13/05/2026",
+      "age": 70,
+      "industry": "Construction",
+      "district_of_incident": "Otago",
+      "summary_of_incident": "Worker died following vehicle rollover on rural access track"
+    },
+    {
+      "formatted_date_of_incident": "12/05/2026",
+      "age": 59,
+      "industry": "Construction",
+      "district_of_incident": "Waikato",
+      "summary_of_incident": "Road worker fatally struck by truck on expressway worksite"
+    },
+    {
+      "formatted_date_of_incident": "07/05/2026",
+      "age": 51,
+      "industry": "Agriculture",
+      "district_of_incident": "West Coast",
+      "summary_of_incident": "Farmer killed in tractor rollover"
+    },
+    {
+      "formatted_date_of_incident": "06/05/2026",
+      "age": null,
+      "industry": "Manufacturing",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Truck driver died after falling during loading operations in high winds"
+    },
+    {
+      "formatted_date_of_incident": "27/04/2026",
+      "age": null,
+      "industry": "Administrative and Support Services",
+      "district_of_incident": "West Coast",
+      "summary_of_incident": "Rider fatality following fall"
+    },
+    {
+      "formatted_date_of_incident": "14/04/2026",
+      "age": 50,
+      "industry": "Agriculture, Forestry and Fishing",
+      "district_of_incident": "Waikato",
+      "summary_of_incident": "Quad-bike injury where rider subsequently collapsed a short time after the incident"
+    },
+    {
+      "formatted_date_of_incident": "31/03/2026",
+      "age": null,
+      "industry": "Health Care and Social Assistance",
+      "district_of_incident": "Northland",
+      "summary_of_incident": "Death related to asbestos exposure"
+    },
+    {
+      "formatted_date_of_incident": "28/03/2026",
+      "age": 56,
+      "industry": "Arts and Recreation Services",
+      "district_of_incident": "Otago",
+      "summary_of_incident": "Vehicle crash at event resulting in fatality"
+    },
+    {
+      "formatted_date_of_incident": "23/03/2026",
+      "age": 68,
+      "industry": "Manufacturing",
+      "district_of_incident": "Manawatu-Whanganui",
+      "summary_of_incident": "Truck collision resulting in fatality"
+    },
+    {
+      "formatted_date_of_incident": "23/03/2026",
+      "age": 38,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Manawatu-Whanganui",
+      "summary_of_incident": "Vehicle fatality (no further information)"
+    },
+    {
+      "formatted_date_of_incident": "19/03/2026",
+      "age": null,
+      "industry": "Electricity, Gas, Water and Waste Services",
+      "district_of_incident": "Otago",
+      "summary_of_incident": "Commercial truck crash resulting in fatality."
+    },
+    {
+      "formatted_date_of_incident": "28/02/2026",
+      "age": 28,
+      "industry": "Agriculture, Forestry and Fishing",
+      "district_of_incident": "Bay of Plenty",
+      "summary_of_incident": "Farm worker on motorcycle crashed into tree"
+    },
+    {
+      "formatted_date_of_incident": "26/02/2026",
+      "age": 55,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Northland",
+      "summary_of_incident": "Fatal vehicle crash involving a commercial truck"
+    },
+    {
+      "formatted_date_of_incident": "18/02/2026",
+      "age": 65,
+      "industry": "Construction",
+      "district_of_incident": "Canterbury",
+      "summary_of_incident": "Fatal accident while building home"
+    },
+    {
+      "formatted_date_of_incident": "09/02/2026",
+      "age": 66,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Vehicle crash resulting in death of worker"
+    },
+    {
+      "formatted_date_of_incident": "02/02/2026",
+      "age": 63,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Marlborough",
+      "summary_of_incident": "Delivery van hit a cyclist who received fatal injuries."
+    },
+    {
+      "formatted_date_of_incident": "18/01/2026",
+      "age": 43,
+      "industry": "Agriculture",
+      "district_of_incident": "Canterbury",
+      "summary_of_incident": "Fatally injured during maintenance of a tractor wheel"
+    },
+    {
+      "formatted_date_of_incident": "13/01/2026",
+      "age": 17,
+      "industry": "Construction",
+      "district_of_incident": "Hawke's Bay",
+      "summary_of_incident": "Fatally injured after being struck by a truck"
+    },
+    {
+      "formatted_date_of_incident": "05/01/2026",
+      "age": 62,
+      "industry": "Agriculture",
+      "district_of_incident": "Waikato",
+      "summary_of_incident": "Side-by-side rollover"
+    },
+    {
+      "formatted_date_of_incident": "26/12/2025",
+      "age": 67,
+      "industry": "Agriculture",
+      "district_of_incident": "Gisborne",
+      "summary_of_incident": "Fatal injury while handling cattle"
+    },
+    {
+      "formatted_date_of_incident": "19/12/2025",
+      "age": 58,
+      "industry": "Forestry and Logging",
+      "district_of_incident": "Wellington",
+      "summary_of_incident": "Heavy machinery rollover"
+    },
+    {
+      "formatted_date_of_incident": "18/12/2025",
+      "age": 63,
+      "industry": "Administrative and Support Services",
+      "district_of_incident": "Waikato",
+      "summary_of_incident": "Lawnmower rollover on incline"
+    },
+    {
+      "formatted_date_of_incident": "18/12/2025",
+      "age": 44,
+      "industry": "Agriculture",
+      "district_of_incident": "Waikato",
+      "summary_of_incident": "Truck rollover"
+    },
+    {
+      "formatted_date_of_incident": "14/12/2025",
+      "age": 52,
+      "industry": "Administrative and Support Services",
+      "district_of_incident": "Wellington",
+      "summary_of_incident": "Struck by a falling tree branch"
+    },
+    {
+      "formatted_date_of_incident": "13/12/2025",
+      "age": 51,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Manawatu-Whanganui",
+      "summary_of_incident": "A helicopter crash occurred during the course of work activity"
+    },
+    {
+      "formatted_date_of_incident": "27/11/2025",
+      "age": 77,
+      "industry": "Construction",
+      "district_of_incident": "Waikato",
+      "summary_of_incident": "Fall from height"
+    },
+    {
+      "formatted_date_of_incident": "26/11/2025",
+      "age": 59,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Waikato",
+      "summary_of_incident": "Truck collision"
+    },
+    {
+      "formatted_date_of_incident": "24/11/2025",
+      "age": 44,
+      "industry": "Arts and Recreation",
+      "district_of_incident": "Canterbury",
+      "summary_of_incident": "Guide and client involved in a mountaineering incident"
+    },
+    {
+      "formatted_date_of_incident": "24/11/2025",
+      "age": 40,
+      "industry": "Arts and Recreation",
+      "district_of_incident": "Canterbury",
+      "summary_of_incident": "Guide and client involved in a mountaineering incident"
+    },
+    {
+      "formatted_date_of_incident": "18/11/2025",
+      "age": 18,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Manawatu-Whanganui",
+      "summary_of_incident": "Vehicle crash involving worker and member of the public"
+    },
+    {
+      "formatted_date_of_incident": "06/11/2025",
+      "age": null,
+      "industry": "Agriculture, Forestry and Fishing",
+      "district_of_incident": "Northland",
+      "summary_of_incident": "Quad-bike rollover"
+    },
+    {
+      "formatted_date_of_incident": "03/11/2025",
+      "age": 40,
+      "industry": "Agriculture, Forestry and Fishing",
+      "district_of_incident": "Wellington",
+      "summary_of_incident": "Side-by-side rollover"
+    },
+    {
+      "formatted_date_of_incident": "31/10/2025",
+      "age": 48,
+      "industry": "Manufacturing",
+      "district_of_incident": "Hawke's Bay",
+      "summary_of_incident": "Fall from height (roofing)"
+    },
+    {
+      "formatted_date_of_incident": "22/10/2025",
+      "age": 61,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Traffic collision between bus and car"
+    },
+    {
+      "formatted_date_of_incident": "30/08/2025",
+      "age": 18,
+      "industry": "Agriculture",
+      "district_of_incident": "Taranaki",
+      "summary_of_incident": "Quad-bike rollover"
+    },
+    {
+      "formatted_date_of_incident": "26/08/2025",
+      "age": 83,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Pedestrian hit by bus"
+    },
+    {
+      "formatted_date_of_incident": "25/08/2025",
+      "age": null,
+      "industry": "Agriculture",
+      "district_of_incident": "Manawatu-Whanganui",
+      "summary_of_incident": "Trapped in farming machinery"
+    },
+    {
+      "formatted_date_of_incident": "17/07/2025",
+      "age": 19,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Fatality of individual on public transport"
+    },
+    {
+      "formatted_date_of_incident": "14/07/2025",
+      "age": 38,
+      "industry": "Construction",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Truck rolled over worker / driver"
+    },
+    {
+      "formatted_date_of_incident": "10/07/2025",
+      "age": 29,
+      "industry": "Construction",
+      "district_of_incident": "Bay of Plenty",
+      "summary_of_incident": "Single vehicle crash involving a truck"
+    },
+    {
+      "formatted_date_of_incident": "04/07/2025",
+      "age": 78,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Canterbury",
+      "summary_of_incident": "Truck crashed into stationary (stuck) vehicle"
+    },
+    {
+      "formatted_date_of_incident": "22/06/2025",
+      "age": 52,
+      "industry": "Electricity, Gas, Water and Waste Services",
+      "district_of_incident": "Bay of Plenty",
+      "summary_of_incident": "Commercial truck vehicle incident / crash"
+    },
+    {
+      "formatted_date_of_incident": "20/06/2025",
+      "age": 68,
+      "industry": "Retail Trade",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Fell off ladder while stocking shelves"
+    },
+    {
+      "formatted_date_of_incident": "03/06/2025",
+      "age": 76,
+      "industry": "Health Care and Social Assistance",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Fell from bed"
+    },
+    {
+      "formatted_date_of_incident": "30/05/2025",
+      "age": 72,
+      "industry": "Arts and Recreation Services",
+      "district_of_incident": "Manawatu-Whanganui",
+      "summary_of_incident": "Fell from tree"
+    },
+    {
+      "formatted_date_of_incident": "25/05/2025",
+      "age": 53,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Manawatu-Whanganui",
+      "summary_of_incident": "Single vehicle crash involving a truck"
+    },
+    {
+      "formatted_date_of_incident": "12/05/2025",
+      "age": 33,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Manawatu-Whanganui",
+      "summary_of_incident": "Worker vehicle collision with member of the public's vehicle"
+    },
+    {
+      "formatted_date_of_incident": "10/05/2025",
+      "age": 36,
+      "industry": "Agriculture, Forestry and Fishing",
+      "district_of_incident": "Northland",
+      "summary_of_incident": "Quad bike rollover"
+    },
+    {
+      "formatted_date_of_incident": "06/05/2025",
+      "age": 55,
+      "industry": "Agriculture, Forestry and Fishing",
+      "district_of_incident": "Canterbury",
+      "summary_of_incident": "Quad bike rollover"
+    },
+    {
+      "formatted_date_of_incident": "02/05/2025",
+      "age": 62,
+      "industry": "Electricity, Gas, Water and Waste Services",
+      "district_of_incident": "Southland",
+      "summary_of_incident": "Crush injuries after becoming caught between two objects"
+    },
+    {
+      "formatted_date_of_incident": "29/04/2025",
+      "age": 65,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Waikato",
+      "summary_of_incident": "Vehicle crash (truck rollover)"
+    },
+    {
+      "formatted_date_of_incident": "24/04/2025",
+      "age": 32,
+      "industry": "Manufacturing",
+      "district_of_incident": "Otago",
+      "summary_of_incident": "Crushed in machine being manufactured"
+    },
+    {
+      "formatted_date_of_incident": "19/04/2025",
+      "age": 52,
+      "industry": "Agriculture, Forestry and Fishing",
+      "district_of_incident": "Bay of Plenty",
+      "summary_of_incident": "Trapped between side-by-side and gate"
+    },
+    {
+      "formatted_date_of_incident": "19/04/2025",
+      "age": 42,
+      "industry": "Agriculture, Forestry and Fishing",
+      "district_of_incident": "Otago",
+      "summary_of_incident": "Tractor rollover while baling"
+    },
+    {
+      "formatted_date_of_incident": "16/04/2025",
+      "age": 64,
+      "industry": "Construction",
+      "district_of_incident": "Hawke's Bay",
+      "summary_of_incident": "Vehicle crash (truck, not further defined)"
+    },
+    {
+      "formatted_date_of_incident": "15/04/2025",
+      "age": 69,
+      "industry": "Personal and Other Services",
+      "district_of_incident": "Northland",
+      "summary_of_incident": "Power tool / machinery accident (stump grinder)"
+    },
+    {
+      "formatted_date_of_incident": "10/04/2025",
+      "age": 85,
+      "industry": "Construction",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Caught between a moving vehicle and trailer."
+    },
+    {
+      "formatted_date_of_incident": "09/04/2025",
+      "age": 36,
+      "industry": "Construction",
+      "district_of_incident": "Manawatu-Whanganui",
+      "summary_of_incident": "Vehicle crash (truck v van)"
+    },
+    {
+      "formatted_date_of_incident": "22/03/2025",
+      "age": 72,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Wellington",
+      "summary_of_incident": "Vehicle crash, not further defined"
+    },
+    {
+      "formatted_date_of_incident": "03/03/2025",
+      "age": 46,
+      "industry": "Electricity, Gas, Water and Waste Services",
+      "district_of_incident": "Manawatu-Whanganui",
+      "summary_of_incident": "Vehicle crash (truck and van)"
+    },
+    {
+      "formatted_date_of_incident": "26/02/2025",
+      "age": 77,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Taranaki",
+      "summary_of_incident": "Single-vehicle crash (truck)"
+    },
+    {
+      "formatted_date_of_incident": "04/02/2025",
+      "age": 35,
+      "industry": "Accommodation and Food Services",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Lawnmower rollover"
+    },
+    {
+      "formatted_date_of_incident": "04/02/2025",
+      "age": 81,
+      "industry": "Agriculture",
+      "district_of_incident": "Hawke's Bay",
+      "summary_of_incident": "Quad bike rollover"
+    },
+    {
+      "formatted_date_of_incident": "03/02/2025",
+      "age": null,
+      "industry": "Public Administration and Safety",
+      "district_of_incident": "Bay of Plenty",
+      "summary_of_incident": "Vehicle crash"
+    },
+    {
+      "formatted_date_of_incident": "21/01/2025",
+      "age": 50,
+      "industry": "Construction",
+      "district_of_incident": "Taranaki",
+      "summary_of_incident": "Vehicle crash (truck v truck)"
+    },
+    {
+      "formatted_date_of_incident": "01/01/2025",
+      "age": 62,
+      "industry": "Public Administration and Safety",
+      "district_of_incident": "Nelson",
+      "summary_of_incident": "Vehicle incident (car v pedestrian)"
+    },
+    {
+      "formatted_date_of_incident": "28/12/2024",
+      "age": 37,
+      "industry": "Manufacturing",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Fall from aerial work platform"
+    },
+    {
+      "formatted_date_of_incident": "21/12/2024",
+      "age": 51,
+      "industry": "Agriculture",
+      "district_of_incident": "Canterbury",
+      "summary_of_incident": "Vehicle incident (hydraulics trailer malfunction)"
+    },
+    {
+      "formatted_date_of_incident": "16/12/2024",
+      "age": 64,
+      "industry": "Wholesale Trade",
+      "district_of_incident": "Hawke's Bay",
+      "summary_of_incident": "Vehicle incident (logging forwarder)"
+    },
+    {
+      "formatted_date_of_incident": "12/12/2024",
+      "age": 70,
+      "industry": "Unknown",
+      "district_of_incident": "Northland",
+      "summary_of_incident": "Mower rollover"
+    },
+    {
+      "formatted_date_of_incident": "26/11/2024",
+      "age": 84,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Bay of Plenty",
+      "summary_of_incident": "Vehicle crash (car v truck)"
+    },
+    {
+      "formatted_date_of_incident": "13/11/2024",
+      "age": 49,
+      "industry": "Agriculture",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Vehicle crash (tractor)"
+    },
+    {
+      "formatted_date_of_incident": "10/11/2024",
+      "age": 78,
+      "industry": "Public Administration and Safety",
+      "district_of_incident": "Manawatu-Whanganui",
+      "summary_of_incident": "Complications caused by wearing an ankle monitoring bracelet"
+    },
+    {
+      "formatted_date_of_incident": "15/10/2024",
+      "age": 53,
+      "industry": "Retail Trade",
+      "district_of_incident": "Manawatu-Whanganui",
+      "summary_of_incident": "Vehicle crash (truck v bus)"
+    },
+    {
+      "formatted_date_of_incident": "05/10/2024",
+      "age": 62,
+      "industry": "Agriculture",
+      "district_of_incident": "Taranaki",
+      "summary_of_incident": "Crushed (vehicle/machinery)"
+    },
+    {
+      "formatted_date_of_incident": "04/10/2024",
+      "age": 42,
+      "industry": "Retail Trade",
+      "district_of_incident": "Canterbury",
+      "summary_of_incident": "Hit by falling / moving object"
+    },
+    {
+      "formatted_date_of_incident": "25/09/2024",
+      "age": 38,
+      "industry": "Arts and Recreation Services",
+      "district_of_incident": "Canterbury",
+      "summary_of_incident": "Avalanche"
+    },
+    {
+      "formatted_date_of_incident": "19/09/2024",
+      "age": 29,
+      "industry": "Wholesale Trade",
+      "district_of_incident": "Waikato",
+      "summary_of_incident": "Forklift incident"
+    },
+    {
+      "formatted_date_of_incident": "07/09/2024",
+      "age": 11,
+      "industry": "Agriculture",
+      "district_of_incident": "Waikato",
+      "summary_of_incident": "Quad-bike rollover"
+    },
+    {
+      "formatted_date_of_incident": "05/09/2024",
+      "age": 83,
+      "industry": "Health Care and Social Assistance",
+      "district_of_incident": "Northland",
+      "summary_of_incident": "Slip / fall"
+    },
+    {
+      "formatted_date_of_incident": "26/08/2024",
+      "age": null,
+      "industry": "Construction",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Multi-vehicle crash (truck v car + van)"
+    },
+    {
+      "formatted_date_of_incident": "26/08/2024",
+      "age": null,
+      "industry": "Construction",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Multi-vehicle crash (truck v car + van)"
+    },
+    {
+      "formatted_date_of_incident": "26/08/2024",
+      "age": null,
+      "industry": "Construction",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Multi-vehicle crash (truck v car + van)"
+    },
+    {
+      "formatted_date_of_incident": "14/08/2024",
+      "age": null,
+      "industry": "Arts and Recreation Services",
+      "district_of_incident": "Canterbury",
+      "summary_of_incident": "Vehicle crash, not further defined"
+    },
+    {
+      "formatted_date_of_incident": "14/08/2024",
+      "age": null,
+      "industry": "Arts and Recreation Services",
+      "district_of_incident": "Canterbury",
+      "summary_of_incident": "Vehicle crash, not further defined"
+    },
+    {
+      "formatted_date_of_incident": "14/08/2024",
+      "age": null,
+      "industry": "Arts and Recreation Services",
+      "district_of_incident": "Canterbury",
+      "summary_of_incident": "Vehicle crash, not further defined"
+    },
+    {
+      "formatted_date_of_incident": "31/07/2024",
+      "age": 58,
+      "industry": "Construction",
+      "district_of_incident": "Bay of Plenty",
+      "summary_of_incident": "Drowning"
+    },
+    {
+      "formatted_date_of_incident": "30/07/2024",
+      "age": 69,
+      "industry": "Agriculture",
+      "district_of_incident": "Northland",
+      "summary_of_incident": "Quad-bike rollover"
+    },
+    {
+      "formatted_date_of_incident": "30/07/2024",
+      "age": 13,
+      "industry": "Arts and Recreation Services",
+      "district_of_incident": "Canterbury",
+      "summary_of_incident": "Slip / Fall"
+    },
+    {
+      "formatted_date_of_incident": "29/07/2024",
+      "age": 44,
+      "industry": "Education and Training",
+      "district_of_incident": "Northland",
+      "summary_of_incident": "Vehicle Crash (Single-Vehicle)"
+    },
+    {
+      "formatted_date_of_incident": "27/07/2024",
+      "age": 69,
+      "industry": "Agriculture",
+      "district_of_incident": "Waikato",
+      "summary_of_incident": "Trapped / caught in machinery"
+    },
+    {
+      "formatted_date_of_incident": "26/07/2024",
+      "age": 59,
+      "industry": "Agriculture",
+      "district_of_incident": "Southland",
+      "summary_of_incident": "Quad-bike rollover"
+    },
+    {
+      "formatted_date_of_incident": "22/07/2024",
+      "age": 64,
+      "industry": "Agriculture",
+      "district_of_incident": "Canterbury",
+      "summary_of_incident": "Side-by-side rollover"
+    },
+    {
+      "formatted_date_of_incident": "22/07/2024",
+      "age": 48,
+      "industry": "Agriculture, Forestry and Fishing",
+      "district_of_incident": "Hawke's Bay",
+      "summary_of_incident": "Digger submersion in river"
+    },
+    {
+      "formatted_date_of_incident": "22/07/2024",
+      "age": 80,
+      "industry": "Health Care and Social Assistance",
+      "district_of_incident": "Taranaki",
+      "summary_of_incident": "Fall"
+    },
+    {
+      "formatted_date_of_incident": "18/07/2024",
+      "age": 69,
+      "industry": "Agriculture",
+      "district_of_incident": "Wellington",
+      "summary_of_incident": "ATV rollover"
+    },
+    {
+      "formatted_date_of_incident": "11/07/2024",
+      "age": 33,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Tasman",
+      "summary_of_incident": "Vehicle crash (truck v truck)"
+    },
+    {
+      "formatted_date_of_incident": "20/06/2024",
+      "age": 37,
+      "industry": "Agriculture",
+      "district_of_incident": "Tasman",
+      "summary_of_incident": "Vehicle crash (truck and van)"
+    },
+    {
+      "formatted_date_of_incident": "20/06/2024",
+      "age": 53,
+      "industry": "Transport, Postal, and Warehousing",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Being hit by falling objects"
+    },
+    {
+      "formatted_date_of_incident": "19/06/2024",
+      "age": 58,
+      "industry": "Agriculture",
+      "district_of_incident": "Northland",
+      "summary_of_incident": "Caught/trapped in machinery"
+    },
+    {
+      "formatted_date_of_incident": "01/06/2024",
+      "age": 48,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Waikato",
+      "summary_of_incident": "Vehicle crash (truck v van)"
+    },
+    {
+      "formatted_date_of_incident": "11/05/2024",
+      "age": 65,
+      "industry": "Transport, Postal, and Warehousing",
+      "district_of_incident": "Taranaki",
+      "summary_of_incident": "Vehicle crash (horse float and van)"
+    },
+    {
+      "formatted_date_of_incident": "08/05/2024",
+      "age": 49,
+      "industry": "Construction",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Vehicle rolled on top of person"
+    },
+    {
+      "formatted_date_of_incident": "29/04/2024",
+      "age": 52,
+      "industry": "Forestry and Logging",
+      "district_of_incident": "Hawke's Bay",
+      "summary_of_incident": "Tree-felling incident"
+    },
+    {
+      "formatted_date_of_incident": "23/04/2024",
+      "age": 42,
+      "industry": "Construction",
+      "district_of_incident": "Canterbury",
+      "summary_of_incident": "Digger rollover"
+    },
+    {
+      "formatted_date_of_incident": "16/04/2024",
+      "age": 22,
+      "industry": "Agriculture",
+      "district_of_incident": "Canterbury",
+      "summary_of_incident": "Trapped in machinery"
+    },
+    {
+      "formatted_date_of_incident": "10/04/2024",
+      "age": 44,
+      "industry": "Manufacturing",
+      "district_of_incident": "Waikato",
+      "summary_of_incident": "Slipped/fell while working with metal beam"
+    },
+    {
+      "formatted_date_of_incident": "09/04/2024",
+      "age": 41,
+      "industry": "Construction",
+      "district_of_incident": "Canterbury",
+      "summary_of_incident": "Vehicle crash (van)"
+    },
+    {
+      "formatted_date_of_incident": "05/04/2024",
+      "age": 81,
+      "industry": "Agriculture",
+      "district_of_incident": "Hawke's Bay",
+      "summary_of_incident": "Crushed by falling object"
+    },
+    {
+      "formatted_date_of_incident": "05/04/2024",
+      "age": 76,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Waikato",
+      "summary_of_incident": "Vehicle crash (van)"
+    },
+    {
+      "formatted_date_of_incident": "28/03/2024",
+      "age": 25,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Canterbury",
+      "summary_of_incident": "Vehicle incident (truck rolled over worker)"
+    },
+    {
+      "formatted_date_of_incident": "19/03/2024",
+      "age": 44,
+      "industry": "Administrative and Support Services",
+      "district_of_incident": "Northland",
+      "summary_of_incident": "Vehicle incident (truck rolled over worker)"
+    },
+    {
+      "formatted_date_of_incident": "07/03/2024",
+      "age": 61,
+      "industry": "Agriculture",
+      "district_of_incident": "Taranaki",
+      "summary_of_incident": "Vehicle incident (motorbike on farm)"
+    },
+    {
+      "formatted_date_of_incident": "03/03/2024",
+      "age": 41,
+      "industry": "Construction",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Hit by falling object"
+    },
+    {
+      "formatted_date_of_incident": "01/03/2024",
+      "age": 52,
+      "industry": "Manufacturing",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Fall down stairs"
+    },
+    {
+      "formatted_date_of_incident": "22/02/2024",
+      "age": 48,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Canterbury",
+      "summary_of_incident": "Vehicle incident (truck)"
+    },
+    {
+      "formatted_date_of_incident": "20/02/2024",
+      "age": 66,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Otago",
+      "summary_of_incident": "Hit by falling machinery"
+    },
+    {
+      "formatted_date_of_incident": "12/02/2024",
+      "age": 67,
+      "industry": "Agriculture",
+      "district_of_incident": "Waikato",
+      "summary_of_incident": "Quad-bike accident"
+    },
+    {
+      "formatted_date_of_incident": "10/02/2024",
+      "age": 36,
+      "industry": "Arts and Recreation Services",
+      "district_of_incident": "Canterbury",
+      "summary_of_incident": "Drowning"
+    },
+    {
+      "formatted_date_of_incident": "08/02/2024",
+      "age": 70,
+      "industry": "Agriculture",
+      "district_of_incident": "Waikato",
+      "summary_of_incident": "Vehicle rollover on farm (quad bike)"
+    },
+    {
+      "formatted_date_of_incident": "08/02/2024",
+      "age": 50,
+      "industry": "Forestry and Logging",
+      "district_of_incident": "Bay of Plenty",
+      "summary_of_incident": "Struck by falling tree"
+    },
+    {
+      "formatted_date_of_incident": "08/02/2024",
+      "age": null,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Hawke's Bay",
+      "summary_of_incident": "Vehicle incident (truck and ute)"
+    },
+    {
+      "formatted_date_of_incident": "29/01/2024",
+      "age": 43,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Otago",
+      "summary_of_incident": "Vehicle incident (truck and car)"
+    },
+    {
+      "formatted_date_of_incident": "29/01/2024",
+      "age": 48,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Otago",
+      "summary_of_incident": "Vehicle incident (truck and car)"
+    },
+    {
+      "formatted_date_of_incident": "25/01/2024",
+      "age": 43,
+      "industry": "Arts and Recreation Services",
+      "district_of_incident": "Otago",
+      "summary_of_incident": "Vehicle incident (car and car)"
+    },
+    {
+      "formatted_date_of_incident": "25/01/2024",
+      "age": 30,
+      "industry": "Manufacturing",
+      "district_of_incident": "Taranaki",
+      "summary_of_incident": "Caught/trapped in machinery"
+    },
+    {
+      "formatted_date_of_incident": "15/01/2024",
+      "age": 41,
+      "industry": "Construction",
+      "district_of_incident": "Northland",
+      "summary_of_incident": "Trapped between vehicles (truck and roller)"
+    },
+    {
+      "formatted_date_of_incident": "15/01/2024",
+      "age": 54,
+      "industry": "Manufacturing",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Fall from height"
+    },
+    {
+      "formatted_date_of_incident": "12/01/2024",
+      "age": 44,
+      "industry": "Construction",
+      "district_of_incident": "Northland",
+      "summary_of_incident": "Fall from machinery (loader)"
+    },
+    {
+      "formatted_date_of_incident": "29/12/2023",
+      "age": 29,
+      "industry": "Agriculture, Forestry and Fishing Support Services",
+      "district_of_incident": "West Coast",
+      "summary_of_incident": "Vehicle incident (single car)"
+    },
+    {
+      "formatted_date_of_incident": "25/12/2023",
+      "age": 83,
+      "industry": "Agriculture",
+      "district_of_incident": "Waikato",
+      "summary_of_incident": "Crush injuries from tractor"
+    },
+    {
+      "formatted_date_of_incident": "23/12/2023",
+      "age": 79,
+      "industry": "Agriculture",
+      "district_of_incident": "Waikato",
+      "summary_of_incident": "Vehicle rollover on farm (quad bike)"
+    },
+    {
+      "formatted_date_of_incident": "10/12/2023",
+      "age": 61,
+      "industry": "Agriculture",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Machinery related"
+    },
+    {
+      "formatted_date_of_incident": "04/12/2023",
+      "age": 75,
+      "industry": "Agriculture",
+      "district_of_incident": "Bay of Plenty",
+      "summary_of_incident": "Vehicle rollover (quad bike)"
+    },
+    {
+      "formatted_date_of_incident": "01/12/2023",
+      "age": 31,
+      "industry": "Manufacturing",
+      "district_of_incident": "Waikato",
+      "summary_of_incident": "Crushed by machinery"
+    },
+    {
+      "formatted_date_of_incident": "30/11/2023",
+      "age": 70,
+      "industry": "Manufacturing",
+      "district_of_incident": "Northland",
+      "summary_of_incident": "Incident involving knife"
+    },
+    {
+      "formatted_date_of_incident": "25/11/2023",
+      "age": 63,
+      "industry": "Agriculture",
+      "district_of_incident": "Taranaki",
+      "summary_of_incident": "Vehicle rollover (quad bike)"
+    },
+    {
+      "formatted_date_of_incident": "17/11/2023",
+      "age": 50,
+      "industry": "Agriculture, Forestry and Fishing Support Services",
+      "district_of_incident": "Manawatu-Whanganui",
+      "summary_of_incident": "Cause to be determined"
+    },
+    {
+      "formatted_date_of_incident": "03/11/2023",
+      "age": 64,
+      "industry": "Construction",
+      "district_of_incident": "Waikato",
+      "summary_of_incident": "Vehicle incident (Truck and Ute)"
+    },
+    {
+      "formatted_date_of_incident": "25/10/2023",
+      "age": 73,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Waikato",
+      "summary_of_incident": "Vehicle incident (Pedestrian and Truck)"
+    },
+    {
+      "formatted_date_of_incident": "24/10/2023",
+      "age": 70,
+      "industry": "Arts and Recreation Services",
+      "district_of_incident": "Bay of Plenty",
+      "summary_of_incident": "Vehicle rollover (side-by-side)"
+    },
+    {
+      "formatted_date_of_incident": "09/10/2023",
+      "age": 37,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Waikato",
+      "summary_of_incident": "Crush injuries from shipping container"
+    },
+    {
+      "formatted_date_of_incident": "11/09/2023",
+      "age": 64,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Bay of Plenty",
+      "summary_of_incident": "Vehicle incident (Truck)"
+    },
+    {
+      "formatted_date_of_incident": "06/09/2023",
+      "age": 45,
+      "industry": "Wholesale Trade",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Struck by forklift"
+    },
+    {
+      "formatted_date_of_incident": "30/08/2023",
+      "age": 53,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Manawatu-Whanganui",
+      "summary_of_incident": "Vehicle incident (Truck and pedestrian)"
+    },
+    {
+      "formatted_date_of_incident": "05/08/2023",
+      "age": 38,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Vehicle incident (Contact with live wires)"
+    },
+    {
+      "formatted_date_of_incident": "01/08/2023",
+      "age": 51,
+      "industry": "Agriculture",
+      "district_of_incident": "Tasman",
+      "summary_of_incident": "Vehicle incident (Tractor rollover)"
+    },
+    {
+      "formatted_date_of_incident": "27/07/2023",
+      "age": 37,
+      "industry": "Manufacturing",
+      "district_of_incident": "Bay of Plenty",
+      "summary_of_incident": "Caught in machinery"
+    },
+    {
+      "formatted_date_of_incident": "21/07/2023",
+      "age": 24,
+      "industry": "Construction",
+      "district_of_incident": "Waikato",
+      "summary_of_incident": "Vehicle incident (Car and car)"
+    },
+    {
+      "formatted_date_of_incident": "10/07/2023",
+      "age": 34,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Manawatu-Whanganui",
+      "summary_of_incident": "Vehicle incident (Truck)"
+    },
+    {
+      "formatted_date_of_incident": "04/07/2023",
+      "age": 17,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Wellington",
+      "summary_of_incident": "Vehicle incident (Bus and motorcycle)"
+    },
+    {
+      "formatted_date_of_incident": "21/06/2023",
+      "age": 70,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Vehicle incident (Truck)"
+    },
+    {
+      "formatted_date_of_incident": "30/05/2023",
+      "age": 39,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Northland",
+      "summary_of_incident": "Vehicle incident (truck and truck)"
+    },
+    {
+      "formatted_date_of_incident": "30/05/2023",
+      "age": 30,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Northland",
+      "summary_of_incident": "Vehicle incident (truck and truck)"
+    },
+    {
+      "formatted_date_of_incident": "27/05/2023",
+      "age": null,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Waikato",
+      "summary_of_incident": "Vehicle rollover (Truck)"
+    },
+    {
+      "formatted_date_of_incident": "22/05/2023",
+      "age": 35,
+      "industry": "Agriculture, Forestry and Fishing Support Services",
+      "district_of_incident": "Canterbury",
+      "summary_of_incident": "Struck by falling tree"
+    },
+    {
+      "formatted_date_of_incident": "12/05/2023",
+      "age": 83,
+      "industry": "Health Care and Social Assistance",
+      "district_of_incident": "Northland",
+      "summary_of_incident": "Patient transfer"
+    },
+    {
+      "formatted_date_of_incident": "11/05/2023",
+      "age": 24,
+      "industry": "Construction",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Hit by falling object (gate)"
+    },
+    {
+      "formatted_date_of_incident": "09/05/2023",
+      "age": 15,
+      "industry": "Education and Training",
+      "district_of_incident": "Northland",
+      "summary_of_incident": "Weather event (flooding)"
+    },
+    {
+      "formatted_date_of_incident": "08/05/2023",
+      "age": 56,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Canterbury",
+      "summary_of_incident": "Vehicle incident (truck)"
+    },
+    {
+      "formatted_date_of_incident": "28/04/2023",
+      "age": 59,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Bay of Plenty",
+      "summary_of_incident": "Vehicle incident (Truck and cyclist)"
+    },
+    {
+      "formatted_date_of_incident": "18/04/2023",
+      "age": 31,
+      "industry": "Administrative and Support Services",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Vehicle incident (Van and pedestrian)"
+    },
+    {
+      "formatted_date_of_incident": "13/04/2023",
+      "age": 32,
+      "industry": "Agriculture",
+      "district_of_incident": "Waikato",
+      "summary_of_incident": "Vehicle rollover (quad bike)"
+    },
+    {
+      "formatted_date_of_incident": "10/04/2023",
+      "age": 48,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Marlborough",
+      "summary_of_incident": "Vehicle crush incident (truck deck and chassis)"
+    },
+    {
+      "formatted_date_of_incident": "02/04/2023",
+      "age": 46,
+      "industry": "Health Care and Social Assistance",
+      "district_of_incident": "Wellington",
+      "summary_of_incident": "Asphyxiation while eating"
+    },
+    {
+      "formatted_date_of_incident": "28/03/2023",
+      "age": 58,
+      "industry": "Construction",
+      "district_of_incident": "Otago",
+      "summary_of_incident": "Vehicle rollover (truck)"
+    },
+    {
+      "formatted_date_of_incident": "27/03/2023",
+      "age": 30,
+      "industry": "Forestry and Logging",
+      "district_of_incident": "Manawatu-Whanganui",
+      "summary_of_incident": "Struck by falling tree"
+    },
+    {
+      "formatted_date_of_incident": "23/03/2023",
+      "age": 33,
+      "industry": "Education and Training",
+      "district_of_incident": "Waikato",
+      "summary_of_incident": "Multiple vehicle incident (2x car)"
+    },
+    {
+      "formatted_date_of_incident": "22/03/2023",
+      "age": 2,
+      "industry": "Accommodation and Food Services",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Drowning"
+    },
+    {
+      "formatted_date_of_incident": "17/03/2023",
+      "age": 20,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Otago",
+      "summary_of_incident": "Vehicle incident (truck)"
+    },
+    {
+      "formatted_date_of_incident": "13/03/2023",
+      "age": 76,
+      "industry": "Construction",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Multiple vehicle incident (Car and truck)"
+    },
+    {
+      "formatted_date_of_incident": "13/03/2023",
+      "age": 83,
+      "industry": "Construction",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Multiple vehicle incident (Car and truck)"
+    },
+    {
+      "formatted_date_of_incident": "07/03/2023",
+      "age": 66,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Manawatu-Whanganui",
+      "summary_of_incident": "Vehicle incident (bus)"
+    },
+    {
+      "formatted_date_of_incident": "28/02/2023",
+      "age": 66,
+      "industry": "Administrative and Support Services",
+      "district_of_incident": "Canterbury",
+      "summary_of_incident": "Fall from height (ladder)"
+    },
+    {
+      "formatted_date_of_incident": "20/02/2023",
+      "age": 78,
+      "industry": "Agriculture, Forestry and Fishing Support Services",
+      "district_of_incident": "Southland",
+      "summary_of_incident": "Vehicle incident (tractor)"
+    },
+    {
+      "formatted_date_of_incident": "18/02/2023",
+      "age": 42,
+      "industry": "Agriculture",
+      "district_of_incident": "Bay of Plenty",
+      "summary_of_incident": "Vehicle collision with wire cable (side by side)"
+    },
+    {
+      "formatted_date_of_incident": "18/02/2023",
+      "age": 70,
+      "industry": "Arts and Recreation Services",
+      "district_of_incident": "Southland",
+      "summary_of_incident": "Drowning"
+    },
+    {
+      "formatted_date_of_incident": "17/02/2023",
+      "age": 24,
+      "industry": "Agriculture",
+      "district_of_incident": "Manawatu-Whanganui",
+      "summary_of_incident": "Vehicle contacted live wires"
+    },
+    {
+      "formatted_date_of_incident": "13/02/2023",
+      "age": 39,
+      "industry": "Public Administration and Safety",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Land slip"
+    },
+    {
+      "formatted_date_of_incident": "13/02/2023",
+      "age": 41,
+      "industry": "Public Administration and Safety",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Land slip"
+    },
+    {
+      "formatted_date_of_incident": "12/02/2023",
+      "age": 59,
+      "industry": "Construction",
+      "district_of_incident": "Waikato",
+      "summary_of_incident": "Collision with truck"
+    },
+    {
+      "formatted_date_of_incident": "02/02/2023",
+      "age": 68,
+      "industry": "Agriculture",
+      "district_of_incident": "Southland",
+      "summary_of_incident": "Death caused by farm animal"
+    },
+    {
+      "formatted_date_of_incident": "02/02/2023",
+      "age": 16,
+      "industry": "Agriculture, Forestry and Fishing Support Services",
+      "district_of_incident": "Waikato",
+      "summary_of_incident": "Vehicle rollover (ATV)"
+    },
+    {
+      "formatted_date_of_incident": "20/01/2023",
+      "age": 35,
+      "industry": "Construction",
+      "district_of_incident": "Marlborough",
+      "summary_of_incident": "Fall from height (ladder)"
+    },
+    {
+      "formatted_date_of_incident": "18/01/2023",
+      "age": 79,
+      "industry": "Agriculture",
+      "district_of_incident": "Otago",
+      "summary_of_incident": "Vehicle rollover (side by side)"
+    },
+    {
+      "formatted_date_of_incident": "12/01/2023",
+      "age": 75,
+      "industry": "Other Services",
+      "district_of_incident": "Bay of Plenty",
+      "summary_of_incident": "Fall from ladder"
+    },
+    {
+      "formatted_date_of_incident": "29/12/2022",
+      "age": 63,
+      "industry": "Health Care and Social Assistance",
+      "district_of_incident": "Bay of Plenty",
+      "summary_of_incident": "Drowning"
+    },
+    {
+      "formatted_date_of_incident": "27/12/2022",
+      "age": 64,
+      "industry": "Agriculture",
+      "district_of_incident": "Southland",
+      "summary_of_incident": "Tractor with trailer roll over"
+    },
+    {
+      "formatted_date_of_incident": "16/12/2022",
+      "age": 76,
+      "industry": "Agriculture",
+      "district_of_incident": "West Coast",
+      "summary_of_incident": "Fell from horse while mustering cattle"
+    },
+    {
+      "formatted_date_of_incident": "15/12/2022",
+      "age": 26,
+      "industry": "Arts and Recreation Services",
+      "district_of_incident": "Canterbury",
+      "summary_of_incident": "Fell from horse during race"
+    },
+    {
+      "formatted_date_of_incident": "13/12/2022",
+      "age": 62,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Otago",
+      "summary_of_incident": "Truck vs Pedestrian"
+    },
+    {
+      "formatted_date_of_incident": "24/11/2022",
+      "age": 31,
+      "industry": "Agriculture",
+      "district_of_incident": "Manawatu-Whanganui",
+      "summary_of_incident": "Quad bike rollover"
+    },
+    {
+      "formatted_date_of_incident": "18/11/2022",
+      "age": 66,
+      "industry": "Agriculture",
+      "district_of_incident": "Manawatu-Whanganui",
+      "summary_of_incident": "Quad bike rollover"
+    },
+    {
+      "formatted_date_of_incident": "04/11/2022",
+      "age": 43,
+      "industry": "Rental, Hiring and Real Estate Services",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Fall from height (scaffolding)"
+    },
+    {
+      "formatted_date_of_incident": "01/11/2022",
+      "age": 23,
+      "industry": "Manufacturing",
+      "district_of_incident": "Canterbury",
+      "summary_of_incident": "Caught in machinery"
+    },
+    {
+      "formatted_date_of_incident": "19/10/2022",
+      "age": 4,
+      "industry": "Agriculture",
+      "district_of_incident": "Otago",
+      "summary_of_incident": "Hit by falling object"
+    },
+    {
+      "formatted_date_of_incident": "14/10/2022",
+      "age": 42,
+      "industry": "Forestry and Logging",
+      "district_of_incident": "Gisborne",
+      "summary_of_incident": "Struck by a tree"
+    },
+    {
+      "formatted_date_of_incident": "05/10/2022",
+      "age": 68,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Waikato",
+      "summary_of_incident": "Collision on road involving truck and light bus"
+    },
+    {
+      "formatted_date_of_incident": "27/09/2022",
+      "age": 81,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Manawatu-Whanganui",
+      "summary_of_incident": "Collision on road involving truck and pedestrian"
+    },
+    {
+      "formatted_date_of_incident": "14/09/2022",
+      "age": 66,
+      "industry": "Health Care and Social Assistance",
+      "district_of_incident": "Waikato",
+      "summary_of_incident": "Collision on road involving car and ambulance"
+    },
+    {
+      "formatted_date_of_incident": "05/09/2022",
+      "age": 62,
+      "industry": "Agriculture",
+      "district_of_incident": "Otago",
+      "summary_of_incident": "Vehicle rollover on farm (quad bike)"
+    },
+    {
+      "formatted_date_of_incident": "30/08/2022",
+      "age": 30,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Hawke's Bay",
+      "summary_of_incident": "Collision on road involving truck and light goods vehicle"
+    },
+    {
+      "formatted_date_of_incident": "29/08/2022",
+      "age": 64,
+      "industry": "Construction",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Mobile scaffold tip over"
+    },
+    {
+      "formatted_date_of_incident": "25/08/2022",
+      "age": 77,
+      "industry": "Construction",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Fall from height (ladder)"
+    },
+    {
+      "formatted_date_of_incident": "22/08/2022",
+      "age": 83,
+      "industry": "Health Care and Social Assistance",
+      "district_of_incident": "Marlborough",
+      "summary_of_incident": "Incident in care"
+    },
+    {
+      "formatted_date_of_incident": "22/08/2022",
+      "age": 28,
+      "industry": "Manufacturing",
+      "district_of_incident": "Nelson",
+      "summary_of_incident": "Unguarded machinery"
+    },
+    {
+      "formatted_date_of_incident": "09/08/2022",
+      "age": 60,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Canterbury",
+      "summary_of_incident": "Truck crash due to black ice"
+    },
+    {
+      "formatted_date_of_incident": "03/08/2022",
+      "age": 28,
+      "industry": "Arts and Recreation Services",
+      "district_of_incident": "Waikato",
+      "summary_of_incident": "Fell from horse during race"
+    },
+    {
+      "formatted_date_of_incident": "18/07/2022",
+      "age": 58,
+      "industry": "Construction",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Fall from height in construction (roof)"
+    },
+    {
+      "formatted_date_of_incident": "30/06/2022",
+      "age": 51,
+      "industry": "Health Care and Social Assistance",
+      "district_of_incident": "Canterbury",
+      "summary_of_incident": "A patient fell from hoist system to the ground"
+    },
+    {
+      "formatted_date_of_incident": "27/06/2022",
+      "age": 28,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Waikato",
+      "summary_of_incident": "Collision on road involving truck and cyclist"
+    },
+    {
+      "formatted_date_of_incident": "26/06/2022",
+      "age": 36,
+      "industry": "Agriculture",
+      "district_of_incident": "Canterbury",
+      "summary_of_incident": "Quad bike rollover"
+    },
+    {
+      "formatted_date_of_incident": "21/06/2022",
+      "age": 57,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Hit by falling timber when unloading a truck"
+    },
+    {
+      "formatted_date_of_incident": "15/06/2022",
+      "age": 55,
+      "industry": "Agriculture",
+      "district_of_incident": "Southland",
+      "summary_of_incident": "Crashed a quad bike into a ditch"
+    },
+    {
+      "formatted_date_of_incident": "01/06/2022",
+      "age": 39,
+      "industry": "Forestry and Logging",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Hit by falling tree"
+    },
+    {
+      "formatted_date_of_incident": "23/05/2022",
+      "age": 48,
+      "industry": "Agriculture",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Tractor roll over"
+    },
+    {
+      "formatted_date_of_incident": "23/04/2022",
+      "age": 82,
+      "industry": "Construction",
+      "district_of_incident": "Marlborough",
+      "summary_of_incident": "Tripped and fell at unfenced worksite"
+    },
+    {
+      "formatted_date_of_incident": "13/04/2022",
+      "age": 55,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Gisborne",
+      "summary_of_incident": "Trapped in machinery"
+    },
+    {
+      "formatted_date_of_incident": "11/04/2022",
+      "age": 63,
+      "industry": "Agriculture",
+      "district_of_incident": "Manawatu-Whanganui",
+      "summary_of_incident": "Death related to incident with animal"
+    },
+    {
+      "formatted_date_of_incident": "04/04/2022",
+      "age": 50,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Crushed between the edge of a metal skip bin"
+    },
+    {
+      "formatted_date_of_incident": "30/03/2022",
+      "age": 53,
+      "industry": "Arts and Recreation Services",
+      "district_of_incident": "Waikato",
+      "summary_of_incident": "Crashed at organised motorsport event"
+    },
+    {
+      "formatted_date_of_incident": "30/03/2022",
+      "age": 18,
+      "industry": "Construction",
+      "district_of_incident": "Bay of Plenty",
+      "summary_of_incident": "Wall fell on worker"
+    },
+    {
+      "formatted_date_of_incident": "11/03/2022",
+      "age": 45,
+      "industry": "Agriculture",
+      "district_of_incident": "Canterbury",
+      "summary_of_incident": "Trapped by tractor/trailer door"
+    },
+    {
+      "formatted_date_of_incident": "25/02/2022",
+      "age": 41,
+      "industry": "Arts and Recreation Services",
+      "district_of_incident": "Marlborough",
+      "summary_of_incident": "Drowning"
+    },
+    {
+      "formatted_date_of_incident": "02/02/2022",
+      "age": 42,
+      "industry": "Construction",
+      "district_of_incident": "Wellington",
+      "summary_of_incident": "Fall from a ladder"
+    },
+    {
+      "formatted_date_of_incident": "31/01/2022",
+      "age": 23,
+      "industry": "Forestry and Logging",
+      "district_of_incident": "Canterbury",
+      "summary_of_incident": "Crushed by heavy machinery"
+    },
+    {
+      "formatted_date_of_incident": "30/01/2022",
+      "age": 44,
+      "industry": "Other Services",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Hit by falling gate"
+    },
+    {
+      "formatted_date_of_incident": "22/01/2022",
+      "age": 57,
+      "industry": "Agriculture",
+      "district_of_incident": "Northland",
+      "summary_of_incident": "Quad bike rolled"
+    },
+    {
+      "formatted_date_of_incident": "14/01/2022",
+      "age": 27,
+      "industry": "Other services",
+      "district_of_incident": "Waikato",
+      "summary_of_incident": "Crushed by falling truck cab."
+    },
+    {
+      "formatted_date_of_incident": "03/01/2022",
+      "age": 27,
+      "industry": "Arts and Recreation Services",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Crashed motorcycle into a culvert"
+    },
+    {
+      "formatted_date_of_incident": "30/12/2021",
+      "age": 64,
+      "industry": "Health Care and Social Assistance",
+      "district_of_incident": "Otago",
+      "summary_of_incident": "Fell into a wheelie bin"
+    },
+    {
+      "formatted_date_of_incident": "30/12/2021",
+      "age": 31,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Wellington",
+      "summary_of_incident": "Vehicle ran off road"
+    },
+    {
+      "formatted_date_of_incident": "29/12/2021",
+      "age": 73,
+      "industry": "Health Care and Social Assistance",
+      "district_of_incident": "Bay of Plenty",
+      "summary_of_incident": "Clothing caught fire"
+    },
+    {
+      "formatted_date_of_incident": "19/12/2021",
+      "age": 52,
+      "industry": "Agriculture, Forestry and Fishing Support Services",
+      "district_of_incident": "Wellington",
+      "summary_of_incident": "Heavy Machinery rollover"
+    },
+    {
+      "formatted_date_of_incident": "01/12/2021",
+      "age": 69,
+      "industry": "Agriculture",
+      "district_of_incident": "Otago",
+      "summary_of_incident": "Heavy Machinery rollover"
+    },
+    {
+      "formatted_date_of_incident": "30/11/2021",
+      "age": 42,
+      "industry": "Administrative and Support Services",
+      "district_of_incident": "Bay of Plenty",
+      "summary_of_incident": "Hit by rolling log"
+    },
+    {
+      "formatted_date_of_incident": "05/10/2021",
+      "age": 21,
+      "industry": "Construction",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Struck by falling steel beam."
+    },
+    {
+      "formatted_date_of_incident": "16/09/2021",
+      "age": null,
+      "industry": "Health Care and Social Assistance",
+      "district_of_incident": "Taranaki",
+      "summary_of_incident": "Fell down flight of stairs."
+    },
+    {
+      "formatted_date_of_incident": "14/09/2021",
+      "age": 62,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Tasman",
+      "summary_of_incident": "Crushed between two vehicles."
+    },
+    {
+      "formatted_date_of_incident": "30/08/2021",
+      "age": 21,
+      "industry": "Public Administration and Safety",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Police matter"
+    },
+    {
+      "formatted_date_of_incident": "11/08/2021",
+      "age": 35,
+      "industry": "Construction",
+      "district_of_incident": "Wellington",
+      "summary_of_incident": "Fell through skylight"
+    },
+    {
+      "formatted_date_of_incident": "10/08/2021",
+      "age": 70,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Waikato",
+      "summary_of_incident": "Vehicle collision"
+    },
+    {
+      "formatted_date_of_incident": "09/08/2021",
+      "age": 54,
+      "industry": "Agriculture, Forestry and Fishing Support Services",
+      "district_of_incident": "Otago",
+      "summary_of_incident": "Hit by runaway tractor."
+    },
+    {
+      "formatted_date_of_incident": "30/06/2021",
+      "age": 23,
+      "industry": "Forestry and Logging",
+      "district_of_incident": "Hawke's Bay",
+      "summary_of_incident": "Hit by rolling log."
+    },
+    {
+      "formatted_date_of_incident": "19/06/2021",
+      "age": 41,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Suffered fatal injuries when a tornado struck the worksite."
+    },
+    {
+      "formatted_date_of_incident": "17/06/2021",
+      "age": 57,
+      "industry": "Construction",
+      "district_of_incident": "Canterbury",
+      "summary_of_incident": "Run over by car."
+    },
+    {
+      "formatted_date_of_incident": "13/06/2021",
+      "age": 43,
+      "industry": "Public Administration and Safety",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Death in custody."
+    },
+    {
+      "formatted_date_of_incident": "11/06/2021",
+      "age": 37,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Hawke's Bay",
+      "summary_of_incident": "Struck by a stock truck whilst unloading machinery from a transporter."
+    },
+    {
+      "formatted_date_of_incident": "04/06/2021",
+      "age": 53,
+      "industry": "Other Services",
+      "district_of_incident": "Canterbury",
+      "summary_of_incident": "Hit by falling roller gate during installation."
+    },
+    {
+      "formatted_date_of_incident": "31/05/2021",
+      "age": 43,
+      "industry": "Agriculture",
+      "district_of_incident": "Canterbury",
+      "summary_of_incident": "Struck by falling hay bales."
+    },
+    {
+      "formatted_date_of_incident": "13/05/2021",
+      "age": 56,
+      "industry": "Construction",
+      "district_of_incident": "Waikato",
+      "summary_of_incident": "Road worker struck by car"
+    },
+    {
+      "formatted_date_of_incident": "05/05/2021",
+      "age": 41,
+      "industry": "Other Services",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Crushed by tail gate of truck"
+    },
+    {
+      "formatted_date_of_incident": "20/04/2021",
+      "age": 40,
+      "industry": "Construction",
+      "district_of_incident": "Southland",
+      "summary_of_incident": "Crushed in a rockslide"
+    },
+    {
+      "formatted_date_of_incident": "14/04/2021",
+      "age": 61,
+      "industry": "Forestry and Logging",
+      "district_of_incident": "Waikato",
+      "summary_of_incident": "Hit by log"
+    },
+    {
+      "formatted_date_of_incident": "04/04/2021",
+      "age": 18,
+      "industry": "Agriculture",
+      "district_of_incident": "Otago",
+      "summary_of_incident": "Farm vehicle rollover"
+    },
+    {
+      "formatted_date_of_incident": "02/04/2021",
+      "age": 47,
+      "industry": "Manufacturing",
+      "district_of_incident": "Manawatu-Whanganui",
+      "summary_of_incident": "Caught in lifting machinery"
+    },
+    {
+      "formatted_date_of_incident": "16/03/2021",
+      "age": 63,
+      "industry": "Agriculture, Forestry and Fishing Support Services",
+      "district_of_incident": "Bay of Plenty",
+      "summary_of_incident": "Fertiliser spreader tipped over"
+    },
+    {
+      "formatted_date_of_incident": "16/03/2021",
+      "age": 52,
+      "industry": "Construction",
+      "district_of_incident": "West Coast",
+      "summary_of_incident": "Tree fell and crushed digger."
+    },
+    {
+      "formatted_date_of_incident": "26/02/2021",
+      "age": 5,
+      "industry": "Rental, Hiring and Real Estate Services",
+      "district_of_incident": "Bay of Plenty",
+      "summary_of_incident": "Car towing trailer crashed."
+    },
+    {
+      "formatted_date_of_incident": "26/02/2021",
+      "age": 56,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Northland",
+      "summary_of_incident": "Water tank being unloading from a trailer struck victim."
+    },
+    {
+      "formatted_date_of_incident": "23/02/2021",
+      "age": 53,
+      "industry": "Administrative and Support Services",
+      "district_of_incident": "Canterbury",
+      "summary_of_incident": "Crushed by vehicle."
+    },
+    {
+      "formatted_date_of_incident": "20/02/2021",
+      "age": 55,
+      "industry": "Information Media and Telecommunications",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Struck on head by powered propeller."
+    },
+    {
+      "formatted_date_of_incident": "09/02/2021",
+      "age": 43,
+      "industry": "Construction",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Tripped and fell."
+    },
+    {
+      "formatted_date_of_incident": "05/02/2021",
+      "age": 92,
+      "industry": "Retail Trade",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Knocked down by closing automatic door."
+    },
+    {
+      "formatted_date_of_incident": "04/02/2021",
+      "age": 56,
+      "industry": "Construction",
+      "district_of_incident": "Canterbury",
+      "summary_of_incident": "Fell from roof."
+    },
+    {
+      "formatted_date_of_incident": "26/01/2021",
+      "age": 53,
+      "industry": "Forestry and Logging",
+      "district_of_incident": "Wellington",
+      "summary_of_incident": "Struck by tree spar whilst tree felling."
+    },
+    {
+      "formatted_date_of_incident": "22/01/2021",
+      "age": 66,
+      "industry": "Agriculture",
+      "district_of_incident": "Otago",
+      "summary_of_incident": "Ride-on tractor rollover."
+    },
+    {
+      "formatted_date_of_incident": "16/01/2021",
+      "age": 89,
+      "industry": "Agriculture",
+      "district_of_incident": "Hawke's Bay",
+      "summary_of_incident": "Quad bike rollover."
+    },
+    {
+      "formatted_date_of_incident": "15/01/2021",
+      "age": 54,
+      "industry": "Agriculture",
+      "district_of_incident": "Manawatu-Whanganui",
+      "summary_of_incident": "Crashed two-wheeled farm bike."
+    },
+    {
+      "formatted_date_of_incident": "19/12/2020",
+      "age": 63,
+      "industry": "Health Care and Social Assistance",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Choked whilst eating."
+    },
+    {
+      "formatted_date_of_incident": "11/12/2020",
+      "age": 20,
+      "industry": "Health Care and Social Assistance",
+      "district_of_incident": "Tasman",
+      "summary_of_incident": "Run over by a vehicle in a driveway."
+    },
+    {
+      "formatted_date_of_incident": "05/12/2020",
+      "age": 2,
+      "industry": "Arts and Recreation Services",
+      "district_of_incident": "Hawke's Bay",
+      "summary_of_incident": "Drowned at pool."
+    },
+    {
+      "formatted_date_of_incident": "04/12/2020",
+      "age": 72,
+      "industry": "Administrative and Support Services",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Hit by falling tree."
+    },
+    {
+      "formatted_date_of_incident": "03/12/2020",
+      "age": 60,
+      "industry": "Retail Trade",
+      "district_of_incident": "West Coast",
+      "summary_of_incident": "Electrocuted."
+    },
+    {
+      "formatted_date_of_incident": "23/11/2020",
+      "age": 33,
+      "industry": "Manufacturing",
+      "district_of_incident": "Canterbury",
+      "summary_of_incident": "Struck by a piece of steel."
+    },
+    {
+      "formatted_date_of_incident": "05/11/2020",
+      "age": 48,
+      "industry": "Forestry and Logging",
+      "district_of_incident": "Hawke's Bay",
+      "summary_of_incident": "Crushed by machinery."
+    },
+    {
+      "formatted_date_of_incident": "23/10/2020",
+      "age": 60,
+      "industry": "Agriculture, Forestry and Fishing Support Services",
+      "district_of_incident": "Otago",
+      "summary_of_incident": "Fertiliser truck rollover."
+    },
+    {
+      "formatted_date_of_incident": "23/10/2020",
+      "age": 52,
+      "industry": "Construction",
+      "district_of_incident": "Canterbury",
+      "summary_of_incident": "Trailer detached from towing vehicle"
+    },
+    {
+      "formatted_date_of_incident": "14/10/2020",
+      "age": 52,
+      "industry": "Retail Trade",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Run over by van."
+    },
+    {
+      "formatted_date_of_incident": "30/09/2020",
+      "age": 48,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Waikato",
+      "summary_of_incident": "Truck and trailer left road down a bank and hit a tree."
+    },
+    {
+      "formatted_date_of_incident": "28/09/2020",
+      "age": 33,
+      "industry": "Agriculture",
+      "district_of_incident": "Hawke's Bay",
+      "summary_of_incident": "Struck by rolling quad bike."
+    },
+    {
+      "formatted_date_of_incident": "17/09/2020",
+      "age": 7,
+      "industry": "Agriculture",
+      "district_of_incident": "Bay of Plenty",
+      "summary_of_incident": "Crushed by milking shed backing gate."
+    },
+    {
+      "formatted_date_of_incident": "16/09/2020",
+      "age": 43,
+      "industry": "Agriculture",
+      "district_of_incident": "Hawke's Bay",
+      "summary_of_incident": "Struck by rolling tractor."
+    },
+    {
+      "formatted_date_of_incident": "11/09/2020",
+      "age": 79,
+      "industry": "Agriculture",
+      "district_of_incident": "Waikato",
+      "summary_of_incident": "Tractor roll over."
+    },
+    {
+      "formatted_date_of_incident": "31/08/2020",
+      "age": 22,
+      "industry": "Arts and Recreation Services",
+      "district_of_incident": "Wellington",
+      "summary_of_incident": "Drowning"
+    },
+    {
+      "formatted_date_of_incident": "17/08/2020",
+      "age": 34,
+      "industry": "Forestry and Logging",
+      "district_of_incident": "Otago",
+      "summary_of_incident": "Digger rollover."
+    },
+    {
+      "formatted_date_of_incident": "15/08/2020",
+      "age": 52,
+      "industry": "Construction",
+      "district_of_incident": "Otago",
+      "summary_of_incident": "Fall from a ladder"
+    },
+    {
+      "formatted_date_of_incident": "02/08/2020",
+      "age": 64,
+      "industry": "Arts and Recreation Services",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Crashed motorcycle into a tree."
+    },
+    {
+      "formatted_date_of_incident": "01/08/2020",
+      "age": 64,
+      "industry": "Agriculture",
+      "district_of_incident": "Taranaki",
+      "summary_of_incident": "Fell from quad bike."
+    },
+    {
+      "formatted_date_of_incident": "30/06/2020",
+      "age": 19,
+      "industry": "Agriculture",
+      "district_of_incident": "Manawatu-Whanganui",
+      "summary_of_incident": "Crushed between tractor and its attachment."
+    },
+    {
+      "formatted_date_of_incident": "22/06/2020",
+      "age": 38,
+      "industry": "Agriculture",
+      "district_of_incident": "Southland",
+      "summary_of_incident": "Tractor rolled."
+    },
+    {
+      "formatted_date_of_incident": "15/06/2020",
+      "age": 65,
+      "industry": "Construction",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Fell four metres off roof."
+    },
+    {
+      "formatted_date_of_incident": "25/05/2020",
+      "age": 27,
+      "industry": "Manufacturing",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Caught in machinery."
+    },
+    {
+      "formatted_date_of_incident": "08/05/2020",
+      "age": 54,
+      "industry": "Electricity, Gas, Water and Waste Services",
+      "district_of_incident": "Waikato",
+      "summary_of_incident": "Hit by high pressure blast of water."
+    },
+    {
+      "formatted_date_of_incident": "19/04/2020",
+      "age": 43,
+      "industry": "Agriculture",
+      "district_of_incident": "Waikato",
+      "summary_of_incident": "Electrocuted."
+    },
+    {
+      "formatted_date_of_incident": "31/03/2020",
+      "age": 77,
+      "industry": "Agriculture",
+      "district_of_incident": "Taranaki",
+      "summary_of_incident": "Quad bike rollover."
+    },
+    {
+      "formatted_date_of_incident": "26/03/2020",
+      "age": 34,
+      "industry": "Agriculture",
+      "district_of_incident": "Canterbury",
+      "summary_of_incident": "Slipped or tripped"
+    },
+    {
+      "formatted_date_of_incident": "23/03/2020",
+      "age": 42,
+      "industry": "Electricity, Gas, Water and Waste Services",
+      "district_of_incident": "Canterbury",
+      "summary_of_incident": "Steel cylinder rolled onto victim."
+    },
+    {
+      "formatted_date_of_incident": "19/03/2020",
+      "age": 53,
+      "industry": "Construction",
+      "district_of_incident": "Nelson",
+      "summary_of_incident": "Electric shock."
+    },
+    {
+      "formatted_date_of_incident": "19/03/2020",
+      "age": 16,
+      "industry": "Education and Training",
+      "district_of_incident": "Bay of Plenty",
+      "summary_of_incident": "Drowned."
+    },
+    {
+      "formatted_date_of_incident": "18/03/2020",
+      "age": 72,
+      "industry": "Other Services",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Fell from ladder."
+    },
+    {
+      "formatted_date_of_incident": "16/03/2020",
+      "age": 60,
+      "industry": "Electricity, Gas, Water and Waste Services",
+      "district_of_incident": "Waikato",
+      "summary_of_incident": "Crushed between truck and a loader."
+    },
+    {
+      "formatted_date_of_incident": "15/03/2020",
+      "age": 73,
+      "industry": "Agriculture",
+      "district_of_incident": "Tasman",
+      "summary_of_incident": "Crushed by post between car and car door."
+    },
+    {
+      "formatted_date_of_incident": "13/03/2020",
+      "age": 78,
+      "industry": "Agriculture",
+      "district_of_incident": "Wellington",
+      "summary_of_incident": "Quad bike accident."
+    },
+    {
+      "formatted_date_of_incident": "10/03/2020",
+      "age": 51,
+      "industry": "Mining",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Truck went off quarry road."
+    },
+    {
+      "formatted_date_of_incident": "21/02/2020",
+      "age": 17,
+      "industry": "Education and Training",
+      "district_of_incident": "Bay of Plenty",
+      "summary_of_incident": "Missing, presumed drowned."
+    },
+    {
+      "formatted_date_of_incident": "11/02/2020",
+      "age": 33,
+      "industry": "Manufacturing",
+      "district_of_incident": "Waikato",
+      "summary_of_incident": "Fall from height."
+    },
+    {
+      "formatted_date_of_incident": "06/02/2020",
+      "age": 65,
+      "industry": "Agriculture",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Struck by side by side."
+    },
+    {
+      "formatted_date_of_incident": "05/02/2020",
+      "age": 64,
+      "industry": "Agriculture, Forestry and Fishing Support Services",
+      "district_of_incident": "Bay of Plenty",
+      "summary_of_incident": "Multiple car crash due to fertiliser spill on the road."
+    },
+    {
+      "formatted_date_of_incident": "05/02/2020",
+      "age": 61,
+      "industry": "Manufacturing",
+      "district_of_incident": "Hawke's Bay",
+      "summary_of_incident": "Equipment collapse."
+    },
+    {
+      "formatted_date_of_incident": "01/02/2020",
+      "age": 78,
+      "industry": "Agriculture",
+      "district_of_incident": "Marlborough",
+      "summary_of_incident": "Struck by falling hay bale."
+    },
+    {
+      "formatted_date_of_incident": "31/01/2020",
+      "age": 79,
+      "industry": "Agriculture",
+      "district_of_incident": "Gisborne",
+      "summary_of_incident": "Slipped and fell heavily onto ground."
+    },
+    {
+      "formatted_date_of_incident": "15/01/2020",
+      "age": 24,
+      "industry": "Manufacturing",
+      "district_of_incident": "Canterbury",
+      "summary_of_incident": "Struck by falling pallet."
+    },
+    {
+      "formatted_date_of_incident": "10/01/2020",
+      "age": 34,
+      "industry": "Agriculture",
+      "district_of_incident": "Waikato",
+      "summary_of_incident": "Quad bike rollover."
+    },
+    {
+      "formatted_date_of_incident": "09/01/2020",
+      "age": 56,
+      "industry": "Forestry and Logging",
+      "district_of_incident": "Gisborne",
+      "summary_of_incident": "Pinned by tree."
+    },
+    {
+      "formatted_date_of_incident": "08/01/2020",
+      "age": 70,
+      "industry": "Arts and Recreation Services",
+      "district_of_incident": "Otago",
+      "summary_of_incident": "Tractor rolled down bank."
+    },
+    {
+      "formatted_date_of_incident": "06/01/2020",
+      "age": 53,
+      "industry": "Agriculture",
+      "district_of_incident": "Manawatu-Whanganui",
+      "summary_of_incident": "Quad bike rollover."
+    },
+    {
+      "formatted_date_of_incident": "04/01/2020",
+      "age": 19,
+      "industry": "Agriculture",
+      "district_of_incident": "Canterbury",
+      "summary_of_incident": "Farm vehicle rollover."
+    },
+    {
+      "formatted_date_of_incident": "04/01/2020",
+      "age": 58,
+      "industry": "Agriculture",
+      "district_of_incident": "Taranaki",
+      "summary_of_incident": "Quad bike rolled over into ditch."
+    },
+    {
+      "formatted_date_of_incident": "29/12/2019",
+      "age": null,
+      "industry": "Arts and Recreation Services",
+      "district_of_incident": "Waikato",
+      "summary_of_incident": "Kicked by a horse."
+    },
+    {
+      "formatted_date_of_incident": "19/12/2019",
+      "age": 74,
+      "industry": "Manufacturing",
+      "district_of_incident": "Taranaki",
+      "summary_of_incident": "Fell into machinery."
+    },
+    {
+      "formatted_date_of_incident": "17/12/2019",
+      "age": 17,
+      "industry": "Construction",
+      "district_of_incident": "Northland",
+      "summary_of_incident": "Fell into window from scaffolding."
+    },
+    {
+      "formatted_date_of_incident": "11/12/2019",
+      "age": 34,
+      "industry": "Agriculture, Forestry and Fishing Support Services",
+      "district_of_incident": "Otago",
+      "summary_of_incident": "Fertiliser truck accident."
+    },
+    {
+      "formatted_date_of_incident": "09/12/2019",
+      "age": 64,
+      "industry": "Arts and Recreation Services",
+      "district_of_incident": "Bay of Plenty",
+      "summary_of_incident": "Volcanic eruption at Whakaari/White Island."
+    },
+    {
+      "formatted_date_of_incident": "09/12/2019",
+      "age": 13,
+      "industry": "Arts and Recreation Services",
+      "district_of_incident": "Bay of Plenty",
+      "summary_of_incident": "Volcanic eruption at Whakaari/White Island."
+    },
+    {
+      "formatted_date_of_incident": "09/12/2019",
+      "age": 15,
+      "industry": "Arts and Recreation Services",
+      "district_of_incident": "Bay of Plenty",
+      "summary_of_incident": "Volcanic eruption at Whakaari/White Island."
+    },
+    {
+      "formatted_date_of_incident": "09/12/2019",
+      "age": 16,
+      "industry": "Arts and Recreation Services",
+      "district_of_incident": "Bay of Plenty",
+      "summary_of_incident": "Volcanic eruption at Whakaari/White Island."
+    },
+    {
+      "formatted_date_of_incident": "09/12/2019",
+      "age": 17,
+      "industry": "Arts and Recreation Services",
+      "district_of_incident": "Bay of Plenty",
+      "summary_of_incident": "Volcanic eruption at Whakaari/White Island."
+    },
+    {
+      "formatted_date_of_incident": "09/12/2019",
+      "age": 20,
+      "industry": "Arts and Recreation Services",
+      "district_of_incident": "Bay of Plenty",
+      "summary_of_incident": "Volcanic eruption at Whakaari/White Island."
+    },
+    {
+      "formatted_date_of_incident": "09/12/2019",
+      "age": 21,
+      "industry": "Arts and Recreation Services",
+      "district_of_incident": "Bay of Plenty",
+      "summary_of_incident": "Volcanic eruption at Whakaari/White Island."
+    },
+    {
+      "formatted_date_of_incident": "09/12/2019",
+      "age": 24,
+      "industry": "Arts and Recreation Services",
+      "district_of_incident": "Bay of Plenty",
+      "summary_of_incident": "Volcanic eruption at Whakaari/White Island."
+    },
+    {
+      "formatted_date_of_incident": "09/12/2019",
+      "age": 32,
+      "industry": "Arts and Recreation Services",
+      "district_of_incident": "Bay of Plenty",
+      "summary_of_incident": "Volcanic eruption at Whakaari/White Island."
+    },
+    {
+      "formatted_date_of_incident": "09/12/2019",
+      "age": 32,
+      "industry": "Arts and Recreation Services",
+      "district_of_incident": "Bay of Plenty",
+      "summary_of_incident": "Volcanic eruption at Whakaari/White Island."
+    },
+    {
+      "formatted_date_of_incident": "09/12/2019",
+      "age": 33,
+      "industry": "Arts and Recreation Services",
+      "district_of_incident": "Bay of Plenty",
+      "summary_of_incident": "Volcanic eruption at Whakaari/White Island."
+    },
+    {
+      "formatted_date_of_incident": "09/12/2019",
+      "age": 40,
+      "industry": "Arts and Recreation Services",
+      "district_of_incident": "Bay of Plenty",
+      "summary_of_incident": "Volcanic eruption at Whakaari/White Island."
+    },
+    {
+      "formatted_date_of_incident": "09/12/2019",
+      "age": 42,
+      "industry": "Arts and Recreation Services",
+      "district_of_incident": "Bay of Plenty",
+      "summary_of_incident": "Volcanic eruption at Whakaari/White Island."
+    },
+    {
+      "formatted_date_of_incident": "09/12/2019",
+      "age": 43,
+      "industry": "Arts and Recreation Services",
+      "district_of_incident": "Bay of Plenty",
+      "summary_of_incident": "Volcanic eruption at Whakaari/White Island."
+    },
+    {
+      "formatted_date_of_incident": "09/12/2019",
+      "age": 46,
+      "industry": "Arts and Recreation Services",
+      "district_of_incident": "Bay of Plenty",
+      "summary_of_incident": "Volcanic eruption at Whakaari/White Island."
+    },
+    {
+      "formatted_date_of_incident": "09/12/2019",
+      "age": 47,
+      "industry": "Arts and Recreation Services",
+      "district_of_incident": "Bay of Plenty",
+      "summary_of_incident": "Volcanic eruption at Whakaari/White Island."
+    },
+    {
+      "formatted_date_of_incident": "09/12/2019",
+      "age": 48,
+      "industry": "Arts and Recreation Services",
+      "district_of_incident": "Bay of Plenty",
+      "summary_of_incident": "Volcanic eruption at Whakaari/White Island."
+    },
+    {
+      "formatted_date_of_incident": "09/12/2019",
+      "age": 49,
+      "industry": "Arts and Recreation Services",
+      "district_of_incident": "Bay of Plenty",
+      "summary_of_incident": "Volcanic eruption at Whakaari/White Island."
+    },
+    {
+      "formatted_date_of_incident": "09/12/2019",
+      "age": 49,
+      "industry": "Arts and Recreation Services",
+      "district_of_incident": "Bay of Plenty",
+      "summary_of_incident": "Volcanic eruption at Whakaari/White Island."
+    },
+    {
+      "formatted_date_of_incident": "09/12/2019",
+      "age": 51,
+      "industry": "Arts and Recreation Services",
+      "district_of_incident": "Bay of Plenty",
+      "summary_of_incident": "Volcanic eruption at Whakaari/White Island."
+    },
+    {
+      "formatted_date_of_incident": "09/12/2019",
+      "age": 53,
+      "industry": "Arts and Recreation Services",
+      "district_of_incident": "Bay of Plenty",
+      "summary_of_incident": "Volcanic eruption at Whakaari/White Island."
+    },
+    {
+      "formatted_date_of_incident": "09/12/2019",
+      "age": 55,
+      "industry": "Arts and Recreation Services",
+      "district_of_incident": "Bay of Plenty",
+      "summary_of_incident": "Volcanic eruption at Whakaari/White Island."
+    },
+    {
+      "formatted_date_of_incident": "06/12/2019",
+      "age": 70,
+      "industry": "Arts and Recreation Services",
+      "district_of_incident": "Southland",
+      "summary_of_incident": "Fell off track."
+    },
+    {
+      "formatted_date_of_incident": "28/11/2019",
+      "age": 17,
+      "industry": "Agriculture",
+      "district_of_incident": "Waikato",
+      "summary_of_incident": "Quad bike rollover."
+    },
+    {
+      "formatted_date_of_incident": "18/11/2019",
+      "age": 71,
+      "industry": "Agriculture",
+      "district_of_incident": "Otago",
+      "summary_of_incident": "Died as a result of positional asphyxia when trapped in a vehicle."
+    },
+    {
+      "formatted_date_of_incident": "13/11/2019",
+      "age": 56,
+      "industry": "Agriculture",
+      "district_of_incident": "Hawke's Bay",
+      "summary_of_incident": "Side by side rolled"
+    },
+    {
+      "formatted_date_of_incident": "12/11/2019",
+      "age": 79,
+      "industry": "Agriculture",
+      "district_of_incident": "Canterbury",
+      "summary_of_incident": "Trampled by cattle."
+    },
+    {
+      "formatted_date_of_incident": "06/11/2019",
+      "age": 62,
+      "industry": "Arts and Recreation Services",
+      "district_of_incident": "Otago",
+      "summary_of_incident": "Died while on a guided mountain climbing expedition."
+    },
+    {
+      "formatted_date_of_incident": "06/11/2019",
+      "age": 44,
+      "industry": "Arts and Recreation Services",
+      "district_of_incident": "Otago",
+      "summary_of_incident": "Died while on a guided mountain climbing expedition."
+    },
+    {
+      "formatted_date_of_incident": "03/11/2019",
+      "age": 64,
+      "industry": "Agriculture",
+      "district_of_incident": "Otago",
+      "summary_of_incident": "Knocked off tray of side by side by sheep."
+    },
+    {
+      "formatted_date_of_incident": "22/10/2019",
+      "age": 48,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Otago",
+      "summary_of_incident": "Hit by reversing truck."
+    },
+    {
+      "formatted_date_of_incident": "21/10/2019",
+      "age": 44,
+      "industry": "Construction",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Fall from height."
+    },
+    {
+      "formatted_date_of_incident": "17/10/2019",
+      "age": 57,
+      "industry": "Agriculture",
+      "district_of_incident": "Hawke's Bay",
+      "summary_of_incident": "Cherry picker contacted power lines."
+    },
+    {
+      "formatted_date_of_incident": "14/10/2019",
+      "age": 43,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Waikato",
+      "summary_of_incident": "Hit by falling transporter loading ramp."
+    },
+    {
+      "formatted_date_of_incident": "08/10/2019",
+      "age": 66,
+      "industry": "Forestry and Logging",
+      "district_of_incident": "Manawatu-Whanganui",
+      "summary_of_incident": "Crushed by tree."
+    },
+    {
+      "formatted_date_of_incident": "02/10/2019",
+      "age": 68,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Wellington",
+      "summary_of_incident": "Fell from truck."
+    },
+    {
+      "formatted_date_of_incident": "30/09/2019",
+      "age": 4,
+      "industry": "Manufacturing",
+      "district_of_incident": "Canterbury",
+      "summary_of_incident": "Run over by forklift."
+    },
+    {
+      "formatted_date_of_incident": "25/09/2019",
+      "age": 41,
+      "industry": "Agriculture",
+      "district_of_incident": "Canterbury",
+      "summary_of_incident": "Quad bike rollover."
+    },
+    {
+      "formatted_date_of_incident": "23/09/2019",
+      "age": 16,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Forklift flipped over."
+    },
+    {
+      "formatted_date_of_incident": "18/09/2019",
+      "age": 33,
+      "industry": "Agriculture",
+      "district_of_incident": "Taranaki",
+      "summary_of_incident": "Tank exploded."
+    },
+    {
+      "formatted_date_of_incident": "21/08/2019",
+      "age": 45,
+      "industry": "Forestry and Logging",
+      "district_of_incident": "Taranaki",
+      "summary_of_incident": "Hit by falling tree."
+    },
+    {
+      "formatted_date_of_incident": "15/08/2019",
+      "age": 15,
+      "industry": "Agriculture",
+      "district_of_incident": "Waikato",
+      "summary_of_incident": "Came into contact with overhead electrical power lines."
+    },
+    {
+      "formatted_date_of_incident": "07/07/2019",
+      "age": 66,
+      "industry": "Agriculture",
+      "district_of_incident": "Canterbury",
+      "summary_of_incident": "Farm machinery fell off a jack onto victim."
+    },
+    {
+      "formatted_date_of_incident": "02/07/2019",
+      "age": 48,
+      "industry": "Health Care and Social Assistance",
+      "district_of_incident": "Bay of Plenty",
+      "summary_of_incident": "Died as a result of positional asphyxia while sleeping."
+    },
+    {
+      "formatted_date_of_incident": "01/06/2019",
+      "age": 28,
+      "industry": "Agriculture",
+      "district_of_incident": "Canterbury",
+      "summary_of_incident": "Knocked off motorcycle by goat."
+    },
+    {
+      "formatted_date_of_incident": "13/05/2019",
+      "age": 69,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Canterbury",
+      "summary_of_incident": "Slipped and tripped hitting head on concrete."
+    },
+    {
+      "formatted_date_of_incident": "09/05/2019",
+      "age": 22,
+      "industry": "Health Care and Social Assistance",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Fell from moving vehicle."
+    },
+    {
+      "formatted_date_of_incident": "08/05/2019",
+      "age": 59,
+      "industry": "Agriculture",
+      "district_of_incident": "Taranaki",
+      "summary_of_incident": "Found beside running tractor."
+    },
+    {
+      "formatted_date_of_incident": "08/05/2019",
+      "age": 45,
+      "industry": "Construction",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Fall from height."
+    },
+    {
+      "formatted_date_of_incident": "08/05/2019",
+      "age": 35,
+      "industry": "Public Administration and Safety",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Fall on a training exercise."
+    },
+    {
+      "formatted_date_of_incident": "07/05/2019",
+      "age": 52,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Northland",
+      "summary_of_incident": "Truck struck the back of stationary traffic management vehicle."
+    },
+    {
+      "formatted_date_of_incident": "26/04/2019",
+      "age": 48,
+      "industry": "Construction",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Trapped between two trailers."
+    },
+    {
+      "formatted_date_of_incident": "20/04/2019",
+      "age": 50,
+      "industry": "Arts and Recreation Services",
+      "district_of_incident": "Waikato",
+      "summary_of_incident": "Fell and hit head."
+    },
+    {
+      "formatted_date_of_incident": "18/04/2019",
+      "age": 55,
+      "industry": "Rental, Hiring and Real Estate Services",
+      "district_of_incident": "Wellington",
+      "summary_of_incident": "Cherry picker contacted power lines."
+    },
+    {
+      "formatted_date_of_incident": "17/04/2019",
+      "age": 55,
+      "industry": "Manufacturing",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Struck by broken off grinding equipment."
+    },
+    {
+      "formatted_date_of_incident": "14/04/2019",
+      "age": 34,
+      "industry": "Construction",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Fell from ladder."
+    },
+    {
+      "formatted_date_of_incident": "05/04/2019",
+      "age": 73,
+      "industry": "Arts and Recreation Services",
+      "district_of_incident": "Bay of Plenty",
+      "summary_of_incident": "Fell down cliff."
+    },
+    {
+      "formatted_date_of_incident": "29/03/2019",
+      "age": 57,
+      "industry": "Construction",
+      "district_of_incident": "Waikato",
+      "summary_of_incident": "Fell from ladder."
+    },
+    {
+      "formatted_date_of_incident": "28/03/2019",
+      "age": 49,
+      "industry": "Manufacturing",
+      "district_of_incident": "Bay of Plenty",
+      "summary_of_incident": "Crushed between a loader and timber stack."
+    },
+    {
+      "formatted_date_of_incident": "25/03/2019",
+      "age": 23,
+      "industry": "Public Administration and Safety",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Drowned while diving."
+    },
+    {
+      "formatted_date_of_incident": "23/03/2019",
+      "age": 50,
+      "industry": "Arts and Recreation Services",
+      "district_of_incident": "Otago",
+      "summary_of_incident": "Was on a six seater side-by-side that fell into a ravine."
+    },
+    {
+      "formatted_date_of_incident": "23/03/2019",
+      "age": 55,
+      "industry": "Arts and Recreation Services",
+      "district_of_incident": "Otago",
+      "summary_of_incident": "Was on a six seater side by side that fell into a ravine."
+    },
+    {
+      "formatted_date_of_incident": "11/03/2019",
+      "age": 25,
+      "industry": "Construction",
+      "district_of_incident": "Wellington",
+      "summary_of_incident": "Run over by truck."
+    },
+    {
+      "formatted_date_of_incident": "05/03/2019",
+      "age": 37,
+      "industry": "Construction",
+      "district_of_incident": "West Coast",
+      "summary_of_incident": "Overcome by solvents."
+    },
+    {
+      "formatted_date_of_incident": "27/02/2019",
+      "age": 63,
+      "industry": "Construction",
+      "district_of_incident": "Northland",
+      "summary_of_incident": "Fell from mobile scaffolding."
+    },
+    {
+      "formatted_date_of_incident": "27/02/2019",
+      "age": 40,
+      "industry": "Other Services",
+      "district_of_incident": "Waikato",
+      "summary_of_incident": "Member of public hit by bus in vehicle testing station."
+    },
+    {
+      "formatted_date_of_incident": "26/02/2019",
+      "age": 55,
+      "industry": "Construction",
+      "district_of_incident": "Bay of Plenty",
+      "summary_of_incident": "Truck rear-ended a work truck causing a pile-up."
+    },
+    {
+      "formatted_date_of_incident": "26/02/2019",
+      "age": 55,
+      "industry": "Construction",
+      "district_of_incident": "Bay of Plenty",
+      "summary_of_incident": "Truck rear-ended a work truck causing a pile-up."
+    },
+    {
+      "formatted_date_of_incident": "26/02/2019",
+      "age": 40,
+      "industry": "Construction",
+      "district_of_incident": "Bay of Plenty",
+      "summary_of_incident": "Truck rear-ended a work truck causing a pile-up."
+    },
+    {
+      "formatted_date_of_incident": "23/02/2019",
+      "age": 76,
+      "industry": "Agriculture",
+      "district_of_incident": "Hawke's Bay",
+      "summary_of_incident": "Rolled a Caterpillar D4E bulldozer."
+    },
+    {
+      "formatted_date_of_incident": "20/02/2019",
+      "age": 65,
+      "industry": "Construction",
+      "district_of_incident": "Otago",
+      "summary_of_incident": "A Champion 21 tonne grader went over the edge of steep bluff."
+    },
+    {
+      "formatted_date_of_incident": "13/02/2019",
+      "age": 28,
+      "industry": "Forestry and Logging",
+      "district_of_incident": "Gisborne",
+      "summary_of_incident": "Struck by loose log."
+    },
+    {
+      "formatted_date_of_incident": "04/02/2019",
+      "age": 68,
+      "industry": "Arts and Recreation Services",
+      "district_of_incident": "Northland",
+      "summary_of_incident": "Sand dune surfing accident."
+    },
+    {
+      "formatted_date_of_incident": "02/02/2019",
+      "age": 76,
+      "industry": "Agriculture",
+      "district_of_incident": "Waikato",
+      "summary_of_incident": "Quad bike and trailer roll-over."
+    },
+    {
+      "formatted_date_of_incident": "02/02/2019",
+      "age": 30,
+      "industry": "Arts and Recreation Services",
+      "district_of_incident": "Hawke's Bay",
+      "summary_of_incident": "Side by side rollover."
+    },
+    {
+      "formatted_date_of_incident": "29/01/2019",
+      "age": 3,
+      "industry": "Public administration and safety",
+      "district_of_incident": "Southland",
+      "summary_of_incident": "Drowned"
+    },
+    {
+      "formatted_date_of_incident": "26/01/2019",
+      "age": 61,
+      "industry": "Administrative and support services",
+      "district_of_incident": "Otago",
+      "summary_of_incident": "Hit by tree branch and fell from height."
+    },
+    {
+      "formatted_date_of_incident": "20/01/2019",
+      "age": 65,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Fall from truck."
+    },
+    {
+      "formatted_date_of_incident": "16/01/2019",
+      "age": 23,
+      "industry": "Administrative and Support Services",
+      "district_of_incident": "Manawatu-Whanganui",
+      "summary_of_incident": "Vehicle incident (Car and ute)"
+    },
+    {
+      "formatted_date_of_incident": "16/01/2019",
+      "age": 21,
+      "industry": "Administrative and Support Services",
+      "district_of_incident": "Manawatu-Whanganui",
+      "summary_of_incident": "Vehicle incident (Car and ute)"
+    },
+    {
+      "formatted_date_of_incident": "16/01/2019",
+      "age": 39,
+      "industry": "Manufacturing",
+      "district_of_incident": "Auckland",
+      "summary_of_incident": "Hit by falling object."
+    },
+    {
+      "formatted_date_of_incident": "09/01/2019",
+      "age": 71,
+      "industry": "Transport, Postal and Warehousing",
+      "district_of_incident": "Wellington",
+      "summary_of_incident": "Fall from truck trailer."
+    },
+    {
+      "formatted_date_of_incident": "30/11/-0001",
+      "age": null,
+      "industry": "",
+      "district_of_incident": "",
+      "summary_of_incident": ""
+    }
+  ]
+}

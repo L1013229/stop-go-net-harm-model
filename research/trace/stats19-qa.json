@@ -1,0 +1,32 @@
+[
+  {
+    "year": 2021,
+    "retained_collisions": 1410,
+    "literal_roadworks": 1410,
+    "vehicle_casualty_joins_and_severity": "all passed"
+  },
+  {
+    "year": 2022,
+    "retained_collisions": 1225,
+    "literal_roadworks": 1225,
+    "vehicle_casualty_joins_and_severity": "all passed"
+  },
+  {
+    "year": 2023,
+    "retained_collisions": 1225,
+    "literal_roadworks": 1225,
+    "vehicle_casualty_joins_and_severity": "all passed"
+  },
+  {
+    "year": 2024,
+    "retained_collisions": 1196,
+    "literal_roadworks": 466,
+    "vehicle_casualty_joins_and_severity": "all passed"
+  },
+  {
+    "year": 2025,
+    "retained_collisions": 1042,
+    "literal_roadworks": 140,
+    "vehicle_casualty_joins_and_severity": "all passed"
+  }
+]

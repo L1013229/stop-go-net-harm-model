@@ -1,0 +1,79 @@
+xlsx_row,column_1,column_2,column_3,column_4,column_5
+61,collision,collision_severity,1,Fatal,
+62,collision,collision_severity,2,Serious,
+63,collision,collision_severity,3,Slight,
+1365,collision,special_conditions_at_site,0,None,
+1366,collision,special_conditions_at_site,1,Auto traffic signal - out,
+1367,collision,special_conditions_at_site,2,Auto signal part defective,
+1368,collision,special_conditions_at_site,3,Road sign or marking defective or obscured,
+1369,collision,special_conditions_at_site,4,Roadworks,
+1370,collision,special_conditions_at_site,5,Road surface defective,
+1371,collision,special_conditions_at_site,6,Oil or diesel,
+1372,collision,special_conditions_at_site,7,Mud,
+1373,collision,special_conditions_at_site,-1,Data missing or out of range,
+1374,collision,special_conditions_at_site,9,unknown (self reported),
+1385,collision,carriageway_hazards,0,None,New field added with the 2024 data - data collected in or converted to the 2024 STATS19 specification
+1386,collision,carriageway_hazards,11,Defective traffic signals,New field added with the 2024 data - data collected in or converted to the 2024 STATS19 specification
+1387,collision,carriageway_hazards,12,Permanent road signing or markings defective or obscured or inadequate,New field added with the 2024 data - data collected in or converted to the 2024 STATS19 specification
+1388,collision,carriageway_hazards,13,Roadworks,New field added with the 2024 data - data collected in or converted to the 2024 STATS19 specification
+1389,collision,carriageway_hazards,14,Oil or diesel,New field added with the 2024 data - data collected in or converted to the 2024 STATS19 specification
+1390,collision,carriageway_hazards,15,Mud,New field added with the 2024 data - data collected in or converted to the 2024 STATS19 specification
+1391,collision,carriageway_hazards,16,Dislodged vehicle load in carriageway,New field added with the 2024 data - data collected in or converted to the 2024 STATS19 specification
+1392,collision,carriageway_hazards,17,Other object in carriageway,New field added with the 2024 data - data collected in or converted to the 2024 STATS19 specification
+1393,collision,carriageway_hazards,18,Involvement with previous collision,New field added with the 2024 data - data collected in or converted to the 2024 STATS19 specification
+1394,collision,carriageway_hazards,19,Pedestrian in carriageway - not injured,New field added with the 2024 data - data collected in or converted to the 2024 STATS19 specification
+1395,collision,carriageway_hazards,20,Any animal in carriageway (except ridden horse),New field added with the 2024 data - data collected in or converted to the 2024 STATS19 specification
+1396,collision,carriageway_hazards,21,Poor or defective road surface,New field added with the 2024 data - data collected in or converted to the 2024 STATS19 specification
+1397,collision,carriageway_hazards,-1,Data missing or out of range,New field added with the 2024 data - data collected in or converted to the 2024 STATS19 specification
+1398,collision,carriageway_hazards,99,unknown (self reported),New field added with the 2024 data - data collected in or converted to the 2024 STATS19 specification
+1483,vehicle,vehicle_manoeuvre,1,Reversing,New field added with the 2024 data - data collected in or converted to the 2024 STATS19 specification
+1484,vehicle,vehicle_manoeuvre,2,Parked,New field added with the 2024 data - data collected in or converted to the 2024 STATS19 specification
+1485,vehicle,vehicle_manoeuvre,3,Waiting to go ahead,New field added with the 2024 data - data collected in or converted to the 2024 STATS19 specification
+1486,vehicle,vehicle_manoeuvre,4,Slowing or stopping,New field added with the 2024 data - data collected in or converted to the 2024 STATS19 specification
+1487,vehicle,vehicle_manoeuvre,5,Moving off,New field added with the 2024 data - data collected in or converted to the 2024 STATS19 specification
+1488,vehicle,vehicle_manoeuvre,6,U-turn,New field added with the 2024 data - data collected in or converted to the 2024 STATS19 specification
+1489,vehicle,vehicle_manoeuvre,7,Turning left,New field added with the 2024 data - data collected in or converted to the 2024 STATS19 specification
+1490,vehicle,vehicle_manoeuvre,8,Waiting to turn left,New field added with the 2024 data - data collected in or converted to the 2024 STATS19 specification
+1491,vehicle,vehicle_manoeuvre,9,Turning right,New field added with the 2024 data - data collected in or converted to the 2024 STATS19 specification
+1492,vehicle,vehicle_manoeuvre,10,Waiting to turn right,New field added with the 2024 data - data collected in or converted to the 2024 STATS19 specification
+1493,vehicle,vehicle_manoeuvre,11,Changing lane to left,New field added with the 2024 data - data collected in or converted to the 2024 STATS19 specification
+1494,vehicle,vehicle_manoeuvre,12,Changing lane to right,New field added with the 2024 data - data collected in or converted to the 2024 STATS19 specification
+1495,vehicle,vehicle_manoeuvre,13,Over taking moving vehicle on its offside,New field added with the 2024 data - data collected in or converted to the 2024 STATS19 specification
+1496,vehicle,vehicle_manoeuvre,14,Overtaking stationary vehicle on its offside,New field added with the 2024 data - data collected in or converted to the 2024 STATS19 specification
+1497,vehicle,vehicle_manoeuvre,15,Overtaking on nearside (passengers side nearest kerb),New field added with the 2024 data - data collected in or converted to the 2024 STATS19 specification
+1498,vehicle,vehicle_manoeuvre,19,Going ahead,New field added with the 2024 data - data collected in or converted to the 2024 STATS19 specification
+1499,vehicle,vehicle_manoeuvre,20,Parking,New field added with the 2024 data - data collected in or converted to the 2024 STATS19 specification
+1500,vehicle,vehicle_manoeuvre,99,unknown (self reported),New field added with the 2024 data - data collected in or converted to the 2024 STATS19 specification
+1501,vehicle,vehicle_manoeuvre,-1,Data missing or out of range,New field added with the 2024 data - data collected in or converted to the 2024 STATS19 specification
+1502,vehicle,vehicle_direction_from,0,Parked,both vehicle_direction_from and vehicle_direction_to should be 0
+1503,vehicle,vehicle_direction_from,1,North,
+1504,vehicle,vehicle_direction_from,2,North East,
+1505,vehicle,vehicle_direction_from,3,East,
+1506,vehicle,vehicle_direction_from,4,South East,
+1507,vehicle,vehicle_direction_from,5,South,
+1508,vehicle,vehicle_direction_from,6,South West,
+1509,vehicle,vehicle_direction_from,7,West,
+1510,vehicle,vehicle_direction_from,8,North West,
+1511,vehicle,vehicle_direction_from,9,unknown (self reported),both vehicle_direction_from and vehicle_direction_to should be 9
+1512,vehicle,vehicle_direction_from,-1,Data missing or out of range,
+1513,vehicle,vehicle_direction_to,0,Parked,both vehicle_direction_from and vehicle_direction_to should be 0
+1514,vehicle,vehicle_direction_to,1,North,
+1515,vehicle,vehicle_direction_to,2,North East,
+1516,vehicle,vehicle_direction_to,3,East,
+1517,vehicle,vehicle_direction_to,4,South East,
+1518,vehicle,vehicle_direction_to,5,South,
+1519,vehicle,vehicle_direction_to,6,South West,
+1520,vehicle,vehicle_direction_to,7,West,
+1521,vehicle,vehicle_direction_to,8,North West,
+1522,vehicle,vehicle_direction_to,9,unknown (self reported),both vehicle_direction_from and vehicle_direction_to should be 9
+1523,vehicle,vehicle_direction_to,-1,Data missing or out of range,
+1604,vehicle,first_point_of_impact,0,Did not impact,
+1605,vehicle,first_point_of_impact,1,Front,
+1606,vehicle,first_point_of_impact,2,Back,
+1607,vehicle,first_point_of_impact,3,Offside,
+1608,vehicle,first_point_of_impact,4,Nearside,
+1609,vehicle,first_point_of_impact,9,unknown (self reported),
+1610,vehicle,first_point_of_impact,-1,Data missing or out of range,
+1712,casualty,casualty_severity,1,Fatal,
+1713,casualty,casualty_severity,2,Serious,
+1714,casualty,casualty_severity,3,Slight,

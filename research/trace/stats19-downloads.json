@@ -1,0 +1,498 @@
+{
+  "payload_bytes_this_run": 255105210,
+  "max_bytes": 450000000,
+  "files": [
+    {
+      "year": 2010,
+      "kind": "collision",
+      "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-collision-2010.csv",
+      "accessed_utc": "2026-09-27T17:49:42.153921+00:00",
+      "status": 404,
+      "final_url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-collision-2010.csv",
+      "content_length": "1"
+    },
+    {
+      "year": 2010,
+      "kind": "vehicle",
+      "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-vehicle-2010.csv",
+      "accessed_utc": "2026-09-27T17:49:42.587708+00:00",
+      "status": 404,
+      "final_url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-vehicle-2010.csv",
+      "content_length": "1"
+    },
+    {
+      "year": 2010,
+      "kind": "casualty",
+      "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-casualty-2010.csv",
+      "accessed_utc": "2026-09-27T17:49:42.988216+00:00",
+      "status": 404,
+      "final_url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-casualty-2010.csv",
+      "content_length": "1"
+    },
+    {
+      "year": 2011,
+      "kind": "collision",
+      "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-collision-2011.csv",
+      "accessed_utc": "2026-09-27T17:49:43.381142+00:00",
+      "status": 404,
+      "final_url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-collision-2011.csv",
+      "content_length": "1"
+    },
+    {
+      "year": 2011,
+      "kind": "vehicle",
+      "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-vehicle-2011.csv",
+      "accessed_utc": "2026-09-27T17:49:43.818214+00:00",
+      "status": 404,
+      "final_url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-vehicle-2011.csv",
+      "content_length": "1"
+    },
+    {
+      "year": 2011,
+      "kind": "casualty",
+      "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-casualty-2011.csv",
+      "accessed_utc": "2026-09-27T17:49:44.250686+00:00",
+      "status": 404,
+      "final_url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-casualty-2011.csv",
+      "content_length": "1"
+    },
+    {
+      "year": 2012,
+      "kind": "collision",
+      "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-collision-2012.csv",
+      "accessed_utc": "2026-09-27T17:49:44.641934+00:00",
+      "status": 404,
+      "final_url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-collision-2012.csv",
+      "content_length": "1"
+    },
+    {
+      "year": 2012,
+      "kind": "vehicle",
+      "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-vehicle-2012.csv",
+      "accessed_utc": "2026-09-27T17:49:45.035653+00:00",
+      "status": 404,
+      "final_url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-vehicle-2012.csv",
+      "content_length": "1"
+    },
+    {
+      "year": 2012,
+      "kind": "casualty",
+      "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-casualty-2012.csv",
+      "accessed_utc": "2026-09-27T17:49:45.465792+00:00",
+      "status": 404,
+      "final_url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-casualty-2012.csv",
+      "content_length": "1"
+    },
+    {
+      "year": 2013,
+      "kind": "collision",
+      "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-collision-2013.csv",
+      "accessed_utc": "2026-09-27T17:49:45.859263+00:00",
+      "status": 404,
+      "final_url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-collision-2013.csv",
+      "content_length": "1"
+    },
+    {
+      "year": 2013,
+      "kind": "vehicle",
+      "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-vehicle-2013.csv",
+      "accessed_utc": "2026-09-27T17:49:46.249183+00:00",
+      "status": 404,
+      "final_url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-vehicle-2013.csv",
+      "content_length": "1"
+    },
+    {
+      "year": 2013,
+      "kind": "casualty",
+      "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-casualty-2013.csv",
+      "accessed_utc": "2026-09-27T17:49:46.645554+00:00",
+      "status": 404,
+      "final_url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-casualty-2013.csv",
+      "content_length": "1"
+    },
+    {
+      "year": 2014,
+      "kind": "collision",
+      "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-collision-2014.csv",
+      "accessed_utc": "2026-09-27T17:49:47.076610+00:00",
+      "status": 404,
+      "final_url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-collision-2014.csv",
+      "content_length": "1"
+    },
+    {
+      "year": 2014,
+      "kind": "vehicle",
+      "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-vehicle-2014.csv",
+      "accessed_utc": "2026-09-27T17:49:47.507878+00:00",
+      "status": 404,
+      "final_url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-vehicle-2014.csv",
+      "content_length": "1"
+    },
+    {
+      "year": 2014,
+      "kind": "casualty",
+      "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-casualty-2014.csv",
+      "accessed_utc": "2026-09-27T17:49:47.983227+00:00",
+      "status": 404,
+      "final_url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-casualty-2014.csv",
+      "content_length": "1"
+    },
+    {
+      "year": 2015,
+      "kind": "collision",
+      "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-collision-2015.csv",
+      "accessed_utc": "2026-09-27T17:49:48.413664+00:00",
+      "status": 404,
+      "final_url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-collision-2015.csv",
+      "content_length": "1"
+    },
+    {
+      "year": 2015,
+      "kind": "vehicle",
+      "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-vehicle-2015.csv",
+      "accessed_utc": "2026-09-27T17:49:48.844042+00:00",
+      "status": 404,
+      "final_url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-vehicle-2015.csv",
+      "content_length": "1"
+    },
+    {
+      "year": 2015,
+      "kind": "casualty",
+      "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-casualty-2015.csv",
+      "accessed_utc": "2026-09-27T17:49:49.264282+00:00",
+      "status": 404,
+      "final_url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-casualty-2015.csv",
+      "content_length": "1"
+    },
+    {
+      "year": 2016,
+      "kind": "collision",
+      "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-collision-2016.csv",
+      "accessed_utc": "2026-09-27T17:49:49.698852+00:00",
+      "status": 404,
+      "final_url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-collision-2016.csv",
+      "content_length": "1"
+    },
+    {
+      "year": 2016,
+      "kind": "vehicle",
+      "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-vehicle-2016.csv",
+      "accessed_utc": "2026-09-27T17:49:50.095861+00:00",
+      "status": 404,
+      "final_url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-vehicle-2016.csv",
+      "content_length": "1"
+    },
+    {
+      "year": 2016,
+      "kind": "casualty",
+      "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-casualty-2016.csv",
+      "accessed_utc": "2026-09-27T17:49:50.527067+00:00",
+      "status": 404,
+      "final_url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-casualty-2016.csv",
+      "content_length": "1"
+    },
+    {
+      "year": 2017,
+      "kind": "collision",
+      "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-collision-2017.csv",
+      "accessed_utc": "2026-09-27T17:49:50.964031+00:00",
+      "status": 404,
+      "final_url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-collision-2017.csv",
+      "content_length": "1"
+    },
+    {
+      "year": 2017,
+      "kind": "vehicle",
+      "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-vehicle-2017.csv",
+      "accessed_utc": "2026-09-27T17:49:51.362769+00:00",
+      "status": 404,
+      "final_url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-vehicle-2017.csv",
+      "content_length": "1"
+    },
+    {
+      "year": 2017,
+      "kind": "casualty",
+      "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-casualty-2017.csv",
+      "accessed_utc": "2026-09-27T17:49:51.755036+00:00",
+      "status": 404,
+      "final_url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-casualty-2017.csv",
+      "content_length": "1"
+    },
+    {
+      "year": 2018,
+      "kind": "collision",
+      "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-collision-2018.csv",
+      "accessed_utc": "2026-09-27T17:49:52.152013+00:00",
+      "status": 404,
+      "final_url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-collision-2018.csv",
+      "content_length": "1"
+    },
+    {
+      "year": 2018,
+      "kind": "vehicle",
+      "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-vehicle-2018.csv",
+      "accessed_utc": "2026-09-27T17:49:52.549336+00:00",
+      "status": 404,
+      "final_url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-vehicle-2018.csv",
+      "content_length": "1"
+    },
+    {
+      "year": 2018,
+      "kind": "casualty",
+      "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-casualty-2018.csv",
+      "accessed_utc": "2026-09-27T17:49:52.980721+00:00",
+      "status": 404,
+      "final_url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-casualty-2018.csv",
+      "content_length": "1"
+    },
+    {
+      "year": 2019,
+      "kind": "collision",
+      "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-collision-2019.csv",
+      "accessed_utc": "2026-09-27T17:49:53.415910+00:00",
+      "status": 404,
+      "final_url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-collision-2019.csv",
+      "content_length": "1"
+    },
+    {
+      "year": 2019,
+      "kind": "vehicle",
+      "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-vehicle-2019.csv",
+      "accessed_utc": "2026-09-27T17:49:53.886926+00:00",
+      "status": 404,
+      "final_url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-vehicle-2019.csv",
+      "content_length": "1"
+    },
+    {
+      "year": 2019,
+      "kind": "casualty",
+      "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-casualty-2019.csv",
+      "accessed_utc": "2026-09-27T17:49:54.363108+00:00",
+      "status": 404,
+      "final_url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-casualty-2019.csv",
+      "content_length": "1"
+    },
+    {
+      "year": 2020,
+      "kind": "collision",
+      "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-collision-2020.csv",
+      "accessed_utc": "2026-09-27T17:49:54.793755+00:00",
+      "status": 404,
+      "final_url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-collision-2020.csv",
+      "content_length": "1"
+    },
+    {
+      "year": 2020,
+      "kind": "vehicle",
+      "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-vehicle-2020.csv",
+      "accessed_utc": "2026-09-27T17:49:55.274586+00:00",
+      "status": 404,
+      "final_url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-vehicle-2020.csv",
+      "content_length": "1"
+    },
+    {
+      "year": 2020,
+      "kind": "casualty",
+      "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-casualty-2020.csv",
+      "accessed_utc": "2026-09-27T17:49:55.712992+00:00",
+      "status": 404,
+      "final_url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-casualty-2020.csv",
+      "content_length": "1"
+    },
+    {
+      "year": 2021,
+      "kind": "collision",
+      "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-collision-2021.csv",
+      "accessed_utc": "2026-09-27T17:49:56.151550+00:00",
+      "status": 200,
+      "final_url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-collision-2021.csv",
+      "content_length": "19208797",
+      "bytes": 19208797,
+      "sha256": "e729a3276859120261c616cbc0ac4ac7be034a608895928c41c765b3e3749ba9",
+      "rows": 101087,
+      "selected_rows": 1410
+    },
+    {
+      "year": 2021,
+      "kind": "vehicle",
+      "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-vehicle-2021.csv",
+      "accessed_utc": "2026-09-27T17:50:04.855675+00:00",
+      "status": 200,
+      "final_url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-vehicle-2021.csv",
+      "content_length": "20519491",
+      "bytes": 20519491,
+      "sha256": "80d3c8eea4547d9014ef3ce7698ae0942907aafefd8576f614c05fc9777f6d13",
+      "rows": 186443,
+      "selected_rows": 2838
+    },
+    {
+      "year": 2021,
+      "kind": "casualty",
+      "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-casualty-2021.csv",
+      "accessed_utc": "2026-09-27T17:50:16.016744+00:00",
+      "status": 200,
+      "final_url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-casualty-2021.csv",
+      "content_length": "10674693",
+      "bytes": 10674693,
+      "sha256": "272c04fae888c1b09447e55db211c9af43a003a42cd27b184405bcdde13e4df0",
+      "rows": 128209,
+      "selected_rows": 1913
+    },
+    {
+      "year": 2022,
+      "kind": "collision",
+      "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-collision-2022.csv",
+      "accessed_utc": "2026-09-27T17:50:23.008077+00:00",
+      "status": 200,
+      "final_url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-collision-2022.csv",
+      "content_length": "20116923",
+      "bytes": 20116923,
+      "sha256": "b0a704f7826f53774472254cf0dd5c0d2ec3fef006622a10a2a15f31571d4e7a",
+      "rows": 106004,
+      "selected_rows": 1225
+    },
+    {
+      "year": 2022,
+      "kind": "vehicle",
+      "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-vehicle-2022.csv",
+      "accessed_utc": "2026-09-27T17:50:32.207924+00:00",
+      "status": 200,
+      "final_url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-vehicle-2022.csv",
+      "content_length": "21324503",
+      "bytes": 21324503,
+      "sha256": "2f6a33fd31e8f399857b837b68b4426a6ad1dd3a0160c027cebb9de8ea37da0e",
+      "rows": 193545,
+      "selected_rows": 2432
+    },
+    {
+      "year": 2022,
+      "kind": "casualty",
+      "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-casualty-2022.csv",
+      "accessed_utc": "2026-09-27T17:50:44.221784+00:00",
+      "status": 200,
+      "final_url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-casualty-2022.csv",
+      "content_length": "11242293",
+      "bytes": 11242293,
+      "sha256": "8f89af8529bbbc7fe92ea65b7e5a2773e0b7f4d4d5ae903338dbd69499900730",
+      "rows": 135480,
+      "selected_rows": 1647
+    },
+    {
+      "year": 2023,
+      "kind": "collision",
+      "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-collision-2023.csv",
+      "accessed_utc": "2026-09-27T17:50:52.040189+00:00",
+      "status": 200,
+      "final_url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-collision-2023.csv",
+      "content_length": "19790001",
+      "bytes": 19790001,
+      "sha256": "0c01d4194b4e4c5e1b242a43c633bc30e22cf16e8becca698e63a37f71410cfa",
+      "rows": 104258,
+      "selected_rows": 1225
+    },
+    {
+      "year": 2023,
+      "kind": "vehicle",
+      "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-vehicle-2023.csv",
+      "accessed_utc": "2026-09-27T17:51:01.973110+00:00",
+      "status": 200,
+      "final_url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-vehicle-2023.csv",
+      "content_length": "20914478",
+      "bytes": 20914478,
+      "sha256": "9beafb1831cc611bcc0337eddaeb8b1cbdf03440df3be12d187ef34174c9ff3e",
+      "rows": 189815,
+      "selected_rows": 2366
+    },
+    {
+      "year": 2023,
+      "kind": "casualty",
+      "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-casualty-2023.csv",
+      "accessed_utc": "2026-09-27T17:51:13.174451+00:00",
+      "status": 200,
+      "final_url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-casualty-2023.csv",
+      "content_length": "11012867",
+      "bytes": 11012867,
+      "sha256": "83e509384d877535bcd566772d029a1408568114fe51a5ed66c89b677b94a46e",
+      "rows": 132977,
+      "selected_rows": 1589
+    },
+    {
+      "year": 2024,
+      "kind": "collision",
+      "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-collision-2024.csv",
+      "accessed_utc": "2026-09-27T17:51:19.683441+00:00",
+      "status": 200,
+      "final_url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-collision-2024.csv",
+      "content_length": "19208488",
+      "bytes": 19208488,
+      "sha256": "32a78f4662e309160f37b1ea2b82017e85e07b62a022d680da7140e88706a17c",
+      "rows": 100927,
+      "selected_rows": 1196
+    },
+    {
+      "year": 2024,
+      "kind": "vehicle",
+      "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-vehicle-2024.csv",
+      "accessed_utc": "2026-09-27T17:51:27.269634+00:00",
+      "status": 200,
+      "final_url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-vehicle-2024.csv",
+      "content_length": "20296911",
+      "bytes": 20296911,
+      "sha256": "1a60f65f07a44454bc03c63b35d6741f41c9dfbb05a26753406aef8bff4ae6cd",
+      "rows": 183514,
+      "selected_rows": 2396
+    },
+    {
+      "year": 2024,
+      "kind": "casualty",
+      "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-casualty-2024.csv",
+      "accessed_utc": "2026-09-27T17:51:37.362975+00:00",
+      "status": 200,
+      "final_url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-casualty-2024.csv",
+      "content_length": "10439101",
+      "bytes": 10439101,
+      "sha256": "838aad605a6ac638973f09248ef3a730dbd1de30ac8fc79dfd536e7d4a47b0f8",
+      "rows": 128272,
+      "selected_rows": 1591
+    },
+    {
+      "year": 2025,
+      "kind": "collision",
+      "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-collision-2025.csv",
+      "accessed_utc": "2026-09-27T17:51:44.936290+00:00",
+      "status": 200,
+      "final_url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-collision-2025.csv",
+      "content_length": "19349153",
+      "bytes": 19349153,
+      "sha256": "e699c19bdb82e47e449b6f3381ac87631865f6a31cef118c9955ba80ca870e2b",
+      "rows": 101525,
+      "selected_rows": 1042
+    },
+    {
+      "year": 2025,
+      "kind": "vehicle",
+      "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-vehicle-2025.csv",
+      "accessed_utc": "2026-09-27T17:51:52.787800+00:00",
+      "status": 200,
+      "final_url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-vehicle-2025.csv",
+      "content_length": "20688988",
+      "bytes": 20688988,
+      "sha256": "dbeadb9745a8821ab8132f0dde59c246159e23059ab5db2c9a4381d44141a430",
+      "rows": 183948,
+      "selected_rows": 2050
+    },
+    {
+      "year": 2025,
+      "kind": "casualty",
+      "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-casualty-2025.csv",
+      "accessed_utc": "2026-09-27T17:52:03.672389+00:00",
+      "status": 200,
+      "final_url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-casualty-2025.csv",
+      "content_length": "10318523",
+      "bytes": 10318523,
+      "sha256": "b343039991f63f526bbcac0a5e6102e3a6e4c0b65d077e3ae37dbd53d1a7319a",
+      "rows": 127883,
+      "selected_rows": 1360
+    }
+  ]
+}

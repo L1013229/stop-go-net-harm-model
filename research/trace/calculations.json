@@ -1,0 +1,721 @@
+{
+  "gb_2021_2025": [
+    {
+      "scope": "harmonised_special4_or_hazard13",
+      "definition": "ALL_ROADWORKS",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "totals": {
+        "collisions": 6098,
+        "fatal": 80,
+        "serious": 1277,
+        "slight": 4741,
+        "fatal_or_serious": 1357,
+        "casualties": 8100,
+        "fatal_casualties": 83,
+        "serious_casualties": 1403
+      },
+      "annual_mean": {
+        "collisions": 1219.6,
+        "fatal": 16.0,
+        "serious": 255.4,
+        "slight": 948.2,
+        "fatal_or_serious": 271.4,
+        "casualties": 1620.0,
+        "fatal_casualties": 16.6,
+        "serious_casualties": 280.6
+      }
+    },
+    {
+      "scope": "harmonised_special4_or_hazard13",
+      "definition": "L1_pair_one_front_opposite_from",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "totals": {
+        "collisions": 551,
+        "fatal": 8,
+        "serious": 156,
+        "slight": 387,
+        "fatal_or_serious": 164,
+        "casualties": 830,
+        "fatal_casualties": 9,
+        "serious_casualties": 187
+      },
+      "annual_mean": {
+        "collisions": 110.2,
+        "fatal": 1.6,
+        "serious": 31.2,
+        "slight": 77.4,
+        "fatal_or_serious": 32.8,
+        "casualties": 166.0,
+        "fatal_casualties": 1.8,
+        "serious_casualties": 37.4
+      }
+    },
+    {
+      "scope": "harmonised_special4_or_hazard13",
+      "definition": "L2_pair_opposite_from",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "totals": {
+        "collisions": 627,
+        "fatal": 8,
+        "serious": 170,
+        "slight": 449,
+        "fatal_or_serious": 178,
+        "casualties": 929,
+        "fatal_casualties": 9,
+        "serious_casualties": 201
+      },
+      "annual_mean": {
+        "collisions": 125.4,
+        "fatal": 1.6,
+        "serious": 34.0,
+        "slight": 89.8,
+        "fatal_or_serious": 35.6,
+        "casualties": 185.8,
+        "fatal_casualties": 1.8,
+        "serious_casualties": 40.2
+      }
+    },
+    {
+      "scope": "harmonised_special4_or_hazard13",
+      "definition": "L3_multi_any_front",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "totals": {
+        "collisions": 3902,
+        "fatal": 48,
+        "serious": 742,
+        "slight": 3112,
+        "fatal_or_serious": 790,
+        "casualties": 5597,
+        "fatal_casualties": 51,
+        "serious_casualties": 842
+      },
+      "annual_mean": {
+        "collisions": 780.4,
+        "fatal": 9.6,
+        "serious": 148.4,
+        "slight": 622.4,
+        "fatal_or_serious": 158.0,
+        "casualties": 1119.4,
+        "fatal_casualties": 10.2,
+        "serious_casualties": 168.4
+      }
+    },
+    {
+      "scope": "harmonised_special4_or_hazard13",
+      "definition": "M1_pair_front_opposite_from",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "totals": {
+        "collisions": 253,
+        "fatal": 8,
+        "serious": 86,
+        "slight": 159,
+        "fatal_or_serious": 94,
+        "casualties": 413,
+        "fatal_casualties": 9,
+        "serious_casualties": 112
+      },
+      "annual_mean": {
+        "collisions": 50.6,
+        "fatal": 1.6,
+        "serious": 17.2,
+        "slight": 31.8,
+        "fatal_or_serious": 18.8,
+        "casualties": 82.6,
+        "fatal_casualties": 1.8,
+        "serious_casualties": 22.4
+      }
+    },
+    {
+      "scope": "harmonised_special4_or_hazard13",
+      "definition": "M2_pair_front_near_opposite_from",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "totals": {
+        "collisions": 304,
+        "fatal": 8,
+        "serious": 101,
+        "slight": 195,
+        "fatal_or_serious": 109,
+        "casualties": 494,
+        "fatal_casualties": 9,
+        "serious_casualties": 130
+      },
+      "annual_mean": {
+        "collisions": 60.8,
+        "fatal": 1.6,
+        "serious": 20.2,
+        "slight": 39.0,
+        "fatal_or_serious": 21.8,
+        "casualties": 98.8,
+        "fatal_casualties": 1.8,
+        "serious_casualties": 26.0
+      }
+    },
+    {
+      "scope": "harmonised_special4_or_hazard13",
+      "definition": "M3_two_front",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "totals": {
+        "collisions": 520,
+        "fatal": 5,
+        "serious": 149,
+        "slight": 366,
+        "fatal_or_serious": 154,
+        "casualties": 684,
+        "fatal_casualties": 5,
+        "serious_casualties": 166
+      },
+      "annual_mean": {
+        "collisions": 104.0,
+        "fatal": 1.0,
+        "serious": 29.8,
+        "slight": 73.2,
+        "fatal_or_serious": 30.8,
+        "casualties": 136.8,
+        "fatal_casualties": 1.0,
+        "serious_casualties": 33.2
+      }
+    },
+    {
+      "scope": "harmonised_special4_or_hazard13",
+      "definition": "M4_pair_front",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "totals": {
+        "collisions": 767,
+        "fatal": 13,
+        "serious": 208,
+        "slight": 546,
+        "fatal_or_serious": 221,
+        "casualties": 1168,
+        "fatal_casualties": 14,
+        "serious_casualties": 249
+      },
+      "annual_mean": {
+        "collisions": 153.4,
+        "fatal": 2.6,
+        "serious": 41.6,
+        "slight": 109.2,
+        "fatal_or_serious": 44.2,
+        "casualties": 233.6,
+        "fatal_casualties": 2.8,
+        "serious_casualties": 49.8
+      }
+    },
+    {
+      "scope": "harmonised_special4_or_hazard13",
+      "definition": "S0_two_front_opposite_straight_ahead",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "totals": {
+        "collisions": 67,
+        "fatal": 2,
+        "serious": 23,
+        "slight": 42,
+        "fatal_or_serious": 25,
+        "casualties": 95,
+        "fatal_casualties": 2,
+        "serious_casualties": 30
+      },
+      "annual_mean": {
+        "collisions": 13.4,
+        "fatal": 0.4,
+        "serious": 4.6,
+        "slight": 8.4,
+        "fatal_or_serious": 5.0,
+        "casualties": 19.0,
+        "fatal_casualties": 0.4,
+        "serious_casualties": 6.0
+      }
+    },
+    {
+      "scope": "harmonised_special4_or_hazard13",
+      "definition": "S1_two_front_opposite_straight",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "totals": {
+        "collisions": 107,
+        "fatal": 3,
+        "serious": 36,
+        "slight": 68,
+        "fatal_or_serious": 39,
+        "casualties": 156,
+        "fatal_casualties": 3,
+        "serious_casualties": 46
+      },
+      "annual_mean": {
+        "collisions": 21.4,
+        "fatal": 0.6,
+        "serious": 7.2,
+        "slight": 13.6,
+        "fatal_or_serious": 7.8,
+        "casualties": 31.2,
+        "fatal_casualties": 0.6,
+        "serious_casualties": 9.2
+      }
+    },
+    {
+      "scope": "harmonised_special4_or_hazard13",
+      "definition": "S2_two_front_opposite_from",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "totals": {
+        "collisions": 180,
+        "fatal": 3,
+        "serious": 59,
+        "slight": 118,
+        "fatal_or_serious": 62,
+        "casualties": 257,
+        "fatal_casualties": 3,
+        "serious_casualties": 69
+      },
+      "annual_mean": {
+        "collisions": 36.0,
+        "fatal": 0.6,
+        "serious": 11.8,
+        "slight": 23.6,
+        "fatal_or_serious": 12.4,
+        "casualties": 51.4,
+        "fatal_casualties": 0.6,
+        "serious_casualties": 13.8
+      }
+    },
+    {
+      "scope": "literal_special4",
+      "definition": "ALL_ROADWORKS",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "totals": {
+        "collisions": 4466,
+        "fatal": 58,
+        "serious": 895,
+        "slight": 3513,
+        "fatal_or_serious": 953,
+        "casualties": 5891,
+        "fatal_casualties": 61,
+        "serious_casualties": 984
+      },
+      "annual_mean": {
+        "collisions": 893.2,
+        "fatal": 11.6,
+        "serious": 179.0,
+        "slight": 702.6,
+        "fatal_or_serious": 190.6,
+        "casualties": 1178.2,
+        "fatal_casualties": 12.2,
+        "serious_casualties": 196.8
+      }
+    },
+    {
+      "scope": "literal_special4",
+      "definition": "L1_pair_one_front_opposite_from",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "totals": {
+        "collisions": 400,
+        "fatal": 7,
+        "serious": 106,
+        "slight": 287,
+        "fatal_or_serious": 113,
+        "casualties": 588,
+        "fatal_casualties": 8,
+        "serious_casualties": 127
+      },
+      "annual_mean": {
+        "collisions": 80.0,
+        "fatal": 1.4,
+        "serious": 21.2,
+        "slight": 57.4,
+        "fatal_or_serious": 22.6,
+        "casualties": 117.6,
+        "fatal_casualties": 1.6,
+        "serious_casualties": 25.4
+      }
+    },
+    {
+      "scope": "literal_special4",
+      "definition": "L2_pair_opposite_from",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "totals": {
+        "collisions": 454,
+        "fatal": 7,
+        "serious": 115,
+        "slight": 332,
+        "fatal_or_serious": 122,
+        "casualties": 662,
+        "fatal_casualties": 8,
+        "serious_casualties": 136
+      },
+      "annual_mean": {
+        "collisions": 90.8,
+        "fatal": 1.4,
+        "serious": 23.0,
+        "slight": 66.4,
+        "fatal_or_serious": 24.4,
+        "casualties": 132.4,
+        "fatal_casualties": 1.6,
+        "serious_casualties": 27.2
+      }
+    },
+    {
+      "scope": "literal_special4",
+      "definition": "L3_multi_any_front",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "totals": {
+        "collisions": 2832,
+        "fatal": 33,
+        "serious": 490,
+        "slight": 2309,
+        "fatal_or_serious": 523,
+        "casualties": 4019,
+        "fatal_casualties": 36,
+        "serious_casualties": 560
+      },
+      "annual_mean": {
+        "collisions": 566.4,
+        "fatal": 6.6,
+        "serious": 98.0,
+        "slight": 461.8,
+        "fatal_or_serious": 104.6,
+        "casualties": 803.8,
+        "fatal_casualties": 7.2,
+        "serious_casualties": 112.0
+      }
+    },
+    {
+      "scope": "literal_special4",
+      "definition": "M1_pair_front_opposite_from",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "totals": {
+        "collisions": 193,
+        "fatal": 7,
+        "serious": 60,
+        "slight": 126,
+        "fatal_or_serious": 67,
+        "casualties": 312,
+        "fatal_casualties": 8,
+        "serious_casualties": 79
+      },
+      "annual_mean": {
+        "collisions": 38.6,
+        "fatal": 1.4,
+        "serious": 12.0,
+        "slight": 25.2,
+        "fatal_or_serious": 13.4,
+        "casualties": 62.4,
+        "fatal_casualties": 1.6,
+        "serious_casualties": 15.8
+      }
+    },
+    {
+      "scope": "literal_special4",
+      "definition": "M2_pair_front_near_opposite_from",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "totals": {
+        "collisions": 220,
+        "fatal": 7,
+        "serious": 68,
+        "slight": 145,
+        "fatal_or_serious": 75,
+        "casualties": 351,
+        "fatal_casualties": 8,
+        "serious_casualties": 90
+      },
+      "annual_mean": {
+        "collisions": 44.0,
+        "fatal": 1.4,
+        "serious": 13.6,
+        "slight": 29.0,
+        "fatal_or_serious": 15.0,
+        "casualties": 70.2,
+        "fatal_casualties": 1.6,
+        "serious_casualties": 18.0
+      }
+    },
+    {
+      "scope": "literal_special4",
+      "definition": "M3_two_front",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "totals": {
+        "collisions": 373,
+        "fatal": 3,
+        "serious": 99,
+        "slight": 271,
+        "fatal_or_serious": 102,
+        "casualties": 487,
+        "fatal_casualties": 3,
+        "serious_casualties": 112
+      },
+      "annual_mean": {
+        "collisions": 74.6,
+        "fatal": 0.6,
+        "serious": 19.8,
+        "slight": 54.2,
+        "fatal_or_serious": 20.4,
+        "casualties": 97.4,
+        "fatal_casualties": 0.6,
+        "serious_casualties": 22.4
+      }
+    },
+    {
+      "scope": "literal_special4",
+      "definition": "M4_pair_front",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "totals": {
+        "collisions": 552,
+        "fatal": 10,
+        "serious": 143,
+        "slight": 399,
+        "fatal_or_serious": 153,
+        "casualties": 839,
+        "fatal_casualties": 11,
+        "serious_casualties": 174
+      },
+      "annual_mean": {
+        "collisions": 110.4,
+        "fatal": 2.0,
+        "serious": 28.6,
+        "slight": 79.8,
+        "fatal_or_serious": 30.6,
+        "casualties": 167.8,
+        "fatal_casualties": 2.2,
+        "serious_casualties": 34.8
+      }
+    },
+    {
+      "scope": "literal_special4",
+      "definition": "S0_two_front_opposite_straight_ahead",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "totals": {
+        "collisions": 48,
+        "fatal": 1,
+        "serious": 14,
+        "slight": 33,
+        "fatal_or_serious": 15,
+        "casualties": 73,
+        "fatal_casualties": 1,
+        "serious_casualties": 20
+      },
+      "annual_mean": {
+        "collisions": 9.6,
+        "fatal": 0.2,
+        "serious": 2.8,
+        "slight": 6.6,
+        "fatal_or_serious": 3.0,
+        "casualties": 14.6,
+        "fatal_casualties": 0.2,
+        "serious_casualties": 4.0
+      }
+    },
+    {
+      "scope": "literal_special4",
+      "definition": "S1_two_front_opposite_straight",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "totals": {
+        "collisions": 83,
+        "fatal": 2,
+        "serious": 25,
+        "slight": 56,
+        "fatal_or_serious": 27,
+        "casualties": 126,
+        "fatal_casualties": 2,
+        "serious_casualties": 33
+      },
+      "annual_mean": {
+        "collisions": 16.6,
+        "fatal": 0.4,
+        "serious": 5.0,
+        "slight": 11.2,
+        "fatal_or_serious": 5.4,
+        "casualties": 25.2,
+        "fatal_casualties": 0.4,
+        "serious_casualties": 6.6
+      }
+    },
+    {
+      "scope": "literal_special4",
+      "definition": "S2_two_front_opposite_from",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "totals": {
+        "collisions": 139,
+        "fatal": 2,
+        "serious": 41,
+        "slight": 96,
+        "fatal_or_serious": 43,
+        "casualties": 198,
+        "fatal_casualties": 2,
+        "serious_casualties": 49
+      },
+      "annual_mean": {
+        "collisions": 27.8,
+        "fatal": 0.4,
+        "serious": 8.2,
+        "slight": 19.2,
+        "fatal_or_serious": 8.6,
+        "casualties": 39.6,
+        "fatal_casualties": 0.4,
+        "serious_casualties": 9.8
+      }
+    }
+  ],
+  "dft_2016": {
+    "all_works_mean_duration_days": 4.88477832655972,
+    "traffic_control_mean_duration_days": 4.9182007578065035,
+    "paper_1_5m_minus_source_works": -8796,
+    "paper_1_5m_minus_source_traffic_control_duration": -518405,
+    "warning": "Works, elapsed duration days and 8-hour operation-days are different units; these differences do not reproduce the paper's denominator."
+  },
+  "dft_street_manager_2023_24": {
+    "table_3_minus_table_2_works": 788,
+    "implied_opdays_per_restricted_work_for_paper_gb_central": 1.72355152729646,
+    "implied_opdays_per_restricted_work_for_paper_gb_range": [
+      1.034130916377876,
+      2.8725858788274334
+    ],
+    "warning": "Reverse arithmetic only. No source supplies these operation-days per work. England is not GB."
+  },
+  "nz": {
+    "implied_national_uplift_times_realised_sites_per_car_times_opdays_per_site": 13.793103448275861,
+    "implied_product_for_range": [
+      5.172413793103448,
+      25.862068965517242
+    ],
+    "stopgo_fraction_of_central_total_assumed": 0.4375,
+    "fatalities_needed_over_2010_2025_to_support_claim": [
+      4.0,
+      8.0
+    ],
+    "warning": "No national fatality rate estimated from an incomplete incident search. Exposure factors and ranges are unsupported assumptions."
+  },
+  "us": {
+    "years": 8,
+    "activity_deaths_per_year": 11.5,
+    "flagger_occupation_deaths_per_year": 4.0,
+    "other_occupation_deaths_per_year": 7.5
+  }
+}

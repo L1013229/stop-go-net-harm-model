@@ -11,6 +11,7 @@ Code, configuration, tests and production outputs for version 1.2 of *A Probabil
 - `model/outputs/dist/capfix_20260927/`: the production run of record for version 1.3 (the version 1.2 run, e64d394_20260926, is in this repository's history) (grid results, sensitivity, calibration curves, decision surfaces, record checks, model-form and welfare summaries), including the saved per-draw traces used by the figure scripts.
 - `docs/prespec.md` (the pre-registered design, decision rules and the addendum for the attended device), `docs/model-design.md`, `research/` (the evidence notes behind every prior and both record bands), `results/REGISTRY.md` (every number the paper quotes, with its source file).
 - `docs/influence-diagram-edges.md`: the node and edge list for the main influence diagram and its full supplemental version, with links to the model code and the distinction between modelled links and the unmodelled delay-to-violation response.
+- `research/trace/stats19_trace.py` and its `README.md` reproduce the Great Britain STATS19 roadworks head-on proxy for 2021 to 2025 from saved extracts: 50.6 injury collisions, 18.8 fatal or serious and 1.6 fatal per year; `research/traceability.md` documents the confirmed US count and the unresolved NZ frequency and national exposure estimates.
 
 ## Version 1.2 figures
 

@@ -1,0 +1,90 @@
+[
+  {
+    "label": "Open dataset data guide",
+    "url": "https://assets.publishing.service.gov.uk/media/6ab2a71d997a4b2950cced58/dft-road-casualty-statistics-road-safety-open-dataset-data-guide-2025.xlsx"
+  },
+  {
+    "label": "Road Safety Data - Collisions - 2025",
+    "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-collision-2025.csv"
+  },
+  {
+    "label": "Road Safety Data - Vehicles - 2025",
+    "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-vehicle-2025.csv"
+  },
+  {
+    "label": "Road Safety Data - Casualties - 2025",
+    "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-casualty-2025.csv"
+  },
+  {
+    "label": "Road Safety Data - Collisions - 1979 - Latest Published Year",
+    "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-collision-1979-latest-published-year.csv"
+  },
+  {
+    "label": "Road Safety Data - Vehicles  - 1979 - Latest Published Year",
+    "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-vehicle-1979-latest-published-year.csv"
+  },
+  {
+    "label": "Road Safety Data - Casualties  - 1979 - Latest Published Year",
+    "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-casualty-1979-latest-published-year.csv"
+  },
+  {
+    "label": "Road Safety Data - Collisions - last 5 years",
+    "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-collision-last-5-years.csv"
+  },
+  {
+    "label": "Road Safety Data - Vehicles - last 5 years",
+    "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-vehicle-last-5-years.csv"
+  },
+  {
+    "label": "Road Safety Data - Casualties - last 5 years",
+    "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-casualty-last-5-years.csv"
+  },
+  {
+    "label": "Road Safety Data - Collisions - 2024",
+    "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-collision-2024.csv"
+  },
+  {
+    "label": "Road Safety Data - Vehicles - 2024",
+    "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-vehicle-2024.csv"
+  },
+  {
+    "label": "Road Safety Data - Casualties - 2024",
+    "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-casualty-2024.csv"
+  },
+  {
+    "label": "Road Safety Data - Collisions - 2023",
+    "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-collision-2023.csv"
+  },
+  {
+    "label": "Road Safety Data - Vehicles - 2023",
+    "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-vehicle-2023.csv"
+  },
+  {
+    "label": "Road Safety Data - Casualties - 2023",
+    "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-casualty-2023.csv"
+  },
+  {
+    "label": "Road Safety Data - Collisions - 2022",
+    "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-collision-2022.csv"
+  },
+  {
+    "label": "Road Safety Data - Vehicles - 2022",
+    "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-vehicle-2022.csv"
+  },
+  {
+    "label": "Road Safety Data - Casualties - 2022",
+    "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-casualty-2022.csv"
+  },
+  {
+    "label": "Road Safety Data - Collisions - 2021",
+    "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-collision-2021.csv"
+  },
+  {
+    "label": "Road Safety Data - Vehicles - 2021",
+    "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-vehicle-2021.csv"
+  },
+  {
+    "label": "Road Safety Data - Casualties - 2021",
+    "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-casualty-2021.csv"
+  }
+]
