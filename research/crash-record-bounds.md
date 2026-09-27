@@ -92,3 +92,5 @@ Yousif, Alterawi & Henson (*AA&P* 66:147-157, 2014); Finley et al. (TTI 0-6407-1
 Finley, Songchitruksa & Jenkins (ODOT, 2015); Carlson et al. (TX, 2015); Garber & Zhao
 (*TRR* 1794, 2002); FIU ABC-UTC-2016-C3-FIU03 (2021); Theiss et al. (TTI 0-6998-R1, 2022);
 DfT STATS19 open data and STATS20 guidance; NZ CAS (NZTA); Blackman, Debnath & Haworth (2020).
+
+**Provenance of the New Zealand head-on counts (reproduced 27 September 2026, CAS load of 14 September 2026).** Relation nz.crash; movement_category "Head On Crash"; work-zone crashes by the seven-signal definition (column is_ttm_tilton7; Tilton, CAS identifiability paper). Crash years 1990 to 2025: 883 crashes (49 fatal, 119 serious, 283 minor, 432 non-injury), matching the count above exactly. Crash years 2018 to 2024: 325 crashes (49, 46, 50, 51, 34, 54, 41 by year), 46.4 per year; the working value of about 45 per year is within 3 per cent. The broader any-signal flag gives 1,010 head-ons over all years and the narrow core flag 68, so the seven-signal definition is the one these counts use.
