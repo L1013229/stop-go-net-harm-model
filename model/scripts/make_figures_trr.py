@@ -259,6 +259,61 @@ def fig_tree(tr):
     plt.close(fig)
 
 
+def fig_tree_structure():
+    """The same staircase as fig_tree without any numbers: the four questions and the outcome at each terminal.
+    The Methods show this figure and say in prose what decides each answer; the Results show fig_tree with the
+    median counts (owner's 29 September 2026 review: the tree is better shown than described, and no results
+    before the Results)."""
+    # Taller than fig_tree: under each question sits the rule that decides it (owner's 29 September 2026
+    # comment 1: the tree is better shown than described), so the Methods prose keeps only the values.
+    fig, ax = plt.subplots(figsize=(6.5, 4.8))
+    ax.set_xlim(0, 10)
+    ax.set_ylim(0, 16.5)
+    ax.axis("off")
+    QY = [15.0, 11.8, 8.6, 5.4]
+    QX = [1.30, 3.45, 5.55, 7.65]
+    BASE = 0.8
+    questions = [
+        "does the vehicle\nfacing red enter?",
+        "does it meet an\nopposing vehicle?",
+        "do they\ncollide?",
+        "is anyone\nseriously hurt?",
+    ]
+    rules = [
+        "at the measured rate,\nscaled by what the\ndriver can see",
+        "unless the all-red\ncovers it or a person\nholds the release",
+        "if both drivers fail\nto avoid in the\ntime left (S-curve)",
+        "injury curves at the\nimpact speed, worker\nor occupants",
+    ]
+    terminals = ["do not enter", "cross empty", "avoided", "no serious\ninjury"]
+    ax.text(QX[0], QY[0] + 0.95, "every vehicle facing a red", ha="center", va="bottom", fontsize=9, color=MUTED)
+    for i, q in enumerate(questions):
+        ax.text(QX[i], QY[i], q, ha="center", va="center", fontsize=9, color=INK, fontweight="bold", linespacing=1.25, zorder=4)
+        ax.text(QX[i], QY[i] - 0.9, rules[i], ha="center", va="top", fontsize=9, color=MUTED, linespacing=1.2, zorder=4)
+        ax.annotate("", xy=(QX[i], BASE + 0.75), xytext=(QX[i], QY[i] - 2.75),
+                    arrowprops=dict(arrowstyle="-|>", color=INK, lw=0.9, shrinkA=0, shrinkB=0))
+        ax.text(QX[i] + 0.12, (QY[i] - 2.75 + BASE) / 2 + 0.3, "No", ha="left", va="center", fontsize=9, color=INK)
+        ax.text(QX[i], BASE, terminals[i], ha="center", va="center", fontsize=9, color=INK, fontweight="bold", linespacing=1.15)
+        if i < 3:
+            x_start = QX[i] + 1.30
+            x_end = QX[i + 1]
+            y_run = QY[i]
+            ax.plot([x_start, x_end], [y_run, y_run], color=INK, lw=0.9, solid_capstyle="butt", zorder=2)
+            ax.annotate("", xy=(x_end, QY[i + 1] + 0.85), xytext=(x_end, y_run),
+                        arrowprops=dict(arrowstyle="-|>", color=INK, lw=0.9, shrinkA=0, shrinkB=0))
+            ax.text(x_end + 0.12, (y_run + QY[i + 1] + 0.85) / 2, "Yes", ha="left", va="center", fontsize=9, color=INK)
+        else:
+            x_start = QX[i] + 1.30
+            x_end = 9.35
+            ax.plot([x_start, x_end], [QY[i], QY[i]], color=INK, lw=0.9, solid_capstyle="butt", zorder=2)
+            ax.annotate("", xy=(x_end, BASE + 0.75), xytext=(x_end, QY[i]),
+                        arrowprops=dict(arrowstyle="-|>", color=INK, lw=0.9, shrinkA=0, shrinkB=0))
+            ax.text(x_end + 0.12, (QY[i] + BASE) / 2 + 0.3, "Yes", ha="left", va="center", fontsize=9, color=INK)
+            ax.text(x_end, BASE, "death or\nserious injury", ha="center", va="center", fontsize=9, color=INK, fontweight="bold", linespacing=1.15)
+    _save(fig, "fig_tree_structure.png")
+    plt.close(fig)
+
+
 # ----------------------------------------------------------------- FIGURE 4 (code all-red)
 def fig_allred():
     """The all-red rules of the reviewed standards, labelled in a legend clear of the lines."""
