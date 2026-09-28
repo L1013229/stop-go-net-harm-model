@@ -286,6 +286,32 @@ def fig_spread(data):
 
 # ------------------------------------------------------------------ Figure 6: sight
 
+def fig_prcc(data):
+    """Figure 6: the eight largest partial rank correlations with the change in harm at the recorded rates."""
+    names = {"re3_rate": "controller-strike rate", "sev3_p": "controller-strike severity",
+             "q_lead": "released driver enters against a vehicle it can see",
+             "r_v1a": "entry rate at the signal", "w_occ": "entering driver enters against a visible vehicle",
+             "impact_speed_frac": "share of closing speed kept at impact", "ttc50": "time to collision at even odds of avoiding",
+             "w_onset": "share of entries made just after the red starts", "d_sight_m": "mutual sight distance",
+             "platoon_speed_kmh": "operating speed", "f_cycle_a": "fixed-time green ratio"}
+    d = json.loads((DIST / "decision_summary_s2.json").read_text())
+    top = d["s1a_prcc_at_record_top8"][:8][::-1]
+    vals = [float(v) for _, v in top]
+    labels = [names.get(k, k) for k, _ in top]
+    fig = plt.figure(figsize=(WIDTH, 2.8))
+    ax = fig.add_axes([.54, .22, .43, .74])
+    ax.barh(labels, vals, height=0.62, color=[BLUE if v > 0 else INK for v in vals], edgecolor="white", lw=.4)
+    for i, v in enumerate(vals):
+        ax.text(v + (0.02 if v > 0 else -0.02), i, f"{v:+.2f}", ha="left" if v > 0 else "right", va="center", fontsize=9)
+    lim = max(abs(v) for v in vals) + 0.22
+    ax.set_xlim(-lim, lim); ax.set_xticks([-0.5, 0, 0.5]); ax.axvline(0, color=MUTED, lw=0.7)
+    ax.set_xlabel("rank correlation with the change in harm\n(negative favours signals)")
+    ax.tick_params(axis="y", labelsize=9)
+    clean(ax, "x")
+    check_and_save(fig, "fig_prcc_record.png")
+    return dict(top=top)
+
+
 def fig_sight():
     rows = read_csv("sight_sweep.csv")
     fig, axes = plt.subplots(1, 2, figsize=(WIDTH, 2.8))
@@ -330,9 +356,9 @@ def fig_injury_curves():
     a.plot([31, 47], [pw, pw], color=MUTED, lw=0.8, ls=":")
     a.plot([31], [pw], marker="o", ms=4.5, mfc="white", mec=INK, mew=1.1, zorder=5)
     a.plot([47], [pw], marker="o", ms=4.5, mfc="white", mec=BLUE, mew=1.1, zorder=5)
-    a.text(2, 0.36, "same risk at\n31 and 47 km/h", fontsize=9, color=MUTED, ha="left", va="bottom")
-    a.plot([20, 30], [0.35, pw + 0.03], color=MUTED, lw=0.6)
-    a.text(50, 0.60, "worker, at\nimpact speed", fontsize=9, color=INK, ha="right", va="bottom")
+    a.text(2, 0.50, "same risk at\n31 and 47 km/h", fontsize=9, color=MUTED, ha="left", va="bottom")
+    a.plot([20, 30], [0.49, pw + 0.03], color=MUTED, lw=0.6)
+    a.text(56, 0.68, "worker, at\nimpact speed", fontsize=9, color=INK, ha="right", va="bottom")
     a.text(72, 0.28, "occupant,\nat delta-V", fontsize=9, color=BLUE, ha="left", va="bottom")
     a.set_xlabel("impact speed or delta-V (km/h)"); a.set_ylabel("probability of serious injury\nper person")
     a.set_ylim(0, 1.02); a.set_xlim(0, 120); a.set_yticks([0, .25, .5, .75, 1])
@@ -346,9 +372,9 @@ def fig_injury_curves():
     b.plot(vop, p_strike, color=INK, lw=1.6)
     b.plot(vop, p_headon, color=BLUE, lw=1.6, ls="--")
     b.axvline(45, color=MUTED, lw=0.7, ls="-.")
-    b.text(12, 0.76, "above about 45 km/h\nthe head-on is\nthe worse event", fontsize=9, color=MUTED, va="bottom")
-    b.text(12, 0.60, "solid: one worker struck", fontsize=9, color=INK, ha="left", va="bottom")
-    b.text(12, 0.34, "dashed: head-on between\ntwo vehicles", fontsize=9, color=BLUE, ha="left", va="bottom")
+    b.text(12, 0.66, "above about\n45 km/h the\nhead-on is the\nworse event", fontsize=9, color=MUTED, va="bottom")
+    b.text(11.5, 0.46, "solid: one\nworker struck", fontsize=9, color=INK, ha="left", va="bottom")
+    b.text(11.5, 0.20, "dashed:\nhead-on between\ntwo vehicles", fontsize=9, color=BLUE, ha="left", va="bottom")
     b.set_xlabel("operating speed (km/h)"); b.set_ylabel("probability of a serious-harm\nevent per collision or strike")
     b.set_ylim(0, 1.02); b.set_xlim(10, 80); b.set_yticks([0, .25, .5, .75, 1]); b.set_xticks([20, 40, 60, 80])
     b.set_title("(b)  per event at one speed", loc="left")
@@ -399,7 +425,8 @@ def main():
     if want("fig_spread.png"):
         fig_spread(data)
     if want("fig9_sight.png"):
-        fig_sight()
+        out["prcc"] = fig_prcc(data)
+    fig_sight()
     if want("fig_injury_speed.png"):
         fig_injury_curves()
     out["speed"] = fig_speed_sweep()
