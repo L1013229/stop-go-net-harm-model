@@ -31,7 +31,7 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parents[2]
 DIST = ROOT / "model/outputs/dist/capfix_20260927"
-OUT = ROOT / "trr/manuscript/figures"
+OUT = ROOT / "model/outputs/figures_trr"
 BUILD = DIST / "figures"
 AUDIT = DIST / "figure-audit.json"
 WIDTH, DPI, MIN_FONT_PT = 6.5, 400, 9.0
@@ -343,13 +343,13 @@ def fig4(data):
     fig, ax = canvas(4.6)
     box(ax, .18, 3.85, 1.72, .50, "Occupational counts\nand assumed exposure")
     arrow(ax, (1.90, 4.10), (2.16, 4.10))
-    box(ax, 2.16, 3.85, 1.80, .50, "Controller-strike\nreference level")
+    box(ax, 2.16, 3.85, 1.80, .50, "Recorded\ncontroller-strike rate")
     box(ax, .18, 3.18, 1.72, .50, "Roadworks counts\nand assumed exposure")
     arrow(ax, (1.90, 3.43), (2.16, 3.43))
-    box(ax, 2.16, 3.18, 1.80, .50, "Assumed signal\nhead-on level")
+    box(ax, 2.16, 3.18, 1.80, .50, "Recorded head-on rate,\nassigned to signals")
     arrow(ax, (3.96, 3.43), (4.22, 3.43))
-    box(ax, 4.22, 3.18, 2.10, .50, "One multiplier for all\nhead-on branches")
-    text(ax, .18, 2.89, "Constructed reference levels set the scale; relative rates come from the event tree.")
+    box(ax, 4.22, 3.18, 2.10, .50, "One factor for every\nhead-on branch")
+    text(ax, .18, 2.89, "The recorded rates set the scale; the event tree sets the relative rates.")
     axes = [fig.add_axes([.105, .22, .365, .29]), fig.add_axes([.59, .22, .365, .29])]
     curves = []
     for arr, anchor in ((data.w, data.c), (data.v["S1a"], data.h)):
@@ -371,10 +371,10 @@ def fig4(data):
         inside = np.mean((arr*central/np.median(arr) >= band[0]) & (arr*central/np.median(arr) <= band[1]))
         key = "share_of_scaled_strike_draws_inside_band" if i == 0 else "share_of_scaled_headon_draws_inside_band"
         close(inside, data.d[key], "R45 band share")
-        plot.text(.03, .90, f"{inside:.0%} inside band\n(medians matched)", transform=plot.transAxes, fontsize=9, va="top")
-    axes[0].set_ylabel("Cumulative share of draws", labelpad=4)
-    fig.text(.53, .145, "Serious-harm events / operation day (log scale)", fontsize=9, ha="center")
-    handles = [Line2D([], [], c=INK, lw=1.2, ls="--", label="Means matched"), Line2D([], [], c=INK, lw=1.2, label="Medians matched (sensitivity)"), Rectangle((0, 0), 1, 1, fc="#dddddd", label="Constructed reference band"), Line2D([], [], c=MUTED, ls=":", label="Reference central")]
+        plot.text(.03, .90, f"{inside:.0%} of draws inside\nthe recorded range\n(medians matched)", transform=plot.transAxes, fontsize=9, va="top")
+    axes[0].set_ylabel("cumulative share of draws", labelpad=4)
+    fig.text(.53, .145, "serious-harm events per operation day (log scale)", fontsize=9, ha="center")
+    handles = [Line2D([], [], c=INK, lw=1.2, label="Medians matched (the paper's reading)"), Line2D([], [], c=INK, lw=1.2, ls="--", label="Means matched (alternative)"), Rectangle((0, 0), 1, 1, fc="#dddddd", label="Recorded range"), Line2D([], [], c=MUTED, ls=":", label="Middle of the range")]
     fig.legend(handles=handles, loc="lower center", bbox_to_anchor=(.5, .015), ncol=2, frameon=False, columnspacing=1.8)
     return fig
 
@@ -445,8 +445,8 @@ def fig5(data):
 def device_rows(data):
     rows = []
     for ref in (0, 1):
-        rows.append((f"Tied exposure, {ref} m", data.r["R71_R75_tied_operator"][f"reference_{ref}m"], True))
-    for label, key in (("Encroachment", "pre_specified_two_operators"), ("Independent scaling, 0 m", "like_for_like_ref_0.0m_two_operators"), ("Independent scaling, 1 m", "like_for_like_ref_1.0m_two_operators")):
+        rows.append(({0: "tied to the controller,\nreference at the edge line", 1: "tied to the controller,\nreference 1 m back"}[ref], data.r["R71_R75_tied_operator"][f"reference_{ref}m"], True))
+    for label, key in (("from the encroachment\nrate alone", "pre_specified_two_operators"), ("Independent scaling, 0 m", "like_for_like_ref_0.0m_two_operators"), ("Independent scaling, 1 m", "like_for_like_ref_1.0m_two_operators")):
         rows.append((label, data.variants[key], False))
     d = data.d
     rows.append(("Own anchor + encroachment", dict(p=d["s2_own_anchor_p_at_record_central"], p_corners_min_max=d["s2_own_anchor_p_worst_best"], p_s2_below_s1a=d["s2_own_anchor_vs_s1a_p_s2_lower"]), False))
@@ -463,7 +463,7 @@ def device_rows(data):
 
 def fig6(data):
     fig, ax = canvas(5.4)
-    text(ax, .18, 5.16, "Manual control → attended device (two operators)", weight="bold")
+    text(ax, .18, 5.16, "Manual control replaced by the attended device (two operators)", weight="bold")
     ax.add_patch(Rectangle((.20, 3.95), 1.25, .70, fc="#ededed", ec="none"))
     text(ax, .82, 4.30, "Travelled lane", ha="center")
     ax.plot([1.45, 1.45], [3.84, 4.66], c=INK, lw=1.2)
@@ -471,11 +471,11 @@ def fig6(data):
     person(ax, 1.55, 4.25)
     person(ax, 2.47, 4.25)
     person(ax, 4.70, 4.25)
-    text(ax, 2.12, 4.85, "Reference: 0 or 1 m", ha="center")
-    text(ax, 4.73, 4.85, "Operator: sampled 1.5 to 6 m", ha="center")
+    text(ax, 2.00, 4.85, "reference controller:\nedge line or 1 m back", ha="center")
+    text(ax, 4.73, 4.85, "operator: sampled\n1.5 to 6 m from the edge line", ha="center")
     arrow(ax, (2.73, 4.23), (4.44, 4.23))
     retained = data.r["R82_queue_tail_share_and_retained_exposure"]["tied_retained_fraction_ref_0m"]["median"]
-    text(ax, 3.80, 3.83, f"Tied 0 m: {retained:.0%} exposure retained\n(median draw)", ha="center")
+    text(ax, 3.80, 3.83, f"operator keeps {retained:.0%} of the controller's exposure\n(median draw, edge-line reference)", ha="center")
     rows = data.device_rows[:3]  # Adopted references and original encroachment sensitivity.
     plot = fig.add_axes([.405, .155, .37, .445])
     ys = [2, 1, 0]
@@ -489,11 +489,11 @@ def fig6(data):
         plot.text(1.32, y, f"{row['p_s2_below_s1a']:.3f}", transform=plot.get_yaxis_transform(), ha="center", va="center", fontsize=9)
     plot.set(xlim=(0, 1), ylim=(-.6, 2.9), xticks=[0, .5, 1], yticks=[])
     plot.axvline(.5, c=GRID, lw=.8, zorder=0)
-    plot.text(.5, 1.03, "Share below\nmanual control", ha="center", va="bottom", transform=plot.transAxes, fontsize=9)
-    plot.text(1.32, 1.03, "Share below\nfixed-time signals", ha="center", va="bottom", transform=plot.transAxes, fontsize=9)
+    plot.text(.5, 1.03, "probability of less harm\nthan manual control", ha="center", va="bottom", transform=plot.transAxes, fontsize=9)
+    plot.text(1.30, 1.03, "probability of less\nharm than signals", ha="center", va="bottom", transform=plot.transAxes, fontsize=9)
     clean(plot)
     plot.spines["left"].set_visible(False)
-    text(ax, .18, .25, "Medians matched; whiskers: selected calibration corners. Distances schematic.")
+    text(ax, .18, .25, "Medians matched; whiskers span the corners of the recorded ranges. Distances are schematic.")
     return fig
 
 
@@ -655,11 +655,11 @@ def figS6(data):
     close([failed[s] for s in ("S1a", "S2")],
           [registered[s]["count_above_ceiling"] for s in ("S1a", "S2")], "R59 grid failures")
     axes[0].set_ylabel("Section length (m)", labelpad=3)
-    fig.text(.53, .215, "Demand (vehicles / hour / direction)", fontsize=9, ha="center")
-    fig.text(.53, .955, r"Cell values: median head-on collisions / operation day ($\times 10^{-5}$)", ha="center", fontsize=9)
-    handles = [Rectangle((0, 0), 1, 1, fc="white", ec=MUTED, hatch="////", label="Outside gate"), Rectangle((0, 0), 1, 1, fc="#aaaaaa", label="Infeasible"), Rectangle((0, 0), 1, 1, fc="white", ec=MUTED, hatch="....", label="Partly stable"), Rectangle((0, 0), 1, 1, fc="white", ec=INK, lw=1.7, label="Baseline")]
+    fig.text(.53, .215, "demand (vehicles per hour per direction)", fontsize=9, ha="center")
+    fig.text(.53, .955, r"Cell values: median head-on collisions per operation day ($\times 10^{-5}$)", ha="center", fontsize=9)
+    handles = [Rectangle((0, 0), 1, 1, fc="white", ec=MUTED, hatch="////", label="Outside the screening band"), Rectangle((0, 0), 1, 1, fc="#aaaaaa", label="Infeasible"), Rectangle((0, 0), 1, 1, fc="white", ec=MUTED, hatch="....", label="Partly stable"), Rectangle((0, 0), 1, 1, fc="white", ec=INK, lw=1.7, label="Baseline")]
     fig.legend(handles=handles, loc="lower center", bbox_to_anchor=(.51, .108), ncol=4, frameon=False, handlelength=1.25, columnspacing=1)
-    fig.text(.5, .035, r"Gate: $10^{-6}$ to $10^{-3}$ collisions / operation day.", ha="center", fontsize=9)
+    fig.text(.5, .035, r"Screening band: $10^{-6}$ to $10^{-3}$ collisions per operation day.", ha="center", fontsize=9)
     return fig
 
 
