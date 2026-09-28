@@ -22,8 +22,8 @@ from dataclasses import dataclass
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-FIG = ROOT / "trr/manuscript/figures/fig_influence"
-AUDIT = ROOT / "trr/reviews/round10/influence-diagram-edges.md"
+FIG = ROOT / "model/outputs/figures_trr/fig_influence"
+AUDIT = ROOT / "docs/influence-diagram-edges.md"
 M = "model/src/mtcpts/model.py"
 P = "model/src/mtcpts/pathways.py"
 C = "model/src/mtcpts/conflict.py"
@@ -76,8 +76,8 @@ NODES = [
          "run_cell", (ref(M, 252, 282, 'for name in STRATEGIES:'),)),
     Node("layout", "Section length;\nstop-line\nplacement", "decision", "Decisions",
          "Cell.section_m and stop-line placement define the section being controlled. Mutual sight is a site property, represented by Priors.d_sight_m and capped at section length in encounters. Placement affects the available sight supplied to the model; the code does not calculate sight from a geometric site plan.",
-         "Cell; run_baseline_extras", (ref(M, 51, 54, 'section_m'), ref(SU, 247, 259, 'Priors(d_sight_m=Fixed(float(sig)))'))),
-    Node("allred", "Programmed\nall-red", "decision", "Decisions",
+         "Cell; run_baseline_extras", (ref(M, 51, 54, 'section_m'), ref(SU, 259, 271, 'Priors(d_sight_m=Fixed(float(sig)))'))),
+    Node("allred", "All-red, sampled\nfrom the standards", "uncertain", "Site context",
          "Specified clearance-speed and buffer distributions, Priors.v_clear_kmh and Priors.clear_buffer_s. The programme samples designs; actual C1 is computed in cycle, not an independent freely chosen scalar.",
          "Priors; run_cell", (ref(M, 79, 82, 'v_clear_kmh'), ref(M, 164, 175, 'C1 = np.maximum'))),
     Node("context", "Demand;\nhours", "fixed", "Site context",
@@ -85,7 +85,7 @@ NODES = [
          "Cell; run_cell", (ref(M, 48, 54, 'OPERATION_HOURS'), ref(M, 148, 150, 'q_vps'), ref(M, 242, 242, 'veh_day_dir'))),
     Node("motion", "Speed;\nacceleration", "uncertain", "Site context",
          "platoon_speed_kmh=v_p_kmh, v_p=v_p_kmh/3.6, a_veh_ms2=a_veh. The main run samples speed; a Fixed(speed) sweep is a separate design scenario. The posted speed limit is not the sampled operating speed.",
-         "run_cell; run_baseline_extras", (ref(M, 158, 160, 'v_p_kmh'), ref(SU, 226, 234, 'platoon_speed_kmh=Fixed')),
+         "run_cell; run_baseline_extras", (ref(M, 158, 160, 'v_p_kmh'), ref(SU, 236, 244, 'platoon_speed_kmh=Fixed')),
          ("platoon_speed_kmh", "a_veh_ms2")),
     Node("timing", "Cycle timing\ninputs", "uncertain", "Release control",
          "sat_headway_s=h_sat; startup_lost_s=lost; s0_green_margin=margin; v_clear_kmh=v_clear; clear_buffer_s=buffer_s; t_confirm_s=t_confirm; f_cycle_a=f_a; f_cycle_b=f_b. Values drawn after the design specifications are supplied.",
@@ -123,28 +123,28 @@ NODES = [
          "w5_terms", (ref(P, 94, 101, 'violations_per_day ='),)),
     Node("encounters", "Encounters;\ntime to meet", "deterministic", "Red-running event chain",
          "Branch time t_a, standing/onset type, weight; occupied, d_near, v_near; visible_occ/hidden_occ; entry weight w and normaliser acc[w]; next entry t_next/v0_next, meets, sep_e, hold, p_enter; p_conf, TTC and closing for A/H/B branches; weighted conf, blind, clear and safe accumulators; p_conflict, conflicts_per_day, p_blind, f_clear, p_safe_window. Carries entry count and full branch states to collisions, not just mean TTC.",
-         "nearest_opposing; next_opposing_entry; w5_tree.branch; w5_terms", (ref(C, 117, 195, 'd_near'), ref(C, 286, 348, 'p_conf ='), ref(C, 367, 391, 'branch('), ref(P, 99, 99, 'conflicts_per_day'))),
+         "nearest_opposing; next_opposing_entry; w5_tree.branch; w5_terms", (ref(C, 117, 195, 'd_near'), ref(C, 318, 380, 'p_conf ='), ref(C, 367, 391, 'branch('), ref(P, 100, 100, 'conflicts_per_day'))),
     Node("collisions", "Collisions;\navoidances", "deterministic", "Red-running event chain",
          "q=q_fail(TTC); branch p_coll=p_conf*q*q (or rho*q+(1-rho)*q*q); acc[coll], acc[collv], acc[collt]; tree p_coll, p_evade; collisions_per_day, evasions_per_day; collision-weighted closing_ms and mean_ttc. Branch closing speeds and weighted collision terms continue into injury; no product of marginal medians is used.",
-         "q_fail; p_collision_given_conflict; w5_tree.branch; w5_terms", (ref(C, 247, 262, 'return form.rho'), ref(C, 350, 362, 'p_coll ='), ref(C, 379, 388, 'p_evade'), ref(P, 100, 104, 'collisions_per_day'))),
+         "q_fail; p_collision_given_conflict; w5_tree.branch; w5_terms", (ref(C, 247, 262, 'return form.rho'), ref(C, 350, 362, 'p_coll ='), ref(C, 415, 424, 'p_evade'), ref(P, 100, 104, 'collisions_per_day'))),
     Node("headon", "Head-on\ninjury harm", "deterministic", "Red-running event chain",
          "closing_kmh=branch closing_ms*3.6*f_imp; momentum dv1/dv2; occupant p1/p2; p_dsi=1-(1-p1)^occ1*(1-p2)^occ2; acc[harm], p_harm; raw W5=Nentries*p_harm. Also holds l5=headon record/centre(S1a W5) and l5*W5 for each arm. centre is median or mean; l5 is shared across arms, not draw-by-draw fitting.",
-         "w5_terms.severity_fn; p_event_dsi_headon; w5_tree; Data.delta", (ref(P, 89, 100, 'severity_fn'), ref(V, 79, 96, 'return 1.0'), ref(C, 355, 360, 'acc["harm"]'), ref(F, 177, 191, 'l5 ='))),
+         "w5_terms.severity_fn; p_event_dsi_headon; w5_tree; Data.delta", (ref(P, 89, 100, 'severity_fn'), ref(V, 79, 96, 'return 1.0'), ref(C, 363, 368, 'acc["harm"]'), ref(F, 177, 191, 'l5 ='))),
     Node("controller", "Controller\nstrike harm", "deterministic", "Worker exposure",
          "passes=2*veh_day_dir; raw strikes=passes*re3_rate; sev3=logistic(logit(sev3_p)+0.078*(v_p_kmh-50)); S0 W3=passes*re3_rate*sev3; l3=controller record/centre(S0 W3); calibrated reference l3*W3. Retains the S0 reference draw for the tied operator even when its direct ledger contribution is removed by a device.",
          "w3_events; sev_worker_at_speed; run_cell; Data.delta", (ref(P, 59, 71, 'passes ='), ref(V, 99, 122, 'logit ='), ref(M, 265, 282, 'strikes_day'), ref(F, 177, 191, 'l3 ='))),
     Node("operator", "Operator\nharm (tied)", "deterministic", "Worker exposure",
-         "Adopted v1.2 S2 op=l3*W3_S0*exp(-reach_alpha*(offset_op_m-d_ref)); zero in S0/S1a/S1b. Same controller draw, same calibrated record, additional standing distance. Original W3r encroachment and independently scaled W3r are alternative formulas listed below, not substituted for this adopted edge.",
+         "Adopted S2 op=l3*W3_S0*exp(-reach_alpha*(offset_op_m-d_ref)); zero in S0/S1a/S1b. Same controller draw, same calibrated record, additional standing distance. Original W3r encroachment and independently scaled W3r are alternative formulas listed below, not substituted for this adopted edge.",
          "review_reads.main.tied; Data.delta", (ref(R, 180, 190, 'op ='), ref(F, 182, 190, 'mode == "tied"'))),
     Node("placement", "Placement /\nretrieval\nharm", "deterministic", "Worker exposure",
          "n_veh=2*q_vph_dir*t_dep/3600; lam=n_veh*enc*l_exp*exp(-alpha*offset); W4d=lam*p_worker(v_dep). Present in S1a/S1b/S2, zero in S0. Total on-foot time already includes both heads and both moves; operation hours are not multiplied again.",
-         "w4d_events; run_cell", (ref(P, 123, 133, 'n_veh ='), ref(M, 265, 282, 'w4 ='))),
+         "w4d_events; run_cell", (ref(P, 130, 140, 'n_veh ='), ref(M, 265, 282, 'w4 ='))),
     Node("queue", "Queue-tail\nharm\n(raw / S)", "deterministic", "Queue-tail pathway",
          "re1_per_stop=re1_rate/max(f_stop0,1e-6); W1=stopped_day*re1_per_stop*sev1_p. Optional k1=all-cause record/centre(W1_S0) scales the queue term. The principal harm DIFFERENCE suppresses W1; raw totals include it. No operating-speed severity adjustment is applied to W1.",
-         "run_cell; w1_events; review_reads.main; welfare.main", (ref(M, 244, 246, 're1_per_stop'), ref(P, 49, 56, 'return day.stopped_per_day'), ref(R, 54, 64, 'qt_scale'), ref(W, 81, 85, 'w1_scale_mean'))),
+         "run_cell; w1_events; review_reads.main; welfare.main", (ref(M, 244, 246, 're1_per_stop'), ref(P, 49, 56, 'return day.stopped_per_day'), ref(R, 54, 64, 'qt_scale'), ref(W, 87, 91, 'w1_scale_mean'))),
     Node("avoidance", "Avoidance\nharm (S)", "deterministic", "Avoidance sensitivity",
          "W5b=evasions_per_day*p_evade_harm*p_worker(v_p_kmh); raw term reported separately. Optional record sensitivity adds l5*(W5b_s-W5b_S0), sharing the head-on multiplier. Never in run_cell.results_h or the adopted principal comparison.",
-         "w5b_band; decision_outputs_s2.main", (ref(P, 111, 120, 'return evasions_per_day'), ref(D, 223, 229, 'w5b[s]'))),
+         "w5b_band; decision_outputs_s2.main", (ref(P, 120, 129, 'return evasions_per_day'), ref(D, 228, 234, 'w5b[s]'))),
     Node("occupation", "Constructed worker\nreference", "evidence", "Calibration evidence",
          "STRIKE_REC, STRIKE_C: controller serious-harm reference levels built from recorded counts and assumed exposure. These fixed calibration inputs do not alter priors or cause strikes. Alternative fatal-to-serious ratios are reference sensitivities.",
          "module constants; record_reads; Data.delta", (ref(D, 29, 31, 'STRIKE_REC'), ref(D, 47, 54, 'l3, l5'), ref(F, 177, 180, 'l3 ='))),
@@ -156,7 +156,7 @@ NODES = [
          "run_cell; review_reads.main.dh; Data.delta", (ref(M, 287, 292, 'results_h[name]'), ref(R, 58, 64, 'return (queue'), ref(F, 177, 191, 'return self.a[s]'))),
     Node("delay", "Delay\nvehicle-hours /\noperation day", "outcome", "Outcomes",
          "r=T-green; d1=r^2/[2*T*(1-q/sat)]; delay_h=2*q_vph_dir*hours*d1/3600. S2=S0 by cycle assumption. Optional non-clearing residual delay uses excess=max(q*T-sat*G,0), D=hours*3600, residual_vh=2*excess*D^2/(2*T)/3600. Delay does not feed serious harm.",
-         "uniform_delay_per_vehicle_s; welfare.main; review_reads.main", (ref(W, 36, 39, 'return r * r'), ref(W, 59, 74, 'delay_h[s]'), ref(R, 225, 238, 'residual_vh'))),
+         "uniform_delay_per_vehicle_s; welfare.main; review_reads.main", (ref(W, 42, 45, 'return r * r'), ref(W, 71, 86, 'delay_h[s]'), ref(R, 225, 238, 'residual_vh'))),
 ]
 
 
@@ -182,22 +182,22 @@ EDGES = [
     edge("control", "controller", "engineered", "Lane-standing controller term belongs to S0; direct term is removed in device arms. The S0 reference remains available for tied S2 exposure.", ref(M, 265, 280, 'w3 = np.zeros'), ref(F, 183, 191, 'operator = l3*self.w')),
     edge("control", "operator", "engineered", "Include tied operator exposure only for the attended S2 device.", ref(F, 182, 185, 'if s == "S2":')),
     edge("control", "placement", "engineered", "Zero in S0; physical head placement/retrieval in all three device arms.", ref(M, 265, 282, 'w4 = np.zeros')),
-    edge("layout", "sight", "engineered", "Section length and stop-line placement determine which site sight is available. The code accepts that sight as d_sight_m, including fixed sight in the sweep; it caps effective sight at L. This is an input-specification relation, not a geometry solver or a decision to change the site's intrinsic visibility.", ref(SU, 253, 259, 'Priors(d_sight_m=Fixed'), ref(M, 222, 223, 'priors.d_sight_m'), ref(C, 290, 290, 's = np.minimum')),
+    edge("layout", "sight", "engineered", "Section length and stop-line placement determine which site sight is available. The code accepts that sight as d_sight_m, including fixed sight in the sweep; it caps effective sight at L. This is an input-specification relation, not a geometry solver or a decision to change the site's intrinsic visibility.", ref(SU, 262, 268, 'Priors(d_sight_m=Fixed'), ref(M, 222, 223, 'priors.d_sight_m'), ref(C, 291, 291, 's = np.minimum')),
     edge("layout", "cycle", "engineered", "Section length determines traverse times and programmed all-red.", ref(M, 168, 175, 'cell.section_m / (v_clear / 3.6)')),
-    edge("layout", "encounters", "engineered", "Length sets occupancy, separation, transit and the cap on mutual sight.", ref(M, 258, 263, 'section_m=L'), ref(C, 286, 290, 's = np.minimum'), ref(C, 328, 331, 'sep_e =')),
+    edge("layout", "encounters", "engineered", "Length sets occupancy, separation, transit and the cap on mutual sight.", ref(M, 258, 263, 'section_m=L'), ref(C, 289, 293, 's = np.minimum'), ref(C, 334, 337, 'sep_e =')),
     edge("allred", "timing", "computed", "Draw the specified clearance-speed and safety-buffer inputs. Actual all-red C1 is computed in cycle.", ref(M, 164, 165, 'priors.v_clear_kmh')),
     edge("timing", "cycle", "computed", "Headway -> saturation; confirmation -> C0; design speed/buffer -> C1; margins and scale factors -> greens. Startup lost time is passed to ConflictInputs.", ref(M, 170, 191, 'sat_vps ='), ref(M, 258, 263, 'startup_lost_s=lost')),
     edge("motion", "cycle", "computed", "Speed and acceleration determine the from-rest traverse and clearance floor.", ref(M, 158, 175, 't_rest = traverse_time_from_rest'), ref(C, 58, 64, 'v_max / a')),
     edge("context", "cycle", "computed", "Demand sets capacity ratio, green, queues and facing counts; hours set cycles/day and daily counts.", ref(M, 129, 142, 'cycles_day = OPERATION_HOURS'), ref(M, 178, 183, 'rho_q')),
-    edge("cycle", "entries", "computed", "Use actual facing_STOP/red arrivals from this arm's red duration and cycle count.", ref(M, 254, 257, 'facing_stop_per_day=facing_day'), ref(P, 95, 95, 'day.facing_stop_per_day')),
-    edge("cycle", "encounters", "computed", "Clearance, opposing green, queued count, demand, headway and start lag set release/occupancy and next entry, without changing the measured violation rate.", ref(M, 258, 263, 'clearance_s=clearance'), ref(C, 117, 195, 'ci.release_start_s'), ref(C, 333, 338, 't_a < rel')),
+    edge("cycle", "entries", "computed", "Use actual facing_STOP/red arrivals from this arm's red duration and cycle count.", ref(M, 254, 257, 'facing_stop_per_day=facing_day'), ref(P, 96, 96, 'day.facing_stop_per_day')),
+    edge("cycle", "encounters", "computed", "Clearance, opposing green, queued count, demand, headway and start lag set release/occupancy and next entry, without changing the measured violation rate.", ref(M, 258, 263, 'clearance_s=clearance'), ref(C, 117, 195, 'ci.release_start_s'), ref(C, 337, 342, 't_a < rel')),
     edge("motion", "encounters", "computed", "Speed/acceleration set the vehicle trajectories, transit, mutual-discovery TTC and closing speed.", ref(C, 305, 341, 'ttc_A = time_to_close')),
-    edge("sight", "encounters", "computed", "Cap sight at L; test visible/hidden occupancy and sighted next entry; compute TTC at discovery. Does not scale Nentries.", ref(C, 290, 290, 's = np.minimum'), ref(C, 301, 337, 'hidden_occ')),
-    edge("response", "encounters", "computed", "Entry timing mixture and visibility weights plus hold and opposing-driver entry chance set weighted branch conflict probabilities.", ref(C, 311, 311, 'tp.w_occ'), ref(C, 333, 338, 'tp.q_lead'), ref(C, 367, 377, 'tp.w_onset')),
+    edge("sight", "encounters", "computed", "Cap sight at L; test visible/hidden occupancy and sighted next entry; compute TTC at discovery. Does not scale Nentries.", ref(C, 291, 291, 's = np.minimum'), ref(C, 301, 337, 'hidden_occ')),
+    edge("response", "encounters", "computed", "Entry timing mixture and visibility weights plus hold and opposing-driver entry chance set weighted branch conflict probabilities.", ref(C, 316, 316, 'tp.w_occ'), ref(C, 340, 345, 'tp.q_lead'), ref(C, 380, 390, 'tp.w_onset')),
     edge("entries", "encounters", "computed", "Convert the integrated per-entry conflict probability to daily encounters; retain Nentries for all subsequent event counts.", ref(P, 95, 101, 'violations_per_day * tree["p_conflict"]')),
-    edge("encounters", "collisions", "computed", "Branch TTC and p_conf determine collision/avoidance; weighted branch states and Nentries are retained, not replaced by average TTC.", ref(C, 344, 362, 'p_coll = p_conf * q * q'), ref(C, 379, 388, 'p_evade'), ref(P, 99, 101, 'collisions_per_day')),
-    edge("response", "collisions", "computed", "ttc50/s_ttc set q_fail; fixed ModelForm.rho/curve govern alternatives.", ref(C, 247, 262, 'tp.ttc50'), ref(C, 350, 354, 'q_fail(ttc, tp, form)')),
-    edge("collisions", "headon", "computed", "Weight each branch's injury probability by that branch's collision term before normalisation and multiplication by daily entries.", ref(C, 355, 360, 'w * p_coll * p_dsi'), ref(C, 381, 387, '"p_harm"'), ref(P, 97, 97, 'tree["p_harm"]')),
+    edge("encounters", "collisions", "computed", "Branch TTC and p_conf determine collision/avoidance; weighted branch states and Nentries are retained, not replaced by average TTC.", ref(C, 344, 362, 'p_coll = p_conf * q * q'), ref(C, 415, 424, 'p_evade'), ref(P, 99, 101, 'collisions_per_day')),
+    edge("response", "collisions", "computed", "ttc50/s_ttc set q_fail; fixed ModelForm.rho/curve govern alternatives.", ref(C, 247, 262, 'tp.ttc50'), ref(C, 353, 357, 'q_fail(ttc, tp, form)')),
+    edge("collisions", "headon", "computed", "Weight each branch's injury probability by that branch's collision term before normalisation and multiplication by daily entries.", ref(C, 363, 368, 'w * p_coll * p_dsi'), ref(C, 417, 423, '"p_harm"'), ref(P, 98, 98, 'tree["p_harm"]')),
     edge("injury", "headon", "computed", "Retained closing speed, two masses and integer occupant counts determine at least one serious injury.", ref(P, 89, 92, 'impact_speed_frac'), ref(V, 79, 96, 'occ1 *')),
     edge("crash", "headon", "evidence", "l5=head-on serious-harm record/centre(S1a W5); same multiplier applied to all arms.", ref(F, 177, 191, 'l5 = h / centre'), ref(D, 47, 54, 'headon / w5_anchor')),
     edge("sej", "controller", "computed", "Paired per-pass strike rate and conditional severity anchor determine W3.", ref(P, 59, 71, 're3_per_pass * sev3')),
@@ -206,29 +206,29 @@ EDGES = [
     edge("occupation", "controller", "evidence", "l3=controller serious-harm record/centre(S0 W3); preserve pairing and shape.", ref(F, 177, 191, 'l3 = c / centre(self.w)')),
     edge("controller", "operator", "computed", "Use that same calibrated controller draw in the adopted tied operator construction.", ref(R, 183, 185, 'l3_ * parts["S0"]["W3"]')),
     edge("exposure", "operator", "computed", "Additional distance enters exp[-alpha*(offset_op-d_ref)]. Two operators is the adopted configuration.", ref(R, 182, 185, 't["draw_offset_op_m"] - d_ref')),
-    edge("exposure", "placement", "computed", "Deployment time, encroachment rate, exposed length, offset/reach and deployment-speed injury curve enter W4d.", ref(P, 123, 133, 'np.exp(-reach_alpha * offset_m)')),
-    edge("context", "placement", "computed", "Both-direction hourly demand multiplies deployment duration, not the full operating day.", ref(M, 274, 275, '2.0 * cell.q_vph_dir'), ref(P, 131, 131, 't_deploy_s / 3600.0')),
+    edge("exposure", "placement", "computed", "Deployment time, encroachment rate, exposed length, offset/reach and deployment-speed injury curve enter W4d.", ref(P, 131, 141, 'np.exp(-reach_alpha * offset_m)')),
+    edge("context", "placement", "computed", "Both-direction hourly demand multiplies deployment duration, not the full operating day.", ref(M, 274, 275, '2.0 * cell.q_vph_dir'), ref(P, 135, 135, 't_deploy_s / 3600.0')),
     edge("cycle", "queue", "computed", "Own-arm stopped_day and S0 f_stop0 turn the per-approach SEJ rate into per-stop exposure.", ref(M, 244, 246, 're1_rate / np.maximum'), ref(P, 56, 56, 'day.stopped_per_day')),
     edge("sej", "queue", "computed", "Paired re1_rate and sev1_p determine queue-tail event risk; severity is not operating-speed transported.", ref(M, 245, 246, 're1_rate'), ref(P, 49, 56, 're1_per_stop * sev1')),
-    edge("crash", "queue", "evidence", "Optional k1=all-cause serious-harm record/centre(S0 W1); this is a sensitivity scale, not a proven bound or a primary term.", ref(R, 54, 64, 'qt_scale'), ref(W, 81, 85, 'w1_scale_mean')),
-    edge("collisions", "avoidance", "computed", "Successful evasions use (acc[conf]-acc[coll])/acc[w] times Nentries.", ref(C, 383, 386, 'acc["conf"] - acc["coll"]'), ref(P, 101, 101, 'evasions_per_day'), ref(P, 120, 120, 'evasions_per_day')),
-    edge("secondary", "avoidance", "computed", "Multiply successful evasions by p_evade_harm.", ref(P, 120, 120, '* p_evade_harm')),
-    edge("motion", "avoidance", "computed", "Apply worker injury probability at operating speed to the secondary event band.", ref(P, 120, 120, 'p_worker(v_platoon_kmh)')),
-    edge("headon", "avoidance", "evidence", "Record sensitivity shares l5 with W5 (thin scaling link), anchored to W5 alone; raw W5b remains separately available.", ref(D, 223, 227, 'l5 * ((parts[s]["W5"] + w5b[s])')),
+    edge("crash", "queue", "evidence", "Optional k1=all-cause serious-harm record/centre(S0 W1); this is a sensitivity scale, not a proven bound or a primary term.", ref(R, 54, 64, 'qt_scale'), ref(W, 87, 91, 'w1_scale_mean')),
+    edge("collisions", "avoidance", "computed", "Successful evasions use (acc[conf]-acc[coll])/acc[w] times Nentries.", ref(C, 418, 421, 'acc["conf"] - acc["coll"]'), ref(P, 102, 102, 'evasions_per_day'), ref(P, 124, 124, 'evasions_per_day')),
+    edge("secondary", "avoidance", "computed", "Multiply successful evasions by p_evade_harm.", ref(P, 124, 124, '* p_evade_harm')),
+    edge("motion", "avoidance", "computed", "Apply worker injury probability at operating speed to the secondary event band.", ref(P, 124, 124, 'p_worker(v_platoon_kmh)')),
+    edge("headon", "avoidance", "evidence", "Record sensitivity shares l5 with W5 (thin scaling link), anchored to W5 alone; raw W5b remains separately available.", ref(D, 229, 233, 'l5 * ((parts[s]["W5"] + w5b[s])')),
     edge("headon", "harm", "computed", "W5 enters raw H and calibrated paired differences.", ref(M, 291, 291, 'w5["events"]'), ref(F, 191, 191, 'l5*(self.v[s]-self.v["S0"])')),
     edge("controller", "harm", "computed", "Retain W3 in S0; subtract its calibrated reference in device-minus-manual delta H.", ref(M, 291, 291, 'w1 + w3'), ref(F, 191, 191, '- l3*self.w')),
     edge("operator", "harm", "computed", "Add the adopted tied S2 operator term.", ref(F, 183, 191, '+ operator')),
     edge("placement", "harm", "computed", "Add incremental placement/retrieval harm under each device.", ref(M, 291, 291, '+ w4'), ref(F, 191, 191, 'return self.a[s]')),
     edge("queue", "harm", "computed", "Raw H includes W1; principal delta H sets queue=0. Optional restoration adds k1*(W1_s-W1_S0), or the unscaled gap.", ref(M, 291, 291, 'w1 +'), ref(R, 58, 64, 'queue * (parts[s]["W1"]')),
-    edge("avoidance", "harm", "computed", "Only the bounded sensitivity restores l5*(W5b_s-W5b_S0); excluded from raw results_h and principal delta H.", ref(D, 223, 229, 'w5b["S0"]')),
-    edge("cycle", "delay", "computed", "T, green, demand/capacity ratio and daily arrivals determine delay; residual-queue sensitivity uses the same cycle inputs.", ref(W, 36, 39, 'q_vps / sat_vps'), ref(W, 59, 74, 'veh_day * d1'), ref(R, 230, 238, 'excess =')),
+    edge("avoidance", "harm", "computed", "Only the bounded sensitivity restores l5*(W5b_s-W5b_S0); excluded from raw results_h and principal delta H.", ref(D, 228, 234, 'w5b["S0"]')),
+    edge("cycle", "delay", "computed", "T, green, demand/capacity ratio and daily arrivals determine delay; residual-queue sensitivity uses the same cycle inputs.", ref(W, 42, 45, 'q_vps / sat_vps'), ref(W, 71, 86, 'veh_day * d1'), ref(R, 230, 238, 'excess =')),
 ]
 
 
 NOTES = """
 ## Reading the diagram
 
-This is a grouped computational influence diagram of the current v1.2 model,
+This is a grouped computational influence diagram of the model as run,
 including the adopted tied operator construction. Arrows mean that at least one
 quantity in the source bundle is an input to a quantity in the target bundle.
 They do not assert that every member influences every member. Detailed formulas
@@ -299,7 +299,7 @@ are included in the relevant formula family rather than depicted as extra nodes.
   `W3r=strikes*p_worker(v)` in pathways.py `w3r_operator_events:136-150`,
   selected in model.py `run_cell:270-275`. It would add direct context, motion
   and exposure -> operator edges and remove controller -> operator. The primary
-  figure uses the later v1.2 tied construction, not this original package term.
+  figure uses the later tied construction, not this original package term.
 * **Independent operator calibration:** decision_outputs_s2.py:238-257 and
   variant_operator_reference.py:31-69 strip/reapply offsets, divide the record
   by the median reference exposure and scale W3r. A one-operator alternative
@@ -414,11 +414,9 @@ class Arrow:
 MAIN_NODES = [
     Glyph("control", "Control\nform", "decision", 39, 248, 70, 28, ("control",)),
     Glyph("layout", "Section length;\nstop-line\nplacement", "decision", 259, 201, 78, 40, ("layout",)),
-    Glyph("allred", "Programmed\nall-red", "decision", 174, 204, 70, 28, ("allred",)),
+    Glyph("allred", "All-red, sampled\nfrom the\nstandards", "uncertain", 174, 204, 78, 38, ("allred",)),
     Glyph("sight", "Mutual\nsight", "uncertain", 338, 204, 64, 31, ("sight",)),
     Glyph("site", "Demand, hours;\nspeed", "uncertain", 124, 140, 88, 35, ("context", "motion")),
-    Glyph("crash", "Constructed crash\nreference", "evidence", 374, 278, 87, 25, ("crash",)),
-    Glyph("occupation", "Constructed worker\nreference", "evidence", 114, 89, 90, 27, ("occupation",)),
     Glyph("behaviour", "Violation\nrate", "uncertain", 118, 248, 57, 32, ("behaviour",)),
     Glyph("entries", "Entries", "deterministic", 180, 248, 53, 32, ("entries",)),
     Glyph("encounters", "Entry timing;\nencounters", "deterministic", 245, 248, 65, 32, ("encounters",)),
@@ -428,7 +426,7 @@ MAIN_NODES = [
           ("controller", "operator", "placement")),
     Glyph("queue", "Queue-tail harm", "deterministic", 260, 92, 111, 28, ("queue",)),
     Glyph("harm", "Expected serious\nharm events per\noperation day", "outcome", 415, 193, 84, 56, ("harm",)),
-    Glyph("cycle", "Cycle timing", "deterministic", 292, 64, 81, 26, ("cycle",)),
+    Glyph("cycle", "Cycle timing;\nvehicles facing red\nand stopped", "deterministic", 124, 92, 100, 36, ("cycle",)),
     Glyph("delay", "Delay", "outcome", 424, 64, 62, 28, ("delay",)),
 ]
 
@@ -446,26 +444,28 @@ def main_arrows():
 
     return [
         a(1, "control", "behaviour", "behaviour", [], ["E01"], "Select the form-specific converted entry estimate."),
-        a(2, "behaviour", "entries", "behaviour", [], ["E02"], "Rate multiplied by vehicles facing STOP/red."),
+        a(2, "behaviour", "entries", "computed", [], ["E02"], "Rate multiplied by vehicles facing STOP/red; a computation on the measured rate."),
         a(3, "control", "encounters", "engineered", [(82,241),(82,226),(224,226),(224,235)], ["E03","E04","E16","E19"], "Control form selects release and hold; the grouped route terminates at encounters."),
         a(4, "control", "worker", "engineered", [(39,179),(201,179),(201,157)], ["E05","E06","E07"], "Select controller, tied operator and placement contributions."),
         a(5, "layout", "sight", "engineered", [], ["E08"], "Section length and stop-line placement affect the site sight available to the model."),
         a(6, "layout", "encounters", "engineered", [(267,227)], ["E09","E10","E16"], "Section length determines clearance and opposing trajectories, hence encounters."),
-        a(7, "allred", "encounters", "engineered", [(174,222),(250,222)], ["E11","E12","E16"], "Programmed all-red determines opposing release timing and encounters."),
+        a(7, "allred", "encounters", "computed", [(174,222),(250,222)], ["E11","E12","E16"], "The sampled all-red determines opposing release timing and encounters."),
         a(8, "site", "encounters", "computed", [(136,161),(136,224),(232,224)], ["E13","E14","E17"], "Demand, hours, speed and acceleration enter cycle and encounter calculations; no direct violation-rate adjustment."),
         a(9, "sight", "collisions", "computed", [(313,222)], ["E18","E21"], "Available mutual sight determines discovery time and time to avoid collision; the full trace carries this through encounter branch TTC."),
         a(22, "sight", "encounters", "computed", [(303,224),(281,224),(281,269),(245,269)], ["E18"], "Sight weights entry times, selects encounters and conditions opposing release."),
         a(10, "entries", "encounters", "computed", [], ["E20"], "Retain daily entries through branch calculations."),
         a(11, "encounters", "collisions", "computed", [], ["E21"], "Branch encounters and time to meet determine collision/avoidance probability."),
         a(12, "collisions", "headon", "computed", [], ["E23"], "Apply branch-specific injury probabilities."),
-        a(13, "crash", "headon", "evidence", [], ["E25"], "Scale head-on serious harm to a reference built from recorded counts and assumed exposure."),
         a(14, "site", "worker", "computed", [], ["E27","E28","E33"], "Speed transports controller severity; demand and hours scale exposure. Placement uses demand and duration, not full-day hours."),
-        a(15, "occupation", "worker", "evidence", [(192,89),(192,130)], ["E29"], "Apply the constructed occupational reference; tied operator inherits that same draw. Placement keeps its encroachment scale."),
-        a(16, "headon", "harm", "computed", [(415,248)], ["E41"], "Record-scaled head-on contribution."),
+        a(16, "headon", "harm", "computed", [(415,248)], ["E41"], "Head-on contribution."),
         a(17, "worker", "harm", "computed", [(404,143)], ["E42","E43","E44"], "All three worker contributions with their arm-specific signs."),
-        a(18, "site", "queue", "computed", [(181,122),(181,92)], ["E14","E34"], "Demand/cycle counts scale stopped-vehicle exposure; the expert rate/severity remain within the queue bundle."),
-        a(19, "cycle", "delay", "computed", [], ["E47"], "The model computes delay from cycle timing, including the programmed all-red."),
-        a(20, "allred", "cycle", "computed", [(58,204),(58,54),(244,54)], ["E11","E12"], "Programmed all-red enters cycle timing as modelled; this is a computed link."),
+        a(23, "control", "cycle", "engineered", [(39,92)], ["E03"], "Control form selects the greens and clearances of its cycle; the device copies the manual cycle."),
+        a(24, "site", "cycle", "computed", [], ["E13","E14"], "Demand and hours set capacity, greens, queues and daily counts; speed and acceleration set the from-rest crossing."),
+        a(25, "allred", "cycle", "computed", [(174,86)], ["E11","E12"], "The sampled clearance speed and buffer set the programmed all-red in the cycle."),
+        a(26, "layout", "cycle", "engineered", [(259,172),(180,172),(180,98)], ["E09"], "Section length sets crossing times and the programmed all-red."),
+        a(27, "cycle", "entries", "computed", [(78,92),(78,272),(180,272)], ["E15"], "Vehicles facing red per day, from this form's red duration and cycle count, multiply the violation rate."),
+        a(18, "cycle", "queue", "computed", [], ["E34"], "Stopped vehicles per day scale the queue-tail exposure; the expert rate and severity remain within the queue bundle."),
+        a(19, "cycle", "delay", "computed", [(124,56),(424,56)], ["E47"], "The model computes delay from cycle timing, including the programmed all-red."),
         a(21, "delay", "behaviour", "unmodelled", [(465,64),(465,293),(118,293)], ["U1"], "One continuous peripheral arrow: longer waits may raise violations (not in the model)."),
     ]
 
@@ -711,11 +711,13 @@ def draw_arrow(ax,a):
     ax.add_patch(patch)
 
 
-def legend(ax,y):
+def legend(ax,y,reference=True):
     ax.plot([5,463],[y+18,y+18],color=".65",lw=.4,zorder=0)
-    for x,title,kind in [(15,"Decision","decision"),(103,"Uncertain","uncertain"),
-                         (198,"Computed","deterministic"),(291,"Outcome","outcome"),
-                         (378,"Reference","evidence")]:
+    items=[(15,"Decision","decision"),(103,"Uncertain","uncertain"),
+           (198,"Computed","deterministic"),(291,"Outcome","outcome")]
+    if reference:
+        items.append((378,"Reference","evidence"))
+    for x,title,kind in items:
         draw_node(ax,Glyph("legend","",kind,x,y+6,19,10),legend=True)
         ax.text(x+15,y+6,title,fontsize=9,va="center")
     for x,title,route in [(6,"Engineered","engineered"),(122,"Behavioural","behaviour"),(248,"Computed / scaling","computed")]:
@@ -737,13 +739,13 @@ def draw_main():
     row_band(ax,89,231,313,34)
     row_band(ax,185,118,205,50)
     row_band(ax,201,77,195,30)
-    row_band(ax,247,50,210,28)
+    row_band(ax,80,42,377,30)
     label(ax,39,278,"Decisions",weight="bold")
     label(ax,104,168,"Site context",weight="bold")
     label(ax,227,278,"(a) Red running",weight="bold")
-    label(ax,287,174,"(b) Worker exposure",weight="bold")
+    label(ax,318,174,"(b) Worker exposure",weight="bold")
     label(ax,260,112,"(c) Queue tail",weight="bold")
-    label(ax,214,64,"(d) Delay",weight="bold")
+    label(ax,300,66,"(d) Delay",weight="bold")
     label(ax,357,92,"Outside principal\ndifference")
     arrows=main_arrows()
     for a in arrows:
@@ -751,7 +753,7 @@ def draw_main():
     for n in MAIN_NODES:
         draw_node(ax,n)
     label(ax,284,301,"longer waits may raise violations (not in the model)")
-    legend(ax,31)
+    legend(ax,31,reference=False)
     return save(fig,MAIN_NODES,arrows,FIG,306)
 
 
@@ -821,23 +823,35 @@ def save(fig,nodes,arrows,stem,height):
 MAIN_NOTES = """
 ## Main-text grouping and omissions
 
-The main figure has 17 visible scientific nodes. The worker double oval contains
+The main figure has 15 visible scientific nodes. The worker double oval contains
 three parallel contributions, not a controller -> placement causal chain. The
-tied operator still inherits the calibrated controller draw. Demand and hours
-are fixed within each cell; speed is sampled, so their shared site-input oval
-is not a claim that demand is sampled. Mutual sight remains a separate site oval.
-Its incoming layout arrow concerns available sight over the chosen section.
+tied operator inherits the controller's draw. Demand and hours are fixed within
+each cell; speed is sampled, so their shared site-input oval is not a claim that
+demand is sampled. Mutual sight remains a separate site oval. Its incoming
+layout arrow concerns available sight over the chosen section. The all-red is
+drawn as an uncertain input sampled from the standards' clearance speeds and
+buffers, not as a decision; the programmed value is computed inside cycle timing.
 
-All main-text arrows now terminate at scientific nodes. Control-form hold,
-programmed all-red and section length enter Encounters from below. Mutual sight
+All main-text arrows terminate at scientific nodes. Control-form hold, the
+sampled all-red and section length enter Encounters from below. Mutual sight
 enters Entry timing/encounters through M22 (E18) and Collisions through M09
 (E18/E21), exposing both the timing and avoidance routes. The full trace computes
 sight-dependent discovery TTC inside Encounters before evaluating avoidance.
 
-Cycle timing is a visible computed node. Its all-red input and delay output are
-thin computed arrows, M20 and M19. Other timing inputs and downstream uses remain
-within the grouped pathway arrows, as detailed in the full trace; the main view
-does not claim that all-red is the only input to cycle timing.
+Cycle timing is a visible computed node with its inputs drawn: control form
+(M23), section length (M26), demand, hours and speed (M24) and the sampled
+all-red (M25). Its outputs are the vehicles facing red that the violation rate
+multiplies (M27, to Entries), the stopped vehicles that scale queue-tail exposure
+(M18) and delay (M19).
+
+The two record references (the constructed occupational strike reference and the
+crash-record head-on reference) are calibration steps applied to the model's
+outputs after the run, so they are not drawn as model inputs in the main figure;
+they remain in the full figure as thin solid evidence links.
+
+The control form -> violation rate link (M01) is the only dashed behavioural
+arrow: it selects the measured entry rate for the control in use. The violation
+rate -> entries link (M02) is a computation on that measured rate.
 
 One continuous dotted delay -> violation-rate arrow runs around the edge of
 each figure, labelled once beside the line:
@@ -846,9 +860,10 @@ There are no continuation tags or floating arrow targets.
 
 | Full links | Treatment in main figure |
 |---|---|
-| E11, E12, E15, E16 | All-red to cycle is explicit in M20; release and facing-count arithmetic remain in the grouped red-running inputs, including M03 and M07. |
+| E11, E12, E15, E16 | All-red to cycle is explicit in M25 and facing counts to entries in M27; release arithmetic remains in the grouped red-running inputs, M03 and M07. |
 | E19, E22 | Entry timing, hold and response inputs remain inside encounters/collisions. |
 | E24 | Impact, mass and occupant severity retained within head-on harm. |
+| E25, E29 | Record calibration of head-on and controller-strike harm: applied to outputs, shown only in the full figure. |
 | E26 | Expert strike rate and severity retained within the worker bundle. |
 | E30, E31, E32 | Tied operator and placement/offset arithmetic internal to the worker bundle. |
 | E35 | Expert queue rate and severity retained within queue-tail harm. |
@@ -866,20 +881,19 @@ the inventory below. No parameter value or model calculation was changed.
   implied by E08.
 * U1 is the only dotted link: delay -> violation rate. The line and its
   "not in the model" label refer solely to that behavioural response.
-* Programmed all-red -> cycle timing -> delay is modelled. Main M20/M19 and
+* Sampled all-red -> cycle timing -> delay is modelled. Main M25/M19 and
   full E11/E12/E47 are thin computed arrows. The full diagram retains all
-  original node positions and model-edge routes; E11's style and the waiting
-  annotation/legend are the only full-figure changes.
-* The 47 model links form a DAG. The proposed waiting response is deliberately excluded from computational validation because it is not an implemented dependence. It does not create a directed cycle in this graph; delay is computed from timing, not from entries. Record-scaling links are thin solid, not dotted.
+  original node positions and model-edge routes.
+* The 47 model links form a DAG. The proposed waiting response is deliberately excluded from computational validation because it is not an implemented dependence. It does not create a directed cycle in this graph; delay is computed from timing, not from entries. Record-scaling links are thin solid in the full figure and absent from the main figure.
 """
 
 
 def write_audit(fields,rendering):
     branch=subprocess.check_output(["git","branch","--show-current"],cwd=ROOT,text=True).strip()
     sha=subprocess.check_output(["git","rev-parse","HEAD"],cwd=ROOT,text=True).strip()
-    lines=["# TRR v1.2 influence diagrams: trace and main-text edge audit", "",
-           f"Source branch `{branch}`; base revision `{sha}`. Fingerprints identify the inspected working-tree source.", "",
-           "**Main: 17 nodes, 22 arrows (21 model/grouped links plus 1 plausible-response annotation).**",
+    lines=["# Influence diagrams: trace and main-text edge audit", "",
+           "Fingerprints identify the inspected working-tree source.", "",
+           f"**Main: {len(MAIN_NODES)} nodes, {len(main_arrows())} arrows ({len(main_arrows())-1} model/grouped links plus 1 plausible-response annotation).**",
            "**Full: 27 nodes, 48 arrows (47 original model links plus 1 plausible-response annotation).**", "",
            "Regenerate both figures and this audit with `python3 -B model/scripts/make_influence_diagram.py`. Explicit matplotlib coordinates; no Graphviz. No model run, branch change or commit is required.", "",
            "## Main-text nodes", "", "| ID | Label | Shape/type | Original visible bundles |", "|---|---|---|---|"]
@@ -931,7 +945,7 @@ def main():
     parser.add_argument("--audit-only",action="store_true")
     args=parser.parse_args()
     fields=validate()
-    assert len(MAIN_NODES)==17
+    assert len(MAIN_NODES)==15
     assert len(EDGES)==47
     assert {(e.source,e.target) for e in RESPONSES}=={("delay","behaviour")}
     arrows = main_arrows()
@@ -940,7 +954,10 @@ def main():
     assert {(a.source, a.target) for a in arrows if a.route == "unmodelled"} == {("delay", "behaviour")}
     routes = {(a.source, a.target): a.route for a in arrows}
     assert routes["allred", "cycle"] == routes["cycle", "delay"] == "computed"
-    assert all(routes[source, "encounters"] == "engineered" for source in ("control", "allred", "layout"))
+    assert all(routes[source, "encounters"] == "engineered" for source in ("control", "layout"))
+    assert routes["allred", "encounters"] == "computed"
+    assert {(a.source, a.target) for a in arrows if a.route == "behaviour"} == {("control", "behaviour")}
+    assert {(a.source, a.target) for a in arrows if a.route == "evidence"} == set()
     assert routes["sight", "collisions"] == routes["sight", "encounters"] == "computed"
     rendering=None if args.audit_only else {"main":draw_main(),"full":draw_full()}
     write_audit(fields,rendering)

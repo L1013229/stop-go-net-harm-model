@@ -261,22 +261,19 @@ def fig_tree(tr):
 
 # ----------------------------------------------------------------- FIGURE 4 (code all-red)
 def fig_allred():
-    """The code all-red rules alone (was panel b of the retired 3-panel stack)."""
-    fig, ax = plt.subplots(figsize=(4.2, 1.95))
+    """The all-red rules of the reviewed standards, labelled in a legend clear of the lines."""
+    fig, ax = plt.subplots(figsize=(6.5, 2.6))
     L = np.linspace(50, 300, 120)
     ax.step([0, 50, 100, 150, 200, 250, 300], [5, 10, 15, 20, 25, 30, 30],
-            where="post", color=BLUE, lw=1.7)
-    ax.text(255, 31.6, "NZ M23 / UK", fontsize=9, color=BLUE, ha="center")
-    ax.plot(L, L / (20 / 3.6), color=AQUA, lw=1.4, ls="-")
-    ax.text(88, 24.5, "NSW at 20 km/h", fontsize=9, color=AQUA, rotation=44)
-    ax.plot(L, L / (40 / 3.6), color=AQUA, lw=1.4, ls="--")
-    ax.text(297, 21.0, "NSW at 40 km/h", fontsize=9, color=AQUA, ha="right", va="top")
-    ax.plot(L, L / (32.2 / 3.6) + 4.0, color=GOLD, lw=1.5, ls="--")
-    ax.text(163, 26.5, "Texas 20 mph + 4 s", fontsize=9, color=GOLD, rotation=33)
+            where="post", color=BLUE, lw=1.7, label="New Zealand and United Kingdom stepped tables")
+    ax.plot(L, L / (20 / 3.6), color=AQUA, lw=1.4, ls="-", label="New South Wales, clearance at 20 km/h")
+    ax.plot(L, L / (40 / 3.6), color=AQUA, lw=1.4, ls="--", label="New South Wales, clearance at 40 km/h")
+    ax.plot(L, L / (32.2 / 3.6) + 4.0, color=GOLD, lw=1.5, ls="--", label="Texas, clearance at 20 mph plus 4 s")
     ax.set_xlabel("distance between stop lines (m)")
     ax.set_ylabel("all-red clearance (s)")
     ax.set_ylim(0, 56)
     ax.set_xlim(0, 310)
+    ax.legend(loc="upper left", frameon=False, fontsize=9, handlelength=2.2)
     _clean(ax)
     fig.tight_layout()
     _save(fig, "fig_allred.png")
@@ -397,7 +394,7 @@ def fig_inputs():
     box(6.30, 5.20, 3.65, 2.90, "Red-running event tree",
         "enter, meet, collide\n(Figure 3)", "#f5f7fa", MUTED)
     box(6.30, 0.60, 3.65, 3.40, "Strike and queue-tail\nterms; injury step",
-        "rate x severity for each;\ninjury curves (Figure 5)", "#f5f7fa", MUTED)
+        "rate x severity for each;\ninjury curves (Figure 4)", "#f5f7fa", MUTED)
 
     def arrow(y0, y1, color):
         ax.annotate("", xy=(6.30, y1), xytext=(4.85, y0),
@@ -489,13 +486,15 @@ def fig4_decomposition_prcc(tr):
         xs_nz = [x + (i - 1.5) * 0.17 for x, v in zip(xs, vals) if v > 1e-11]
         vs_nz = [v for v in vals if v > 1e-11]
         ax.bar(xs_nz, vs_nz, width=0.15, color=c, edgecolor="white",
-               lw=0.5, hatch=hatch, label=st)
+               lw=0.5, hatch=hatch, label={"S0": "manual control", "S1a": "fixed-time signals",
+                                            "S1b": "monitored signals", "S2": "attended device"}[st])
     ax.set_yscale("log")
     ax.set_xticks(xs); ax.set_xticklabels(labels, fontsize=9, rotation=32, ha="right", rotation_mode="anchor")
     ax.set_xlim(-0.6, len(paths) - 0.4)
+    ax.set_ylim(2e-8, 3e-1)
     ax.set_ylabel("serious-harm events\nper operation day")
     ax.set_title("(a)   harm by kind and strategy", loc="left")
-    ax.legend(frameon=False, ncol=1, loc="upper right", handlelength=1.3, labelspacing=0.3)
+    ax.legend(frameon=False, ncol=1, loc="upper right", handlelength=1.3, labelspacing=0.3, fontsize=9)
     _clean(ax)
 
     ax = axes[1]
@@ -539,7 +538,7 @@ def fig4_decomposition_prcc(tr):
     lim = max(abs(v) for v in vals) + 0.22
     ax.set_xlim(-lim, lim)
     ax.axvline(0, color=MUTED, lw=0.7)
-    ax.set_xlabel("Rank correlation with $\\Delta H$\nat constructed reference levels\n(negative favours signals)")
+    ax.set_xlabel("rank correlation with the\nchange in harm at the recorded\nrates (negative favours signals)")
     ax.set_title("(b)   signal sensitivities", loc="left")
     ax.tick_params(axis="y", labelsize=9)
     _clean(ax, "x")
@@ -670,7 +669,7 @@ def fig_speed():
     ax.annotate(f"about {w5[-1] / w5[0]:.1f}× over this range", xy=(30.5, 4.2e-5), fontsize=9, color=BLUE)
     ax.annotate(f"about {w3[-1] / w3[0]:.1f}×", xy=(72, 3.3e-3), fontsize=9, color=INK)
     ax.axhspan(5e-6, 2e-5, color=INK, alpha=0.10, lw=0)
-    ax.text(v.max() - 0.5, 6.0e-6, "constructed occupational benchmark", fontsize=9, color=INK, va="bottom", ha="right")
+    ax.text(v.max() - 0.5, 6.0e-6, "recorded controller-strike range", fontsize=9, color=INK, va="bottom", ha="right")
     ax.set_yscale("log")
     ax.set_xlabel("operating speed through the works (km/h)")
     ax.set_ylabel("serious-harm events\nper operation day")
