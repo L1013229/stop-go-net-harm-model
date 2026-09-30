@@ -288,7 +288,7 @@ def fig_spread(data):
 
 def fig_prcc(data):
     """Figure 6: the eight largest partial rank correlations with the change in harm at the recorded rates."""
-    names = {"re3_rate": "controller-strike rate", "sev3_p": "controller-strike severity",
+    names = {"re3_rate": "how often a controller is struck", "sev3_p": "chance a strike kills or seriously injures",
              "q_lead": "released driver enters against a vehicle it can see",
              "r_v1a": "entry rate at the signal", "w_occ": "entering driver enters against a visible vehicle",
              "impact_speed_frac": "share of closing speed kept at impact", "ttc50": "time to collision at even odds of avoiding",

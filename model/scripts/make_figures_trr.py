@@ -434,12 +434,12 @@ def fig_inputs():
         "violation rates at signals,\nflaggers and attended devices;\nentry timing within the red;\noperating speed",
         "#eef4fc", BLUE)
     box(0.05, 6.45, 4.80, 2.70, "Expert panel (companion study)",
-        "controller-strike rate and\nits severity; queue-tail crash\nrate and its severity",
+        "controller strikes and their\nseverity; queue-tail crash\nrate and its severity",
         "#eef9f4", AQUA)
     box(0.05, 3.55, 4.80, 2.70, "Standards",
         "all-red tables and their\nassumed speeds; temporary\nspeed limit; sight-distance rules",
         "#fdf6e3", GOLD)
-    box(0.05, 0.05, 4.80, 3.30, "Assumed ranges (Table 1)",
+    box(0.05, 0.05, 4.80, 3.30, "Assumed ranges (Table 2)",
         "13 quantities never measured\nat a portable signal or\nattended device, each given\na wide prior",
         "#f4f4f2", MUTED)
 
@@ -546,7 +546,9 @@ def fig4_decomposition_prcc(tr):
     ax.set_yscale("log")
     ax.set_xticks(xs); ax.set_xticklabels(labels, fontsize=9, rotation=32, ha="right", rotation_mode="anchor")
     ax.set_xlim(-0.6, len(paths) - 0.4)
-    ax.set_ylim(2e-8, 3e-1)
+    # headroom above the tallest bar (5.5e-3) so the legend sits over empty axis, not over the bars
+    ax.set_ylim(2e-8, 3e2)
+    ax.set_yticks([1e-7, 1e-6, 1e-5, 1e-4, 1e-3, 1e-2, 1e-1])
     ax.set_ylabel("serious-harm events\nper operation day")
     ax.set_title("(a)   harm by kind and strategy", loc="left")
     ax.legend(frameon=False, ncol=1, loc="upper right", handlelength=1.3, labelspacing=0.3, fontsize=9)
@@ -554,8 +556,8 @@ def fig4_decomposition_prcc(tr):
 
     ax = axes[1]
     NAMES = {
-        "re3_rate": "controller-strike rate",
-        "sev3_p": "controller-strike severity",
+        "re3_rate": "how often a controller is struck",
+        "sev3_p": "chance a strike kills or seriously injures",
         "platoon_speed_kmh": "operating speed",
         "f_cycle_a": "fixed-time green ratio",
         "re1_rate": "queue-tail crash rate",
