@@ -379,12 +379,15 @@ RESPONSES = [
     edge("delay", "behaviour", "unmodelled",
          "Longer waits may raise the violation rate. Plausible response only; no response function, coefficient or harm contribution is implemented."),
 ]
+# Each route differs in three ways (colour, dash pattern and weight), so the four
+# stay distinct on screen, in greyscale print and at small sizes (supervisor's
+# review, 1 October 2026).
 STYLES = {
-    "engineered": (1.65, "-"),
-    "behaviour": (1.1, (0, (4, 2.5))),
-    "computed": (.6, "-"),
-    "evidence": (.6, "-"),
-    "unmodelled": (1.05, (0, (1, 2.2))),
+    "engineered": (2.0, "-", "#1f4e9c"),
+    "behaviour": (1.4, (0, (4, 2.5)), "#c2580a"),
+    "computed": (.6, "-", "0.42"),
+    "evidence": (.6, "-", "0.42"),
+    "unmodelled": (1.1, (0, (1, 2.2)), "black"),
 }
 
 
@@ -699,12 +702,12 @@ def draw_arrow(ax,a):
     from matplotlib.path import Path as PlotPath
     from matplotlib.patches import FancyArrowPatch
     import matplotlib.patheffects as pe
-    lw,ls=STYLES[a.route]
+    lw,ls,colour=STYLES[a.route]
     points=a.points
     codes=[PlotPath.MOVETO]+[PlotPath.LINETO]*(len(points)-1)
     patch=FancyArrowPatch(path=PlotPath(points,codes), arrowstyle="-|>",
-                         mutation_scale=6,linewidth=lw,linestyle=ls,
-                         color="black",zorder=3,capstyle="round",joinstyle="round")
+                         mutation_scale=7 if a.route=="engineered" else 6,linewidth=lw,linestyle=ls,
+                         color=colour,zorder=3,capstyle="round",joinstyle="round")
     # A white casing prevents crossings from looking like causal junctions.
     patch.set_path_effects([pe.Stroke(linewidth=lw+1.6,foreground="white"),pe.Normal()])
     patch.set_gid("edge-"+a.id)
@@ -720,13 +723,13 @@ def legend(ax,y,reference=True):
     for x,title,kind in items:
         draw_node(ax,Glyph("legend","",kind,x,y+6,19,10),legend=True)
         ax.text(x+15,y+6,title,fontsize=9,va="center")
-    for x,title,route in [(6,"Engineered","engineered"),(122,"Behavioural","behaviour"),(248,"Computed / scaling","computed")]:
+    for x,title,route in [(6,"Engineered effect","engineered"),(140,"Drivers' response","behaviour"),(272,"Computation or scaling","computed")]:
         a=Arrow("legend","","",route,((x,y-10),(x+22,y-10)),(),"")
         draw_arrow(ax,a)
         ax.text(x+28,y-10,title,fontsize=9,va="center")
     a=Arrow("legend","","","unmodelled",((6,y-26),(28,y-26)),(),"")
     draw_arrow(ax,a)
-    ax.text(34,y-26,"plausible response, not in the model",fontsize=9,va="center")
+    ax.text(34,y-26,"Plausible response, not in the model",fontsize=9,va="center")
 
 
 def row_band(ax,x,y,w,h):
@@ -746,7 +749,7 @@ def draw_main():
     label(ax,318,174,"(b) Worker exposure",weight="bold")
     label(ax,260,112,"(c) Queue tail",weight="bold")
     label(ax,300,66,"(d) Delay",weight="bold")
-    label(ax,357,92,"Outside principal\ndifference")
+    label(ax,357,92,"Set aside in the\nmain comparison")
     arrows=main_arrows()
     for a in arrows:
         draw_arrow(ax,a)
@@ -806,14 +809,14 @@ def save(fig,nodes,arrows,stem,height):
     assert sorted(i for i in ids if re.fullmatch(r"edge-(?:[ME]\d\d|U\d+)",i))==sorted("edge-"+a.id for a in arrows)
     png=io.BytesIO()
     fig.savefig(png,format="png",dpi=300)
-    im=Image.open(io.BytesIO(png.getvalue())).convert("L")
+    im=Image.open(io.BytesIO(png.getvalue())).convert("RGB")
     assert im.width==1950
     stem.with_suffix(".svg").write_bytes(raw)
     im.save(stem.with_suffix(".png"),dpi=(300,300))
     plt.close(fig)
     return {"files":[str(stem.with_suffix(s).relative_to(ROOT)) for s in (".png",".svg")],
             "width_in":6.5,"height_in":height/72,"min_font_pt":9,
-            "png_size":list(im.size),"dpi":300,"colour_mode":"L",
+            "png_size":list(im.size),"dpi":300,"colour_mode":"RGB",
             "nodes":len(nodes),"arrows":len(arrows),
             "model_arrows":sum(a.route!="unmodelled" for a in arrows),
             "unmodelled_arrows":sum(a.route=="unmodelled" for a in arrows),
