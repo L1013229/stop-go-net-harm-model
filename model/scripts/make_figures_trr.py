@@ -264,6 +264,7 @@ def fig_tree_structure():
     The Methods show this figure and say in prose what decides each answer; the Results show fig_tree with the
     median counts (owner's 29 September 2026 review: the tree is better shown than described, and no results
     before the Results)."""
+    RULE = "#383836"  # darker than MUTED so the rules stay legible printed small (supervisor, 1 Oct 2026)
     # Taller than fig_tree: under each question sits the rule that decides it (owner's 29 September 2026
     # comment 1: the tree is better shown than described), so the Methods prose keeps only the values.
     fig, ax = plt.subplots(figsize=(6.5, 4.8))
@@ -286,10 +287,10 @@ def fig_tree_structure():
         "injury curves at the\nimpact speed, worker\nor occupants",
     ]
     terminals = ["do not enter", "cross empty", "avoided", "no serious\ninjury"]
-    ax.text(QX[0], QY[0] + 0.95, "every vehicle facing a red", ha="center", va="bottom", fontsize=9, color=MUTED)
+    ax.text(QX[0], QY[0] + 0.95, "every vehicle facing a red", ha="center", va="bottom", fontsize=9, color=RULE)
     for i, q in enumerate(questions):
         ax.text(QX[i], QY[i], q, ha="center", va="center", fontsize=9, color=INK, fontweight="bold", linespacing=1.25, zorder=4)
-        ax.text(QX[i], QY[i] - 0.9, rules[i], ha="center", va="top", fontsize=9, color=MUTED, linespacing=1.2, zorder=4)
+        ax.text(QX[i], QY[i] - 0.9, rules[i], ha="center", va="top", fontsize=9, color=RULE, linespacing=1.2, zorder=4)
         ax.annotate("", xy=(QX[i], BASE + 0.75), xytext=(QX[i], QY[i] - 2.75),
                     arrowprops=dict(arrowstyle="-|>", color=INK, lw=0.9, shrinkA=0, shrinkB=0))
         ax.text(QX[i] + 0.12, (QY[i] - 2.75 + BASE) / 2 + 0.3, "No", ha="left", va="center", fontsize=9, color=INK)

@@ -220,7 +220,7 @@ def fig_maps(data):
         ax.plot(H_CENTRE, C_CENTRE, "o", ms=5.5, mfc="white", mec=INK, zorder=7)
         ax.annotate(f"{centre:.2f}", (H_CENTRE, C_CENTRE), xytext=(7, 6), textcoords="offset points",
                     fontsize=10, weight="bold", bbox=dict(fc="white", ec="none", pad=1.2), zorder=8)
-        ax.text(.03, .05, f"corners {min(corners):.2f} to {max(corners):.2f}", transform=ax.transAxes,
+        ax.text(.03, .05, f"{min(corners):.2f} to {max(corners):.2f} across the ranges", transform=ax.transAxes,
                 fontsize=9, bbox=dict(fc="white", ec="none", pad=1.2), zorder=8)
         ax.set(xscale="log", yscale="log", xlim=H_BAND, ylim=C_BAND)
         ax.set_xticks([6e-6, 1.2e-5, 2e-5]); ax.set_yticks([5e-6, 1e-5, 2e-5])
@@ -337,7 +337,7 @@ def fig_sight():
         ax.set_xlabel("mutual sight along the section (m)")
         clean(ax)
     axes[0].set_ylabel("head-on serious-harm events\nper operation day")
-    fig.text(.5, .01, "cross: collision count above the screening band", ha="center", fontsize=9, color=MUTED)
+    fig.text(.5, .01, "cross: collision count above the screening range", ha="center", fontsize=9, color=MUTED)
     fig.tight_layout(rect=(0, 0.05, 1, 1))
     check_and_save(fig, "fig9_sight.png")
 
@@ -393,7 +393,7 @@ def fig_speed_sweep():
     w5d = np.array([float(r["w5_s2_median"]) for r in rows]) if "w5_s2_median" in rows[0] else None
     c.plot(sp, w3, color=INK, ls="--", lw=1.6, marker="s", ms=3.5)
     c.plot(sp, w5, color=BLUE, ls="-", lw=1.6, marker="o", ms=3.5)
-    c.text(31, 8e-3, "controller struck, at the panel's level", fontsize=9, color=INK, va="bottom")
+    c.text(31, 8e-3, "controller struck, at the expert panel's rate", fontsize=9, color=INK, va="bottom")
     c.text(31, 1.7e-5, "head-on, signals", fontsize=9, color=BLUE, va="bottom")
     if w5d is not None:
         c.plot(sp, w5d, color=PLUM, ls="-.", lw=1.4, marker="^", ms=3.5)

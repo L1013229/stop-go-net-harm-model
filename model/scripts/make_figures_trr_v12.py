@@ -371,8 +371,8 @@ def fig4(data):
         inside = np.mean((arr*central/np.median(arr) >= band[0]) & (arr*central/np.median(arr) <= band[1]))
         key = "share_of_scaled_strike_draws_inside_band" if i == 0 else "share_of_scaled_headon_draws_inside_band"
         close(inside, data.d[key], "R45 band share")
-        plot.text(.03, .90, f"{inside:.0%} of draws inside\nthe recorded range\n(medians matched)", transform=plot.transAxes, fontsize=9, va="top")
-    axes[0].set_ylabel("cumulative share of draws", labelpad=4)
+        plot.text(.03, .90, f"{inside:.0%} of iterations inside\nthe recorded range\n(medians matched)", transform=plot.transAxes, fontsize=9, va="top")
+    axes[0].set_ylabel("cumulative share of iterations", labelpad=4)
     fig.text(.53, .145, "serious-harm events per operation day (log scale)", fontsize=9, ha="center")
     handles = [Line2D([], [], c=INK, lw=1.2, label="Medians matched (the paper's reading)"), Line2D([], [], c=INK, lw=1.2, ls="--", label="Means matched (alternative)"), Rectangle((0, 0), 1, 1, fc="#dddddd", label="Recorded range"), Line2D([], [], c=MUTED, ls=":", label="Middle of the range")]
     fig.legend(handles=handles, loc="lower center", bbox_to_anchor=(.5, .015), ncol=2, frameon=False, columnspacing=1.8)
@@ -475,7 +475,7 @@ def fig6(data):
     text(ax, 4.73, 4.85, "operator: sampled\n1.5 to 6 m from the edge line", ha="center")
     arrow(ax, (2.73, 4.23), (4.44, 4.23))
     retained = data.r["R82_queue_tail_share_and_retained_exposure"]["tied_retained_fraction_ref_0m"]["median"]
-    text(ax, 3.80, 3.83, f"operator keeps {retained:.0%} of the controller's exposure\n(median draw, edge-line reference)", ha="center")
+    text(ax, 3.80, 3.83, f"operator keeps {retained:.0%} of the controller's exposure\n(median, edge-line reference)", ha="center")
     rows = data.device_rows[:3]  # Adopted references and original encroachment sensitivity.
     plot = fig.add_axes([.405, .155, .37, .445])
     ys = [2, 1, 0]
@@ -657,9 +657,9 @@ def figS6(data):
     axes[0].set_ylabel("Section length (m)", labelpad=3)
     fig.text(.53, .215, "demand (vehicles per hour per direction)", fontsize=9, ha="center")
     fig.text(.53, .955, r"Cell values: median head-on collisions per operation day ($\times 10^{-5}$)", ha="center", fontsize=9)
-    handles = [Rectangle((0, 0), 1, 1, fc="white", ec=MUTED, hatch="////", label="Outside the screening band"), Rectangle((0, 0), 1, 1, fc="#aaaaaa", label="Infeasible"), Rectangle((0, 0), 1, 1, fc="white", ec=MUTED, hatch="....", label="Partly stable"), Rectangle((0, 0), 1, 1, fc="white", ec=INK, lw=1.7, label="Baseline")]
+    handles = [Rectangle((0, 0), 1, 1, fc="white", ec=MUTED, hatch="////", label="Outside the screening range"), Rectangle((0, 0), 1, 1, fc="#aaaaaa", label="Infeasible"), Rectangle((0, 0), 1, 1, fc="white", ec=MUTED, hatch="....", label="Partly stable"), Rectangle((0, 0), 1, 1, fc="white", ec=INK, lw=1.7, label="Baseline")]
     fig.legend(handles=handles, loc="lower center", bbox_to_anchor=(.51, .108), ncol=4, frameon=False, handlelength=1.25, columnspacing=1)
-    fig.text(.5, .035, r"Screening band: $10^{-6}$ to $10^{-3}$ collisions per operation day.", ha="center", fontsize=9)
+    fig.text(.5, .035, r"Screening range: $10^{-6}$ to $10^{-3}$ collisions per operation day.", ha="center", fontsize=9)
     return fig
 
 
