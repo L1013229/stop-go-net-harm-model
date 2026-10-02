@@ -1,4 +1,4 @@
-"""The plan's surface under the two priors as first written (round-5 hostile referee, Opus).
+"""The plan's surface under the two priors as first written (review round 5).
 
 On 9 July 2026 two priors were re-valued after a first calibrated result had been read (supplement
 S7 item 1a; registry R65): the assumed clearance speed from uniform 30 to 36 km/h to uniform 20 to

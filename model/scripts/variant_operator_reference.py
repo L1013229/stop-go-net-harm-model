@@ -1,7 +1,7 @@
 """Device readings with the operator's exposure scaled to the controller record for a
 reference controller standing at a stated offset from the edge line, and with one operator.
 
-Review round 3 (practitioner and regulator, Opus, finding 4) noted that the like-for-like
+Review round 3 (finding 4) noted that the like-for-like
 scaling in decision_outputs_s2.py places the reference controller AT the edge line (offset 0),
 while the standards keep the controller on the shoulder. A controller standing further from
 the lane implies a larger calibration factor for the same record and a larger operator term.
@@ -40,7 +40,7 @@ def main() -> None:
         l3, l5 = controller / w3_anchor, headon / w5_anchor
         # the pre-specified treatment (k_op == 1) is the encroachment method's own level and is NOT scaled
         # with the controller axis, as in decision_outputs_s2.py; a calibrated operator term (k_op != 1) is
-        # tied to the controller record and moves with it (round-5 risk analyst, Fable, S245)
+        # tied to the controller record and moves with it (review round 5, S245)
         scale = (controller / STRIKE_C) if k_op != 1.0 else 1.0
         op = operators * scale * k_op * parts["S2"]["W3"]
         d = parts["S2"]["W4d"] + op - l3 * parts["S0"]["W3"] + l5 * (parts["S2"]["W5"] - parts["S0"]["W5"])

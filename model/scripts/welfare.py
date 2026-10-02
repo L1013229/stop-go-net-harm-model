@@ -53,7 +53,7 @@ def main() -> None:
 
     dist = newest_dist()
     t = np.load(dist / "baseline_traces.npz")
-    # Review round 3 (practitioner, finding 20; round 2 risk analyst, finding 20): the plan named the
+    # Review round 3 (finding 20) and round 2 (finding 20): the plan named the
     # MBCM per-person commuting value (Table 16, $/h/person) and applied it per vehicle-hour, which
     # omits occupancy and vehicle time. Delay is counted in vehicle-hours, so the standard keys now
     # price it at the manual's composite per-vehicle value for rural roads (Table 18); the *_plan
@@ -66,7 +66,7 @@ def main() -> None:
     parts = {s: {k: t[f"part_{s}_{k}"] for k in ("W1", "W3", "W5", "W4d")} for s in ("S0", "S1a", "S1b", "S2")}
     l3 = STRIKE_C / float(np.nanmedian(parts["S0"]["W3"]))
     l5 = HEADON_C / float(np.nanmedian(parts["S1a"]["W5"]))
-    # mean matching (round-3 review): a count over an exposure estimates a MEAN, and under median
+    # mean matching (review round 3): a count over an exposure estimates a MEAN, and under median
     # matching the calibrated means sit above the records (strike 1.85x, head-on 3.3x), so the
     # expectation-consistent reading matches the pathway means to the records instead
     l3_mean = STRIKE_C / float(np.nanmean(parts["S0"]["W3"]))
@@ -84,7 +84,7 @@ def main() -> None:
            "mean_wait_s_per_vehicle_median": {s: float(np.nanmedian(v * 3600.0 / veh_day)) for s, v in delay_h.items()}}
     ALL_TTM_DSI_PER_OP_DAY = ALL_TTM_RECORD           # supplement S1.3; defined once in decision_outputs_s2.py
     w1_scale = ALL_TTM_DSI_PER_OP_DAY / float(np.nanmedian(parts["S0"]["W1"]))
-    # round-6 review (risk analyst, Codex): the mean-matched reading must match the restored queue tail's MEAN
+    # review round 6: the mean-matched reading must match the restored queue tail's MEAN
     # to the record too, or it mixes conventions (median scaling leaves the queue-tail mean at 1.86x the record)
     w1_scale_mean = ALL_TTM_DSI_PER_OP_DAY / float(np.nanmean(parts["S0"]["W1"]))
     out["queue_tail_record_scale"] = w1_scale

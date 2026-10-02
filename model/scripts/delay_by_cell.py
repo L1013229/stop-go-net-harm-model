@@ -1,4 +1,4 @@
-"""Delay trade across cells (review round 2, practitioner finding P8). Uniform delay per arriving
+"""Delay trade across cells (review round 2, finding P8). Uniform delay per arriving
 vehicle under each strategy's own cycle plan (Webster's D/D term, as welfare.py), summed over the
 operation day, at three demands and two section lengths. Fresh draws per cell (4,000), same
 priors and seeds discipline as the suite; medians and means of the fixed-time signals' extra
