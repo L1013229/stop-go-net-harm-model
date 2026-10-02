@@ -96,9 +96,9 @@ def main() -> None:
     h0 = H("S0", l3, l5, qt_scale)
     out["R61_multiplier"]["queue_tail_share_of_S0_at_ceiling"] = float(np.nanmedian(qt_scale * parts["S0"]["W1"] / h0))
 
-    # R82: the queue tail's share of manual control's harm at three levels of the term (round-6 practitioner,
-    # Codex: the record-scaled level is a calibration level, not a demonstrated bound), and the retained
-    # fraction of the controller's exposure under the tied operator construction (round-6 finding 3)
+    # R82: the queue tail's share of manual control's harm at three levels of the term (review round 6:
+    # the record-scaled level is a calibration level, not a demonstrated bound), and the retained
+    # fraction of the controller's exposure under the tied operator construction (review round 6 finding 3)
     rear_end_record = (54.0 / 7.0) / 4.0e5
     out["R82_queue_tail_share_and_retained_exposure"] = {}
     for label, level in (("rear_end_record_only", rear_end_record), ("all_cause_record_uncorrected", ALL_TTM_DSI_PER_OP_DAY),
@@ -189,8 +189,8 @@ def main() -> None:
         out["R71_R75_tied_operator"][f"reference_{d_ref:.0f}m"] = {
             "p": P(d2), "p_corners_min_max": [min(corners), max(corners)], "p_s2_below_s1a": P(d21)}
 
-    # R89: the plan's coherence outcomes and the W5-driven clause on the plan's surface (round-6 hostile referee and
-    # forensic writing reader, Opus: the frame-matched ratio was pre-specified and never reported; the W5 clause was
+    # R89: the plan's coherence outcomes and the W5-driven clause on the plan's surface (review round 6:
+    # the frame-matched ratio was pre-specified and never reported; the W5 clause was
     # not read on the plan's own surface)
     def H_full(s, l3_, l5_, queue, strike=True):
         w3 = (l3_ * parts["S0"]["W3"] if strike else 0.0) if s == "S0" else parts[s]["W3"]
@@ -208,7 +208,7 @@ def main() -> None:
     n_p = int(np.isfinite(d_plan).sum()); p_p = P(d_plan)
     out["R89_coherence_and_plan_surface_clause"]["w5_removal_on_plan_surface"] = {
         "p_with": p_p, "p_without": P(d_plan_no_w5), "monte_carlo_interval_width": float(2 * 1.96 * np.sqrt(p_p * (1 - p_p) / n_p))}
-    # R83: the adopted tied device reading priced as the welfare reading prices the others (round-6 desk reader, Codex:
+    # R83: the adopted tied device reading priced as the welfare reading prices the others (review round 6:
     # Table 4 carried the pre-specified and independent-draw device rows but not the adopted comparison)
     import tomllib
     vals = tomllib.load(open(Path(__file__).resolve().parents[1] / "config" / "welfare-values.toml", "rb"))
@@ -221,7 +221,7 @@ def main() -> None:
             "dh_median": float(np.median(f2)), "dh_mean": float(np.mean(f2)),
             "safety_cost_nzd_mean_vosl": float(np.mean(f2) * vosl), "safety_cost_nzd_mean_serious_injury": float(np.mean(f2) * v_si),
             "p_net_benefit": float((f2 < 0).mean())}
-    # R91: cycles whose sampled green is shorter than the queue needs (round-8 risk analyst, Codex): share of draws,
+    # R91: cycles whose sampled green is shorter than the queue needs (review round 8): share of draws,
     # decision probability without them, and the delay if their residual queue is priced as a deterministic
     # queue growing over the operation day (both directions), at the composite value of travel time
     VOT = 48.23; D = OPERATION_HOURS * 3600.0
@@ -244,13 +244,13 @@ def main() -> None:
             "extra_delay_mean_with_residual_vh": float(np.mean(adj[m])), "extra_delay_median_with_residual_vh": float(np.median(adj[m])),
             "cost_mean_nzd": float(np.mean(dd[m]) * VOT), "cost_mean_with_residual_nzd": float(np.mean(adj[m]) * VOT),
             "cost_median_with_residual_nzd": float(np.median(adj[m]) * VOT)}
-    # R85: within-margin probability and median change at New Zealand's own serious-harm levels (round-6 risk analyst)
+    # R85: within-margin probability and median change at New Zealand's own serious-harm levels (review round 6)
     out["R85_within_margin_at_nz_levels"] = {}
     for label, h_ in (("record_central_1.2e-5", HEADON_C), ("nz_uncorrected_2.1e-5", 2.1e-5), ("nz_corrected_3x_6.4e-5", 6.4e-5), ("nz_corrected_6x_1.3e-4", 1.3e-4)):
         d1 = dh("S1a", l3, h_ / w5_med); f1 = d1[np.isfinite(d1)]
         out["R85_within_margin_at_nz_levels"][label] = {"p_dh_neg": P(d1), "p_within_margin": float((np.abs(f1) <= MARGIN).mean()),
                                                           "dh_median": float(np.median(f1)), "abs_dh_p90": q(np.abs(f1), 90)}
-    # R86: value-of-information spans under the adopted tied construction (round-6 risk analyst)
+    # R86: value-of-information spans under the adopted tied construction (review round 6)
     def tied_p(l3_, l5_, d_ref):
         op = l3_ * parts["S0"]["W3"] * np.exp(-t["draw_reach_alpha"] * (t["draw_offset_op_m"] - d_ref))
         return P(dh("S2", l3_, l5_, op=op))
